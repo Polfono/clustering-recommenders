@@ -1,0 +1,5 @@
+MovieLens 32M https://grouplens.org/datasets/movielens/
+
+Amazon Review Data (Electronics) https://nijianmo.github.io/amazon/index.html#sample-review
+
+MobileRec https://github.com/mhmaqbool/mobilerec
