@@ -1,5 +1,7 @@
-MovieLens 32M https://grouplens.org/datasets/movielens/
+MovieLens Latest Small https://grouplens.org/datasets/movielens/
 
-Amazon Review Data (Electronics) https://nijianmo.github.io/amazon/index.html#sample-review
+MovieLens 1M https://grouplens.org/datasets/movielens/
 
-MobileRec https://github.com/mhmaqbool/mobilerec
+Jester Online Joke https://goldberg.berkeley.edu/jester-data/
+
+Book-Crossing https://www.kaggle.com/datasets/somnambwl/bookcrossing-dataset
