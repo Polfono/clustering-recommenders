@@ -388,6 +388,166 @@
       \verb https://www.payscale.com/research/ES/Job=Data_Analyst/Salary
       \endverb
     \endentry
+    \entry{harper2015movielens}{article}{}
+      \name{author}{2}{}{%
+        {{hash=95c1b94af421fa579fafe01078c70b37}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi Maxwell},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4d9331f432435b9538e5760a6e33696c}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{554cf1fd98e104b27affb7024863dca3}
+      \strng{fullhash}{554cf1fd98e104b27affb7024863dca3}
+      \strng{bibnamehash}{554cf1fd98e104b27affb7024863dca3}
+      \strng{authorbibnamehash}{554cf1fd98e104b27affb7024863dca3}
+      \strng{authornamehash}{554cf1fd98e104b27affb7024863dca3}
+      \strng{authorfullhash}{554cf1fd98e104b27affb7024863dca3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Interactive Intelligent Systems (TiiS)}
+      \field{number}{4}
+      \field{title}{The MovieLens Datasets: History and Context}
+      \field{volume}{5}
+      \field{year}{2015}
+      \field{pages}{19:1\bibrangedash 19:19}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/2827872
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2827872
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2827872
+      \endverb
+    \endentry
+    \entry{ziegler2005improving}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=dcbcdf51dad1917e55004e62d9af7702}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Cai-Nicolas},
+           giveni={C\bibinithyphendelim N\bibinitperiod}}}%
+        {{hash=717fe79c6e213f5c8d636b6e8638ed35}{%
+           family={McNee},
+           familyi={M\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4d9331f432435b9538e5760a6e33696c}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3219839db4fe80ba4ba35fa6aae531b6}{%
+           family={Lausen},
+           familyi={L\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chiba, Japan}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{fullhash}{0e01863175537164b1a73d192a19a1d3}
+      \strng{bibnamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authorbibnamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authornamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authorfullhash}{0e01863175537164b1a73d192a19a1d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 14th International World Wide Web Conference (WWW '05)}
+      \field{month}{5}
+      \field{title}{Improving Recommendation Lists Through Topic Diversification}
+      \field{year}{2005}
+      \field{pages}{22\bibrangedash 32}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/1060745.1060754
+      \endverb
+    \endentry
+    \entry{jesterdataset}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1776deb0a86da5a75d0800ae967f4bd6}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \strng{fullhash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \strng{bibnamehash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \strng{authorbibnamehash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \strng{authornamehash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \strng{authorfullhash}{1776deb0a86da5a75d0800ae967f4bd6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://goldberg.berkeley.edu/jester-data/}}
+      \field{note}{Accessed: 2025-05-06}
+      \field{title}{The Jester Dataset}
+      \field{year}{2001}
+    \endentry
+    \entry{goldberg2001eigentaste}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1776deb0a86da5a75d0800ae967f4bd6}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=31a0ee6601e7fc83abe213dd90e0c62d}{%
+           family={Roeder},
+           familyi={R\bibinitperiod},
+           given={Theresa},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e825a00647a44fbc5e564bcacfb24166}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Dhruv},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a438474ec4004fb3797371d773bb4bdd}{%
+           family={Perkins},
+           familyi={P\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f638dcb0b7cd783f0e02227169151f4e}
+      \strng{fullhash}{6416ddda95c7b16ee58a9f90ae573cab}
+      \strng{bibnamehash}{f638dcb0b7cd783f0e02227169151f4e}
+      \strng{authorbibnamehash}{f638dcb0b7cd783f0e02227169151f4e}
+      \strng{authornamehash}{f638dcb0b7cd783f0e02227169151f4e}
+      \strng{authorfullhash}{6416ddda95c7b16ee58a9f90ae573cab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Retrieval}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{Eigentaste: A Constant Time Collaborative Filtering Algorithm}
+      \field{volume}{4}
+      \field{year}{2001}
+      \field{pages}{133\bibrangedash 151}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1023/A:1011419012201
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -43,17 +43,16 @@ RECOMANACIÓ}
     \Large\textbf{DISSENY I ANÀLISI DE TÈCNIQUES DE CLUSTERING APLICADES A SISTEMES DE RECOMANACIÓ}
 
     % nombre del autor
-    \vspace{2cm}
+    \vspace{3cm}
     \centering
     \large\textbf{POL FONOYET GONZÁLEZ}\\
     \vspace{0.5cm}
     \textbf{Treball Final de Grau}\\
-    \textbf{Lliurable 4: Document final}\\
     \vspace{0.5cm}
     \Large 19 de març de 2025
 
     % información de la universidad
-    \vspace{2cm}
+    \vspace{3cm}
     \centering
     \small
     \textbf{Director/a}\\
@@ -62,8 +61,6 @@ RECOMANACIÓ}
     \textbf{Titulació}\\
     Grau en Enginyeria Informàtica (Computació)\\
     \vspace{0.5cm}
-    \textbf{Tutor GEP}\\
-    Olga Pons Peregort\\
     \vspace{0.5cm}
     \textbf{Facultat d'Informàtica de Barcelona (FIB)}\\
     \vspace{0.5cm}
@@ -844,8 +841,204 @@ D’altra banda, actualment el problema que es vol abordar es resol amb sistemes
 
 inalment, existeix una necessitat real d’aquest projecte, ja que l’increment exponencial de la informació digital exigeix noves eines que superin les limitacions dels mètodes actuals. Això no sols permetrà una millor gestió dels recursos, sinó que també contribuirà a millorar la qualitat de vida social a través d’una experiència d’usuari més adaptada i eficient.
 
-\printbibliography[heading=bibintoc]
+\chapter{Conjunt de dades}
 
-\restoregeometry % Restaurar la configuració de marges original si és necessari
+Una selecció acurada dels conjunts de dades és fonamental per a l'avaluació rigorosa i la comparació de les tècniques de clustering aplicades als sistemes de recomanació.
+Aquest capítol detalla els datasets emprats en aquest estudi, escollits per la seva rellevància en la comunitat d'investigació de sistemes de recomanació i per representar una varietat de dominis, mides i nivells de dispersió.
+L'ús de múltiples datasets permet analitzar la robustesa i la capacitat de generalització dels mètodes de clustering en diferents contextos.
+
+\section{Restriccions i requisits dels conjunts de dades}
+
+Amb l’objectiu de facilitar la comparació i la reproduïbilitat dels experiments, s’ha definit una sèrie de restriccions i requisits que han de complir els conjunts de dades utilitzats. Aquestes condicions tenen com a finalitat garantir una certa homogeneïtat entre els conjunts i, alhora, millorar la qualitat i la interpretabilitat dels resultats obtinguts.
+
+En primer lloc, s’exigeix que les dades estiguin emmagatzemades en format CSV. Aquest format ha estat escollit perquè és àmpliament utilitzat, fàcilment llegible tant per humans com per màquines, i compatible amb la majoria de biblioteques i entorns de programació emprats habitualment en l’anàlisi de dades. A més, el format CSV afavoreix una estructura tabular clara, la qual facilita el processament i la validació automàtica dels conjunts de dades.
+
+Aquest arxiu contindrà exactament tres columnes amb els següents noms, que inclouran la informació següent:
+\begin{itemize}
+    \item \textbf{userId:} Identificador únic de cada usuari del sistema de recomanació.
+    \item \textbf{itemId:} Identificador únic de cada element o producte que es recomana.
+\item \textbf{rating:} Valoració atorgada per l'usuari a l'element.
+\end{itemize}
+
+Tant \textbf{userId} com \textbf{itemId} es representaran com a enters de 64 bits, i \textbf{rating} com un valor de tipus float de 64 bits.
+
+Cap de les tres columnes pot contenir valors no numèrics o NaN; en cas que se'n detectin, es descartaran.
+
+No es permetrà que hi hagi parells \textbf{(userId, itemId)} repetits. Si se'n troben, es mantindrà l’última valoració afegida per aquest parell.
+
+Com a restricció tècnica, s’imposarà un màxim d’uns 10.000 usuaris.
+Aquesta limitació es deu a l’ús de matrius per emmagatzemar la similitud entre usuaris, amb un creixement quadràtic en funció del nombre d’usuaris.
+L’espai necessari ve donat per la fórmula següent:
+
+\[
+\text{Nombre d’usuaris}^2 \times 8 \text{ bytes}
+\]
+
+Els 8 bytes corresponen a la representació de nombres amb comes flotants de 64 bits per expressar la similitud.
+Assumint 10.000 usuaris, això suposa un total de $10^8$ posicions, amb un requeriment d’uns 800 MB, la qual cosa comença a representar un desafiament per executar els experiments en local.
+
+Una solució senzilla seria calcular la similitud entre usuaris de manera dinàmica, només quan sigui necessària, en lloc de calcular-les totes prèviament i emmagatzemar-les.
+Tanmateix, aquesta estratègia implica un increment significatiu del temps de càlcul, que pot resultar inviable per a una execució local.
+Per aquest motiu, s’ha descartat aquesta opció.
+
+De manera similar a l’anterior, s’imposarà un màxim d’uns 10.000 elements.
+Aquesta limitació també es deu a l’ús de matrius per emmagatzemar la valoració entre usuari i element, la qual cosa implica un creixement proporcional al producte entre el nombre d’usuaris i el nombre d’elements.
+
+En aquest cas, l’espai necessari ve donat per:
+
+\[
+\text{Nombre d’usuaris} \times \text{Nombre d’elements} \times 8 \text{ bytes}
+\]
+
+Els 8 bytes corresponen a la representació de nombres amb comes flotants de 64 bits per expressar la valoració.
+De la mateixa manera que amb la matriu de similituds, l’espai comença a ser significatiu i pot comprometre el rendiment en entorns amb recursos limitats.
+
+Una manera de reduir dràsticament l'espai utilitzat per aquesta matriu és fer ús de matrius disperses.
+El motiu d’això és el fet que la majoria d’elements no solen estar valorats per l’usuari i, per tant, la gran majoria de les posicions de la matriu contindran valors nuls o buits.
+
+L’ús de matrius disperses permet emmagatzemar només les posicions que contenen informació rellevant (és a dir, valoracions efectives), reduint dràsticament l’espai requerit.
+
+Tot i això, finalment s’ha descartat l’ús de matrius disperses, ja que, malgrat l’estalvi d’espai, aquest enfocament incrementa considerablement la complexitat del codi i el temps de càlcul.
+La gestió de matrius disperses implica estructures de dades més sofisticades i operacions més costoses, especialment en operacions massives o en entorns on es requereix un accés ràpid i freqüent a les valoracions.
+Per aquest motiu, s’ha optat per mantenir l’enfocament basat en matrius densament poblades, tot i la limitació del nombre màxim d’elements.
+
+\section{Conjunt de dades utilitzats}
+
+\subsection{Conjunt de dades MovieLens} 
+
+El conjunt de dades MovieLens \cite{harper2015movielens} és un dels més utilitzats en la recerca sobre sistemes de recomanació. Proporcionat pel GroupLens Research Project, aquest conjunt inclou valoracions d’usuaris sobre pel·lícules i s’ha convertit en un estàndard de facto per a l’avaluació d’algorismes de filtratge col·laboratiu.
+
+Aquest conjunt recull valoracions amb una escala de fins a 5 estrelles del servei de recomanació de pel·lícules MovieLens.
+
+En aquest estudi s’han emprat dos subconjunts del conjunt de dades MovieLens: el MovieLens Latest Small i el MovieLens 1M.
+
+El MovieLens Latest Small és un subconjunt recent que conté 100.836 valoracions sobre 9.724 pel·lícules, realitzades per 610 usuaris entre el 29 de març de 1996 i el 24 de setembre de 2018.
+
+A partir d’una anàlisi exploratòria de les dades (Figura~\ref{fig:analisis_ml_small}), s’observa que aquest conjunt presenta una densitat de l’1,7\,\%, fet que indica que només l’1,7\,\% de les possibles valoracions estan registrades al conjunt.
+
+\[
+\text{Densitat} = \frac{\text{Nombre de valoracions}}{\text{Nombre d’usuaris} \times \text{Nombre de pel·lícules}} \times 100
+\]
+
+Les valoracions són predominantment positives, amb una mitjana de 3,5 estrelles i una desviació estàndard d’1,04.
+A més, les valoracions per usuari i pel·lícula tenen una distribució fortament sesgada a la dreta.
+El sistema té una majoria d'usuaris i pel·lícules amb poques valoracions, mentre que una petita fracció d’usuaris i pel·lícules concentra una gran quantitat de valoracions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-small-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-small-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-small-items.png}
+    \caption{Anàlisi exploratòria del conjunt MovieLens Latest Small}
+    \label{fig:analisis_ml_small}
+\end{figure}
+
+D’altra banda, el MovieLens 1M és un conjunt de dades més gran que conté 1.000.209 valoracions de 6.040 usuaris sobre 3.706 pel·lícules, recollides entre els anys 2000 i 2003.
+
+A partir de l’anàlisi exploratòria (Figura~\ref{fig:analisis_ml_1m}), s’observa una densitat del 4,5\,\%, és a dir, només el 4,5\,\% de les possibles valoracions estan recollides en el conjunt.
+
+També en aquest cas, les valoracions són majoritàriament positives, amb una mitjana de 3,58 estrelles i una desviació estàndard d’1,12.
+De manera similar al conjunt MovieLens Latest Small, les valoracions per usuari i pel·lícula presenten una distribució fortament sesgada a la dreta, però amb una densitat més alta que en el conjunt anterior.
+
+Cal destacar que les valoracions en aquest conjunt no inclouen puntuacions fraccionàries (com 0,5, 1,5, 2,5, etc.), ja que el sistema original de valoració utilitzava només valors enters de 1 a 5 estrelles.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-1m-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-1m-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/ml-1m-items.png}
+    \caption{Anàlisi exploratòria del conjunt MovieLens 1M}
+    \label{fig:analisis_ml_1m}
+\end{figure}
+
+\subsection{Conjunt de dades Book-Crossing}
+
+El conjunt de dades \emph{Book-Crossing} \cite{ziegler2005improving} prové de la comunitat en línia \emph{BookCrossing.com}, una plataforma destinada a amants de la lectura d’arreu del món que intercanvien llibres i comparteixen experiències. Aquest conjunt ha estat àmpliament utilitzat en estudis sobre sistemes de recomanació, especialment en escenaris que combinen valoracions explícites i implícites.
+
+Les dades es van recollir durant un període de quatre setmanes (agost/setembre de 2004), recopilant informació sobre 278.858 usuaris i 1.157.112 valoracions corresponents a 271.379 llibres diferents (identificats mitjançant ISBN).
+
+Les valoracions s’expressen en una escala de fins a 10 estrelles, segons el sistema de recomanació del servei \emph{Book-Crossing}.
+
+Dels 278.858 usuaris inicials, només una fracció significativa ha realitzat valoracions:
+
+\begin{itemize}
+    \item 99.053 usuaris han valorat almenys un llibre.
+    \item 43.385 usuaris han valorat almenys dos llibres.
+    \item 12.306 usuaris han valorat almenys deu llibres.
+\end{itemize}
+
+Pel que fa als 271.379 llibres presents al conjunt:
+
+\begin{itemize}
+    \item 270.171 llibres han estat valorats almenys una vegada.
+    \item 124.513 llibres han rebut almenys dues valoracions.
+    \item 17.480 llibres han rebut almenys deu valoracions.
+\end{itemize}
+
+Degut a l’elevada dispersió del conjunt original, s’ha realitzat un procés de filtratge per obtenir resultats més significatius en l’avaluació d’algorismes de filtratge col·laboratiu. Primer, s’han seleccionat els usuaris que han valorat almenys 10 llibres; a continuació, s’ha mantingut només aquells llibres que han rebut un mínim de 10 valoracions dins aquest subconjunt.
+
+Aquest procés ha generat un conjunt de dades més compacte i manejable, compost per 74.907 valoracions, 6.570 usuaris i 3.411 llibres.
+
+A partir d’una anàlisi exploratòria de les dades (Figura~\ref{fig:analisis_books}), s’observa que aquest conjunt presenta una densitat del 0,33\,\%, la qual cosa indica que només el 0,33\,\% de les valoracions possibles estan registrades.
+
+Les valoracions són predominantment positives, amb una mitjana de 7,87 estrelles i una desviació estàndard d’1,77. A més, com ja es detectava en conjunts com \emph{MovieLens}, tant les valoracions per usuari com per llibre mostren una distribució amb una llarga cua a la dreta: la majoria d’usuaris i llibres tenen poques valoracions, mentre que una petita fracció concentra un nombre elevat de puntuacions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/books-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/books-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/books-items.png}
+    \caption{Anàlisi exploratòria del conjunt Book-Crossing}
+    \label{fig:analisis_books}
+\end{figure}
+
+\section{Conjunt de dades Jester}
+
+El conjunt de dades Jester \cite{jesterdataset,goldberg2001eigentaste} prové d’un sistema de recomanació d’acudits, en què els usuaris valoren els acudits en una escala contínua de -10 a +10. Tot i el seu caràcter informal, aquest conjunt ha estat àmpliament utilitzat per la seva densitat i per una estructura peculiar que el fa especialment útil en l’àmbit de la recerca en sistemes de recomanació.
+
+El conjunt original conté 100 acudits i 73.421 usuaris, amb un total de 4,1 milions de valoracions recollides entre abril de 1999 i maig de 2003.
+
+Per reduir la mida del conjunt i facilitar l’anàlisi, s’ha aplicat un filtre per conservar únicament 10.000 usuaris seleccionats aleatòriament.
+
+Una de les característiques més destacades d’aquest conjunt és la seva elevada densitat: cada usuari ha valorat un nombre considerable d’ítems, cosa que permet observar amb més claredat el comportament dels mètodes de clustering en entorns amb una gran quantitat d’informació disponible.
+
+A partir d’una anàlisi exploratòria de les dades (Figura~\ref{fig:analisis_jester}), s’observa una densitat del 56,27\,\%, és a dir, s’han registrat més de la meitat de les valoracions possibles. Es tracta d’un valor molt elevat en comparació amb altres conjunts de dades de sistemes de recomanació, que habitualment presenten una cobertura molt més escassa.
+
+Les valoracions mostren una tendència generalment positiva, amb una mitjana de 0,72 i una desviació estàndard de 5,3. Tot i que la majoria d’usuaris només valoren una part dels acudits, s’observa un pic significatiu d’usuaris que han valorat gairebé la totalitat dels acudits disponibles. Pel que fa als acudits, les valoracions es distribueixen de manera relativament uniforme, amb dos pics: alguns acudits han estat valorats per la majoria d’usuaris, mentre que d’altres només han rebut valoracions d’una minoria.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/jester-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/jester-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/jester-items.png}
+    \caption{Anàlisi exploratòria del conjunt Jester}
+    \label{fig:analisis_jester}
+\end{figure}
+
+A continuació es presenta una taula resum amb les característiques dels conjunts de dades utilitzats en aquest estudi (Taula~\ref{tab:datasets}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    \textbf{Conjunt} & \textbf{Usuaris} & \textbf{Elements} & \textbf{Valoracions} & \textbf{Densitat (\%)} & \textbf{Escala} \\ \hline
+    MovieLens Small & 610   & 9.724 & 100.836 & 1,7 & 0.5-5  \\ \hline
+    MovieLens 1M         & 6.040 & 3.706 & 1.000.209 & 4,5 & 1-5   \\ \hline
+    Book-Crossing        & 6.570 & 3.411 & 74.907   & 0,33 & 1-10 \\ \hline
+    Jester               & 10.000& 100   & 4.134.000& 56,27 & -10-10 \\ \hline
+    \end{tabular}
+    \caption{Característiques dels conjunts de dades utilitzats}
+    \label{tab:datasets}
+\end{table}
+
+\printbibliography[heading=bibintoc]
 
 \end{document}

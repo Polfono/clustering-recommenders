@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  19 MAR 2025 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  6 MAY 2025 16:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/pol/Escritorio/TFg/Memoria/Memoria.tex
-(/home/pol/Escritorio/TFg/Memoria/Memoria.tex
+**/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex
+(/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -674,12 +674,12 @@ Package biblatex Info: Reference segment=0 on input line 24.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Figuras/logoUPC.png, id=184, 197.73875pt x 196.735pt>
+<Figuras/logoUPC.png, id=209, 197.73875pt x 196.735pt>
 File: Figuras/logoUPC.png Graphic file (type png)
 <use Figuras/logoUPC.png>
 Package pdftex.def Info: Figuras/logoUPC.png  used on input line 36.
 (pdftex.def)             Requested size: 62.73549pt x 62.41612pt.
-<Figuras/logoFIB.png, id=186, 580.1675pt x 87.32625pt>
+<Figuras/logoFIB.png, id=211, 580.1675pt x 87.32625pt>
 File: Figuras/logoFIB.png Graphic file (type png)
 <use Figuras/logoFIB.png>
 Package pdftex.def Info: Figuras/logoFIB.png  used on input line 38.
@@ -728,166 +728,259 @@ Overfull \hbox (33.82492pt too wide) in paragraph at lines 35--38
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 ...ema de recomanació}{17}{subsection.2.1.4}
+l.34 ...ema de recomanació}{18}{subsection.2.1.4}
                                                   % [1
 
 
-])
+] [2])
 \tf@toc=\write5
 \openout5 = `Memoria.toc'.
 
- [2] (./Memoria.lof)
+ [3] (./Memoria.lof)
 \tf@lof=\write6
 \openout6 = `Memoria.lof'.
 
- [3
+ [4
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Memoria.lot)
 \tf@lot=\write7
 \openout7 = `Memoria.lot'.
 
- [4
+ [5
 
 ]
 Cap\'{\i }tol 1.
-[5
+[6
 
 ]
-<Figuras/DiagramaFiltratgeCol.jpg, id=310, 1031.855pt x 575.14874pt>
+<Figuras/DiagramaFiltratgeCol.jpg, id=356, 1031.855pt x 575.14874pt>
 File: Figuras/DiagramaFiltratgeCol.jpg Graphic file (type jpg)
 <use Figuras/DiagramaFiltratgeCol.jpg>
-Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 123.
+Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 120.
 (pdftex.def)             Requested size: 352.81552pt x 196.65376pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6] [7
+[7] [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 
-       <./Figuras/DiagramaFiltratgeCol.jpg>] [8] [9] [10] [11]
-<Figuras/KANBAN.png, id=353, 888.31876pt x 511.9125pt>
+l.149 
+       <./Figuras/DiagramaFiltratgeCol.jpg>] [9] [10] [11] [12]
+<Figuras/KANBAN.png, id=398, 888.31876pt x 511.9125pt>
 File: Figuras/KANBAN.png Graphic file (type png)
 <use Figuras/KANBAN.png>
-Package pdftex.def Info: Figuras/KANBAN.png  used on input line 290.
+Package pdftex.def Info: Figuras/KANBAN.png  used on input line 287.
 (pdftex.def)             Requested size: 352.81552pt x 203.31631pt.
- [12]
-<Figuras/Notion.png, id=362, 878.28125pt x 580.1675pt>
+ [13]
+<Figuras/Notion.png, id=406, 878.28125pt x 580.1675pt>
 File: Figuras/Notion.png Graphic file (type png)
 <use Figuras/Notion.png>
-Package pdftex.def Info: Figuras/Notion.png  used on input line 300.
+Package pdftex.def Info: Figuras/Notion.png  used on input line 297.
 (pdftex.def)             Requested size: 352.81552pt x 233.06322pt.
- [13
+ [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.308 
+l.305 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.308 
-       <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [14]
+l.305 
+       <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [15]
 Cap\'{\i }tol 2.
-[15
+[16
 
-] [16] [17] [18]
-Overfull \hbox (9.77583pt too wide) in paragraph at lines 487--488
+] [17] [18] [19]
+Overfull \hbox (9.77583pt too wide) in paragraph at lines 484--485
 []\OT1/cmr/bx/n/12 Investigador (I): \OT1/cmr/m/n/12 En-car-re-gat de la re-cer-ca bi-bli-ogr^^Rafica, de l'es-tu-di de les t^^Recniques
  []
 
-[19] [20
+[20] [21
 pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.543 \begin{landscape}
+l.540 \begin{landscape}
                         % Rotar la página a horizontal]
-<Figuras/DiagramaGantt.png, id=405, 1740.5025pt x 700.6175pt>
+<Figuras/DiagramaGantt.png, id=450, 1740.5025pt x 700.6175pt>
 File: Figuras/DiagramaGantt.png Graphic file (type png)
 <use Figuras/DiagramaGantt.png>
-Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 551.
+Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 548.
 (pdftex.def)             Requested size: 661.5266pt x 266.29086pt.
- [21
+ [22
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.556 \end{landscape}
-                      % Tornar a la orientació vertical <./Figuras/DiagramaGantt.png>] [22
+l.553 \end{landscape}
+                      % Tornar a la orientació vertical <./Figuras/DiagramaGantt.png>] [23
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.593 \chapter
+l.590 \chapter
               {Gestió Econòmica i sostenibilitat}]
 Cap\'{\i }tol 3.
 
-Overfull \hbox (18.05974pt too wide) in paragraph at lines 621--649
+Overfull \hbox (18.05974pt too wide) in paragraph at lines 618--646
  [][] 
  []
 
-[23
+[24
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.652 
-      ] [24
+l.649 
+      ] [25
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.667 \end{equation}
-                    ] [25
+l.664 \end{equation}
+                    ] [26
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.712 \end{equation}
+l.709 \end{equation}
                     ]
-Overfull \hbox (43.57405pt too wide) in paragraph at lines 726--735
+Overfull \hbox (43.57405pt too wide) in paragraph at lines 723--732
  [][] 
  []
 
-[26
+[27
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.761 
-      ] [27
+l.758 
+      ] [28
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.807     \item A
-                 justar el temps assignat o reassignar tasques per optimitza...] [28] [29] [30
+l.804     \item A
+                 justar el temps assignat o reassignar tasques per optimitza...] [29] [30]
+Cap\'{\i }tol 4.
+[31
 
-] (./Memoria.aux)
+] [32]
+<Figuras/ml-small-ratings.png, id=529, 462.528pt x 346.896pt>
+File: Figuras/ml-small-ratings.png Graphic file (type png)
+<use Figuras/ml-small-ratings.png>
+Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 929.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/ml-small-users.png, id=530, 462.528pt x 346.896pt>
+File: Figuras/ml-small-users.png Graphic file (type png)
+<use Figuras/ml-small-users.png>
+Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 931.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/ml-small-items.png, id=531, 462.528pt x 346.896pt>
+File: Figuras/ml-small-items.png Graphic file (type png)
+<use Figuras/ml-small-items.png>
+Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 933.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+ [33]
+<Figuras/ml-1m-ratings.png, id=538, 462.528pt x 346.896pt>
+File: Figuras/ml-1m-ratings.png Graphic file (type png)
+<use Figuras/ml-1m-ratings.png>
+Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 949.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/ml-1m-users.png, id=539, 462.528pt x 346.896pt>
+File: Figuras/ml-1m-users.png Graphic file (type png)
+<use Figuras/ml-1m-users.png>
+Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 951.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/ml-1m-items.png, id=540, 462.528pt x 346.896pt>
+File: Figuras/ml-1m-items.png Graphic file (type png)
+<use Figuras/ml-1m-items.png>
+Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 953.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+ [34
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.957 
+       <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [35
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.977     \item 2
+                 70.171 llibres han estat valorats almenys una vegada. <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
+<Figuras/books-ratings.png, id=559, 462.528pt x 346.896pt>
+File: Figuras/books-ratings.png Graphic file (type png)
+<use Figuras/books-ratings.png>
+Package pdftex.def Info: Figuras/books-ratings.png  used on input line 992.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/books-users.png, id=560, 462.528pt x 346.896pt>
+File: Figuras/books-users.png Graphic file (type png)
+<use Figuras/books-users.png>
+Package pdftex.def Info: Figuras/books-users.png  used on input line 994.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/books-items.png, id=561, 462.528pt x 346.896pt>
+File: Figuras/books-items.png Graphic file (type png)
+<use Figuras/books-items.png>
+Package pdftex.def Info: Figuras/books-items.png  used on input line 996.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+ [36] [37
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1013 L
+        es valoracions mostren una tendència generalment positiva, amb una ... <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
+<Figuras/jester-ratings.png, id=579, 462.528pt x 346.896pt>
+File: Figuras/jester-ratings.png Graphic file (type png)
+<use Figuras/jester-ratings.png>
+Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 1017.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/jester-users.png, id=580, 462.528pt x 346.896pt>
+File: Figuras/jester-users.png Graphic file (type png)
+<use Figuras/jester-users.png>
+Package pdftex.def Info: Figuras/jester-users.png  used on input line 1019.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+<Figuras/jester-items.png, id=581, 462.528pt x 346.896pt>
+File: Figuras/jester-items.png Graphic file (type png)
+<use Figuras/jester-items.png>
+Package pdftex.def Info: Figuras/jester-items.png  used on input line 1021.
+(pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
+ [38
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1042 \printbibliography[heading=bibintoc]
+                                           
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1042 \printbibliography[heading=bibintoc]
+                                            <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [39
+
+] [40] (./Memoria.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: F0D608632526121593EB6076B4C6A2C2;7132.
+(rerunfilecheck)             Checksum: 56223AB8141003209EFEB21B1BF1E190;8370.
 Package logreq Info: Writing requests to 'Memoria.run.xml'.
 \openout1 = `Memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19636 strings out of 474222
- 341908 string characters out of 5748734
+ 19773 strings out of 474222
+ 345776 string characters out of 5748734
  1950975 words of memory out of 5000000
- 41538 multiletter control sequences out of 15000+600000
+ 41650 multiletter control sequences out of 15000+600000
  567564 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,81p,713b,2873s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Memoria.pdf (31 pages, 684346 bytes).
+ 75i,11n,81p,733b,2873s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Memoria.pdf (41 pages, 902296 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 125 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 721 PDF objects out of 1000 (max. 8388607)
+ 608 compressed objects within 7 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 499 words of extra memory for PDF output out of 10000 (max. 10000000)
 

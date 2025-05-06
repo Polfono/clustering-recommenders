@@ -1,56 +1,62 @@
 \babel@toc {catalan}{}\relax 
-\contentsline {chapter}{\numberline {1}Contextualització i Abast del projecte}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introducció}{5}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Context}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Conceptes}{6}{subsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.1}Sistema de Recomanació}{6}{subsubsection.1.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.1.2.2}Filtratge Col·laboratiu}{6}{subsubsection.1.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.3}Clustering}{7}{subsubsection.1.1.2.3}%
-\contentsline {subsection}{\numberline {1.1.3}Identificació del problema}{7}{subsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.3.1}Selecció i tractament del conjunt de dades}{7}{subsubsection.1.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.1.3.2}Desenvolupament del sistema de recomanació}{7}{subsubsection.1.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.1.3.3}Comparació de resultats i anàlisi del rendiment}{8}{subsubsection.1.1.3.3}%
-\contentsline {subsection}{\numberline {1.1.4}Actors implicats}{8}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Justificació}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Estat de l'art}{9}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Selecció d'eines}{9}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Abast}{10}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Objectius}{10}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Subobjectius}{10}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Requeriments}{11}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Funcionals}{11}{subsubsection.1.3.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.3.2}No funcionals}{11}{subsubsection.1.3.3.2}%
-\contentsline {subsection}{\numberline {1.3.4}Obstacles i riscos}{11}{subsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.4.1}Obstacles}{11}{subsubsection.1.3.4.1}%
-\contentsline {subsubsection}{\numberline {1.3.4.2}Riscos}{12}{subsubsection.1.3.4.2}%
-\contentsline {section}{\numberline {1.4}Metodologia i rigor}{12}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Metodologia de treball}{12}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Seguiment}{14}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Planificació temporal}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Descripció de les tasques}{15}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}GP - Gestió del Projecte}{15}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}TP - Treball Previ}{16}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}SD - Selecció i tractament del conjunt de dades}{17}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}SR - Desenvolupament del sistema de recomanació}{17}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}AR - Comparació de resultats i anàlisi del rendiment}{18}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}D - Documentació}{18}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}DT - Defensa del treball}{19}{subsection.2.1.7}%
-\contentsline {section}{\numberline {2.2}Recursos}{19}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Recursos humans}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Recursos materials}{19}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Taula resum de les tasques}{20}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Diagrama de Gantt}{21}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Gestió del risc}{22}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Gestió Econòmica i sostenibilitat}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Gestió Econòmica}{23}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Costos de personal}{23}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Costos genèrics}{24}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Contingències}{25}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Imprevistos}{26}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Cost total}{26}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Control de gestió}{27}{subsection.3.1.6}%
-\contentsline {section}{\numberline {3.2}Sostenibilitat}{28}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Dimensió econòmica}{28}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Dimensió ambiental}{29}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Dimensió social}{29}{subsection.3.2.3}%
-\contentsline {chapter}{Bibliografia}{30}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Contextualització i Abast del projecte}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introducció}{6}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Context}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Conceptes}{7}{subsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.1}Sistema de Recomanació}{7}{subsubsection.1.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.1.2.2}Filtratge Col·laboratiu}{7}{subsubsection.1.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.3}Clustering}{8}{subsubsection.1.1.2.3}%
+\contentsline {subsection}{\numberline {1.1.3}Identificació del problema}{8}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Selecció i tractament del conjunt de dades}{8}{subsubsection.1.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.1.3.2}Desenvolupament del sistema de recomanació}{8}{subsubsection.1.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.1.3.3}Comparació de resultats i anàlisi del rendiment}{9}{subsubsection.1.1.3.3}%
+\contentsline {subsection}{\numberline {1.1.4}Actors implicats}{9}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Justificació}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Estat de l'art}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Selecció d'eines}{10}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Abast}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Objectius}{11}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Subobjectius}{11}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Requeriments}{12}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Funcionals}{12}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}No funcionals}{12}{subsubsection.1.3.3.2}%
+\contentsline {subsection}{\numberline {1.3.4}Obstacles i riscos}{12}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Obstacles}{12}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Riscos}{13}{subsubsection.1.3.4.2}%
+\contentsline {section}{\numberline {1.4}Metodologia i rigor}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Metodologia de treball}{13}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Seguiment}{15}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Planificació temporal}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descripció de les tasques}{16}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}GP - Gestió del Projecte}{16}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}TP - Treball Previ}{17}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}SD - Selecció i tractament del conjunt de dades}{18}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}SR - Desenvolupament del sistema de recomanació}{18}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}AR - Comparació de resultats i anàlisi del rendiment}{19}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}D - Documentació}{19}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}DT - Defensa del treball}{20}{subsection.2.1.7}%
+\contentsline {section}{\numberline {2.2}Recursos}{20}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Recursos humans}{20}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Recursos materials}{20}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Taula resum de les tasques}{21}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Diagrama de Gantt}{22}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Gestió del risc}{23}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Gestió Econòmica i sostenibilitat}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Gestió Econòmica}{24}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Costos de personal}{24}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Costos genèrics}{25}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Contingències}{26}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Imprevistos}{27}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Cost total}{27}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Control de gestió}{28}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Sostenibilitat}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Dimensió econòmica}{29}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Dimensió ambiental}{30}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Dimensió social}{30}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Conjunt de dades}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Restriccions i requisits dels conjunts de dades}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Conjunt de dades utilitzats}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Conjunt de dades MovieLens}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Conjunt de dades Book-Crossing}{35}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Conjunt de dades Jester}{37}{section.4.3}%
+\contentsline {chapter}{Bibliografia}{39}{chapter*.4}%
