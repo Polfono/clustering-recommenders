@@ -2383,6 +2383,12 @@
     <bcf:citekey order="23" intorder="1">ziegler2005improving</bcf:citekey>
     <bcf:citekey order="24" intorder="1">jesterdataset</bcf:citekey>
     <bcf:citekey order="24" intorder="2">goldberg2001eigentaste</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">monti2019all</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">chowdhury2024evaluating</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">herlocker2002empirical</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">dakhel2011new</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">treerattanapitak2009items</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">koohi2016user</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

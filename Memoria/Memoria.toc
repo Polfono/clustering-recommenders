@@ -55,8 +55,16 @@
 \contentsline {subsection}{\numberline {3.2.3}Dimensió social}{30}{subsection.3.2.3}%
 \contentsline {chapter}{\numberline {4}Conjunt de dades}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Restriccions i requisits dels conjunts de dades}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Conjunt de dades utilitzats}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Conjunt de dades utilitzades}{33}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Conjunt de dades MovieLens}{33}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Conjunt de dades Book-Crossing}{35}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Conjunt de dades Jester}{37}{section.4.3}%
-\contentsline {chapter}{Bibliografia}{39}{chapter*.4}%
+\contentsline {subsection}{\numberline {4.2.3}Conjunt de dades Jester}{37}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Conjunts de dades sintètiques}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}MovieLens sintètic (base)}{41}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}MovieLens sintètic (baixa densitat)}{42}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}MovieLens sintètic (alta densitat)}{43}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Sistema de recomanació}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Clustering dur}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Clustering difús}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Clustering jeràrquic}{48}{section.5.3}%
+\contentsline {chapter}{Bibliografia}{49}{chapter*.4}%

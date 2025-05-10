@@ -548,6 +548,205 @@
       \verb 10.1023/A:1011419012201
       \endverb
     \endentry
+    \entry{monti2019all}{article}{}
+      \name{author}{3}{}{%
+        {{hash=23f5b06fee7f0ec81277d061ce82689c}{%
+           family={Monti},
+           familyi={M\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f835076ec3f49a5e68df367ef0d4bf02}{%
+           family={Rizzo},
+           familyi={R\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=96c5d9041bb8e331c3da8c2df5659c39}{%
+           family={Morisio},
+           familyi={M\bibinitperiod},
+           given={Maurizio},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90001dbb0d326e612d6924997f41500a}
+      \strng{fullhash}{90001dbb0d326e612d6924997f41500a}
+      \strng{bibnamehash}{90001dbb0d326e612d6924997f41500a}
+      \strng{authorbibnamehash}{90001dbb0d326e612d6924997f41500a}
+      \strng{authornamehash}{90001dbb0d326e612d6924997f41500a}
+      \strng{authorfullhash}{90001dbb0d326e612d6924997f41500a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1909.00687}
+      \field{title}{All you need is ratings: A clustering approach to synthetic rating datasets generation}
+      \field{year}{2019}
+    \endentry
+    \entry{chowdhury2024evaluating}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2167641749de8533a382d4a16fe5fec9}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={Pradipto},
+           giveni={P\bibinitperiod}}}%
+        {{hash=dfee796b02c62f3bbfed5ca14a2de534}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Bam\bibnamedelima Bahadur},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0a18a28ce17614bb83025959b51c2528}
+      \strng{fullhash}{0a18a28ce17614bb83025959b51c2528}
+      \strng{bibnamehash}{0a18a28ce17614bb83025959b51c2528}
+      \strng{authorbibnamehash}{0a18a28ce17614bb83025959b51c2528}
+      \strng{authornamehash}{0a18a28ce17614bb83025959b51c2528}
+      \strng{authorfullhash}{0a18a28ce17614bb83025959b51c2528}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{title}{Evaluating the Effectiveness of Collaborative Filtering Similarity Measures: A Comprehensive Review}
+      \field{volume}{235}
+      \field{year}{2024}
+      \field{pages}{2641\bibrangedash 2650}
+      \range{pages}{10}
+    \endentry
+    \entry{herlocker2002empirical}{article}{}
+      \name{author}{3}{}{%
+        {{hash=94319e671235d0cc5fb4a63fcae5724c}{%
+           family={Herlocker},
+           familyi={H\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4d9331f432435b9538e5760a6e33696c}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \strng{fullhash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \strng{bibnamehash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \strng{authorbibnamehash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \strng{authornamehash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \strng{authorfullhash}{989946e809ab65102c0c9d4ecffd9aaa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information retrieval}
+      \field{title}{An empirical analysis of design choices in neighborhood-based collaborative filtering algorithms}
+      \field{volume}{5}
+      \field{year}{2002}
+      \field{pages}{287\bibrangedash 310}
+      \range{pages}{24}
+    \endentry
+    \entry{dakhel2011new}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=7feb5ef8ba20574c68dbceef1065912b}{%
+           family={Dakhel},
+           familyi={D\bibinitperiod},
+           given={Gilda\bibnamedelima Moradi},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=194219f34c6cf241aaed15a9b5f65746}{%
+           family={Mahdavi},
+           familyi={M\bibinitperiod},
+           given={Mehregan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9e5af5b93d1302c3f25083a735dd6718}
+      \strng{fullhash}{9e5af5b93d1302c3f25083a735dd6718}
+      \strng{bibnamehash}{9e5af5b93d1302c3f25083a735dd6718}
+      \strng{authorbibnamehash}{9e5af5b93d1302c3f25083a735dd6718}
+      \strng{authornamehash}{9e5af5b93d1302c3f25083a735dd6718}
+      \strng{authorfullhash}{9e5af5b93d1302c3f25083a735dd6718}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 11th International conference on hybrid intelligent systems (HIS)}
+      \field{title}{A new collaborative filtering algorithm using K-means clustering and neighbors' voting}
+      \field{year}{2011}
+      \field{pages}{179\bibrangedash 184}
+      \range{pages}{6}
+    \endentry
+    \entry{treerattanapitak2009items}{article}{}
+      \name{author}{2}{}{%
+        {{hash=797304165025d60c3ccc97f6514c3e35}{%
+           family={Treerattanapitak},
+           familyi={T\bibinitperiod},
+           given={Kiatichai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0c391400faf47f1bf5904dda0016f331}{%
+           family={Jaruskulchai},
+           familyi={J\bibinitperiod},
+           given={Chuleerat},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{71161b22cfe8edd7acc146038a2c03ae}
+      \strng{fullhash}{71161b22cfe8edd7acc146038a2c03ae}
+      \strng{bibnamehash}{71161b22cfe8edd7acc146038a2c03ae}
+      \strng{authorbibnamehash}{71161b22cfe8edd7acc146038a2c03ae}
+      \strng{authornamehash}{71161b22cfe8edd7acc146038a2c03ae}
+      \strng{authorfullhash}{71161b22cfe8edd7acc146038a2c03ae}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Technology Journal KMUTNB}
+      \field{number}{2}
+      \field{title}{Items based fuzzy C-mean clustering for collaborative filtering}
+      \field{volume}{5}
+      \field{year}{2009}
+      \field{pages}{30\bibrangedash 34}
+      \range{pages}{5}
+    \endentry
+    \entry{koohi2016user}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6849b1302ed315e1a0c83f98c45fd702}{%
+           family={Koohi},
+           familyi={K\bibinitperiod},
+           given={Hamidreza},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7ba646f1078130e119a050ec35211453}{%
+           family={Kiani},
+           familyi={K\bibinitperiod},
+           given={Kourosh},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \strng{fullhash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \strng{bibnamehash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \strng{authorbibnamehash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \strng{authornamehash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \strng{authorfullhash}{a63ed74c8fbca061dc5b3d48eb395172}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Measurement}
+      \field{title}{User based collaborative filtering using fuzzy C-means}
+      \field{volume}{91}
+      \field{year}{2016}
+      \field{pages}{134\bibrangedash 139}
+      \range{pages}{6}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

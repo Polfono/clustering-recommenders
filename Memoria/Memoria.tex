@@ -902,7 +902,7 @@ Tot i això, finalment s’ha descartat l’ús de matrius disperses, ja que, ma
 La gestió de matrius disperses implica estructures de dades més sofisticades i operacions més costoses, especialment en operacions massives o en entorns on es requereix un accés ràpid i freqüent a les valoracions.
 Per aquest motiu, s’ha optat per mantenir l’enfocament basat en matrius densament poblades, tot i la limitació del nombre màxim d’elements.
 
-\section{Conjunt de dades utilitzats}
+\section{Conjunt de dades utilitzades}
 
 \subsection{Conjunt de dades MovieLens} 
 
@@ -998,7 +998,7 @@ Les valoracions són predominantment positives, amb una mitjana de 7,87 estrelle
     \label{fig:analisis_books}
 \end{figure}
 
-\section{Conjunt de dades Jester}
+\subsection{Conjunt de dades Jester}
 
 El conjunt de dades Jester \cite{jesterdataset,goldberg2001eigentaste} prové d’un sistema de recomanació d’acudits, en què els usuaris valoren els acudits en una escala contínua de -10 a +10. Tot i el seu caràcter informal, aquest conjunt ha estat àmpliament utilitzat per la seva densitat i per una estructura peculiar que el fa especialment útil en l’àmbit de la recerca en sistemes de recomanació.
 
@@ -1038,6 +1038,225 @@ A continuació es presenta una taula resum amb les característiques dels conjun
     \caption{Característiques dels conjunts de dades utilitzats}
     \label{tab:datasets}
 \end{table}
+
+\section{Conjunts de dades sintètiques}
+
+El nombre i la varietat de conjunts de dades de valoracions disponibles públicament són sovint limitats, especialment en àmbits menys convencionals.
+
+Les empreses que poden recopilar conjunts de dades de valoracions solen ser reticents a compartir-los, per por de vulnerar la privadesa dels seus usuaris o d’exposar informació comercialment sensible als seus competidors.
+
+A causa d’aquesta escassetat de dades públiques, els professionals han començat a dependre de valoracions sintètiques.
+
+Tanmateix, els resultats obtinguts d’aquests experiments poden ser qüestionables, ja que els conjunts de dades generats sovint no són capaços de captar adequadament les característiques pròpies d’un domini d’interès concret.
+
+En aquest estudi, ens proposem analitzar la capacitat de generalització dels mètodes de clustering en situacions especialment extremes pel que fa a la densitat de les valoracions.
+
+Per aconseguir aquests conjunts de dades peculiars, utilitzem un conjunt de dades de referència com a punt de partida, el qual codifica les particularitats d’un domini específic. Aquest mètode generatiu permet crear diversos conjunts de dades de valoracions amb usuaris que mostren comportaments similars als dels usuaris del conjunt de dades original. Tanmateix, aquests usuaris sintètics no tenen cap relació directa amb persones reals, de manera que no es compromet cap informació privada ni comercialment sensible.
+
+Sostenim que confiar únicament en unes poques distribucions estadístiques calculades empíricament a partir d’un conjunt de dades existent, o definides per un investigador, no és suficient per simular de manera realista els gustos individuals dels éssers humans. Mètodes d’aquest tipus generen conjunts de dades amb usuaris sense preferències pròpies, fet que dificulta enormement el funcionament efectiu de qualsevol sistema de recomanació.
+
+Així doncs, utilitzarem un enfoc similar al  de l'artice \cite{monti2019all} amb un enfocament basat en clustering per generar conjunts de dades sintètiques a partir de conjunts de dades reals, amb l’objectiu d’obtenir conjunts de dades.
+
+Aquesta generació de conjunts sintètics es basa en un procés en dues fases: una fase d'anàlisi del conjunt de referència i una fase de mostreig de valoracions.
+
+\textbf{Fase 1: Anàlisi del conjunt de dades}
+
+
+En primer lloc, s’aplica una anàlisi detallada del conjunt de dades de referència per obtenir una representació fidel del domini. L’element clau d’aquesta fase és la identificació de comunitats d’usuaris mitjançant el mètode de clustering K-means. Per capturar millor la variabilitat de les valoracions, en lloc d’utilitzar una representació binària (valoració positiva o negativa), s’ha optat per una aproximació que considera cada valor de puntuació per separat. Això vol dir que el procés es repeteix per a cada possible valor de valoració (per exemple, de 1 a 5), generant representacions específiques per a cada cas.
+
+Per a cada valor de valoració, es representa cada usuari com un vector binari d'interaccions amb els ítems: un 1 indica que l’usuari ha assignat aquell valor concret a l’ítem, i un 0 indica absència d’aquesta valoració. Aquesta representació permet aplicar K-means per agrupar usuaris amb patrons similars de puntuació en cada nivell.
+
+A partir d’aquesta agrupació, es construeixen tres distribucions empíriques per a cada valor de valoració:
+
+\begin{itemize}
+    \item $\mathbf{P_C^r}$: Distribució de probabilitat que un usuari pertanyi a un determinat clúster per a la valoració $r$.
+    \item $\mathbf{P_U^{k,r}}$: Distribució del nombre de valoracions amb valor $r$ per usuari dins del clúster $k$.
+    \item $\mathbf{P_I^{k,r}}$: Distribució de probabilitat d’interaccions amb valoració $r$ per ítem dins del clúster $k$.
+\end{itemize}
+
+Aquestes distribucions es construeixen comptant les freqüències observades dins cada comunitat i per cada valor de valoració, reflectint així el comportament col·lectiu detallat dels usuaris.
+
+\medskip
+
+\textbf{Fase 2: Generació de valoracions}
+
+Un cop obtingudes les distribucions, es procedeix a generar el nou conjunt de dades mitjançant un procés de mostreig estocàstic, repetit per a cada valor de valoració $r$.
+
+Per cada valor $r$ del conjunt de puntuacions:
+\begin{enumerate}
+    \item Per cada usuari sintètic, se l’assigna a un clúster $k$ segons la distribució $\mathbf{P_C^r}$.
+    \item Es determina el nombre de valoracions amb valor $r$ mitjançant un mostreig de $\mathbf{P_U^{k,r}}$.
+    \item Es seleccionen ítems a valorar amb puntuació $r$, mitjançant un mostreig sense reemplaçament de la distribució $\mathbf{P_I^{k,r}}$.
+\end{enumerate}
+
+Després de repetir aquest procés per a tots els valors possibles, es fusionen les valoracions generades per construir el conjunt de dades final, que conté valoracions multinivell i reflecteix una estructura rica i fidel al conjunt original.
+
+Aquesta metodologia assegura que els conjunts sintètics reflecteixin una estructura latent realista, en què els usuaris tenen gustos diferenciats i les seves interaccions segueixen patrons similars als del conjunt de referència. Això fa que els conjunts generats siguin adequats per a l’avaluació comparativa d’algorismes de clustering i sistemes de recomanació.
+
+Un cop definit i validat el mètode de generació de conjunts de dades sintètiques, el següent pas és escollir el conjunt de dades de referència a partir del qual es generarà. En aquest estudi, s’ha seleccionat el conjunt MovieLens Latest Small, un dels més utilitzats en la recerca sobre sistemes de recomanació, conegut per la seva estructura rica i diversa. A partir d’aquest conjunt, es generaran tres conjunts de dades sintètiques. El primer actuarà com a conjunt base o de control, reproduint de manera fidel les característiques del conjunt original. En canvi, en el segon i tercer conjunts es modificarà manualment la distribució $\mathbf{P_U^{k,r}}$ per tal de crear situacions amb densitats de valoració extremadament baixes i altes, respectivament. Aquest disseny experimental permet avaluar la robustesa i la capacitat de generalització dels mètodes de clustering en escenaris amb densitats diverses.
+
+\subsection{MovieLens sintètic (base)}
+
+El conjunt de dades MovieLens sintètic (base) es genera a partir del conjunt MovieLens Latest Small, amb l’objectiu de reproduir les mateixes característiques i patrons de valoració que el conjunt original. Això permet establir un punt de referència sòlid per a la comparació amb altres conjunts generats.
+
+A partir de l’anàlisi exploratòria del conjunt MovieLens sintètic (base) (Figura~\ref{fig:analisis_ml_synthetic_base}), s’observa que aquest presenta una densitat del 2,38\,\%, similar a la del conjunt original.
+
+La corba de distribució de les valoracions mostra una tendència comparable a la del conjunt original, tot i que amb una distribució més uniforme. La mitjana de les valoracions és de 3,3 estrelles, amb una desviació estàndard d’1,16.
+
+A més, la distribució de valoracions per usuari i per pel·lícula és també semblant a la del conjunt original, tot i que amb una pèrdua notable de la seva llarga cua característica.
+
+En resum, degut a la naturalesa estocàstica del procés de generació, el conjunt sintètic manté l’estructura general del conjunt original, però amb una variabilitat lleugerament més baixa.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/syn-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn-items.png}
+    \caption{Anàlisi exploratòria del conjunt MovieLens sintètic (base)}
+    \label{fig:analisis_ml_synthetic_base}
+\end{figure}
+
+\subsection{MovieLens sintètic (baixa densitat)}
+
+Per generar aquest conjunt, s'ha aplicat una reducció del 98\,\% a la distribució $\mathbf{P_U^{k,r}}$ amb l'objectiu de disminuir la quantitat de valoracions per usuari.
+Aquesta reducció dràstica provoca una disminució significativa de la densitat del conjunt, que passa a ser del 0,29\,\%.
+
+En l'anàlisi (Figura~\ref{fig:analisis_ml_synthetic_low_dens}), s'observen propietats similars, amb una reducció evident en la quantitat de valoracions per usuari i per pel·lícula. La mitjana de les valoracions és de 3,4 estrelles, amb una desviació estàndard d'0,92.
+Es pot observar una clara diferenciació entre la distribució de les valoracions en valoracions majors que 3 estrelles i les inferiors.
+També s'observa una reducció en el nombre de valoracions per pel·lícula i per usuari.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/syn03-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn03-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn03-items.png}
+    \caption{Anàlisi exploratòria del conjunt MovieLens sintètic (baixa densitat)}
+    \label{fig:analisis_ml_synthetic_low_dens}
+\end{figure}
+
+\subsection{MovieLens sintètic (alta densitat)}
+
+En generar aquest conjunt, s'ha assolit una densitat del 83,9\,\%, fet que representa un increment significatiu respecte al conjunt original.
+
+En l'anàlisi (Figura~\ref{fig:analisis_ml_synthetic_high_dens}), es poden observar canvis notables en la distribució de les valoracions. Aquest fenomen es deu al fet que s'ha forçat que cada usuari sintètic valori un gran nombre d'ítems, incloent-hi molts que probablement no li agradin. Això contradiu la naturalesa del conjunt original, en què els usuaris tendeixen a valorar només aquells ítems que els resulten d'interès.
+
+A conseqüència d'això, la mitjana de les valoracions se situa en 2,39 estrelles, amb una desviació estàndard d'1,21. A més, la distribució de les valoracions per usuari i per pel·lícula s'inverteix respecte a les anteriors, mostrant una gran concentració de valoracions per cada usuari i per cada pel·lícula.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{Figuras/syn80-ratings.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn80-users.png}
+    \hfill
+    \includegraphics[width=0.49\textwidth]{Figuras/syn80-items.png}
+    \caption{Anàlisi exploratòria del conjunt MovieLens sintètic (alta densitat)}
+    \label{fig:analisis_ml_synthetic_high_dens}
+\end{figure}
+
+A continuació es presenta una taula resum amb les característiques dels conjunts de dades sintètiques generats (Taula~\ref{tab:datasets_synthetic}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    \textbf{Conjunt} & \textbf{Usuaris} & \textbf{Elements} & \textbf{Valoracions} & \textbf{Densitat (\%)} & \textbf{Escala} \\ \hline
+    Sintètic (base) & 610   & 8.481 & 123.033 & 2,38 & 0.5-5  \\ \hline
+    Sintètic (baixa densitat) & 432   & 1.060 & 1.319  & 0,29 & 0.5-5 \\ \hline
+    Sintètic (alta densitat)        & 610   & 9.694 & 4.963.951 & 83,9 & 0.5-5 \\ \hline
+    \end{tabular}
+    \caption{Característiques dels conjunts de dades sintètiques generats}
+    \label{tab:datasets_synthetic}
+\end{table}
+
+Encara que s’utilitzin dades sintètiques, es donarà més importància a les que provenen d’interaccions reals d’usuaris. Tot i així, aquestes dades s’empraran per analitzar el comportament de les implementacions en situacions anòmales.
+
+\chapter{Sistema de recomanació}
+
+Aquest capítol descriu el sistema de recomanació implementat per a l’avaluació dels diferents mètodes de clustering considerats en aquest estudi. Amb l’objectiu de garantir una comparació justa entre les diferents variants, s’ha establert una arquitectura comuna que comparteix tant la funció de similitud com la metodologia de predicció. Això permet que qualsevol diferència en el rendiment dels sistemes sigui atribuïble únicament a la tècnica de clustering emprada.
+
+Per mesurar la similitud entre usuaris, s’ha optat per la correlació de Pearson. Aquesta és una mesura de similitud fonamental en els sistemes de recomanació i compta amb una àmplia literatura que en recolza l’eficàcia \cite{chowdhury2024evaluating}.
+
+Aquesta mesura és àmpliament utilitzada en sistemes de recomanació basats en el filtratge col·laboratiu, ja que captura la correlació lineal entre els patrons de valoració dels usuaris, tot tenint en compte les diferències en les seves escales personals de valoració. Donats dos usuaris \( u \) i \( v \), i el conjunt d’elements que ambdós han valorat \( I_{uv} \), la correlació de Pearson s’expressa de la forma següent:
+
+\[
+\text{sim}(u,v) = \frac{\sum_{i \in I_{uv}} (r_{u,i} - \bar{r}_u)(r_{v,i} - \bar{r}_v)}{\sqrt{\sum_{i \in I_{uv}} (r_{u,i} - \bar{r}_u)^2} \cdot \sqrt{\sum_{i \in I_{uv}} (r_{v,i} - \bar{r}_v)^2}}
+\]
+
+on \( r_{u,i} \) és la valoració de l’usuari \( u \) sobre l’element \( i \), i \( \bar{r}_u \) és la mitjana de les valoracions de l’usuari \( u \). Aquesta mesura ofereix una normalització implícita respecte a les mitjanes individuals i afavoreix els casos on els usuaris valoren de forma coherent, encara que utilitzin escales diferents.
+
+La correlació de Pearson oscil·la típicament entre -1 i +1, on -1 indica una correlació negativa forta, +1 una correlació positiva forta, i 0 implica absència d’associació. Visualment, una correlació positiva es manifesta quan els valors augmenten conjuntament, mentre que una correlació negativa apareix quan disminueixen conjuntament.
+
+Per a la predicció de valoracions, s’utilitza la tècnica coneguda com a predicció centrada en la mitjana o basada en la desviació respecte a la mitjana. Aquesta metodologia es basa en ajustar la predicció a partir de la mitjana de l’usuari i les desviacions observades en altres usuaris similars. La predicció \( \hat{r}_{u,i} \) que fa l’usuari \( u \) sobre l’element \( i \) es calcula com:
+
+\[
+\hat{r}_{u,i} = \bar{r}_u + \frac{\sum_{v \in N(u)} \text{sim}(u,v) \cdot (r_{v,i} - \bar{r}_v)}{\sum_{v \in N(u)} |\text{sim}(u,v)|}
+\]
+
+on \( N(u) \) és el conjunt d’usuaris més similars a \( u \) que han valorat l’element \( i \), i \( \text{sim}(u,v) \) és la similitud entre els usuaris \( u \) i \( v \), segons la correlació de Pearson. De manera similar a la mesura de similitud, la predicció centrada en la mitjana també té en compte les escales personals de valoració, cosa que permet obtenir estimacions més precises i comparables entre usuaris.
+
+Segons l’anàlisi empírica presentada a \cite{herlocker2002empirical}, la formulació basada en la desviació respecte a la mitjana resulta ser una de les estratègies de predicció no personalitzada més precises, superant altres enfocaments habituals. Això reforça l’ús d’aquest model com a base de comparació robusta en aquest estudi.
+
+L’ús conjunt de la similitud de Pearson i de la predicció centrada en la mitjana com a base comuna respon a diversos motius. En primer lloc, són tècniques consolidades i àmpliament adoptades en la literatura sobre sistemes de recomanació. A més, proporcionen una base robusta per analitzar l’impacte específic del clustering en el rendiment del sistema, i faciliten la comparació directa entre mètodes, evitant que les diferències puguin atribuir-se a variacions en la funció de similitud o en la fórmula de predicció.
+
+\section{Clustering dur}
+
+Tal com es fa en altres treballs \cite{dakhel2011new}, els usuaris s’agrupen exclusivament en un únic clúster mitjançant l’algorisme K-means. Aquesta tècnica de partició busca dividir l’espai d’usuaris en $K$ grups disjunts, de manera que cada usuari pertanyi al clúster amb el centre (centroid) més proper.
+
+L’algorisme K-means funciona de la manera següent:
+
+\begin{enumerate}
+    \item \textbf{Inicialització:} Es trien $K$ punts inicials com a centroids, habitualment de manera aleatòria o mitjançant una estratègia com K-means++ per millorar la convergència.
+    \item \textbf{Assignació d’usuaris:} Cada usuari, representat com un vector de característiques (per exemple, el vector de valoracions normalitzat), s’assigna al clúster amb el centroid més proper, mesurat normalment amb la distància euclidiana.
+    \item \textbf{Reajustament de centroids:} Per a cada clúster, es recalcula el centroid com la mitjana de tots els vectors d’usuaris assignats a aquell clúster.
+    \item \textbf{Iteració:} Els passos d’assignació i reajustament es repeteixen fins que els centroids deixen de moure’s de manera significativa (convergeixen) o s’arriba a un nombre màxim d’iteracions.
+\end{enumerate}
+
+Aquest procediment assegura que la suma dels quadrats de les distàncies internes als clústers (inertia) es minimitza localment, tot i que K-means no garanteix trobar el mínim global.
+
+Un cop determinats els clústers, es calcula la predicció de les valoracions considerant només els veïns dins del mateix clúster que han valorat l’element corresponent.
+
+\section{Clustering difús}
+
+S’ha descartat la implementació proposada per \cite{treerattanapitak2009items}, que feia ús del grau de pertinença i dels centroids per calcular les prediccions. Tot i que aquesta proposta aprofita millor les propietats del clustering difús, contradiu la nostra premissa de mantenir una fórmula de predicció comuna entre totes les variants. A més, en una anàlisi preliminar s’ha detectat un increment significatiu del temps de còmput i un empitjorament considerable dels resultats en comparació amb altres alternatives.
+
+Seguint la proposta de \cite{koohi2016user}, s’ha implementat un mètode de clustering difús per a la creació de clústers d’usuaris. Aquest mètode permet que cada usuari pugui pertànyer a més d’un clúster, amb un grau de pertinença que es determina mitjançant la distància entre l’usuari i els centroids dels clústers.
+
+L’algorisme utilitzat és el Fuzzy C-Means (FCM), una extensió del K-means que introdueix la possibilitat que un mateix usuari tingui diversos graus de pertinença a diferents clústers, en lloc de ser assignat exclusivament a un sol grup. Aquesta característica reflecteix millor la naturalesa difusa de les preferències dels usuaris en sistemes de recomanació, on sovint comparteixen interessos amb múltiples comunitats.
+
+El funcionament de l’algorisme FCM es pot descriure amb els passos següents:
+
+\begin{enumerate}
+    \item \textbf{Inicialització:} Es tria un nombre de clústers \( K \) i un paràmetre de difusió \( m > 1 \) (habitualment \( m = 2 \)), que controla el grau de “fuzziness”. També s’inicialitza la matriu de pertinences \( U \), on \( u_{ij} \) representa el grau de pertinença de l’usuari \( i \) al clúster \( j \), amb valors entre 0 i 1 i la restricció que \( \sum_{j=1}^{K} u_{ij} = 1 \) per a tot \( i \).
+    
+    \item \textbf{Càlcul dels centroids:} Per a cada clúster \( j \), es calcula el centroid \( c_j \) com una mitjana ponderada dels vectors d’usuaris, utilitzant els graus de pertinença elevats a la potència \( m \):
+    \[
+    c_j = \frac{\sum_{i=1}^{N} u_{ij}^m \cdot x_i}{\sum_{i=1}^{N} u_{ij}^m}
+    \]
+    on \( x_i \) és el vector de característiques de l’usuari \( i \).
+
+    \item \textbf{Actualització dels graus de pertinença:} Es recalculen els valors de \( u_{ij} \) a partir de la distància entre l’usuari \( i \) i cada centroid \( c_j \):
+    \[
+    u_{ij} = \left( \sum_{k=1}^{K} \left( \frac{||x_i - c_j||}{||x_i - c_k||} \right)^{\frac{2}{m-1}} \right)^{-1}
+    \]
+    Aquest pas assegura que els usuaris més propers a un centroid tinguin un grau de pertinença més elevat.
+
+    \item \textbf{Iteració:} Es repeteixen els passos de càlcul de centroids i actualització de pertinences fins que es compleixi un criteri de convergència, com ara un canvi mínim en \( U \) o un nombre màxim d’iteracions.
+\end{enumerate}
+
+Seguint la proposta adoptada, una vegada obtinguts els graus de pertinença dels usuaris a cada clúster, per obtenir una assignació final i discreta de cada usuari a un únic clúster, s’aplica la tècnica del \textit{Centre de Gravetat (Center of Gravity)} sobre els graus de pertinença:
+
+\[
+\text{COG}_i = \sum_{j=1}^{K} u_{ij} \cdot j, \quad \text{cluster}_i = \text{round}(\text{COG}_i)
+\]
+
+Això permet capturar la distribució global de la pertinença de l’usuari i assignar-lo al clúster més representatiu segons la seva posició mitjana entre els clústers.
+
+Un cop determinada l’assignació, es calculen les prediccions de valoracions considerant només els veïns del mateix clúster.
+
+\section{Clustering jeràrquic}
 
 \printbibliography[heading=bibintoc]
 
