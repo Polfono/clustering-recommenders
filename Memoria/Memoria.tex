@@ -1258,6 +1258,39 @@ Un cop determinada l’assignació, es calculen les prediccions de valoracions c
 
 \section{Clustering jeràrquic}
 
+El clustering jeràrquic és una tècnica d’agrupament que construeix una jerarquia de clústers, en lloc de generar una partició plana com fan algorismes com K-means o Fuzzy C-means.
+
+Seguint altres treballs \cite{chalco2019hierarchical} i inspirant-nos en una proposta similar, en aquesta secció es descriu la implementació de l’algorisme d’Agrupament Jeràrquic Aglomeratiu (HAC), utilitzant el mètode d’enllaç promig (\textit{average linkage}) i la mètrica de similitud basada en la correlació de Pearson.
+
+L’algorisme HAC comença considerant que cada usuari constitueix un clúster individual. A cada iteració, es fusionen els dos clústers que presenten la màxima similitud, mesurada en aquest cas mitjançant la distància més petita, obtinguda aplicant una transformació inversa a la correlació de Pearson. Per poder utilitzar aquesta mètrica dins el procés jeràrquic, es calcula inicialment la matriu de similitud entre totes les parelles d’usuaris. Atès que HAC requereix una mesura de distància per realitzar les fusions, es converteixen els valors de similitud de Pearson \( S_{\text{Pearson}}(u,v) \) de la manera següent:
+
+\[
+d(u,v) = 
+\begin{cases}
+1000 & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
+\frac{1}{S_{\text{Pearson}}(u,v)} & \text{altrament}
+\end{cases}
+\]
+
+Aquesta transformació penalitza fortament les parelles d’usuaris amb similitud nul·la, evitant-ne l’agrupament prematur i afavorint la formació de clústers amb una coherència interna elevada.
+
+El mètode de fusió utilitzat ha estat l’\textit{average linkage}, o Mètode No Ponderat de Grups amb Mitjanes Aritmètiques (UPGMA, per les seves sigles en anglès). Aquest enfocament calcula la distància entre dos clústers com la mitjana de les distàncies entre totes les parelles d’usuaris que els componen:
+
+\[
+d(A, B) = \frac{1}{|A| \cdot |B|} \sum_{u \in A} \sum_{v \in B} d(u, v)
+\]
+
+Aquest mètode presenta avantatges respecte a altres com l’enllaç simple o complet, ja que produeix clústers amb formes més equilibrades i és menys sensible als valors atípics.
+
+Així, en cada pas del procés d’agrupament aglomeratiu:
+\begin{enumerate}
+    \item S’identifica la parella de clústers amb la distància \(d\) mínima.
+    \item Es fusionen en un nou clúster i es recalculen les distàncies amb la resta segons la fórmula anterior.
+    \item El procés es repeteix fins a obtenir el nombre desitjat de clústers \(K\).
+\end{enumerate}
+
+Un cop determinada l’assignació de clústers, les prediccions de valoracions es calculen considerant exclusivament els veïns que pertanyen al mateix clúster.
+
 \printbibliography[heading=bibintoc]
 
 \end{document}

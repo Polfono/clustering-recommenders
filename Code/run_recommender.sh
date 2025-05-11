@@ -6,7 +6,7 @@ function usage() {
   echo
   echo "Opciones:" >&2
   echo "  -h            Muestra esta ayuda." >&2
-  echo "  -m método     Tipo de clustering: 'hard' o 'fuzzy'." >&2
+  echo "  -m método     Tipo de clustering: 'hard'/'fuzzy'/'hac'." >&2
   echo "  -n clusters   Número de clusters." >&2
   echo "  -d dataset    Nombre del CSV en ../Datasets (sin .csv). Default: ml-small" >&2
   exit 1

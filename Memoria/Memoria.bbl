@@ -747,6 +747,43 @@
       \field{pages}{134\bibrangedash 139}
       \range{pages}{6}
     \endentry
+    \entry{chalco2019hierarchical}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=78fe64ead0c600f72ae46fef81bcd4cf}{%
+           family={Chalco},
+           familyi={C\bibinitperiod},
+           given={César\bibnamedelima Inga},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=1f3c207f09b80da8fd2e355cdd584923}{%
+           family={Chasi},
+           familyi={C\bibinitperiod},
+           given={Rodolfo\bibnamedelima Bojorque},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6defa26c67a59245e931352a39d4648e}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Remigio\bibnamedelima Hurtado},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a47334dc6344978f27b5f0200946b42b}
+      \strng{fullhash}{a47334dc6344978f27b5f0200946b42b}
+      \strng{bibnamehash}{a47334dc6344978f27b5f0200946b42b}
+      \strng{authorbibnamehash}{a47334dc6344978f27b5f0200946b42b}
+      \strng{authornamehash}{a47334dc6344978f27b5f0200946b42b}
+      \strng{authorfullhash}{a47334dc6344978f27b5f0200946b42b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Artificial Intelligence, Software and Systems Engineering: Joint Proceedings of the AHFE 2018 International Conference on Human Factors in Artificial Intelligence and Social Computing, Software and Systems Engineering, The Human Side of Service Engineering and Human Factors in Energy, July 21--25, 2018, Loews Sapphire Falls Resort at Universal Studios, Orlando, Florida, USA 9}
+      \field{title}{Hierarchical clustering for collaborative filtering recommender systems}
+      \field{year}{2019}
+      \field{pages}{346\bibrangedash 356}
+      \range{pages}{11}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

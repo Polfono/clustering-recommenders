@@ -67,4 +67,4 @@
 \contentsline {section}{\numberline {5.1}Clustering dur}{46}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Clustering difús}{47}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Clustering jeràrquic}{48}{section.5.3}%
-\contentsline {chapter}{Bibliografia}{49}{chapter*.4}%
+\contentsline {chapter}{Bibliografia}{50}{chapter*.4}%

@@ -10,6 +10,12 @@ from sklearn.preprocessing import StandardScaler
 from timeit import default_timer as timer
 from tqdm import tqdm
 from sklearn.preprocessing import normalize
+from scipy.cluster.hierarchy import linkage, fcluster
+from scipy.spatial.distance import squareform
+from scipy.spatial.distance import pdist
+from scipy.spatial.distance import squareform
+
+
 
 
 # --------------------
@@ -27,7 +33,7 @@ def hard_cluster(user_item):
     data_scaled = scaler.fit_transform(filled)
 
     # 4) Normalizar cada vector usuario a norma L2 (opcional)
-    
+    # mirar de quitar
     data_norm = normalize(data_scaled, norm='l2', axis=1)
 
     # 5) Aplicar clustering duro (KMeans)
@@ -71,11 +77,51 @@ def fuzzy_cmeans_cluster(user_item):
 
     return cluster_assign, cluster_members
 
+def hac_cluster(similarity_df):
+
+    # 1) Convertir similitud a distancia: d = 1/s si s>0, o un valor grande si s<=0
+    sim = similarity_df.values.copy()
+    with np.errstate(divide='ignore'):
+        dist = np.where(sim > 0, 1.0/sim, 1000.0)
+    # Aseguramos diagonal cero
+    np.fill_diagonal(dist, 0.0)
+    
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = squareform(dist, checks=False)
+    
+    # 3) HAC linkage
+    Z_average  = linkage(dist_vec, method='average')
+    """
+    Z_weighted = linkage(dist_vec, method='weighted')
+    Z_centroid = linkage(dist_vec, method='centroid')
+    Z_single   = linkage(dist_vec, method='single')
+    Z_complete = linkage(dist_vec, method='complete')
+    """
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_average, t=n_clusters, criterion='maxclust') - 1
+    """
+    labels_weighted = fcluster(Z_weighted, t=n_clusters, criterion='maxclust') - 1
+    labels_centroid = fcluster(Z_centroid, t=n_clusters, criterion='maxclust') - 1
+    labels_single   = fcluster(Z_single, t=n_clusters, criterion='maxclust')  - 1
+    labels_complete = fcluster(Z_complete, t=n_clusters, criterion='maxclust') - 1
+    """
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
 
 # Diccionario de métodos disponibles
 CLUSTER_METHODS = {
     'hard': hard_cluster,
-    'fuzzy': fuzzy_cmeans_cluster
+    'fuzzy': fuzzy_cmeans_cluster,
+    'hac': hac_cluster
 }
 
 # --------------------
@@ -175,7 +221,13 @@ def evaluate_fold(args):
 
     start_cluster = timer()
     cluster_fn = CLUSTER_METHODS[cluster_method]
-    clusters, cluster_members = cluster_fn(user_item)
+
+    if(cluster_method == 'hac'):
+        # HAC no necesita el user_item
+        clusters, cluster_members = cluster_fn(sim_df)
+    else:
+        clusters, cluster_members = cluster_fn(user_item)
+
     end_cluster = timer()
 
     y_true = []
@@ -247,7 +299,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Ejecuta validación cruzada con clustering hard o fuzzy sobre un dataset de ratings.'
     )
-    parser.add_argument('-m', '--method', choices=['hard', 'fuzzy'], default='hard',
+    parser.add_argument('-m', '--method', choices=['hard', 'fuzzy', 'hac'], default='hard',
                         help="Tipo de clustering ('hard' o 'fuzzy').")
     parser.add_argument('-n', '--n_clusters', type=int, default=1,
                         help='Número de clusters a usar.')
