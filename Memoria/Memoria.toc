@@ -64,7 +64,9 @@
 \contentsline {subsection}{\numberline {4.3.2}MovieLens sintètic (baixa densitat)}{42}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}MovieLens sintètic (alta densitat)}{43}{subsection.4.3.3}%
 \contentsline {chapter}{\numberline {5}Sistema de recomanació}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Clustering dur}{46}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Clustering difús}{47}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Clustering jeràrquic}{48}{section.5.3}%
-\contentsline {chapter}{Bibliografia}{50}{chapter*.4}%
+\contentsline {section}{\numberline {5.1}Clustering dur}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Clustering difús}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Clustering jeràrquic}{49}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Clustering per densitat}{50}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Clustering per model}{51}{section.5.5}%
+\contentsline {chapter}{Bibliografia}{53}{chapter*.4}%

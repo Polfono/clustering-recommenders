@@ -9,13 +9,9 @@ import skfuzzy as fuzz
 from sklearn.preprocessing import StandardScaler
 from timeit import default_timer as timer
 from tqdm import tqdm
-from sklearn.preprocessing import normalize
 from scipy.cluster.hierarchy import linkage, fcluster
 from scipy.spatial.distance import squareform
-from scipy.spatial.distance import pdist
-from scipy.spatial.distance import squareform
 from sklearn.mixture import GaussianMixture
-from sklearn.model_selection import ParameterGrid
 
 def cluster_entropy(labels, n_clusters):
     total = len(labels)
@@ -84,12 +80,17 @@ def fuzzy_cmeans_cluster(user_item):
 def hac_cluster(similarity_df):
 
     # 1) Convertir similitud a distancia: d = 1/s si s>0, o un valor grande si s<=0
-    sim = similarity_df.values.copy()
+    sim = 1 + similarity_df.values.copy()
     with np.errstate(divide='ignore'):
         dist = np.where(sim > 0, 1.0/sim, 1000.0)
     # Aseguramos diagonal cero
     np.fill_diagonal(dist, 0.0)
-    
+    '''
+    dist = 1 - similarity_df.values.copy()
+    dist[dist < 0] = 0.0
+    np.fill_diagonal(dist, 0.0)
+    '''
+
     # 2) Obtener el vector condensado para pdist
     dist_vec = squareform(dist, checks=False)
     
@@ -120,20 +121,24 @@ def hac_cluster(similarity_df):
     
     return labels_average, cluster_members
 
-def density_cluster(user_item):
-    # 1) Imputación de NaNs con la media de cada usuario
-    filled = user_item.values.copy()
-    user_means = np.nanmean(filled, axis=1, keepdims=True)
-    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
-
-    # 3) Estandarizar características (items)
-    scaler = StandardScaler()
-    data_scaled = scaler.fit_transform(filled)
+def density_cluster(sim):
+    sim = 1 + sim.values.copy()
+    with np.errstate(divide='ignore'):
+        dist = np.where(sim > 0, 1.0/sim, 1000.0)
+    # Aseguramos diagonal cero
+    np.fill_diagonal(dist, 0.0)
 
     # 4) Aplicar DBSCAN
     # eps y min_samples pueden ajustarse según el dataset
-    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric='cosine', n_jobs=-1)
-    labels = dbscan.fit_predict(data_scaled)
+    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric='precomputed', n_jobs=-1)
+    labels = dbscan.fit_predict(dist)
+
+    # Calcular y mostrar el porcentaje de usuarios sin clúster asignado
+    num_unassigned = np.sum(labels == -1)
+    total_users = len(labels)
+    percent_unassigned = 100 * num_unassigned / total_users
+    print(f"Porcentaje de usuarios sin clúster asignado: {percent_unassigned:.2f}%")
+
 
     # DBSCAN asigna -1 a ruido, convertimos en cluster separado o lo ignoramos
     unique_labels = set(labels)
@@ -284,7 +289,7 @@ def evaluate_fold(args):
     start_cluster = timer()
     cluster_fn = CLUSTER_METHODS[cluster_method]
 
-    if(cluster_method == 'hac'):
+    if(cluster_method == 'hac' or cluster_method == 'density'):
         # HAC no necesita el user_item
         clusters, cluster_members = cluster_fn(sim_df)
     else:
@@ -393,7 +398,7 @@ if __name__ == '__main__':
     MIN_RATING = ratings['rating'].min()
     MAX_RATING = ratings['rating'].max()
 
-    eps = 0.5
+    eps = 0.85
     min_samples = 5
 
     cross_validate(ratings, cluster_method=args.method)

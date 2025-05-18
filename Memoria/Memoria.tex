@@ -1175,6 +1175,8 @@ Encara que s’utilitzin dades sintètiques, es donarà més importància a les 
 
 \chapter{Sistema de recomanació}
 
+\textbf{Arquitectura comuna del sistema de recomanació}
+
 Aquest capítol descriu el sistema de recomanació implementat per a l’avaluació dels diferents mètodes de clustering considerats en aquest estudi. Amb l’objectiu de garantir una comparació justa entre les diferents variants, s’ha establert una arquitectura comuna que comparteix tant la funció de similitud com la metodologia de predicció. Això permet que qualsevol diferència en el rendiment dels sistemes sigui atribuïble únicament a la tècnica de clustering emprada.
 
 Per mesurar la similitud entre usuaris, s’ha optat per la correlació de Pearson. Aquesta és una mesura de similitud fonamental en els sistemes de recomanació i compta amb una àmplia literatura que en recolza l’eficàcia \cite{chowdhury2024evaluating}.
@@ -1201,6 +1203,38 @@ Segons l’anàlisi empírica presentada a \cite{herlocker2002empirical}, la for
 
 L’ús conjunt de la similitud de Pearson i de la predicció centrada en la mitjana com a base comuna respon a diversos motius. En primer lloc, són tècniques consolidades i àmpliament adoptades en la literatura sobre sistemes de recomanació. A més, proporcionen una base robusta per analitzar l’impacte específic del clustering en el rendiment del sistema, i faciliten la comparació directa entre mètodes, evitant que les diferències puguin atribuir-se a variacions en la funció de similitud o en la fórmula de predicció.
 
+\vspace{0.5cm}
+\textbf{Algorismes de clustering emprats}
+
+A grans trets, els algorismes de clustering més comuns, i que tractarem en aquest treball, es poden agrupar en cinc famílies principals segons com entenen i construeixen els grups. \cite{ezugwu2022comprehensive}
+
+En primer lloc, tenim el clustering dur, que divideix el conjunt de dades en $k$ grups mútuament excloents. Entre els algorismes més coneguts d’aquesta família hi ha el K-means, K-means++, Mini-Batch K-means i K-medoids, entre d'altres. En aquest treball ens centrarem en el K-means, ja que, a més de ser àmpliament utilitzat en entorns pràctics, destaca per la seva simplicitat conceptual i eficiència computacional, la qual cosa el converteix en un bon punt de partida per introduir el clustering dur.
+
+A continuació, trobem el clustering difús, que permet que un mateix element pugui pertànyer a més d’un clúster amb un grau de pertinença associat. Els algorismes més representatius d’aquesta categoria són el Fuzzy C-means (FCM), Possibilistic C-means (PCM) i Gustafson–Kessel (GK). En aquest treball ens centrarem en el FCM, atès que és àmpliament emprat en problemes on es busca gestionar la incertesa o l’ambigüitat en la classificació, com ara en el reconeixement de patrons.
+
+El tercer tipus és el clustering jeràrquic, que construeix una jerarquia d’agrupacions mitjançant un arbre o dendrograma. Els mètodes més coneguts d’aquesta família són els algorismes aglomeratius i divisoris. En aquest treball ens centrarem en l’aglomeratiu, ja que ofereix una major flexibilitat en l'elecció de la mesura de distància i permet visualitzar fàcilment l’estructura de les dades, cosa que el fa especialment útil per a anàlisis exploratòries.
+
+El quart enfocament és el clustering basat en densitat, que identifica agrupacions com a regions de major densitat separades per àrees de baixa densitat. Els algorismes més coneguts d’aquesta família són DBSCAN, OPTICS i HDBSCAN. En aquest treball posarem l’accent en DBSCAN, perquè destaca per la seva capacitat per detectar formes arbitràries de clústers i gestionar bé el soroll, cosa que el fa adequat per a dades reals amb estructures no lineals.
+
+Finalment, trobem el clustering basat en models, que assumeix que les dades provenen d’una combinació de distribucions estadístiques subjacents. Els algorismes més habituals en aquesta categoria són el Gaussian Mixture Model (GMM) i el Dirichlet Process Mixture Model (DPMM). En aquest treball analitzarem el GMM, ja que ofereix una aproximació probabilística robusta i flexible que permet modelar clústers amb formes el·líptiques i proporciona una estimació explícita de la probabilitat de pertinença de cada punt.
+
+A continuació es presenta una taula resum amb els algorismes de clustering analitzats (Taula~\ref{tab:algorithms}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Algorisme} & \textbf{Tipus} & \textbf{Complexitat} \\ \hline
+    K-means & Dur  & $O(n)$ \\ \hline
+    Fuzzy C-means & Difús  & $O(n)$ \\ \hline
+    Aglomeratiu & Jeràrquic  & $O(n^2)$ \\ \hline
+    DBSCAN & Densitat  & $O(n \cdot \log n)$ \\ \hline
+    GMM & Model  & $O(n)$ \\ \hline
+    \end{tabular}
+    \caption{Algorismes de clustering analitzats}
+    \label{tab:algorithms}
+\end{table}
+ 
 \section{Clustering dur}
 
 Tal com es fa en altres treballs \cite{dakhel2011new}, els usuaris s’agrupen exclusivament en un únic clúster mitjançant l’algorisme K-means. Aquesta tècnica de partició busca dividir l’espai d’usuaris en $K$ grups disjunts, de manera que cada usuari pertanyi al clúster amb el centre (centroid) més proper.
@@ -1267,10 +1301,16 @@ L’algorisme HAC comença considerant que cada usuari constitueix un clúster i
 \[
 d(u,v) = 
 \begin{cases}
-1000 & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
+MAX_{DIST} & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
 \frac{1}{S_{\text{Pearson}}(u,v)} & \text{altrament}
 \end{cases}
 \]
+
+On $MAX_{DIST}$ (escollit com a 1000 en el nostre cas) denota la distància màxima entre dos punts.
+Com en la correlació de Pearson, el resultat de la similitud també pot ser negatiu, però la similitud negativa no es pot modelar mitjançant l'equació.  
+Hem gestionat aquest problema afegint 1 a tots els resultats de similitud retornats per la correlació de Pearson (és a dir,  
+$\text{sim}(u) \rightarrow \text{sim}(u) + 1,\ \forall u \in U$), i després s'aplica l'equació sobre els resultats de similitud positius.
+
 
 Aquesta transformació penalitza fortament les parelles d’usuaris amb similitud nul·la, evitant-ne l’agrupament prematur i afavorint la formació de clústers amb una coherència interna elevada.
 
@@ -1290,6 +1330,90 @@ Així, en cada pas del procés d’agrupament aglomeratiu:
 \end{enumerate}
 
 Un cop determinada l’assignació de clústers, les prediccions de valoracions es calculen considerant exclusivament els veïns que pertanyen al mateix clúster.
+
+\section{Clustering per densitat}
+
+Per a l’agrupament basat en densitat s’ha utilitzat l’algorisme DBSCAN (\emph{Density-Based Spatial Clustering of Applications with Noise}), com també s’ha fet en altres treballs \cite{satsiou2017hybrid}.
+
+El funcionament de DBSCAN es basa en dos paràmetres principals:
+\begin{itemize}
+    \item \textbf{\( \varepsilon \)}: radi del veïnat considerat per avaluar la densitat al voltant d’un punt.
+    \item \textbf{MinPts}: nombre mínim de punts que han d’existir dins del radi \( \varepsilon \) perquè un punt pugui iniciar la formació d’un grup.
+\end{itemize}
+
+Les distàncies entre usuaris es calculen de la mateixa manera que en l’apartat de clustering jeràrquic, partint de la similitud de Pearson transformada en distància:
+
+\[
+d(u,v) = 
+\begin{cases}
+MAX_{DIST} & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
+\frac{1}{S_{\text{Pearson}}(u,v)} & \text{altrament}
+\end{cases}
+\]
+
+
+El funcionament de l’algorisme DBSCAN es pot resumir en els següents passos:
+
+\begin{enumerate}
+    \item \textbf{Inicialització:} Es fixen els valors dels paràmetres \(\varepsilon\) (distància màxima per considerar dos punts com a veïns) i \(\mathit{MinPts}\) (nombre mínim de veïns per formar un grup).
+    
+    \item \textbf{Avaluació dels punts:} Per a cada usuari, es compta quants altres usuaris es troben dins la distància \(\varepsilon\).
+    \begin{itemize}
+        \item Si un usuari té com a mínim \(\mathit{MinPts}\) veïns, es considera apte per iniciar un grup i unir-hi els punts propers.
+        \item Si en té menys, només podrà afegir-se a un grup si es troba dins del veïnat d’un altre usuari que sí compleixi el criteri anterior.
+        \item Els usuaris que no compleixen cap dels dos casos anteriors no s’inclouen en cap grup.
+    \end{itemize}
+    
+    \item \textbf{Formació dels grups:} Per a cada usuari que pot formar grup:
+    \begin{enumerate}
+        \item Es crea un nou grup i s’hi afegeix aquest usuari.
+        \item Es continua afegint al grup qualsevol usuari proper que compleixi els criteris de densitat, així com els seus veïns, de manera recursiva.
+    \end{enumerate}
+    
+    \item \textbf{Finalització:} Quan tots els grups han estat formats, l’algorisme conclou. Els usuaris que no han estat assignats a cap grup en formen un de nou.
+\end{enumerate}
+
+Un cop formats els grups, la predicció de valoracions es calcula seguint la mateixa lògica que en les tècniques anteriors: per a cada parella usuari–ítem, només es tenen en compte les valoracions d’altres usuaris que formen part del mateix grup.
+
+\section{Clustering per model}
+
+Per al clustering per model s’ha escollit l’ús del \emph{Gaussian Mixture Model} (GMM), una tècnica probabilística que modela la distribució dels usuaris com una combinació de $K$ distribucions gaussiànes. A diferència de K-means, que realitza una partició dura, GMM permet un modelatge de pertinença suau, obtenint per a cada usuari responsabilitats (\emph{responsibilities}) associades a cada component gaussià. Aquesta aproximació ja ha estat utilitzada en sistemes de recomanació col·laboratius, com es mostra a \cite{yan2019collaborative}.
+
+L’algorisme GMM mitjançant l’EM (\emph{Expectation–Maximization}) es desenvolupa de la següent manera:
+
+\begin{enumerate}
+    \item \textbf{Inicialització:} Es defineix el nombre de components $K$ i s’inicialitzen els paràmetres del model:
+    \[
+    \Theta^{(0)} = \{\pi_j^{(0)}, \mu_j^{(0)}, \Sigma_j^{(0)}\}_{j=1}^K,
+    \]
+    on $\pi_j$ són els pesos de barreja (satisfent $\sum_j \pi_j = 1$), $\mu_j$ els vectors de mitjana i $\Sigma_j$ les matrius de covariància diagonals de cada component.
+
+    \item \textbf{E–step (Expectació):} Per a cada usuari $i$ (representat pel vector de característiques $x_i$), es calculen les responsabilitats $\gamma_{ij}$, és a dir, la probabilitat de pertinença de $x_i$ al component $j$:
+    \[
+    \gamma_{ij} = \frac{\pi_j \,\mathcal{N}(x_i \mid \mu_j, \Sigma_j)}{\sum_{l=1}^K \pi_l \,\mathcal{N}(x_i \mid \mu_l, \Sigma_l)},
+    \]
+    on $\mathcal{N}(x \mid \mu, \Sigma)$ és la densitat de la distribució normal multivariante.
+
+    \item \textbf{M–step (Maximització):} Es reestimen els paràmetres del model utilizant les responsabilitats calculades:
+    \[
+    N_j = \sum_{i=1}^N \gamma_{ij},
+    \]
+    \[
+    \pi_j^{\text{new}} = \frac{N_j}{N}, \quad
+    \mu_j^{\text{new}} = \frac{1}{N_j} \sum_{i=1}^N \gamma_{ij}\, x_i, \quad
+    \Sigma_j^{\text{new}} = \frac{1}{N_j} \sum_{i=1}^N \gamma_{ij}\, (x_i - \mu_j^{\text{new}})(x_i - \mu_j^{\text{new}})^\top.
+    \]
+
+    \item \textbf{Iteració:} Els passos d’\emph{E–step} i \emph{M–step} es repeteixen fins que la variació en el log‑vèrtex o en els paràmetres sigui inferior a un llindar predeterminat, o s’arribi al nombre màxim d’iteracions.
+\end{enumerate}
+
+Un cop convergit el model, es pot assignar cada usuari $i$ al clúster $\hat{j}$ per al qual $\gamma_{i\hat{j}}$ és màxima (assignació dura) o bé mantenir les responsabilitats per a un càlcul de predicció difús. En la nostra implementació hem optat per l’assignació dura:
+
+\[
+\hat{j}_i = \arg\max_{j} \;\gamma_{ij}.
+\]
+
+Finalment, la predicció de la valoració de l’usuari $u$ per l’ítem $v$ es calcula considerant exclusivament les valoracions aportades pels usuaris que han estat assignats al mateix component gaussià que $u$.
 
 \printbibliography[heading=bibintoc]
 

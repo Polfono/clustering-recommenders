@@ -386,6 +386,8 @@ INPUT ./Figuras/syn80-items.png
 INPUT ./Figuras/syn80-items.png
 INPUT ./Figuras/syn80-items.png
 INPUT ./Figuras/syn80-items.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT Memoria.aux

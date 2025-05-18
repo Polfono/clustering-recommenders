@@ -651,6 +651,64 @@
       \field{pages}{287\bibrangedash 310}
       \range{pages}{24}
     \endentry
+    \entry{ezugwu2022comprehensive}{article}{}
+      \name{author}{7}{}{%
+        {{hash=7d0212acf93bc31f5ada23a3e50b1841}{%
+           family={Ezugwu},
+           familyi={E\bibinitperiod},
+           given={Absalom\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=247d707b99e9b0c2ddc1bce20c7519f0}{%
+           family={Ikotun},
+           familyi={I\bibinitperiod},
+           given={Abiodun\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a32e5e8061c8f3da36ffcdf56d0d0530}{%
+           family={Oyelade},
+           familyi={O\bibinitperiod},
+           given={Olaide\bibnamedelima O},
+           giveni={O\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=61b325a50c18a490fd21f80291e071af}{%
+           family={Abualigah},
+           familyi={A\bibinitperiod},
+           given={Laith},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e382b5203103f6f3ca38608b90d8f838}{%
+           family={Agushaka},
+           familyi={A\bibinitperiod},
+           given={Jeffery\bibnamedelima O},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=c32f5b1620b46efabdb8ae85e17f4ad8}{%
+           family={Eke},
+           familyi={E\bibinitperiod},
+           given={Christopher\bibnamedelima I},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=34921b68377a5c6967b47deb564857ae}{%
+           family={Akinyelu},
+           familyi={A\bibinitperiod},
+           given={Andronicus\bibnamedelima A},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{807259ce4e143ec9eeff43ec37ef7da0}
+      \strng{fullhash}{6a323fb1f6ba12efa956f74eae07eeb2}
+      \strng{bibnamehash}{807259ce4e143ec9eeff43ec37ef7da0}
+      \strng{authorbibnamehash}{807259ce4e143ec9eeff43ec37ef7da0}
+      \strng{authornamehash}{807259ce4e143ec9eeff43ec37ef7da0}
+      \strng{authorfullhash}{6a323fb1f6ba12efa956f74eae07eeb2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Engineering Applications of Artificial Intelligence}
+      \field{title}{A comprehensive survey of clustering algorithms: State-of-the-art machine learning applications, taxonomy, challenges, and future research prospects}
+      \field{volume}{110}
+      \field{year}{2022}
+      \field{pages}{104743}
+      \range{pages}{1}
+    \endentry
     \entry{dakhel2011new}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=7feb5ef8ba20574c68dbceef1065912b}{%
@@ -702,8 +760,8 @@
       \strng{authorbibnamehash}{71161b22cfe8edd7acc146038a2c03ae}
       \strng{authornamehash}{71161b22cfe8edd7acc146038a2c03ae}
       \strng{authorfullhash}{71161b22cfe8edd7acc146038a2c03ae}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information Technology Journal KMUTNB}
@@ -778,11 +836,81 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Advances in Artificial Intelligence, Software and Systems Engineering: Joint Proceedings of the AHFE 2018 International Conference on Human Factors in Artificial Intelligence and Social Computing, Software and Systems Engineering, The Human Side of Service Engineering and Human Factors in Energy, July 21--25, 2018, Loews Sapphire Falls Resort at Universal Studios, Orlando, Florida, USA 9}
+      \field{booktitle}{Advances in Artificial Intelligence, Software and Systems Engineering: Joint Proceedings of the AHFE 2018 International Conference}
       \field{title}{Hierarchical clustering for collaborative filtering recommender systems}
       \field{year}{2019}
       \field{pages}{346\bibrangedash 356}
       \range{pages}{11}
+    \endentry
+    \entry{satsiou2017hybrid}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ad3aed55ed615da75a08ff0764a1faa7}{%
+           family={Satsiou},
+           familyi={S\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=45becfb0995da893dea48fffbc5c910b}{%
+           family={Vrochidis},
+           familyi={V\bibinitperiod},
+           given={Stefanos},
+           giveni={S\bibinitperiod}}}%
+        {{hash=50c1c75c0291ee56b3303853d6487aa7}{%
+           family={Kompatsiaris},
+           familyi={K\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{488de39f9cea1318737cee35446bd38f}
+      \strng{fullhash}{488de39f9cea1318737cee35446bd38f}
+      \strng{bibnamehash}{488de39f9cea1318737cee35446bd38f}
+      \strng{authorbibnamehash}{488de39f9cea1318737cee35446bd38f}
+      \strng{authornamehash}{488de39f9cea1318737cee35446bd38f}
+      \strng{authorfullhash}{488de39f9cea1318737cee35446bd38f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{LNCS 10750 Internet Science}
+      \field{title}{A Hybrid Recommendation System Based on Density-Based Clustering}
+      \field{year}{2017}
+      \field{pages}{49}
+      \range{pages}{1}
+    \endentry
+    \entry{yan2019collaborative}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7933eb678bf063c7f65cd81f78292236}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Hangyu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0ca96a9b546781174b6ed413fd56cbab}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a5fdc25541ae5faa8110b19759877a37}
+      \strng{fullhash}{a5fdc25541ae5faa8110b19759877a37}
+      \strng{bibnamehash}{a5fdc25541ae5faa8110b19759877a37}
+      \strng{authorbibnamehash}{a5fdc25541ae5faa8110b19759877a37}
+      \strng{authornamehash}{a5fdc25541ae5faa8110b19759877a37}
+      \strng{authorfullhash}{a5fdc25541ae5faa8110b19759877a37}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ieee Access}
+      \field{title}{Collaborative filtering based on Gaussian mixture model and improved Jaccard similarity}
+      \field{volume}{7}
+      \field{year}{2019}
+      \field{pages}{118690\bibrangedash 118701}
+      \range{pages}{12}
     \endentry
   \enddatalist
 \endrefsection
