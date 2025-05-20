@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import KFold
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-from sklearn.cluster import DBSCAN
+from sklearn.cluster import KMeans, DBSCAN
 import skfuzzy as fuzz
 from sklearn.preprocessing import StandardScaler
 from timeit import default_timer as timer
@@ -170,7 +170,7 @@ def kmeans_numba_parallel_fixed(data, n_clusters, max_iters=100, tol=1e-4):
 # 1) CLUSTERING METHODS
 # --------------------
 
-def hard_cluster(user_item):
+def hard_cluster_pearson(user_item):
     sample = user_item.to_numpy()
     sample[np.isnan(sample)] = 0
     
@@ -183,6 +183,28 @@ def hard_cluster(user_item):
 
     
     return labels, cluster_members
+
+def hard_cluster(user_item):
+    # 1) Imputación de NaNs con la media de cada usuario
+    filled = user_item.values.copy()
+    user_means = np.nanmean(filled, axis=1, keepdims=True)
+    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
+
+    # 3) Estandarizar características (items)
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(filled)
+
+    # 5) Aplicar clustering duro (KMeans)
+    kmeans = KMeans(n_clusters=n_clusters, random_state=seed)
+    clusters = kmeans.fit_predict(data_scaled)
+
+    # 6) Agrupar índices de usuarios por clúster asignado
+    cluster_members = {
+        cid: np.where(clusters == cid)[0]
+        for cid in range(n_clusters)
+    }
+
+    return clusters, cluster_members
 
 
 def fuzzy_cmeans_cluster(user_item):
@@ -216,11 +238,16 @@ def fuzzy_cmeans_cluster(user_item):
 def hac_cluster(similarity_df):
 
     # 1) Convertir similitud a distancia: d = 1/s si s>0, o un valor grande si s<=0
-    sim = 1 + similarity_df
+    sim = 1 + similarity_df.values.copy()
     with np.errstate(divide='ignore'):
         dist = np.where(sim > 0, 1.0/sim, 1000.0)
     # Aseguramos diagonal cero
     np.fill_diagonal(dist, 0.0)
+    '''
+    dist = 1 - similarity_df.values.copy()
+    dist[dist < 0] = 0.0
+    np.fill_diagonal(dist, 0.0)
+    '''
 
     # 2) Obtener el vector condensado para pdist
     dist_vec = squareform(dist, checks=False)
@@ -253,7 +280,7 @@ def hac_cluster(similarity_df):
     return labels_average, cluster_members
 
 def density_cluster(sim):
-    sim = 1 + sim
+    sim = 1 + sim.values.copy()
     with np.errstate(divide='ignore'):
         dist = np.where(sim > 0, 1.0/sim, 1000.0)
     # Aseguramos diagonal cero
@@ -316,6 +343,7 @@ def gmm_cluster(user_item):
 # Diccionario de métodos disponibles
 CLUSTER_METHODS = {
     'hard': hard_cluster,
+    'hard_pearson': hard_cluster_pearson,
     'fuzzy': fuzzy_cmeans_cluster,
     'hac': hac_cluster,
     'density': density_cluster,
@@ -351,84 +379,82 @@ def similarity(train_df):
     # Pearson
     sim = np.divide(numerator, denominator, out=np.zeros_like(numerator), where=denominator != 0)
 
-    return sim, R_centered, means, user_item
+    return pd.DataFrame(sim, index=user_item.index, columns=user_item.index), R_centered, means, user_item
 
 # --------------------
 # 3) PREDICCIÓN
 # --------------------
 
-@njit
-def predict_with_numba(top_sims: np.ndarray,
-                       deviations: np.ndarray,
-                       means: np.ndarray,
-                       user_idx: int) -> float:
-    denom = 0.0
-    # sum of absolute similarities
-    for i in range(top_sims.shape[0]):
-        denom += abs(top_sims[i])
+# --- Global Caches for Precomputation ---
+_UIDX_CACHE = {}
+_ITEM_COL_LOC_CACHE = {}
+_MEMBERS_IN_CLUSTER_CACHE = {} 
+_HAS_RATED_MASK_CACHE = {} 
+_SIM_DF_NP_CACHE = {} 
+_USER_ITEM_ISNA_VALUES_CACHE = {}
 
-    if denom < 1e-9:
-        # fallback to user's mean if no significant similarity
-        return means[user_idx]
+
+def predict_rating(user_id, item_id, sim_df, R_centered, means, user_item, clusters, cluster_members):
+    global time_cluster, time_deviations, time_prediction, time_similarities, top_k, MIN_RATING, MAX_RATING
+    global _UIDX_CACHE, _ITEM_COL_LOC_CACHE, _MEMBERS_IN_CLUSTER_CACHE, _HAS_RATED_MASK_CACHE, _SIM_DF_NP_CACHE
+
+    user_idx = _UIDX_CACHE[user_id]
+
+    start_time_cluster = time.time()
+    members_array = _MEMBERS_IN_CLUSTER_CACHE[user_idx]
+    time_cluster += time.time() - start_time_cluster
+    
+    start_time_similarities = time.time()
+    item_col_loc = _ITEM_COL_LOC_CACHE[item_id]
+    has_rated_item_mask = _HAS_RATED_MASK_CACHE[item_id]
+        
+    if members_array.size > 0:
+        valid_candidates_mask = has_rated_item_mask[members_array]
+        candidate_neighbors = members_array[valid_candidates_mask]
     else:
-        # weighted average of deviations
-        numer = 0.0
-        for i in range(top_sims.shape[0]):
-            numer += top_sims[i] * deviations[i]
-        delta = numer / denom
-        return means[user_idx] + delta
+        candidate_neighbors = np.array([], dtype=int)
+        
+    time_similarities += time.time() - start_time_similarities
+
+    if not candidate_neighbors.size:
+        return means[user_idx]
+
+    start_time_deviations = time.time()
+    sim_df_np_ = _SIM_DF_NP_CACHE['cached']
+    neighbor_sims = sim_df_np_[user_idx, candidate_neighbors]
+    neighbor_deviations = R_centered[candidate_neighbors, item_col_loc]
+
+    num_candidates = neighbor_sims.shape[0]
+
+    if num_candidates == 0: 
+        time_deviations += time.time() - start_time_deviations
+        return means[user_idx]
+
+    if top_k < num_candidates:
+        top_k_relative_indices_unsorted = np.argpartition(-neighbor_sims, top_k - 1)[:top_k]
+        sims_of_top_k_partitioned = neighbor_sims[top_k_relative_indices_unsorted]
+        order_within_top_k = np.argsort(-sims_of_top_k_partitioned)
+        final_top_k_relative_indices = top_k_relative_indices_unsorted[order_within_top_k]
+    else:
+        final_top_k_relative_indices = np.argsort(-neighbor_sims)
+
+    top_sims = neighbor_sims[final_top_k_relative_indices]
+    top_devs = neighbor_deviations[final_top_k_relative_indices]
+
+    sum_abs_top_sims = np.sum(np.abs(top_sims))
+    time_deviations += time.time() - start_time_deviations
     
+    if sum_abs_top_sims < 1e-9:
+        return means[user_idx]
 
-    
+    start_time_prediction = time.time()
+    weighted_sum_devs = np.dot(top_sims, top_devs)
+    prediction_delta = weighted_sum_devs / sum_abs_top_sims
+    predicted_rating = means[user_idx] + prediction_delta
+    time_prediction += time.time() - start_time_prediction
 
-def predict_rating(user_id, item_id,
-                   sim_df, R_centered, means,
-                   user_item, clusters,
-                   members_arr_dict):
-    
-    global time_cluster, time_candidates, time_similarities, time_deviations, time_topk, time_prediction
-    # Map user_id to index in sim_df / R
-    user_idx = user_item.index.get_loc(user_id)
+    return float(np.clip(predicted_rating, MIN_RATING, MAX_RATING))
 
-    # 1) Cluster lookup
-    start = time.time()
-    cl = clusters[user_idx]
-    members_arr = members_arr_dict[cl]
-    # remove self from cluster
-    members_arr = members_arr[members_arr != user_idx]
-    time_cluster += time.time() - start
-
-    # If no other members, return user mean
-    if members_arr.size == 0:
-        return float(means[user_idx])
-
-    # 2) Similarities within cluster
-    start = time.time()
-    sims_all = sim_df[user_idx, members_arr]
-    time_similarities += time.time() - start
-
-    # 3) Select top-K most similar users
-    start = time.time()
-    # Get indices of top-K similar users in the cluster
-    k = min(top_k, sims_all.size)
-    top_idxs = np.argsort(-sims_all)[:k]
-    top_users = members_arr[top_idxs]
-    top_sims = sims_all[top_idxs]
-    time_topk = time.time() - start
-
-    # 4) Deviations for selected users on the target item
-    start = time.time()
-    item_idx = user_item.columns.get_loc(item_id)
-    deviations = R_centered[top_users, item_idx]
-    time_deviations += time.time() - start
-
-    # 5) Prediction calculation
-    start = time.time()
-    pred = predict_with_numba(top_sims, deviations, means, user_idx)
-    time_prediction += time.time() - start
-
-    # Clip to allowed range and return
-    return float(np.clip(pred, MIN_RATING, MAX_RATING))
 
 # --------------------
 # 4) EVALUACIÓN POR FOLDS
@@ -438,68 +464,105 @@ def evaluate_fold(args):
     train_index, test_index, ratings, cluster_method = args
     start_total = timer()
 
-    # Split
+    start_sim = timer()
     train_df = ratings.iloc[train_index]
     test_df = ratings.iloc[test_index]
-
-    # 1) Similarity computation
-    start_sim = timer()
     sim_df, R_centered, means, user_item = similarity(train_df)
     end_sim = timer()
 
-    # 2) Clustering
     start_cluster = timer()
     cluster_fn = CLUSTER_METHODS[cluster_method]
-    if cluster_method in ('hac', 'density'):
+
+    if(cluster_method == 'hac' or cluster_method == 'density'):
         clusters, cluster_members = cluster_fn(sim_df)
     else:
         clusters, cluster_members = cluster_fn(user_item)
+
     n_clusters = len(cluster_members)
     entropy = cluster_entropy(clusters, n_clusters)
     end_cluster = timer()
 
-    # 3) Precompute helper structures
-    # Map each cluster to a numpy array of member indices
-    members_arr_dict = {
-        cl: np.array(members_list, dtype=int)
-        for cl, members_list in cluster_members.items()
-    }
+    global _UIDX_CACHE, _ITEM_COL_LOC_CACHE, _MEMBERS_IN_CLUSTER_CACHE, _HAS_RATED_MASK_CACHE, _SIM_DF_NP_CACHE, _USER_ITEM_ISNA_VALUES_CACHE
+    
+    _UIDX_CACHE.clear()
+    _ITEM_COL_LOC_CACHE.clear()
+    _MEMBERS_IN_CLUSTER_CACHE.clear()
+    _HAS_RATED_MASK_CACHE.clear()
+    _SIM_DF_NP_CACHE.clear()
+    _USER_ITEM_ISNA_VALUES_CACHE.clear()
 
-    # 4) Prediction on test set
-    y_true, y_pred = [], []
+    for uid_ in user_item.index:
+        _UIDX_CACHE[uid_] = user_item.index.get_loc(uid_)
+    
+    for iid_ in user_item.columns:
+        _ITEM_COL_LOC_CACHE[iid_] = user_item.columns.get_loc(iid_)
+
+    for u_idx_ in range(len(user_item.index)):
+        current_user_cluster_ = clusters[u_idx_]
+        cluster_member_indices_ = cluster_members[current_user_cluster_]
+        
+        if isinstance(cluster_member_indices_, np.ndarray):
+            member_indices_list_ = cluster_member_indices_.tolist()
+        elif isinstance(cluster_member_indices_, pd.Series):
+            member_indices_list_ = cluster_member_indices_.tolist()
+        else:
+            member_indices_list_ = list(cluster_member_indices_)
+        
+        members_for_uidx_ = [m_idx for m_idx in member_indices_list_ if m_idx != u_idx_]
+        _MEMBERS_IN_CLUSTER_CACHE[u_idx_] = np.array(members_for_uidx_, dtype=int)
+
+    _USER_ITEM_ISNA_VALUES_CACHE['cached'] = user_item.isna().values
+    user_item_is_na_matrix_ = _USER_ITEM_ISNA_VALUES_CACHE['cached']
+
+    for item_id_val_ in user_item.columns: 
+        if item_id_val_ in _ITEM_COL_LOC_CACHE: 
+            item_col_idx_ = _ITEM_COL_LOC_CACHE[item_id_val_]
+            _HAS_RATED_MASK_CACHE[item_id_val_] = ~user_item_is_na_matrix_[:, item_col_idx_]
+
+    _SIM_DF_NP_CACHE['cached'] = sim_df.values
+
+    y_true = []
+    y_pred = []
+
     train_users = set(train_df['userId'])
     train_items = set(train_df['itemId'])
+
+    from joblib import Parallel, delayed
 
     def _predict_one(row):
         u, i, r = row['userId'], row['itemId'], row['rating']
         if u not in train_users or i not in train_items:
             return None
-        p = predict_rating(u, i,
-                           sim_df, R_centered, means,
-                           user_item, clusters,
-                           members_arr_dict)
+        p = predict_rating(u, i, sim_df, R_centered, means,
+                        user_item, clusters, cluster_members)
         return (r, p)
-
     
     start_pred = timer()
-    
     rows = list(test_df.to_dict('records'))
     
     for row in rows:
         result = _predict_one(row)
-        if result:
+        if result is not None:
             y_true.append(result[0])
             y_pred.append(result[1])
 
     end_pred = timer()
-    mae = mean_absolute_error(y_true, y_pred)
-    rmse = np.sqrt(mean_squared_error(y_true, y_pred))
-    nmae = mae / (ratings['rating'].max() - ratings['rating'].min())
-    nrmse = rmse / (ratings['rating'].max() - ratings['rating'].min())
-
+    
+    if not y_true:
+        mae, rmse, nmae = np.nan, np.nan, np.nan
+    else:
+        y_true_np, y_pred_np = np.array(y_true), np.array(y_pred)
+        mae = mean_absolute_error(y_true_np, y_pred_np)
+        rmse = np.sqrt(mean_squared_error(y_true_np, y_pred_np))
+        rating_range = ratings['rating'].max() - ratings['rating'].min()
+        if rating_range == 0:
+            nmae = np.nan if mae > 0 else 0.0 # Or handle as per specific requirements for NMAE with zero range
+        else:
+            nmae = mae / rating_range
+    
     end_total = timer()
 
-    return mae, nmae, rmse, nrmse, end_sim - start_sim, end_cluster - start_cluster, end_pred - start_pred, end_total - start_total, entropy, n_clusters
+    return mae, nmae, rmse, end_sim - start_sim, end_cluster - start_cluster, end_pred - start_pred, end_total - start_total, entropy, n_clusters
 
 # --------------------
 # 5) CROSS-VALIDATION
@@ -513,13 +576,12 @@ def cross_validate(ratings, cluster_method):
     for args in tqdm(args_list, desc="Evaluando folds", unit="fold"):
         results.append(evaluate_fold(args))
 
-    mae_scores, nmae_scores, rmse_scores, nrmse_scores, sim_times, cluster_times, pred_times, total_times, entropyes, n_clusters = zip(*results)
+    mae_scores, nmae_scores, rmse_scores, sim_times, cluster_times, pred_times, total_times, entropyes, n_clusters = zip(*results)
 
     print(f'\n--- Promedios por fold ---')
     print(f'Average MAE: {np.mean(mae_scores):.4f}')
     print(f'Average NMAE: {np.mean(nmae_scores):.4f}')
     print(f'Average RMSE: {np.mean(rmse_scores):.4f}')
-    print(f'Average NRMSE: {np.mean(nrmse_scores):.4f}')
     print(f'Average Entropy: {np.mean(entropyes):.4f}')
     print(f'Average Clusters: {np.mean(n_clusters):.4f}')
     print(f'Average Time - Similarity: {np.mean(sim_times):.2f}s')
@@ -534,7 +596,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Ejecuta validación cruzada con clustering hard o fuzzy sobre un dataset de ratings.'
     )
-    parser.add_argument('-m', '--method', choices=['hard', 'fuzzy', 'hac', 'density', 'gmm'], default='hard',
+    parser.add_argument('-m', '--method', choices=['hard', 'hard_pearson', 'fuzzy', 'hac', 'density', 'gmm'], default='hard',
                         help="Tipo de clustering ('hard' o 'fuzzy').")
     parser.add_argument('-n', '--n_clusters', type=int, default=1,
                         help='Número de clusters a usar.')
@@ -566,8 +628,7 @@ if __name__ == '__main__':
 
     cross_validate(ratings, cluster_method=args.method)
 
-    print(f"\n--- Tiempos ---")
-    print(f"Tiempo total - Clustering: {time_cluster:.2f}s")
-    print(f"Tiempo total - Similitudes: {time_similarities:.2f}s")
-    print(f"Tiempo total - Desviaciones: {time_deviations:.2f}s")
-    print(f"Tiempo total - Predicción: {time_prediction:.2f}s")
+    print(f"\nTiempo total de clustering: {time_cluster:.2f}s")
+    print(f"Tiempo total de similitudes: {time_similarities:.2f}s")
+    print(f"Tiempo total de desviaciones: {time_deviations:.2f}s")
+    print(f"Tiempo total de predicción: {time_prediction:.2f}s")
