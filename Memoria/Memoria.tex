@@ -1203,6 +1203,39 @@ Segons l’anàlisi empírica presentada a \cite{herlocker2002empirical}, la for
 
 L’ús conjunt de la similitud de Pearson i de la predicció centrada en la mitjana com a base comuna respon a diversos motius. En primer lloc, són tècniques consolidades i àmpliament adoptades en la literatura sobre sistemes de recomanació. A més, proporcionen una base robusta per analitzar l’impacte específic del clustering en el rendiment del sistema, i faciliten la comparació directa entre mètodes, evitant que les diferències puguin atribuir-se a variacions en la funció de similitud o en la fórmula de predicció.
 
+Per dur a terme el procés de clustering és imprescindible definir prèviament una funció de distància que mesuri quant “allunyats” estan dos punts (en el nostre cas, dos usuaris) dins l’espai de característiques. Aquesta funció de distància actua com a nucli de qualsevol mètode de partició ja que depenen íntegrament de la mètrica que comparem.
+
+Per seguir garantint que qualsevol variació en el rendiment obtingut es degui només a la mecànica pròpia de l’algorisme de clustering hem optat per experimentar de forma consistent les mateixes dues mesures de distància en tots els procediments d’agrupament. D’aquesta manera, la comparació entre tècniques és estrictament “com a resultat de l’estructura” que el clustering imposa, i no d’algun component extern a l’algorisme.
+
+La primera mètrica de distància que emprem és la distància euclidiana, probablement la més clàssica i intuïtiva en l’anàlisi de dades. Donats dos vectors de característiques $x = (x_1, x_2, \ldots, x_n)$ i $y = (y_1, y_2, \ldots, y_n)$, la seva distància euclidiana ve donada per:
+
+\[
+d_{Euc}(x,y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
+\]
+
+Aquesta fórmula mesura directament la separació geomètrica entre punts en un espai $n$-dimensional, ponderant igualment totes les dimensions.
+
+Els seus punts forts són la seva simplicitat i la seva interpretabilitat, que reflecteix clarament la magnitud total del desplaçament.
+
+Per incorporar la noció de “coherència de patró” en les valoracions, utilitzarem a més una distància basada en la similitud de Pearson. 
+Aquesta segona mètrica permet agrupar usuaris que, tot i fer servir escales de puntuació diferents, mostren un comportament sincronitzat (pujades i baixades conjuntes). 
+Hipotetitzem que aquesta donarà millors resultats, ja que esta relacionada amb la funció de predicció utilitzada. 
+
+En una primera instancia es va implementar la mesura de distància proposada a \cite{zahra2015novel}:
+
+\[
+d_{Pearson}(x,y) = \frac{1}{1 + \text{sim}(x,y)}
+\]
+
+Tanmateix, es va acabar descartant aquesta mesura perquè no compleix les propietats d’una mètrica de distància (identitat, simetria i desigualtat triangular).
+Tot i que es va considerar utilitzar la distància angular, finalment es va optar per implementar la transformació:
+
+\[
+d_{Pearson}(x,y) = \frac{1 - \text{sim}(x,y)}{2}
+\]
+
+Ja que és més senzilla de calcular i compleix les propietats requerides d’una mètrica
+
 \vspace{0.5cm}
 \textbf{Algorismes de clustering emprats}
 
@@ -1252,6 +1285,9 @@ Aquest procediment assegura que la suma dels quadrats de les distàncies interne
 
 Un cop determinats els clústers, es calcula la predicció de les valoracions considerant només els veïns dins del mateix clúster que han valorat l’element corresponent.
 
+Per a la implementació amb distància euclidiana s'ha fet ús de la biblioteca Python \texttt{scikit-learn} \cite{pedregosa2011scikit}, que ofereix la classe \texttt{KMeans} només amb aquesta mesura. Com que no permet canviar la funció de distància, s'ha desenvolupat una implementació pròpia de l'algorisme K-means que utilitza la distància de Pearson definida prèviament. Aquesta versió s'ha optimitzat amb la biblioteca \texttt{numba} per a una major eficiència i ha estat paral·lelitzada per accelerar els càlculs.
+
+
 \section{Clustering difús}
 
 S’ha descartat la implementació proposada per \cite{treerattanapitak2009items}, que feia ús del grau de pertinença i dels centroids per calcular les prediccions. Tot i que aquesta proposta aprofita millor les propietats del clustering difús, contradiu la nostra premissa de mantenir una fórmula de predicció comuna entre totes les variants. A més, en una anàlisi preliminar s’ha detectat un increment significatiu del temps de còmput i un empitjorament considerable dels resultats en comparació amb altres alternatives.
@@ -1290,29 +1326,15 @@ Això permet capturar la distribució global de la pertinença de l’usuari i a
 
 Un cop determinada l’assignació, es calculen les prediccions de valoracions considerant només els veïns del mateix clúster.
 
+Per a la implementació de l’algorisme Fuzzy C-Means s'ha fet ús de la biblioteca Python \texttt{scikit-fuzzy} (\texttt{skfuzzy}). Com que aquesta implementació no permet definir una funció de distància pròpia, s'ha modificat manualment la llibreria per afegir l'opció d'utilitzar la distància de Pearson en el càlcul dels graus de pertinença i dels centroides. Aquestes adaptacions s'han integrat de manera nadiua en les funcions \texttt{cmeans} i \texttt{cmeans\_predict} de \texttt{skfuzzy}, afegint un nou paràmetre \texttt{metric='pearson'}.
+
 \section{Clustering jeràrquic}
 
 El clustering jeràrquic és una tècnica d’agrupament que construeix una jerarquia de clústers, en lloc de generar una partició plana com fan algorismes com K-means o Fuzzy C-means.
 
-Seguint altres treballs \cite{chalco2019hierarchical} i inspirant-nos en una proposta similar, en aquesta secció es descriu la implementació de l’algorisme d’Agrupament Jeràrquic Aglomeratiu (HAC), utilitzant el mètode d’enllaç promig (\textit{average linkage}) i la mètrica de similitud basada en la correlació de Pearson.
+Seguint altres treballs \cite{chalco2019hierarchical} i inspirant-nos en una proposta similar, en aquesta secció es descriu la implementació de l’algorisme d’Agrupament Jeràrquic Aglomeratiu (HAC), utilitzant el mètode d’enllaç promig (\textit{average linkage}).
 
-L’algorisme HAC comença considerant que cada usuari constitueix un clúster individual. A cada iteració, es fusionen els dos clústers que presenten la màxima similitud, mesurada en aquest cas mitjançant la distància més petita, obtinguda aplicant una transformació inversa a la correlació de Pearson. Per poder utilitzar aquesta mètrica dins el procés jeràrquic, es calcula inicialment la matriu de similitud entre totes les parelles d’usuaris. Atès que HAC requereix una mesura de distància per realitzar les fusions, es converteixen els valors de similitud de Pearson \( S_{\text{Pearson}}(u,v) \) de la manera següent:
-
-\[
-d(u,v) = 
-\begin{cases}
-MAX_{DIST} & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
-\frac{1}{S_{\text{Pearson}}(u,v)} & \text{altrament}
-\end{cases}
-\]
-
-On $MAX_{DIST}$ (escollit com a 1000 en el nostre cas) denota la distància màxima entre dos punts.
-Com en la correlació de Pearson, el resultat de la similitud també pot ser negatiu, però la similitud negativa no es pot modelar mitjançant l'equació.  
-Hem gestionat aquest problema afegint 1 a tots els resultats de similitud retornats per la correlació de Pearson (és a dir,  
-$\text{sim}(u) \rightarrow \text{sim}(u) + 1,\ \forall u \in U$), i després s'aplica l'equació sobre els resultats de similitud positius.
-
-
-Aquesta transformació penalitza fortament les parelles d’usuaris amb similitud nul·la, evitant-ne l’agrupament prematur i afavorint la formació de clústers amb una coherència interna elevada.
+L’algorisme HAC parteix del supòsit que cada usuari constitueix un clúster individual. A cada iteració, es fusionen els dos clústers amb major similitud.
 
 El mètode de fusió utilitzat ha estat l’\textit{average linkage}, o Mètode No Ponderat de Grups amb Mitjanes Aritmètiques (UPGMA, per les seves sigles en anglès). Aquest enfocament calcula la distància entre dos clústers com la mitjana de les distàncies entre totes les parelles d’usuaris que els componen:
 
@@ -1331,6 +1353,8 @@ Així, en cada pas del procés d’agrupament aglomeratiu:
 
 Un cop determinada l’assignació de clústers, les prediccions de valoracions es calculen considerant exclusivament els veïns que pertanyen al mateix clúster.
 
+Per a la implementació de l’algorisme d’Agrupament Jeràrquic Aglomeratiu (HAC) s'ha fet ús de les funcions \texttt{linkage} i \texttt{fcluster} del mòdul \texttt{scipy.cluster.hierarchy}. Abans d’invocar \texttt{linkage}, les mesures de distància entre usuaris es precalculen en funció de si s’ha utilitzat la distància euclidiana o la distància de Pearson, i es transmeten a la funció mitjançant el paràmetre \texttt{metric='precomputed'}. Això permet aplicar el mateix procés de clustering sense dependre de la distància interna per defecte.
+
 \section{Clustering per densitat}
 
 Per a l’agrupament basat en densitat s’ha utilitzat l’algorisme DBSCAN (\emph{Density-Based Spatial Clustering of Applications with Noise}), com també s’ha fet en altres treballs \cite{satsiou2017hybrid}.
@@ -1340,17 +1364,6 @@ El funcionament de DBSCAN es basa en dos paràmetres principals:
     \item \textbf{\( \varepsilon \)}: radi del veïnat considerat per avaluar la densitat al voltant d’un punt.
     \item \textbf{MinPts}: nombre mínim de punts que han d’existir dins del radi \( \varepsilon \) perquè un punt pugui iniciar la formació d’un grup.
 \end{itemize}
-
-Les distàncies entre usuaris es calculen de la mateixa manera que en l’apartat de clustering jeràrquic, partint de la similitud de Pearson transformada en distància:
-
-\[
-d(u,v) = 
-\begin{cases}
-MAX_{DIST} & \text{si } S_{\text{Pearson}}(u,v) = 0 \\
-\frac{1}{S_{\text{Pearson}}(u,v)} & \text{altrament}
-\end{cases}
-\]
-
 
 El funcionament de l’algorisme DBSCAN es pot resumir en els següents passos:
 
@@ -1374,6 +1387,9 @@ El funcionament de l’algorisme DBSCAN es pot resumir en els següents passos:
 \end{enumerate}
 
 Un cop formats els grups, la predicció de valoracions es calcula seguint la mateixa lògica que en les tècniques anteriors: per a cada parella usuari–ítem, només es tenen en compte les valoracions d’altres usuaris que formen part del mateix grup.
+
+Per a l’agrupament basat en densitat s'ha fet ús de la classe \texttt{DBSCAN} de la biblioteca \texttt{scikit-learn} \cite{pedregosa2011scikit}. Igual que en el cas jeràrquic, les distàncies entre usuaris es precalculen prèviament (euclidiana o Pearson) i es passen a l’algorisme mitjançant el paràmetre \texttt{metric='precomputed'}. D’aquesta manera es manté consistència en la mesura de similitud utilitzada.
+
 
 \section{Clustering per model}
 
@@ -1414,6 +1430,37 @@ Un cop convergit el model, es pot assignar cada usuari $i$ al clúster $\hat{j}$
 \]
 
 Finalment, la predicció de la valoració de l’usuari $u$ per l’ítem $v$ es calcula considerant exclusivament les valoracions aportades pels usuaris que han estat assignats al mateix component gaussià que $u$.
+
+Per a la implementació del \emph{Gaussian Mixture Model} s'ha fet ús de la classe \texttt{GaussianMixture} del mòdul \texttt{sklearn.mixture} de la biblioteca \texttt{scikit-learn} \cite{pedregosa2011scikit}.
+
+\chapter{Anàlisi de resultats}
+
+En aquest capítol es presenten i s'analitzen els resultats obtinguts en l'avaluació dels diferents mètodes de clustering aplicats al sistema de recomanació. Per tal d'assegurar la fiabilitat i generalitzabilitat de les conclusions, s'ha emprat una metodologia de validació creuada (cross-validation). Concretament, s'ha aplicat una validació creuada de 5 particions (5-fold cross-validation), on el conjunt de dades es divideix en 5 subconjunts o \textit{folds}. En cada iteració, un dels \textit{folds} s'utilitza com a conjunt de prova, mentre que els 4 restants s'empren com a conjunt d'entrenament. Aquest procés es repeteix 5 vegades, de manera que cada \textit{fold} actua com a conjunt de prova exactament una vegada. Les mètriques de rendiment obtingudes en cada una de les 5 iteracions es promedian per obtenir una estimació més robusta i menys susceptible a la particularitat d'una única partició de les dades.
+
+Per avaluar el rendiment i les característiques dels clústers formats, s'empraran diverses mètriques quantitatives, els valors de les quals seran, per tant, la mitjana obtinguda després del procés de validació creuada.
+
+Primerament, per avaluar la precisió de les prediccions de valoracions generades pel sistema, s'utilitzaran l'Error Absolut Mitjà Normalitzat (NMAE) i l'Error Quadràtic Mitjà Normalitzat (NRMSE). Aquestes mètriques es calculen de la següent manera:
+\[
+\text{MAE} = \frac{1}{N} \sum_{i=1}^{N} | \hat{r}_{u,i} - r_{u,i} |
+\]
+\[
+\text{RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (\hat{r}_{u,i} - r_{u,i})^2}
+\]
+on \(N\) és el nombre total de valoracions predites en un \textit{fold} de prova, \( \hat{r}_{u,i} \) és la valoració predita per a l'usuari \(u\) sobre l'ítem \(i\), i \( r_{u,i} \) és la valoració real.
+Per obtenir les versions normalitzades, NMAE i NRMSE, aquests valors es divideixen pel rang de les valoracions presents al conjunt de dades (\( \text{rating}_{\text{max}} - \text{rating}_{\text{min}} \)):
+\[
+\text{NMAE} = \frac{\text{MAE}}{\text{rating}_{\text{max}} - \text{rating}_{\text{min}}}
+\]
+\[
+\text{NRMSE} = \frac{\text{RMSE}}{\text{rating}_{\text{max}} - \text{rating}_{\text{min}}}
+\]
+La normalització d'aquestes mètriques d'error és particularment útil en aquest estudi, ja que permet comparar de manera més equitativa el rendiment dels algorismes a través de diferents conjunts de dades que puguin tenir escales de valoració distintes. Valors més baixos de la mitjana d'NMAE i NRMSE obtinguts a través de la validació creuada indiquen una major precisió generalitzada en les prediccions.
+
+En segon lloc, per avaluar la qualitat de la distribució dels usuaris entre els clústers formats, s'utilitzarà l'entropia normalitzada dels clústers. Aquesta mètrica mesura el grau de desequilibri en l'assignació dels usuaris als diferents grups. Una situació ideal és aquella on els usuaris es distribueixen de manera relativament uniforme entre els clústers disponibles, evitant que la majoria dels usuaris siguin assignats a un sol clúster o a un nombre molt reduït de clústers. Si la majoria d'usuaris són agrupats en un únic clúster, l'estratègia de clustering no aporta un valor significatiu, ja que el sistema es comportaria de manera similar a un enfocament sense clustering. L'entropia normalitzada es calcula com:
+\[
+H_{\text{norm}} = \frac{-\sum_{j=1}^{K} p_j \log_2(p_j)}{\log_2(K)}
+\]
+on \(K\) és el nombre de clústers i \(p_j\) és la proporció d'usuaris assignats al clúster \(j\) en un \textit{fold} particular. Un valor de la mitjana d'entropia normalitzada (calculada a partir dels valors obtinguts en cada \textit{fold}) proper a 1 indica una distribució equilibrada dels usuaris de manera consistent, mentre que un valor proper a 0 suggereix que la majoria dels usuaris estan concentrats en pocs clústers de forma recurrent. Per tant, es cercaran valors mitjans d'entropia més elevats, ja que reflecteixen una millor utilització de la capacitat de segmentació del mètode de clustering en diferents particions de les dades.
 
 \printbibliography[heading=bibintoc]
 

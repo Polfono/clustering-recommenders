@@ -651,6 +651,59 @@
       \field{pages}{287\bibrangedash 310}
       \range{pages}{24}
     \endentry
+    \entry{zahra2015novel}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2beab8ff7430bc3e2036d6e7fa1356be}{%
+           family={Zahra},
+           familyi={Z\bibinitperiod},
+           given={Sobia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f2390df1dcf0468d2d4db4d465e7c98e}{%
+           family={Ghazanfar},
+           familyi={G\bibinitperiod},
+           given={Mustansar\bibnamedelima Ali},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3c612c9f11a8526669872acbeacfaaba}{%
+           family={Khalid},
+           familyi={K\bibinitperiod},
+           given={Asra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1003b5bded51978c2b043deca6b17021}{%
+           family={Azam},
+           familyi={A\bibinitperiod},
+           given={Muhammad\bibnamedelima Awais},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=67990ffa4ddd37e0444dbbb3990ce218}{%
+           family={Naeem},
+           familyi={N\bibinitperiod},
+           given={Usman},
+           giveni={U\bibinitperiod}}}%
+        {{hash=33e98a9fd5cf6829ae058e7b15c9ad3a}{%
+           family={Prugel-Bennett},
+           familyi={P\bibinithyphendelim B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c7512f2adc07689762e019a232b4c9c3}
+      \strng{fullhash}{45e11b5343c0c1e23900657f1563e43a}
+      \strng{bibnamehash}{c7512f2adc07689762e019a232b4c9c3}
+      \strng{authorbibnamehash}{c7512f2adc07689762e019a232b4c9c3}
+      \strng{authornamehash}{c7512f2adc07689762e019a232b4c9c3}
+      \strng{authorfullhash}{45e11b5343c0c1e23900657f1563e43a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information sciences}
+      \field{title}{Novel centroid selection approaches for KMeans-clustering based recommender systems}
+      \field{volume}{320}
+      \field{year}{2015}
+      \field{pages}{156\bibrangedash 189}
+      \range{pages}{34}
+    \endentry
     \entry{ezugwu2022comprehensive}{article}{}
       \name{author}{7}{}{%
         {{hash=7d0212acf93bc31f5ada23a3e50b1841}{%
@@ -731,14 +784,89 @@
       \strng{authorbibnamehash}{9e5af5b93d1302c3f25083a735dd6718}
       \strng{authornamehash}{9e5af5b93d1302c3f25083a735dd6718}
       \strng{authorfullhash}{9e5af5b93d1302c3f25083a735dd6718}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2011 11th International conference on hybrid intelligent systems (HIS)}
       \field{title}{A new collaborative filtering algorithm using K-means clustering and neighbors' voting}
       \field{year}{2011}
       \field{pages}{179\bibrangedash 184}
+      \range{pages}{6}
+    \endentry
+    \entry{pedregosa2011scikit}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=bab4e5caee2d67831e464ce575022b37}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cfa3239dded54488f9a82a5718d5b927}{%
+           family={Varoquaux},
+           familyi={V\bibinitperiod},
+           given={Gaël},
+           giveni={G\bibinitperiod}}}%
+        {{hash=12ebe424e1c87de156c57e8fa7683f46}{%
+           family={Gramfort},
+           familyi={G\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=504ea1986689f1047a6f0beda2cb3822}{%
+           family={Michel},
+           familyi={M\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=0f3fc06fb9fcbb01b9cc0985eaf0a71c}{%
+           family={Thirion},
+           familyi={T\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+        {{hash=721be0317527f44db425f7a97dcab15e}{%
+           family={Grisel},
+           familyi={G\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=d3b6c8582cea4e8b6576137b6a72cadc}{%
+           family={Blondel},
+           familyi={B\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=86e647e5c801f3ce733927f75f029463}{%
+           family={Prettenhofer},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=89d698773eaf2fae761ff0008031c7be}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b255e99d411f28c789a231829f765c64}{%
+           family={Dubourg},
+           familyi={D\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR. org}%
+      }
+      \strng{namehash}{9ec95d747bac3417f92265a9a44f8bb4}
+      \strng{fullhash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \strng{bibnamehash}{9ec95d747bac3417f92265a9a44f8bb4}
+      \strng{authorbibnamehash}{9ec95d747bac3417f92265a9a44f8bb4}
+      \strng{authornamehash}{9ec95d747bac3417f92265a9a44f8bb4}
+      \strng{authorfullhash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{the Journal of machine Learning research}
+      \field{title}{Scikit-learn: Machine learning in Python}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2825\bibrangedash 2830}
       \range{pages}{6}
     \endentry
     \entry{treerattanapitak2009items}{article}{}

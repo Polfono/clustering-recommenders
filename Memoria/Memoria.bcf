@@ -2386,13 +2386,17 @@
     <bcf:citekey order="25" intorder="1">monti2019all</bcf:citekey>
     <bcf:citekey order="26" intorder="1">chowdhury2024evaluating</bcf:citekey>
     <bcf:citekey order="27" intorder="1">herlocker2002empirical</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">ezugwu2022comprehensive</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">dakhel2011new</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">treerattanapitak2009items</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">koohi2016user</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">chalco2019hierarchical</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">satsiou2017hybrid</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">yan2019collaborative</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">zahra2015novel</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">ezugwu2022comprehensive</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">dakhel2011new</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">treerattanapitak2009items</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">koohi2016user</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">chalco2019hierarchical</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">satsiou2017hybrid</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">yan2019collaborative</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">pedregosa2011scikit</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
