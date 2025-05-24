@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  23 MAY 2025 20:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  24 MAY 2025 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,59 +570,263 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen188
+\captionmargin=\dimen189
+\caption@leftmargin=\dimen190
+\caption@rightmargin=\dimen191
+\caption@width=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count429
+\c@continuedfloat=\count430
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count431
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count432
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen196
+\pgfutil@tempdimb=\dimen197
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks36
+))
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
+\w@pgf@writea=\write4
+\r@pgf@reada=\read5
+\c@pgf@counta=\count433
+\c@pgf@countb=\count434
+\c@pgf@countc=\count435
+\c@pgf@countd=\count436
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count437
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count438
+\pgfsyssoftpath@bigbuffer@items=\count439
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen264
+\pgfmath@count=\count440
+\pgfmath@box=\box59
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count441
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count442
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen283
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen287
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen288
+\pgf@sys@shading@range@num=\count443
+\pgf@shadingcount=\count444
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box63
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box64
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count445
+\pgfplotmarksize=\dimen293
+)
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count446
+\tikznumberofchildren=\count447
+\tikznumberofcurrentchild=\count448
+\tikz@fig@count=\count449
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count450
+\pgfmatrixcurrentcolumn=\count451
+\pgf@matrix@numberofcolumns=\count452
+)
+\tikz@expandcount=\count453
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2023/11/15 v3.01 Predefined colors according to Unix/X11 (UK)
+)
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count429
-\@quotereset=\count430
+\@quotelevel=\count454
+\@quotereset=\count455
 (./Memoria.aux)
 \openout1 = `Memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count431
-\scratchdimen=\dimen188
-\scratchbox=\box58
-\nofMPsegments=\count432
-\nofMParguments=\count433
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count434
-\MPscratchDim=\dimen189
-\MPnumerator=\count435
-\makeMPintoPDFobject=\count436
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count456
+\scratchdimen=\dimen302
+\scratchbox=\box69
+\nofMPsegments=\count457
+\nofMParguments=\count458
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count459
+\MPscratchDim=\dimen303
+\MPnumerator=\count460
+\makeMPintoPDFobject=\count461
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \l on input line 24.
-LaTeX Info: Redefining \L on input line 24.
-Package hyperref Info: Link coloring OFF on input line 24.
+LaTeX Info: Redefining \l on input line 38.
+LaTeX Info: Redefining \L on input line 38.
+Package hyperref Info: Link coloring OFF on input line 38.
  (./Memoria.out) (./Memoria.out)
-\@outlinefile=\write4
-\openout4 = `Memoria.out'.
+\@outlinefile=\write5
+\openout5 = `Memoria.out'.
 
 Package biblatex Info: Trying to load language 'catalan'...
 Package biblatex Info: ... file 'catalan.lbx' found.
@@ -637,8 +841,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Memoria.bbl' found.
  (./Memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 24.
-Package biblatex Info: Reference segment=0 on input line 24.
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -674,18 +878,20 @@ Package biblatex Info: Reference segment=0 on input line 24.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Figuras/logoUPC.png, id=253, 197.73875pt x 196.735pt>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<Figuras/logoUPC.png, id=264, 197.73875pt x 196.735pt>
 File: Figuras/logoUPC.png Graphic file (type png)
 <use Figuras/logoUPC.png>
-Package pdftex.def Info: Figuras/logoUPC.png  used on input line 36.
+Package pdftex.def Info: Figuras/logoUPC.png  used on input line 50.
 (pdftex.def)             Requested size: 62.73549pt x 62.41612pt.
-<Figuras/logoFIB.png, id=255, 580.1675pt x 87.32625pt>
+<Figuras/logoFIB.png, id=266, 580.1675pt x 87.32625pt>
 File: Figuras/logoFIB.png Graphic file (type png)
 <use Figuras/logoFIB.png>
-Package pdftex.def Info: Figuras/logoFIB.png  used on input line 38.
+Package pdftex.def Info: Figuras/logoFIB.png  used on input line 52.
 (pdftex.def)             Requested size: 418.25368pt x 62.95613pt.
 
-Overfull \hbox (33.82492pt too wide) in paragraph at lines 35--38
+Overfull \hbox (33.82492pt too wide) in paragraph at lines 49--52
 []  []   [] 
  []
 
@@ -733,18 +939,18 @@ l.34 ...ema de recomanació}{18}{subsection.2.1.4}
 
 
 ] [2])
-\tf@toc=\write5
-\openout5 = `Memoria.toc'.
+\tf@toc=\write6
+\openout6 = `Memoria.toc'.
 
  [3] (./Memoria.lof)
-\tf@lof=\write6
-\openout6 = `Memoria.lof'.
+\tf@lof=\write7
+\openout7 = `Memoria.lof'.
 
  [4
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Memoria.lot)
-\tf@lot=\write7
-\openout7 = `Memoria.lot'.
+\tf@lot=\write8
+\openout8 = `Memoria.lot'.
 
  [5
 
@@ -753,302 +959,197 @@ Cap\'{\i }tol 1.
 [6
 
 ]
-<Figuras/DiagramaFiltratgeCol.jpg, id=421, 1031.855pt x 575.14874pt>
+<Figuras/DiagramaFiltratgeCol.jpg, id=438, 1031.855pt x 575.14874pt>
 File: Figuras/DiagramaFiltratgeCol.jpg Graphic file (type jpg)
 <use Figuras/DiagramaFiltratgeCol.jpg>
-Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 120.
+Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 134.
 (pdftex.def)             Requested size: 352.81552pt x 196.65376pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7] [8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.149 
-       <./Figuras/DiagramaFiltratgeCol.jpg>] [9] [10] [11] [12]
-<Figuras/KANBAN.png, id=463, 888.31876pt x 511.9125pt>
+[7] [8 <./Figuras/DiagramaFiltratgeCol.jpg>] [9] [10] [11] [12]
+<Figuras/KANBAN.png, id=481, 888.31876pt x 511.9125pt>
 File: Figuras/KANBAN.png Graphic file (type png)
 <use Figuras/KANBAN.png>
-Package pdftex.def Info: Figuras/KANBAN.png  used on input line 287.
+Package pdftex.def Info: Figuras/KANBAN.png  used on input line 301.
 (pdftex.def)             Requested size: 352.81552pt x 203.31631pt.
  [13]
-<Figuras/Notion.png, id=471, 878.28125pt x 580.1675pt>
+<Figuras/Notion.png, id=491, 878.28125pt x 580.1675pt>
 File: Figuras/Notion.png Graphic file (type png)
 <use Figuras/Notion.png>
-Package pdftex.def Info: Figuras/Notion.png  used on input line 297.
+Package pdftex.def Info: Figuras/Notion.png  used on input line 311.
 (pdftex.def)             Requested size: 352.81552pt x 233.06322pt.
- [14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.305 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.305 
-       <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [15]
+ [14 <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [15]
 Cap\'{\i }tol 2.
 [16
 
 ] [17] [18] [19]
-Overfull \hbox (9.77583pt too wide) in paragraph at lines 484--485
+Overfull \hbox (9.77583pt too wide) in paragraph at lines 498--499
 []\OT1/cmr/bx/n/12 Investigador (I): \OT1/cmr/m/n/12 En-car-re-gat de la re-cer-ca bi-bli-ogr^^Rafica, de l'es-tu-di de les t^^Recniques
  []
 
-[20] [21
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.540 \begin{landscape}
-                        % Rotar la página a horizontal]
-<Figuras/DiagramaGantt.png, id=515, 1740.5025pt x 700.6175pt>
+[20] [21]
+<Figuras/DiagramaGantt.png, id=534, 1740.5025pt x 700.6175pt>
 File: Figuras/DiagramaGantt.png Graphic file (type png)
 <use Figuras/DiagramaGantt.png>
-Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 548.
+Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 562.
 (pdftex.def)             Requested size: 661.5266pt x 266.29086pt.
  [22
 
+ <./Figuras/DiagramaGantt.png>] [23
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.553 \end{landscape}
-                      % Tornar a la orientació vertical <./Figuras/DiagramaGantt.png>] [23
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.590 \chapter
-              {Gestió Econòmica i sostenibilitat}]
+]
 Cap\'{\i }tol 3.
 
-Overfull \hbox (18.05974pt too wide) in paragraph at lines 618--646
+Overfull \hbox (18.05974pt too wide) in paragraph at lines 632--660
  [][] 
  []
 
 [24
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.649 
-      ] [25
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.664 \end{equation}
-                    ] [26
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.709 \end{equation}
-                    ]
-Overfull \hbox (43.57405pt too wide) in paragraph at lines 723--732
+] [25] [26]
+Overfull \hbox (43.57405pt too wide) in paragraph at lines 737--746
  [][] 
  []
 
-[27
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.758 
-      ] [28
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.804     \item A
-                 justar el temps assignat o reassignar tasques per optimitza...] [29] [30]
+[27] [28] [29] [30]
 Cap\'{\i }tol 4.
 [31
 
 ] [32]
-<Figuras/ml-small-ratings.png, id=595, 462.528pt x 346.896pt>
+<Figuras/ml-small-ratings.png, id=615, 462.528pt x 346.896pt>
 File: Figuras/ml-small-ratings.png Graphic file (type png)
 <use Figuras/ml-small-ratings.png>
-Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 929.
+Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 943.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-users.png, id=596, 462.528pt x 346.896pt>
+<Figuras/ml-small-users.png, id=616, 462.528pt x 346.896pt>
 File: Figuras/ml-small-users.png Graphic file (type png)
 <use Figuras/ml-small-users.png>
-Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 931.
+Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 945.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-items.png, id=597, 462.528pt x 346.896pt>
+<Figuras/ml-small-items.png, id=617, 462.528pt x 346.896pt>
 File: Figuras/ml-small-items.png Graphic file (type png)
 <use Figuras/ml-small-items.png>
-Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 933.
+Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 947.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
  [33]
-<Figuras/ml-1m-ratings.png, id=604, 462.528pt x 346.896pt>
+<Figuras/ml-1m-ratings.png, id=624, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-ratings.png Graphic file (type png)
 <use Figuras/ml-1m-ratings.png>
-Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 949.
+Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 963.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-users.png, id=605, 462.528pt x 346.896pt>
+<Figuras/ml-1m-users.png, id=625, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-users.png Graphic file (type png)
 <use Figuras/ml-1m-users.png>
-Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 951.
+Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 965.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-items.png, id=606, 462.528pt x 346.896pt>
+<Figuras/ml-1m-items.png, id=626, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-items.png Graphic file (type png)
 <use Figuras/ml-1m-items.png>
-Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 953.
+Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 967.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [34
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.957 
-       <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [35
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.977     \item 2
-                 70.171 llibres han estat valorats almenys una vegada. <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
-<Figuras/books-ratings.png, id=624, 462.528pt x 346.896pt>
+ [34 <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [35 <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
+<Figuras/books-ratings.png, id=644, 462.528pt x 346.896pt>
 File: Figuras/books-ratings.png Graphic file (type png)
 <use Figuras/books-ratings.png>
-Package pdftex.def Info: Figuras/books-ratings.png  used on input line 992.
+Package pdftex.def Info: Figuras/books-ratings.png  used on input line 1006.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-users.png, id=625, 462.528pt x 346.896pt>
+<Figuras/books-users.png, id=645, 462.528pt x 346.896pt>
 File: Figuras/books-users.png Graphic file (type png)
 <use Figuras/books-users.png>
-Package pdftex.def Info: Figuras/books-users.png  used on input line 994.
+Package pdftex.def Info: Figuras/books-users.png  used on input line 1008.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-items.png, id=626, 462.528pt x 346.896pt>
+<Figuras/books-items.png, id=646, 462.528pt x 346.896pt>
 File: Figuras/books-items.png Graphic file (type png)
 <use Figuras/books-items.png>
-Package pdftex.def Info: Figuras/books-items.png  used on input line 996.
+Package pdftex.def Info: Figuras/books-items.png  used on input line 1010.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [36] [37
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1014 
-        <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
-<Figuras/jester-ratings.png, id=644, 462.528pt x 346.896pt>
+ [36] [37 <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
+<Figuras/jester-ratings.png, id=664, 462.528pt x 346.896pt>
 File: Figuras/jester-ratings.png Graphic file (type png)
 <use Figuras/jester-ratings.png>
-Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 1017.
+Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 1031.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-users.png, id=645, 462.528pt x 346.896pt>
+<Figuras/jester-users.png, id=665, 462.528pt x 346.896pt>
 File: Figuras/jester-users.png Graphic file (type png)
 <use Figuras/jester-users.png>
-Package pdftex.def Info: Figuras/jester-users.png  used on input line 1019.
+Package pdftex.def Info: Figuras/jester-users.png  used on input line 1033.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-items.png, id=646, 462.528pt x 346.896pt>
+<Figuras/jester-items.png, id=666, 462.528pt x 346.896pt>
 File: Figuras/jester-items.png Graphic file (type png)
 <use Figuras/jester-items.png>
-Package pdftex.def Info: Figuras/jester-items.png  used on input line 1021.
+Package pdftex.def Info: Figuras/jester-items.png  used on input line 1035.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [38
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1046 L
-        es empreses que poden recopilar conjunts de dades de valoracions sol...
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1046 L
-        es empreses que poden recopilar conjunts de dades de valoracions sol... <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [39] [40]
-<Figuras/syn-ratings.png, id=671, 462.528pt x 346.896pt>
+ [38 <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [39] [40]
+<Figuras/syn-ratings.png, id=691, 462.528pt x 346.896pt>
 File: Figuras/syn-ratings.png Graphic file (type png)
 <use Figuras/syn-ratings.png>
-Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 1112.
+Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 1126.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-users.png, id=672, 462.528pt x 346.896pt>
+<Figuras/syn-users.png, id=692, 462.528pt x 346.896pt>
 File: Figuras/syn-users.png Graphic file (type png)
 <use Figuras/syn-users.png>
-Package pdftex.def Info: Figuras/syn-users.png  used on input line 1114.
+Package pdftex.def Info: Figuras/syn-users.png  used on input line 1128.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-items.png, id=673, 462.528pt x 346.896pt>
+<Figuras/syn-items.png, id=693, 462.528pt x 346.896pt>
 File: Figuras/syn-items.png Graphic file (type png)
 <use Figuras/syn-items.png>
-Package pdftex.def Info: Figuras/syn-items.png  used on input line 1116.
+Package pdftex.def Info: Figuras/syn-items.png  used on input line 1130.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
  [41]
-<Figuras/syn03-ratings.png, id=679, 462.528pt x 346.896pt>
+<Figuras/syn03-ratings.png, id=699, 462.528pt x 346.896pt>
 File: Figuras/syn03-ratings.png Graphic file (type png)
 <use Figuras/syn03-ratings.png>
-Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 1132.
+Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 1146.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-users.png, id=680, 462.528pt x 346.896pt>
+<Figuras/syn03-users.png, id=700, 462.528pt x 346.896pt>
 File: Figuras/syn03-users.png Graphic file (type png)
 <use Figuras/syn03-users.png>
-Package pdftex.def Info: Figuras/syn03-users.png  used on input line 1134.
+Package pdftex.def Info: Figuras/syn03-users.png  used on input line 1148.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-items.png, id=681, 462.528pt x 346.896pt>
+<Figuras/syn03-items.png, id=701, 462.528pt x 346.896pt>
 File: Figuras/syn03-items.png Graphic file (type png)
 <use Figuras/syn03-items.png>
-Package pdftex.def Info: Figuras/syn03-items.png  used on input line 1136.
+Package pdftex.def Info: Figuras/syn03-items.png  used on input line 1150.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [42
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1140 
-        <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
-<Figuras/syn80-ratings.png, id=691, 462.528pt x 346.896pt>
+ [42 <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
+<Figuras/syn80-ratings.png, id=711, 462.528pt x 346.896pt>
 File: Figuras/syn80-ratings.png Graphic file (type png)
 <use Figuras/syn80-ratings.png>
-Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 1150.
+Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 1164.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-users.png, id=692, 462.528pt x 346.896pt>
+<Figuras/syn80-users.png, id=712, 462.528pt x 346.896pt>
 File: Figuras/syn80-users.png Graphic file (type png)
 <use Figuras/syn80-users.png>
-Package pdftex.def Info: Figuras/syn80-users.png  used on input line 1152.
+Package pdftex.def Info: Figuras/syn80-users.png  used on input line 1166.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-items.png, id=693, 462.528pt x 346.896pt>
+<Figuras/syn80-items.png, id=713, 462.528pt x 346.896pt>
 File: Figuras/syn80-items.png Graphic file (type png)
 <use Figuras/syn80-items.png>
-Package pdftex.def Info: Figuras/syn80-items.png  used on input line 1154.
+Package pdftex.def Info: Figuras/syn80-items.png  used on input line 1168.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [43
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1158 
-        <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
-Overfull \hbox (34.94783pt too wide) in paragraph at lines 1163--1170
+ [43 <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
+Overfull \hbox (34.94783pt too wide) in paragraph at lines 1177--1184
  [][] 
  []
 
-[44
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1176 \chapter
-               {Sistema de recomanació}
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1176 \chapter
-               {Sistema de recomanació} <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
+[44 <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
 Cap\'{\i }tol 5.
 [45
 
 ] [46] [47]
-Overfull \hbox (7.92615pt too wide) in paragraph at lines 1279--1280
+Overfull \hbox (7.92615pt too wide) in paragraph at lines 1293--1294
 []\OT1/cmr/bx/n/12 Assignaci^^So d'u-su-a-ris: \OT1/cmr/m/n/12 Ca-da usu-a-ri, re-pre-sen-tat com un vec-tor de ca-rac-ter^^S^^Pstiques
  []
 
-[48
-pdfTeX warning (ext4): destination with the same identifier (name{table.5.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1282 \end{enumerate}
-                      ] [49] [50] [51] [52]
-Overfull \hbox (15.99088pt too wide) in paragraph at lines 1401--1402
+[48] [49] [50] [51] [52]
+Overfull \hbox (15.99088pt too wide) in paragraph at lines 1415--1416
 []\OT1/cmr/bx/n/12 Inicialitzaci^^So: \OT1/cmr/m/n/12 Es de-fi-neix el nom-bre de com-po-nents $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 i s'i-ni-ci-a-lit-zen els par^^Rametres
  []
 
 
-Overfull \hbox (40.94884pt too wide) in paragraph at lines 1434--1435
+Overfull \hbox (40.94884pt too wide) in paragraph at lines 1448--1449
 []\OT1/cmr/m/n/12 Per a la im-ple-men-ta-ci^^So del \OT1/cmr/m/it/12 Gaus-si-an Mix-tu-re Mo-del \OT1/cmr/m/n/12 s'-ha fet ^^Sus de la clas-se \OT1/cmtt/m/n/12 GaussianMixture
  []
 
@@ -1056,37 +1157,104 @@ Overfull \hbox (40.94884pt too wide) in paragraph at lines 1434--1435
 Cap\'{\i }tol 6.
 [54
 
-] [55] [56
+] [55] [56]
+<Figuras/nmae-hard-all.png, id=846, 508.0581pt x 395.076pt>
+File: Figuras/nmae-hard-all.png Graphic file (type png)
+<use Figuras/nmae-hard-all.png>
+Package pdftex.def Info: Figuras/nmae-hard-all.png  used on input line 1504.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nmae-hard_pearson-all.png, id=847, 508.0581pt x 395.076pt>
+File: Figuras/nmae-hard_pearson-all.png Graphic file (type png)
+<use Figuras/nmae-hard_pearson-all.png>
+Package pdftex.def Info: Figuras/nmae-hard_pearson-all.png  used on input line 1510.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-hard-all.png, id=848, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-hard-all.png Graphic file (type png)
+<use Figuras/nrmse-hard-all.png>
+Package pdftex.def Info: Figuras/nrmse-hard-all.png  used on input line 1519.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-hard_pearson-all.png, id=849, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-hard_pearson-all.png Graphic file (type png)
+<use Figuras/nrmse-hard_pearson-all.png>
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-all.png  used on input line 1525.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-hard-all.png, id=850, 508.0581pt x 395.076pt>
+File: Figuras/entropy-hard-all.png Graphic file (type png)
+<use Figuras/entropy-hard-all.png>
+Package pdftex.def Info: Figuras/entropy-hard-all.png  used on input line 1534.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-hard_pearson-all.png, id=851, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hard_pearson-all.png Graphic file (type png)
+<use Figuras/entropy-hard_pearson-all.png>
+Package pdftex.def Info: Figuras/entropy-hard_pearson-all.png  used on input line 1540.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [57]
+Overfull \hbox (3.28877pt too wide) in paragraph at lines 1563--1564
+\OT1/cmr/m/n/12 sint^^Retiques (Fi-gu-ra []6.2[]) ofe-reix una pers-pec-ti-va in-teres-sant so-bre com les ca-rac-ter^^S^^Pstiques
+ []
+
+[58 <./Figuras/nmae-hard-all.png> <./Figuras/nmae-hard_pearson-all.png> <./Figuras/nrmse-hard-all.png> <./Figuras/nrmse-hard_pearson-all.png> <./Figuras/entropy-hard-all.png> <./Figuras/entropy-hard_pearson-all.png>] [59]
+<Figuras/nmae-hard-sin.png, id=881, 514.3215pt x 395.076pt>
+File: Figuras/nmae-hard-sin.png Graphic file (type png)
+<use Figuras/nmae-hard-sin.png>
+Package pdftex.def Info: Figuras/nmae-hard-sin.png  used on input line 1581.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nmae-hard_pearson-sin.png, id=882, 514.3215pt x 395.076pt>
+File: Figuras/nmae-hard_pearson-sin.png Graphic file (type png)
+<use Figuras/nmae-hard_pearson-sin.png>
+Package pdftex.def Info: Figuras/nmae-hard_pearson-sin.png  used on input line 1587.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-hard-sin.png, id=883, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-hard-sin.png Graphic file (type png)
+<use Figuras/nrmse-hard-sin.png>
+Package pdftex.def Info: Figuras/nrmse-hard-sin.png  used on input line 1596.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-hard_pearson-sin.png, id=884, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-hard_pearson-sin.png Graphic file (type png)
+<use Figuras/nrmse-hard_pearson-sin.png>
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-sin.png  used on input line 1602.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/entropy-hard-sin.png, id=885, 508.0581pt x 395.076pt>
+File: Figuras/entropy-hard-sin.png Graphic file (type png)
+<use Figuras/entropy-hard-sin.png>
+Package pdftex.def Info: Figuras/entropy-hard-sin.png  used on input line 1611.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-hard_pearson-sin.png, id=886, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hard_pearson-sin.png Graphic file (type png)
+<use Figuras/entropy-hard_pearson-sin.png>
+Package pdftex.def Info: Figuras/entropy-hard_pearson-sin.png  used on input line 1617.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [60] [61 <./Figuras/nmae-hard-sin.png> <./Figuras/nmae-hard_pearson-sin.png> <./Figuras/nrmse-hard-sin.png> <./Figuras/nrmse-hard_pearson-sin.png> <./Figuras/entropy-hard-sin.png> <./Figuras/entropy-hard_pearson-sin.png>] [62] [63
 
 ]
-Overfull \hbox (11.25876pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (11.25876pt too wide) in paragraph at lines 1642--1642
 \OT1/cmr/m/n/12 clus-te-ring for co-lla-bo-ra-ti-ve fil-te-ring''. A: \OT1/cmr/m/it/12 In-for-ma-ti-on Tech-no-logy Jour-nal KMUTNB
  []
 
-[57] [58] (./Memoria.aux)
+[64] [65] (./Memoria.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: D8B486EA41909CB15EE458252CB889EC;10384.
+(rerunfilecheck)             Checksum: 7890AEE9F347E5FA42CC6F9D2519FCDC;10767.
 Package logreq Info: Writing requests to 'Memoria.run.xml'.
 \openout1 = `Memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19966 strings out of 474222
- 350665 string characters out of 5748734
+ 31817 strings out of 474222
+ 606924 string characters out of 5748734
  1950975 words of memory out of 5000000
- 41769 multiletter control sequences out of 15000+600000
- 568886 words of font info for 72 fonts, out of 8000000 for 9000
+ 53390 multiletter control sequences out of 15000+600000
+ 571479 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,81p,1019b,2873s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Memoria.pdf (59 pages, 1163123 bytes).
+ 84i,12n,87p,1596b,2873s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Memoria.pdf (66 pages, 3032420 bytes).
 PDF statistics:
- 987 PDF objects out of 1000 (max. 8388607)
- 822 compressed objects within 9 object streams
- 220 named destinations out of 1000 (max. 500000)
- 632 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1090 PDF objects out of 1200 (max. 8388607)
+ 889 compressed objects within 9 object streams
+ 231 named destinations out of 1000 (max. 500000)
+ 720 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -654,7 +654,7 @@ def cross_validate(ratings, cluster_method):
 
     mae_scores, nmae_scores, rmse_scores, nrmse_scores, sim_times, cluster_times, pred_times, total_times, entropyes, n_clusters = zip(*results)
 
-    
+    '''
     print(f'\n--- Promedios por fold ---')
     print(f'Average MAE: {np.mean(mae_scores):.4f}')
     print(f'Average NMAE: {np.mean(nmae_scores):.4f}')
@@ -666,7 +666,7 @@ def cross_validate(ratings, cluster_method):
     print(f'Average Time - Clustering: {np.mean(cluster_times):.2f}s')
     print(f'Average Time - Prediction: {np.mean(pred_times):.2f}s')
     print(f'Average Time - Fold: {np.mean(total_times):.2f}s')
-    
+    '''
     return np.mean(nmae_scores), np.mean(nrmse_scores), np.mean(entropyes)
 
 # --------------------

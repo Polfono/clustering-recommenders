@@ -12,6 +12,20 @@
 \usepackage{verbatim}
 \usepackage{geometry}
 \usepackage{pdflscape}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\usepackage[x11names]{xcolor}      % o simplemente \usepackage{ xcolor }
+
+% Definición de colores personalizados
+\definecolor{customBlue}   {HTML}{1F77B4} % azul
+\definecolor{customOrange} {HTML}{FF7F0E} % naranja
+\definecolor{customGreen}  {HTML}{2CA02C} % verde
+\definecolor{customRed}    {HTML}{D62728} % rojo
+\definecolor{customPurple}{HTML}{9467BD}  % púrpura
+\definecolor{customBrown} {HTML}{8C564B}  % marrón
+\definecolor{customPink}  {HTML}{E377C2}  % rosa
 
 \addbibresource{biblio.bib}
 
@@ -1461,6 +1475,169 @@ En segon lloc, per avaluar la qualitat de la distribució dels usuaris entre els
 H_{\text{norm}} = \frac{-\sum_{j=1}^{K} p_j \log_2(p_j)}{\log_2(K)}
 \]
 on \(K\) és el nombre de clústers i \(p_j\) és la proporció d'usuaris assignats al clúster \(j\) en un \textit{fold} particular. Un valor de la mitjana d'entropia normalitzada (calculada a partir dels valors obtinguts en cada \textit{fold}) proper a 1 indica una distribució equilibrada dels usuaris de manera consistent, mentre que un valor proper a 0 suggereix que la majoria dels usuaris estan concentrats en pocs clústers de forma recurrent. Per tant, es cercaran valors mitjans d'entropia més elevats, ja que reflecteixen una millor utilització de la capacitat de segmentació del mètode de clustering en diferents particions de les dades.
+
+\section{Resultats clustering dur}
+
+En aquesta secció s'analitzen els resultats obtinguts amb l'algorisme de clustering dur K-means, utilitzant dues mètriques de distància diferents: la distància Euclidiana i la distància basada en la correlació de Pearson, tal com es mostra a la Figura~\ref{fig:hard-clustering-results}. S'avalua el rendiment en termes de NMAE, NRMSE i entropia normalitzada per als conjunts de dades \texttt{ml-small}, \texttt{ml-1m}, \texttt{books} i \texttt{jester}, en funció del nombre de clústers (K).
+
+A la primera columna de la figura es mostren els resultats d'utilitzar la distància Euclidiana, mentre que a la segona columna es presenten els resultats utilitzant la distància de Pearson.
+La primera fila mostra els valors de NMAE (Figures~\ref{fig:hard-clustering-results-a} i~\ref{fig:hard-clustering-results-b}), la segona fila mostra els valors de NRMSE (Figures~\ref{fig:hard-clustering-results-c} i~\ref{fig:hard-clustering-results-d}), i la tercera fila presenta els valors d'entropia normalitzada (Figures~\ref{fig:hard-clustering-results-e} i~\ref{fig:hard-clustering-results-f}).
+
+L'anàlisi dels resultats del clustering dur amb K-means revela una interacció complexa entre l'algorisme, les característiques intrínseques de cada conjunt de dades i la mètrica de distància emprada. No emergeix una configuració universalment òptima, sinó que el rendiment depèn de l'equilibri entre la precisió de les prediccions (NMAE i NRMSE) i la qualitat de la segmentació dels usuaris (entropia normalitzada).
+
+En termes de precisió, el conjunt de dades \texttt{books} destaca per obtenir generalment els errors més baixos quan s'utilitza la distància Euclidiana (Figures~\ref{fig:hard-clustering-results-a} i~\ref{fig:hard-clustering-results-c}, línia verda). En aquest cas, s'observa una millora de la precisió a mesura que el nombre de clústers (K) augmenta fins a un cert punt (aproximadament entre 60 i 80), suggerint que per a aquest dataset, amb la seva baixa densitat (0,33\,\%) i escala de valoració àmplia (1-10), una segmentació més fina pot ajudar a identificar grups d'usuaris amb preferències més homogènies. No obstant això, quan s'utilitza la distància de Pearson per al clustering en el dataset \texttt{books} (Figures~\ref{fig:hard-clustering-results-b} i~\ref{fig:hard-clustering-results-d}, línia verda), la precisió empitjora lleugerament en comparació amb la distància Euclidiana, especialment per a valors de K més alts. Això és contraintuïtiu, ja que s'esperaria que una mètrica de distància alineada amb la de similitud de la predicció (Pearson amb Pearson) oferís millors resultats. Aquest fenomen podria indicar que els clústers formats per Pearson, tot i agrupar usuaris amb patrons de valoració correlacionats, no són tan efectius per a la predicció específica amb desviació de la mitjana com els formats per Euclidiana en aquest cas particular, o que la interacció amb la baixa entropia resultant (explicada més endavant) impacta negativament.
+
+Aquesta observació d'un empitjorament de la precisió amb la distància de Pearson es generalitza a la majoria dels altres conjunts de dades. Per exemple, per a \texttt{ml-1m} (línia taronja), l'increment de l'error amb K és més pronunciat amb Pearson que amb Euclidiana. De manera similar, per a \texttt{jester} (línia vermella), la precisió també es degrada més amb la distància de Pearson a mesura que K augmenta. Per a \texttt{ml-small} (línia blava), les diferències entre les dues distàncies són menys marcades, però no s'observa un benefici clar de Pearson sobre Euclidiana en termes de precisió. Aquesta tendència general suggereix que, tot i que la distància de Pearson captura la similitud de patrons, la seva aplicació directa en l'algorisme K-means, que intrínsecament busca minimitzar la variància espacial (més afí a Euclidiana), pot no traduir-se sempre en una millora de la precisió del sistema de recomanació global. La geometria de l'espai definida per Pearson pot no ser tan ben explotada per K-means com la geometria Euclidiana.
+
+Pel que fa a la precisió en funció de K, per al conjunt \texttt{ml-1m}, augmentar el nombre de clústers K tendeix a empitjorar la precisió amb ambdues distàncies. Això suggereix que per a \texttt{ml-1m} (densitat 4,5\,\%, valoracions enteres 1-5), els patrons de preferència podrien ser més amplis o que els usuaris són intrínsecament més similars. Forçar una segmentació en massa clústers podria estar dividint "veïnats naturals", resultant en clústers més petits i menys informatius.
+
+Per als conjunts \texttt{ml-small} i \texttt{jester}, quan s'utilitza la distància Euclidiana (Figures~\ref{fig:hard-clustering-results-a} i~\ref{fig:hard-clustering-results-c}, línies blava i vermella respectivament), l'empitjorament de la precisió a mesura que K augmenta és relativament petit, especialment després d'un increment inicial. Per a \texttt{jester}, els valors de NMAE i NRMSE es mantenen bastant estables. Per a \texttt{ml-small}, després de l'augment fins a K al voltant de 40, la precisió fins i tot mostra una lleugera tendència a millorar o estabilitzar-se. Aquesta estabilitat o petita pèrdua de precisió amb un nombre elevat de clústers podria permetre dividir la complexitat del problema en subproblemes més petits (un per clúster) sense una penalització significativa en el rendiment predictiu. Això podria ser avantatjós des d'un punt de vista computacional o per a anàlisis més granulars, sempre que l'entropia es mantingui en nivells acceptables.
+
+Un aspecte crític és l'entropia normalitzada. Per al dataset \texttt{books} amb distància de Pearson (Figura~\ref{fig:hard-clustering-results-f}, línia verda), l'entropia és extremadament baixa, especialment per a valors baixos de K, indicant que gairebé tots els usuaris s'assignen a un únic clúster. Això podria explicar en part per què la precisió no millora: si gairebé tots els usuaris estan en un sol clúster, el sistema es comporta de manera similar a no tenir clustering, i els petits clústers residuals poden no ser representatius. Aquest fenomen de baixa entropia amb Pearson per a \texttt{books} suggereix que, tot i el filtratge, hi ha un nucli molt gran d'usuaris altament correlacionats segons Pearson, que dominen l'agrupament. En general, per a la resta de casos, l'entropia tendeix a disminuir a mesura que K augmenta (amb excepcions puntuals com el pic inicial de \texttt{ml-small} amb Pearson), la qual cosa és esperable, ja que aconseguir una distribució perfectament equilibrada és més difícil amb més clústers.
+
+En conclusió, l'eficàcia del clustering dur amb K-means depèn críticament de l'harmonia entre les característiques del conjunt de dades, la mètrica de distància escollida i la seva interacció amb l'algorisme K-means i el mètode de predicció. Contrari al que es podria esperar inicialment, l'ús de la distància de Pearson per al clustering no ha resultat en una millora generalitzada de la precisió i, en molts casos, l'ha empitjorat en comparació amb la distància Euclidiana. Per a certs datasets com \texttt{ml-small} i \texttt{jester}, l'ús de la distància Euclidiana permet incrementar el nombre de clústers sense una pèrdua dràstica de precisió, la qual cosa podria ser útil per a la gestió de la complexitat. No obstant això, l'alineació conceptual entre la mètrica de clustering i la de similitud de predicció no garanteix un millor rendiment global, i altres factors com la geometria de l'espai, la capacitat de K-means per explotar-la, i la distribució resultant dels usuaris (entropia) són determinants. La selecció de K i la mètrica de distància requereix una anàlisi curosa, considerant el compromís entre la millora predictiva (que pot ser esquiva) i la qualitat estructural dels clústers.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hard-all.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:hard-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hard_pearson-all.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:hard-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hard-all.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:hard-clustering-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hard_pearson-all.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:hard-clustering-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hard-all.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:hard-clustering-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hard_pearson-all.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:hard-clustering-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens Small} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens 1M} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Book-Crossing} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Jester} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering dur}
+    \label{fig:hard-clustering-results}
+\end{figure}
+
+L'anàlisi dels resultats del clustering dur K-means sobre els conjunts de dades sintètiques (Figura~\ref{fig:hard-clustering-sin-results}) ofereix una perspectiva interessant sobre com les característiques extremes de densitat i, fonamentalment, la \textbf{naturalesa artificial d'aquestes dades}, influeixen en el rendiment. És crucial recordar que, tot i que aquests conjunts es basen en un dataset real (MovieLens Latest Small), el procés generatiu simplifica i pot no capturar tota la complexitat i els matisos del comportament humà real en la valoració. Les conclusions extretes d'aquests conjunts sintètics serveixen principalment per entendre el comportament dels algorismes en condicions controlades i extremes, però la seva extrapolació directa a escenaris reals ha de fer-se amb cautela.
+
+Començant per la precisió (NMAE i NRMSE), el conjunt sintètic de baixa densitat (\texttt{syn03}, línia marró) mostra un comportament notablement estable i, de fet, aconsegueix errors (NMAE al voltant de 0.115, NRMSE al voltant de 0.18) inferiors als obtinguts amb els conjunts de dades reals i amb el conjunt sintètic base. Tant amb la distància Euclidiana (Figures~\ref{fig:hard-clustering-sin-results-a} i~\ref{fig:hard-clustering-sin-results-c}) com amb la distància de Pearson (Figures~\ref{fig:hard-clustering-sin-results-b} i~\ref{fig:hard-clustering-sin-results-d}), els valors de NMAE i NRMSE es mantenen pràcticament constants independentment del nombre de clústers K. Això suggereix que, en un escenari de densitat extremadament baixa (0,29\,\%) i amb dades generades que poden tenir una estructura de preferències més simple o menys sorollosa que les reals, l'algorisme de clustering té dificultats per trobar una estructura addicional que pugui alterar significativament la predicció. La informació és tan escassa que la segmentació addicional té un impacte mínim; les prediccions es basen en molt pocs veïns, i la divisió en clústers no canvia fonamentalment aquesta situació.
+
+Per al conjunt sintètic base (\texttt{syn}, línia porpra), que intenta replicar les característiques del MovieLens Small (densitat 2,38\,\%), s'observa un augment de l'error (tant NMAE com NRMSE) amb un nombre baix de clústers (K de 2 a aproximadament 20-30), de manera similar al que succeïa amb el conjunt de dades original MovieLens Small. Després d'aquest augment inicial, l'error s'estabilitza en un nivell comparable al que s'observava amb el dataset real original. Aquest comportament és consistent amb ambdues mètriques de distància. Aquesta similitud en la tendència de l'error amb el seu homòleg real suggereix que el procés de generació, tot i ser una simplificació, aconsegueix capturar algunes de les dinàmiques fonamentals respecte a l'impacte del clustering.
+
+El cas més distintiu és el del conjunt sintètic d'alta densitat (\texttt{syn80}, línia rosa), amb una densitat del 83,9\,\%. Aquí, els valors de NMAE i NRMSE són extremadament baixos (NMAE començant al voltant de 0.02, NRMSE al voltant de 0.05). Aquesta alta precisió és una conseqüència directa de l'abundància d'informació de valoracions. Curiosament, a mesura que el nombre de clústers K augmenta, s'observa un increment gradual però constant de l'error. Això suggereix que, quan les dades són molt denses (encara que artificialment), el sistema de recomanació base ja funciona extremadament bé. Intentar dividir els usuaris en més clústers, en aquest context, sembla introduir una segmentació que no millora, sinó que degrada lleugerament la precisió.
+
+Pel que fa a l'entropia normalitzada (Figures~\ref{fig:hard-clustering-sin-results-e} i~\ref{fig:hard-clustering-sin-results-f}), els patrons reflecteixen com l'algorisme distribueix aquests usuaris sintètics. Amb la distància Euclidiana (Figura~\ref{fig:hard-clustering-sin-results-e}), \texttt{syn} i \texttt{syn03} mostren una disminució de l'entropia amb K. El conjunt \texttt{syn80} mostra una caiguda inicial de l'entropia (K=5), seguida d'una recuperació i fluctuacions, mantenint-se generalment alta.
+
+Amb la distància de Pearson (Figura~\ref{fig:hard-clustering-sin-results-f}), l'entropia per a \texttt{syn} es manté relativament alta i estable. En canvi, per a \texttt{syn03} (línia marró), l'entropia és extremadament baixa i augmenta molt lentament amb K, sense superar mai 0.22. Això indica que, per al conjunt de baixa densitat, la distància de Pearson porta a una situació on gairebé tots els usuaris s'agrupen en un o molt pocs clústers. Aquest fenomen de baixa entropia amb Pearson en un context de baixa densitat és similar al que es va observar amb el conjunt de dades real \texttt{books}, la qual cosa podria suggerir una correlació entre la baixa densitat de dades i la tendència de la distància de Pearson a produir agrupaments molt desequilibrats quan s'utilitza amb K-means. Amb molt poques valoracions, les correlacions de Pearson poden ser o bé molt fortes entre un gran grup (si valoren els pocs ítems comuns de manera similar) o molt dèbils/indefinides, portant K-means a agrupar la majoria d'usuaris junts. Per a \texttt{syn80}, l'entropia amb Pearson comença baixa, però augmenta amb K fins a estabilitzar-se al voltant de 0.8.
+
+En resum, els resultats amb dades sintètiques il·lustren com els algorismes de clustering responen a variacions extremes de densitat i a dades que, per la seva naturalesa generada, poden mancar de la riquesa i complexitat de les interaccions reals. En baixa densitat sintètica, el clustering té poc impacte sobre la precisió, i els errors obtinguts són fins i tot menors que en altres escenaris. En alta densitat sintètica, tendeix a empitjorar una precisió ja artificialment alta. La interpretació d'aquests resultats ha de tenir sempre present que són una aproximació i que les dinàmiques observades podrien no traduir-se directament al comportament amb dades reals.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hard-sin.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:hard-clustering-sin-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hard_pearson-sin.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:hard-clustering-sin-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hard-sin.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:hard-clustering-sin-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hard_pearson-sin.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:hard-clustering-sin-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hard-sin.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:hard-clustering-sin-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hard_pearson-sin.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:hard-clustering-sin-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (base)} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (baixa densitat)} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (alta densitat)} \\
+
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering dur dades sintètiques}
+    \label{fig:hard-clustering-sin-results}
+\end{figure}
+
+\subsection{Resultats clustering difús}
 
 \printbibliography[heading=bibintoc]
 

@@ -337,8 +337,8 @@
       \endverb
     \endentry
     \entry{ProjectManager}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{journaltitle}{PayScale}
       \field{title}{Project Manager, Information Technology (IT) Salary in Spain in 2025 -- PayScale}
@@ -350,8 +350,8 @@
       \endverb
     \endentry
     \entry{Research}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{journaltitle}{PayScale}
       \field{title}{Researcher, Scientific Salary in Spain in 2025 -- PayScale}
@@ -640,8 +640,8 @@
       \strng{authorbibnamehash}{989946e809ab65102c0c9d4ecffd9aaa}
       \strng{authornamehash}{989946e809ab65102c0c9d4ecffd9aaa}
       \strng{authorfullhash}{989946e809ab65102c0c9d4ecffd9aaa}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information retrieval}
@@ -693,8 +693,8 @@
       \strng{authorbibnamehash}{c7512f2adc07689762e019a232b4c9c3}
       \strng{authornamehash}{c7512f2adc07689762e019a232b4c9c3}
       \strng{authorfullhash}{45e11b5343c0c1e23900657f1563e43a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information sciences}
@@ -751,8 +751,8 @@
       \strng{authorbibnamehash}{807259ce4e143ec9eeff43ec37ef7da0}
       \strng{authornamehash}{807259ce4e143ec9eeff43ec37ef7da0}
       \strng{authorfullhash}{6a323fb1f6ba12efa956f74eae07eeb2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Engineering Applications of Artificial Intelligence}
@@ -1029,8 +1029,8 @@
       \strng{authorbibnamehash}{a5fdc25541ae5faa8110b19759877a37}
       \strng{authornamehash}{a5fdc25541ae5faa8110b19759877a37}
       \strng{authorfullhash}{a5fdc25541ae5faa8110b19759877a37}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ieee Access}
