@@ -1941,6 +1941,89 @@ En conclusió, el clustering jeràrquic aplicat a dades sintètiques mostra que 
     \caption{Resultats clustering jeràrquic dades sintètiques}
     \label{fig:hac-clustering-sin-results}
 \end{figure}
+\newpage
+Per tal de justificar l'elecció del mètode d'enllaç promig (\textit{average linkage}) utilitzat en les seccions anteriors del clustering jeràrquic, s'ha realitzat una anàlisi comparativa amb altres mètodes d'enllaç comuns. Aquests mètodes defineixen com es calcula la distància entre dos clústers durant el procés d'aglomeració:
+\begin{itemize}
+    \item \textbf{Enllaç simple (Single Linkage):} La distància entre dos clústers es defineix com la distància mínima entre qualsevol parell de punts dels dos clústers. Tendeix a formar clústers allargats i pot patir l'efecte "encadenament".
+    \item \textbf{Enllaç complet (Complete Linkage):} La distància entre dos clústers és la distància màxima entre qualsevol parell de punts dels dos clústers. Tendeix a produir clústers més compactes i de mida similar.
+    \item \textbf{Enllaç per centroides (Centroid Linkage):} La distància entre dos clústers es calcula com la distància entre els seus respectius centroides.
+    \item \textbf{Enllaç ponderat (Weighted Linkage, WPGMA):} Similar a l'enllaç promig, però pondera les contribucions dels clústers originals de manera diferent quan es fusionen, especialment útil si els clústers tenen mides molt diferents.
+\end{itemize}
+Aquesta anàlisi comparativa s'ha realitzat exclusivament sobre el conjunt de dades \texttt{ml-small}, com es pot veure a la Figura~\ref{fig:hac-clustering-e-results}. La decisió de centrar-se en aquest conjunt es basa en els resultats previs: \texttt{ml-small} va mostrar una sensibilitat intermèdia als paràmetres de clustering i a les mètriques de distància, a diferència de \texttt{ml-1m} (on la precisió generalment empitjorava amb K), \texttt{jester} (molt estable o empitjorant amb Pearson) o \texttt{books} (que ja mostrava bons resultats amb \textit{average linkage} però amb problemes d'entropia en algunes configuracions). \texttt{ml-small} ofereix, per tant, un escenari més matisat per avaluar les diferències subtils entre mètodes d'enllaç.
+
+Observant els resultats de precisió (NMAE i NRMSE) per a \texttt{ml-small} amb distància Euclidiana (Figures~\ref{fig:hac-clustering-e-results-a} i~\ref{fig:hac-clustering-e-results-c}), el mètode d'enllaç promig (\textit{average}, línia blava) i l'enllaç per centroides (\textit{centroid}, línia verda) mostren un comportament molt similar, amb un augment de l'error a mesura que K creix, estabilitzant-se a un nivell relativament alt. L'enllaç ponderat (\textit{weighted}, línia taronja) segueix una tendència similar però amb un error lleugerament superior. L'enllaç simple (\textit{single}, línia vermella) és el que presenta l'error més baix de manera consistent, especialment per a K baixos, tot i que també augmenta amb K. L'enllaç complet (\textit{complete}, línia porpra) mostra l'error més alt entre tots els mètodes.
+
+Amb la distància de Pearson (Figures~\ref{fig:hac-clustering-e-results-b} i~\ref{fig:hac-clustering-e-results-d}), el mètode d'enllaç promig (\textit{average}) continua mostrant un augment de l'error amb K, però assoleix un nivell d'estabilització inferior al que tenia amb Euclidiana. L'enllaç ponderat i el complet segueixen patrons similars, amb el complet obtenint els errors més alts. L'enllaç per centroides i l'enllaç simple mostren els errors més baixos i un comportament molt estable al llarg de K, amb el simple sent lleugerament millor.
+
+Pel que fa a l'entropia amb distància Euclidiana (Figura~\ref{fig:hac-clustering-e-results-e}), l'enllaç simple és el que presenta l'entropia més baixa de manera consistent, indicant clústers molt desequilibrats. L'enllaç complet i el ponderat aconsegueixen les entropies més altes i estables. L'enllaç promig i el de centroides es troben en una posició intermèdia. Amb la distància de Pearson (Figura~\ref{fig:hac-clustering-e-results-f}), la situació canvia: l'enllaç complet assoleix l'entropia més alta, propera a 1, indicant una distribució gairebé perfecta. L'enllaç promig, ponderat i per centroides també aconsegueixen entropies altes i creixents amb K. Novament, l'enllaç simple és el que presenta l'entropia més baixa.
+
+La justificació per utilitzar l'enllaç promig (\textit{average linkage}) en els experiments principals es basa en un compromís entre la precisió i la qualitat de la distribució dels clústers. Tot i que l'enllaç simple sovint ofereix la millor precisió, especialment amb la distància Euclidiana, la seva tendència a produir entropies molt baixes (clústers desequilibrats i efecte "encadenament") el fa menys desitjable si es busca una segmentació significativa. L'enllaç complet, tot i que pot generar entropies altes (especialment amb Pearson), tendeix a produir errors de predicció més elevats. L'enllaç promig, tot i no ser el millor en cap mètrica individual de manera consistent, ofereix un balanç raonable: la seva precisió és competitiva, especialment amb la distància de Pearson per a \texttt{ml-small}, i aconsegueix entropies significativament millors que l'enllaç simple. A més, és conegut per ser menys sensible a valors atípics que l'enllaç simple o complet, i per generar clústers amb formes més equilibrades, la qual cosa s'alinea amb l'objectiu de trobar grups d'usuaris coherents. Per tant, l'elecció de l'enllaç promig es va considerar un punt de partida robust i equilibrat per a l'anàlisi principal del clustering jeràrquic.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-euc-ml-small.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:hac-clustering-e-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-pear-ml-small.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:hac-clustering-e-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-euc-ml-small.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:hac-clustering-e-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-pear-ml-small.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:hac-clustering-e-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-euc-ml-small.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:hac-clustering-e-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-pear-ml-small.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:hac-clustering-e-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Average} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Weighted} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Centroid} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Single} \\
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Complete} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering jeràrquic diferents mètodes d'enllaç (MovieLens Small)}
+    \label{fig:hac-clustering-e-results}
+\end{figure}
+
+\section{Resultats clustering per densitat}
 
 \printbibliography[heading=bibintoc]
 

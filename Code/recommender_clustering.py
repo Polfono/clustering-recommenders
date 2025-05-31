@@ -282,10 +282,109 @@ def hac_cluster_pearson(similarity_df):
     
     # 3) HAC linkage
     Z_average  = linkage(dist_vec, method='average')
-
     
     # 4) Cortar el dendrograma en k clusters
     labels_average  = fcluster(Z_average, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_pearson_W(similarity_df):
+
+    # 1) Convertir similitud en distancia
+    sim = similarity_df.values.copy()
+    sim = np.clip(sim, -1.0, 1.0)
+    dist = (1 - sim) / 2.0
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = squareform(dist, checks=False)
+    
+    # 3) HAC linkage
+    Z_weighted = linkage(dist_vec, method='weighted')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_weighted, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_pearson_S(similarity_df):
+
+    # 1) Convertir similitud en distancia
+    sim = similarity_df.values.copy()
+    sim = np.clip(sim, -1.0, 1.0)
+    dist = (1 - sim) / 2.0
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = squareform(dist, checks=False)
+    
+    # 3) HAC linkage
+    Z_single   = linkage(dist_vec, method='single')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_single, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_pearson_CO(similarity_df):
+
+    # 1) Convertir similitud en distancia
+    sim = similarity_df.values.copy()
+    sim = np.clip(sim, -1.0, 1.0)
+    dist = (1 - sim) / 2.0
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = squareform(dist, checks=False)
+    
+    # 3) HAC linkage
+    Z_complete = linkage(dist_vec, method='complete')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_complete, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_pearson_CE(similarity_df):
+
+    # 1) Convertir similitud en distancia
+    sim = similarity_df.values.copy()
+    sim = np.clip(sim, -1.0, 1.0)
+    dist = (1 - sim) / 2.0
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = squareform(dist, checks=False)
+    
+    # 3) HAC linkage
+    Z_centroid = linkage(dist_vec, method='centroid')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_centroid, t=n_clusters, criterion='maxclust') - 1
     
     # 6) Construir dict de miembros por cluster
     cluster_members = {
@@ -310,10 +409,127 @@ def hac_cluster(user_item):
     
     # 3) HAC linkage
     Z_average  = linkage(dist_vec, method='average')
+    """
+    Z_weighted = linkage(dist_vec, method='weighted')
+    Z_centroid = linkage(dist_vec, method='centroid')
+    Z_single   = linkage(dist_vec, method='single')
+    Z_complete = linkage(dist_vec, method='complete')
+    """
 
     
     # 4) Cortar el dendrograma en k clusters
     labels_average  = fcluster(Z_average, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_W(user_item):
+    # 1) Imputación de NaNs con la media de cada usuario
+    filled = user_item.values.copy()
+    user_means = np.nanmean(filled, axis=1, keepdims=True)
+    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
+
+    # 3) Estandarizar características (items)
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(filled)
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = pdist(data_scaled, metric='euclidean')
+    
+    # 3) HAC linkage
+    Z_weighted = linkage(dist_vec, method='weighted')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_weighted, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_CE(user_item):
+    # 1) Imputación de NaNs con la media de cada usuario
+    filled = user_item.values.copy()
+    user_means = np.nanmean(filled, axis=1, keepdims=True)
+    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
+
+    # 3) Estandarizar características (items)
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(filled)
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = pdist(data_scaled, metric='euclidean')
+    
+    # 3) HAC linkage
+    Z_centroid = linkage(dist_vec, method='centroid')
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_centroid, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_S(user_item):
+    # 1) Imputación de NaNs con la media de cada usuario
+    filled = user_item.values.copy()
+    user_means = np.nanmean(filled, axis=1, keepdims=True)
+    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
+
+    # 3) Estandarizar características (items)
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(filled)
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = pdist(data_scaled, metric='euclidean')
+    
+    # 3) HAC linkage
+    Z_single   = linkage(dist_vec, method='single')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_single, t=n_clusters, criterion='maxclust') - 1
+    
+    # 6) Construir dict de miembros por cluster
+    cluster_members = {
+        cid: np.where(labels_average == cid)[0]
+        for cid in range(n_clusters)
+    }
+    
+    return labels_average, cluster_members
+
+def hac_cluster_CO(user_item):
+    # 1) Imputación de NaNs con la media de cada usuario
+    filled = user_item.values.copy()
+    user_means = np.nanmean(filled, axis=1, keepdims=True)
+    filled[np.isnan(filled)] = np.take(user_means, np.where(np.isnan(filled))[0])
+
+    # 3) Estandarizar características (items)
+    scaler = StandardScaler()
+    data_scaled = scaler.fit_transform(filled)
+
+    # 2) Obtener el vector condensado para pdist
+    dist_vec = pdist(data_scaled, metric='euclidean')
+    
+    # 3) HAC linkage
+    Z_complete = linkage(dist_vec, method='complete')
+
+    
+    # 4) Cortar el dendrograma en k clusters
+    labels_average  = fcluster(Z_complete, t=n_clusters, criterion='maxclust') - 1
     
     # 6) Construir dict de miembros por cluster
     cluster_members = {
@@ -426,7 +642,15 @@ CLUSTER_METHODS = {
     'fuzzy': fuzzy_cmeans_cluster,
     'fuzzy_pearson': fuzzy_cmeans_pearson,
     'hac': hac_cluster,
+    'hac_W': hac_cluster_W,
+    'hac_CE': hac_cluster_CE,
+    'hac_S': hac_cluster_S,
+    'hac_CO': hac_cluster_CO,
     'hac_pearson': hac_cluster_pearson,
+    'hac_pearson_W': hac_cluster_pearson_W,
+    'hac_pearson_S': hac_cluster_pearson_S,
+    'hac_pearson_CO': hac_cluster_pearson_CO,
+    'hac_pearson_CE': hac_cluster_pearson_CE,
     'density': density_cluster,
     'density_pearson': density_cluster_pearson,
     'gmm': gmm_cluster
@@ -545,7 +769,7 @@ def evaluate_fold(args):
     start_cluster = timer()
     cluster_fn = CLUSTER_METHODS[cluster_method]
 
-    if(cluster_method == 'hac_pearson' or cluster_method == 'density_pearson'):
+    if(cluster_method == 'density_pearson' or cluster_method.startswith('hac_pearson')):
         clusters, cluster_members = cluster_fn(sim_df)
     else:
         clusters, cluster_members = cluster_fn(user_item)
@@ -719,7 +943,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Ejecuta validación cruzada con clustering hard o fuzzy sobre un dataset de ratings.'
     )
-    parser.add_argument('-m', '--method', choices=['hard', 'hard_pearson', 'fuzzy', 'fuzzy_pearson', 'hac', 'hac_pearson', 'density', 'gmm'], default='hard',
+    parser.add_argument('-m', '--method', choices=['hard', 'hard_pearson', 'fuzzy', 'fuzzy_pearson', 'hac', 'hac_pearson', 'density', 'gmm', 'hac_W', 'hac_CE', 'hac_S', 'hac_CO', 'hac_pearson_W', 'hac_pearson_S', 'hac_pearson_CO', 'hac_pearson_CE'], default='hard',
                         help="Tipo de clustering ('hard' o 'fuzzy').")
     parser.add_argument('-n', '--n_clusters', type=int, default=1,
                         help='Número de clusters a usar.')
