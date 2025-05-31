@@ -1637,7 +1637,310 @@ En resum, els resultats amb dades sintètiques il·lustren com els algorismes de
     \label{fig:hard-clustering-sin-results}
 \end{figure}
 
-\subsection{Resultats clustering difús}
+\section{Resultats clustering difús}
+
+L'aplicació del clustering difús mitjançant l'algorisme Fuzzy C-Means (FCM) als conjunts de dades reals, seguida d'una assignació dura mitjançant el mètode del Centre de Gravetat (COG), presenta una sèrie de resultats particulars que es detallen a la Figura~\ref{fig:fuzzy-clustering-results}. Aquesta aproximació, tot i la seva naturalesa difusa inicial, finalment assigna cada usuari a un únic clúster per a la fase de predicció, mantenint així la coherència amb l'arquitectura de recomanació emprada.
+
+Observant la precisió (NMAE i NRMSE) amb la distància Euclidiana (Figures~\ref{fig:fuzzy-clustering-results-a} i~\ref{fig:fuzzy-clustering-results-c}), el comportament dels diferents conjunts de dades és força heterogeni. Per al conjunt \texttt{ml-small} (línia blava), l'error augmenta significativament a mesura que K s'incrementa, especialment fins a K al voltant de 60, estabilitzant-se després en un nivell d'error superior al dels valors baixos de K. Això suggereix que la flexibilitat inherent de FCM, combinada amb una posterior assignació dura, no necessàriament es tradueix en una millora de la precisió per a aquest dataset, i una segmentació més fina resulta perjudicial. El conjunt \texttt{ml-1m} (línia taronja) mostra un lleuger increment de l'error amb K, però amb menys variabilitat que \texttt{ml-small}, mantenint-se relativament estable. El conjunt \texttt{jester} (línia vermella) presenta una precisió notablement constant al llarg de tot el rang de K, amb variacions mínimes. El cas més favorable amb distància Euclidiana és el del conjunt \texttt{books} (línia verda), on tant el NMAE com el NRMSE disminueixen de manera consistent a mesura que K augmenta, assolint els valors més baixos de precisió entre tots els datasets amb aquesta configuració. Això indica que, per a \texttt{books}, la capacitat de FCM per modelar pertinences parcials, fins i tot després de l'assignació dura, podria estar identificant agrupacions més coherents que beneficien la predicció.
+
+Quan s'utilitza la distància de Pearson amb FCM (Figures~\ref{fig:fuzzy-clustering-results-b} i~\ref{fig:fuzzy-clustering-results-d}), els resultats de precisió canvien dràsticament i mostren patrons molt distintius. Per a \texttt{ml-1m} i \texttt{jester} (línies taronja i vermella), la precisió esdevé pràcticament constant al llarg de tot el rang de K, amb valors d'error superiors als obtinguts amb distància Euclidiana. Però el comportament més sorprenent es dóna en \texttt{ml-small} i \texttt{books} (línies blava i verda). Ambdós conjunts mostren un patró cíclic o oscil·latori en els valors de NMAE i NRMSE. Per exemple, per a \texttt{ml-small}, l'error fluctua considerablement, amb pics i valls a mesura que K canvia. Per a \texttt{books}, tot i que les oscil·lacions són menys pronunciades, també s'observa una manca de tendència clara. Aquest comportament oscil·latori és inusual i podria ser un artefacte de la interacció entre la distància de Pearson (que opera sobre correlacions), l'algorisme FCM (que calcula centroids ponderats i graus de pertinença), i el mètode d'assignació dura COG. La mètrica de Pearson pot ser molt sensible a petits canvis en les dades o en la inicialització dels centroids, especialment quan es combina amb els càlculs iteratius de FCM. Les oscil·lacions podrien indicar una inestabilitat en la convergència dels clústers o que l'assignació final mitjançant COG és molt sensible al nombre de clústers quan s'utilitza Pearson en aquest context difús.
+
+L'anàlisi de l'entropia normalitzada (Figures~\ref{fig:fuzzy-clustering-results-e} i~\ref{fig:fuzzy-clustering-results-f}) revela aspectes crítics sobre la distribució dels usuaris. Amb la distància Euclidiana (Figura~\ref{fig:fuzzy-clustering-results-e}), \texttt{ml-small} i \texttt{books} mantenen una entropia relativament alta i estable (al voltant de 0.7-0.9), indicant una bona distribució dels usuaris entre els clústers. En canvi, \texttt{ml-1m} mostra una entropia que disminueix amb K, i \texttt{jester} presenta l'entropia més baixa i més variable, amb caigudes significatives per a certs valors de K (per exemple, K=30 i K=85), la qual cosa suggereix que per a \texttt{jester}, la combinació FCM-Euclidiana-COG tendeix a concentrar els usuaris en pocs clústers.
+
+La situació de l'entropia amb la distància de Pearson és encara més extrema (Figura~\ref{fig:fuzzy-clustering-results-f}). Per a \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester}, l'entropia cau a valors propers a zero per a $K>2$ i es manté allà, amb lleugeres fluctuacions gairebé imperceptibles. Això indica que, amb la distància de Pearson, el mètode FCM seguit de l'assignació COG resulta en què pràcticament tots els usuaris són assignats a un únic clúster. Aquesta és una troballa crítica, ja que invalida en gran manera el propòsit del clustering per a aquests casos: si tots els usuaris estan en un sol grup, el sistema es comporta com si no hi hagués clustering. Aquest fenomen podria explicar els resultats de precisió constants o oscil·latoris observats per a aquests datasets amb Pearson, ja que les prediccions es basarien gairebé sempre en el conjunt complet d'usuaris (o en un grup dominant i altres residuals molt petits). L'única excepció és el conjunt \texttt{books}, on l'entropia, tot i començar baixa, augmenta amb K fins a assolir valors més respectables (al voltant de 0.7), indicant una millor distribució, encara que no perfecta. Aquesta millora en l'entropia per a \texttt{books} amb Pearson podria estar relacionada amb la seva millor precisió relativa en aquesta configuració, tot i les oscil·lacions. La sensibilitat de la distància de Pearson i la seva possible interacció amb el paràmetre de difusió \(m\) de FCM (tot i que es va mantenir a \(m=2\)) podrien estar darrere d'aquesta concentració extrema d'usuaris.
+
+En conclusió, el clustering difús amb FCM i posterior assignació dura mostra una gran sensibilitat a l'elecció de la mètrica de distància. Mentre que amb la distància Euclidiana s'observen comportaments diversos en precisió i una entropia generalment acceptable (excepte per a \texttt{jester}), l'ús de la distància de Pearson condueix a resultats de precisió inestables o plans i, de manera més preocupant, a una entropia extremadament baixa per a la majoria dels datasets. Aquesta concentració d'usuaris en un sol clúster amb Pearson qüestiona la utilitat pràctica d'aquesta combinació específica (FCM-Pearson-COG) per a la segmentació efectiva d'usuaris en aquests sistemes de recomanació, ja que la naturalesa "difusa" no sembla traduir-se en una partició dura útil quan s'empra Pearson. El dataset \texttt{books} emergeix com el cas més consistentment positiu, especialment amb distància Euclidiana, on la precisió millora amb K i l'entropia es manté alta.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-fuzzy-all.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:fuzzy-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-fuzzy_pearson-all.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:fuzzy-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-fuzzy-all.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:fuzzy-clustering-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-fuzzy_pearson-all.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:fuzzy-clustering-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-fuzzy-all.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:fuzzy-clustering-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-fuzzy_pearson-all.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:fuzzy-clustering-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens Small} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens 1M} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Book-Crossing} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Jester} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering difús}
+    \label{fig:fuzzy-clustering-results}
+\end{figure}
+
+L'avaluació del clustering difús (FCM amb assignació COG) sobre els conjunts de dades sintètiques, com es mostra a la Figura~\ref{fig:fuzzy-clustering-sin-results}, proporciona informació addicional sobre la interacció entre la naturalesa de les dades generades, la densitat, i el comportament de l'algorisme. Com en el cas anterior, és important subratllar que aquestes dades sintètiques són una simplificació de la realitat i els resultats han d'interpretar-se en aquest context.
+
+Analitzant la precisió (NMAE i NRMSE) amb la distància Euclidiana (Figures~\ref{fig:fuzzy-clustering-sin-results-a} i~\ref{fig:fuzzy-clustering-sin-results-c}), observem que el conjunt sintètic de baixa densitat (\texttt{syn03}, línia marró) i el d'alta densitat (\texttt{syn80}, línia rosa) mostren una precisió extremadament estable al llarg de tot el rang de K. Els valors d'error són pràcticament plans, indicant que, per a aquestes densitats extremes i amb dades sintètiques, la variació del nombre de clústers en FCM té un impacte negligible en la precisió final. Per a \texttt{syn03}, l'escassetat d'informació limita la capacitat del clustering per millorar o empitjorar les prediccions. Per a \texttt{syn80}, l'abundància d'informació fa que el sistema base ja sigui molt precís, i la segmentació addicional no aporta canvis significatius. El conjunt sintètic base (\texttt{syn}, línia porpra) presenta un comportament diferent: l'error augmenta amb K fins a estabilitzar-se, de manera similar al que s'observava amb el clustering dur per a aquest mateix conjunt sintètic i el seu homòleg real, suggerint que la segmentació addicional és perjudicial.
+
+Quan s'utilitza la distància de Pearson (Figures~\ref{fig:fuzzy-clustering-sin-results-b} i~\ref{fig:fuzzy-clustering-sin-results-d}), els resultats de precisió canvien notablement. El conjunt \texttt{syn03} manté la seva precisió gairebé constant, tot i que a un nivell d'error lleugerament superior que amb Euclidiana. El conjunt \texttt{syn80} continua mostrant una precisió molt alta, però amb un lleuger augment de l'error a mesura que K augmenta, similar al que passava amb el clustering dur. El canvi més dràstic es produeix amb el conjunt sintètic base (\texttt{syn}), que ara exhibeix un patró fortament oscil·latori en els valors de NMAE i NRMSE. Aquestes fluctuacions pronunciades són similars a les observades amb alguns conjunts de dades reals quan s'utilitzava FCM amb Pearson, i podrien atribuir-se a inestabilitats en el procés de convergència de FCM amb aquesta mètrica o a la sensibilitat de l'assignació COG a les subtils variacions en els graus de pertinença generats per Pearson en un context de dades sintètiques.
+
+L'entropia normalitzada (Figures~\ref{fig:fuzzy-clustering-sin-results-e} i~\ref{fig:fuzzy-clustering-sin-results-f}) revela aspectes crucials sobre la distribució dels usuaris sintètics. Amb la distància Euclidiana (Figura~\ref{fig:fuzzy-clustering-sin-results-e}), \texttt{syn} i \texttt{syn03} mostren una entropia que comença alta i disminueix a mesura que K augmenta, indicant una distribució progressivament menys equilibrada. El conjunt \texttt{syn80} presenta un comportament d'entropia molt particular: comença alta, cau a zero per a K=5, i després oscil·la entre zero i valors baixos (aproximadament 0.25) per a la resta de K. Aquesta tendència a una entropia zero o molt baixa per a \texttt{syn80} amb Euclidiana significa que, malgrat l'alta densitat, l'algorisme tendeix a agrupar gairebé tots els usuaris en un sol clúster o en un nombre molt reduït de clústers. Això és sorprenent i podria ser un artefacte de com FCM amb Euclidiana gestiona la variància en un espai de dades sintètiques tan densament i uniformement poblat.
+
+Amb la distància de Pearson (Figura~\ref{fig:fuzzy-clustering-sin-results-f}), els patrons d'entropia són encara més extrems. Per al conjunt sintètic base (\texttt{syn}), l'entropia és pràcticament zero per a gairebé tots els valors de K majors que 2, amb algunes oscil·lacions puntuals on arriba a valors més alts (per exemple, K=10, K=20). Aquesta és una indicació clara que la combinació FCM-Pearson-COG porta a una concentració gairebé total dels usuaris en un sol clúster per a aquest conjunt sintètic. Això explicaria les oscil·lacions en la precisió, ja que petits canvis en K podrien moure uns pocs usuaris residuals, mentre la majoria romanen agrupats. Per al conjunt \texttt{syn03}, l'entropia també és molt baixa, començant al voltant de 0.5 i disminuint fins a aproximadament 0.3, indicant una distribució molt desequilibrada, similar al que passava amb el clustering dur per a aquest dataset amb Pearson. El conjunt \texttt{syn80}, en canvi, manté una entropia relativament més alta i estable amb Pearson (entre 0.55 i 0.8), suggerint que per a aquestes dades sintètiques d'alta densitat, Pearson permet una segmentació més equilibrada que Euclidiana.
+
+En conclusió, l'aplicació de FCM a dades sintètiques mostra que els resultats són altament dependents de la densitat de les dades generades i de la mètrica de distància. La precisió tendeix a ser estable o a empitjorar amb l'augment de K, i les oscil·lacions observades amb Pearson per al conjunt base sintètic són notables. L'entropia revela problemes significatius de concentració d'usuaris, especialment quan s'utilitza la distància Euclidiana amb el conjunt d'alta densitat (\texttt{syn80}) o la distància de Pearson amb el conjunt base (\texttt{syn}) i el de baixa densitat (\texttt{syn03}). Aquests resultats amb dades sintètiques, tot i que útils per explorar comportaments en condicions extremes, han de ser interpretats amb la deguda consideració de les limitacions inherents a la generació de dades, que pot no capturar tota la variabilitat i complexitat dels patrons de preferència humans reals. La tendència a l'entropia zero o molt baixa en diverses configuracions sintètiques quan s'utilitza FCM-Pearson suggereix una possible inestabilitat o una particularitat d'aquesta combinació metodològica amb la naturalesa de les dades generades.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-fuzzy-sin.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:fuzzy-clustering-sin-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-fuzzy_pearson-sin.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:fuzzy-clustering-sin-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-fuzzy-sin.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:fuzzy-clustering-sin-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-fuzzy_pearson-sin.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:fuzzy-clustering-sin-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-fuzzy-sin.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:fuzzy-clustering-sin-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-fuzzy_pearson-sin.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:fuzzy-clustering-sin-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (base)} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (baixa densitat)} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (alta densitat)} \\
+
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering difús dades sintètiques}
+    \label{fig:fuzzy-clustering-sin-results}
+\end{figure}
+
+\section{Resultats clustering jeràrquic}
+
+L'aplicació del clustering jeràrquic aglomeratiu (HAC), utilitzant el mètode d'enllaç promig (average linkage) i tallant el dendrograma per obtenir K clústers, presenta una sèrie de dinàmiques interessants quan s'aplica als conjunts de dades reals, tal com es mostra a la Figura~\ref{fig:hac-clustering-results}.
+
+En termes de precisió (NMAE i NRMSE) amb la distància Euclidiana (Figures~\ref{fig:hac-clustering-results-a} i~\ref{fig:hac-clustering-results-c}), el comportament dels datasets és variat. Per a \texttt{ml-small} (línia blava), l'error augmenta de manera notable a mesura que K s'incrementa, especialment fins a K al voltant de 40, per després estabilitzar-se en un nivell d'error significativament més alt que amb pocs clústers. Aquest patró suggereix que la segmentació progressiva que realitza HAC, quan es basa en la distància Euclidiana, no aconsegueix crear agrupacions que millorin la predicció per a \texttt{ml-small}, sinó que la fragmentació resulta perjudicial. El conjunt \texttt{ml-1m} (línia taronja) mostra un increment constant i més gradual de l'error amb K, indicant que per a aquest dataset més gran, una major granularitat en els clústers també redueix la precisió. El conjunt \texttt{jester} (línia vermella) presenta una precisió molt estable amb la distància Euclidiana, amb un lleuger augment de l'error a l'inici que després es manté pràcticament constant, suggerint que la naturalesa densa de \texttt{jester} fa que la predicció sigui menys sensible al nombre de clústers formats per HAC amb Euclidiana. El cas més favorable, similar al que s'observava amb altres mètodes de clustering, és el del conjunt \texttt{books} (línia verda). Aquí, el NMAE i el NRMSE disminueixen de manera consistent a mesura que K augmenta, assolint els errors més baixos. Això indica que per a \texttt{books}, l'estructura jeràrquica descoberta per HAC amb Euclidiana i el mètode d'enllaç promig, condueix a agrupacions progressivament més útils per a la predicció.
+
+Quan s'utilitza la distància de Pearson amb HAC (Figures~\ref{fig:hac-clustering-results-b} i~\ref{fig:hac-clustering-results-d}), els resultats de precisió mostren canvis respecte a la distància Euclidiana. Per a \texttt{ml-small}, l'error encara augmenta amb K, però l'increment és menys pronunciat i l'estabilització es produeix a un nivell d'error lleugerament inferior que amb Euclidiana per a valors alts de K. Per al conjunt \texttt{ml-1m}, la tendència de l'error amb la distància de Pearson és molt similar a la observada amb la distància Euclidiana, mostrant un increment gradual i constant de l'error a mesura que K augmenta. En el cas de \texttt{jester}, l'ús de la distància de Pearson resulta en un lleuger increment de l'error amb K, a diferència del comportament pràcticament constant observat amb la distància Euclidiana; per tant, per a \texttt{jester}, la precisió empitjora de manera més gradual però consistent amb Pearson. Per al conjunt \texttt{books}, la distància de Pearson també condueix a una millora de la precisió a mesura que K augmenta, però la corba és més plana i l'error es manté gairebé constant després d'una petita millora inicial. En aquest cas, la distància Euclidiana semblava oferir una millora més sostinguda per a \texttt{books}. Aquests resultats suggereixen que la naturalesa de l'enllaç promig, que considera la mitjana de les distàncies entre tots els parells d'usuaris dels clústers a fusionar, interactua de manera diferent amb les dues mètriques de distància. La distància de Pearson, basada en correlacions, pot ser més sensible a valors atípics o a usuaris amb pocs ítems en comú, la qual cosa podria influir en la mitjana de les distàncies i, per tant, en l'estructura del dendrograma resultant.
+
+L'anàlisi de l'entropia normalitzada (Figures~\ref{fig:hac-clustering-results-e} i~\ref{fig:hac-clustering-results-f}) és particularment reveladora per al clustering jeràrquic. Amb la distància Euclidiana (Figura~\ref{fig:hac-clustering-results-e}), tots els conjunts de dades, excepte \texttt{books}, mostren una entropia molt baixa per a un nombre reduït de clústers ($K<10$), que després augmenta i s'estabilitza a mesura que K creix. Per exemple, \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester} tenen entropies properes a zero per a K=2, indicant que el tall del dendrograma en dos clústers resulta en un clúster que conté gairebé tots els usuaris i un altre molt petit. Això és una característica coneguda del clustering jeràrquic aglomeratiu quan es talla a pocs nivells: sovint es produeixen clústers de mides molt desiguals. A mesura que K augmenta, es van separant més branques del dendrograma, permetent una distribució més equilibrada. El conjunt \texttt{books} és una excepció notable, ja que la seva entropia comença relativament alta i té un pic al voltant de K=15, per després disminuir lleugerament i estabilitzar-se, suggerint una estructura jeràrquica més equilibrada des de l'inici per a aquest dataset amb Euclidiana.
+
+Amb la distància de Pearson (Figura~\ref{fig:hac-clustering-results-f}), l'entropia mostra un comportament molt diferent i generalment més favorable en termes de distribució equilibrada. Per a \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester}, l'entropia augmenta de manera molt més ràpida i constant amb K, assolint valors significativament més alts que amb la distància Euclidiana, especialment per a \texttt{ml-small} que arriba a entropies superiors a 0.8. Això indica que l'estructura jeràrquica generada amb la distància de Pearson, quan es talla per obtenir K clústers, tendeix a produir agrupacions de mides més equilibrades des de valors baixos de K. El conjunt \texttt{books} també mostra un patró interessant: comença amb una entropia moderada, té un pic molt alt (superior a 0.8) per a K=5, i després disminueix gradualment. Aquesta capacitat de la distància de Pearson per generar dendrogrames que, en ser tallats, produeixen particions més equilibrades podria estar relacionada amb la seva naturalesa normalitzada, que pot donar lloc a una estructura de similituds més distribuïda.
+
+En conclusió, el clustering jeràrquic aglomeratiu mostra una forta dependència de la mètrica de distància tant en termes de precisió com, de manera molt destacada, en la distribució dels usuaris (entropia). Tot i que la distància Euclidiana pot oferir millores de precisió per a certs datasets com \texttt{books}, sovint condueix a entropies molt baixes per a pocs clústers. La distància de Pearson, per contra, tendeix a generar clústers més equilibrats (major entropia) de manera més consistent a mesura que K augmenta, la qual cosa és desitjable des del punt de vista de la segmentació. No obstant això, aquesta millor distribució no sempre es tradueix en una millor precisió. Per exemple, mentre \texttt{ml-1m} presenta un comportament de precisió similar amb ambdues distàncies, per a \texttt{jester}, l'ús de Pearson condueix a un lleuger empitjorament de la precisió. Això subratlla el compromís entre obtenir clústers ben distribuïts i clústers que siguin efectivament útils per a la tasca de predicció. L'elecció de la mètrica i el nombre de clústers K en HAC requereix una consideració acurada de les propietats estructurals dels clústers formats (reflectides per l'entropia) juntament amb el rendiment predictiu.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hac-all.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:hac-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hac_pearson-all.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:hac-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hac-all.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:hac-clustering-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hac_pearson-all.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:hac-clustering-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hac-all.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:hac-clustering-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hac_pearson-all.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:hac-clustering-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens Small} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens 1M} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Book-Crossing} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Jester} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering jeràrquic}
+    \label{fig:hac-clustering-results}
+\end{figure}
+
+L'aplicació del clustering jeràrquic aglomeratiu (HAC) als conjunts de dades sintètiques, visible a la Figura~\ref{fig:hac-clustering-sin-results}, continua il·lustrant la influència de la densitat de les dades i la mètrica de distància, tot recordant la naturalesa artificial d'aquests conjunts.
+
+En termes de precisió (NMAE i NRMSE) amb la distància Euclidiana (Figures~\ref{fig:hac-clustering-sin-results-a} i~\ref{fig:hac-clustering-sin-results-c}), el conjunt sintètic de baixa densitat (\texttt{syn03}, línia marró) manté una precisió pràcticament constant i amb errors baixos, similar al que s'observava amb altres mètodes de clustering per a aquest dataset. El conjunt sintètic d'alta densitat (\texttt{syn80}, línia rosa) mostra un increment gradual de l'error a mesura que K augmenta, indicant que la segmentació addicional empitjora una precisió que ja és molt bona de partida. El conjunt sintètic base (\texttt{syn}, línia porpra) exhibeix un augment de l'error amb K, especialment per a valors baixos, estabilitzant-se posteriorment, un patró consistent amb el seu comportament en altres experiments i amb el seu homòleg real.
+
+Quan s'utilitza la distància de Pearson (Figures~\ref{fig:hac-clustering-sin-results-b} i~\ref{fig:hac-clustering-sin-results-d}), el comportament de \texttt{syn03} i \texttt{syn80} en termes de precisió és molt similar al que presenten amb la distància Euclidiana: \texttt{syn03} es manté estable i \texttt{syn80} mostra un augment gradual de l'error. Per al conjunt sintètic base (\texttt{syn}, línia porpra), l'ús de la distància de Pearson resulta en un comportament de l'error que, si bé presenta algunes fluctuacions, es manté generalment en un nivell inferior al que s'obté amb la distància Euclidiana per a aquest mateix conjunt, especialment per a valors de K més elevats.
+
+L'anàlisi de l'entropia normalitzada (Figures~\ref{fig:hac-clustering-sin-results-e} i~\ref{fig:hac-clustering-sin-results-f}) és on es veuen les diferències més significatives induïdes per la naturalesa jeràrquica de l'algorisme. Amb la distància Euclidiana (Figura~\ref{fig:hac-clustering-sin-results-e}), els tres conjunts de dades sintètiques comencen amb entropies molt baixes per a K=2 (properes a 0 per a \texttt{syn80} i \texttt{syn}, i al voltant de 0.2 per a \texttt{syn03}). Això reflecteix la tendència de HAC a crear un clúster molt gran i altres de molt petits quan es talla el dendrograma a pocs nivells. A mesura que K augmenta, l'entropia s'incrementa per a tots tres. \texttt{syn03} assoleix l'entropia més alta i més estable (al voltant de 0.7-0.85). \texttt{syn} arriba a valors al voltant de 0.6-0.65. \texttt{syn80} mostra l'increment més lent, assolint només al voltant de 0.45-0.5 per a K alt. Aquest comportament suggereix que la naturalesa de les dades sintètiques d'alta densitat (\texttt{syn80}) pot portar a una estructura jeràrquica on, fins i tot amb molts clústers, la distribució dels usuaris roman relativament desequilibrada quan s'usa Euclidiana.
+
+Amb la distància de Pearson (Figura~\ref{fig:hac-clustering-sin-results-f}), els patrons d'entropia canvien dràsticament. El conjunt sintètic base (\texttt{syn}, línia porpra) mostra un increment molt ràpid i sostingut de l'entropia, arribant a valors propers a 1 per a K alt. Això indica que, per a aquest conjunt, la distància de Pearson genera una estructura jeràrquica que permet obtenir particions molt equilibrades a mesura que augmenta el nombre de talls. El conjunt \texttt{syn80} (línia rosa) també mostra un increment de l'entropia amb K, tot i que més moderat, estabilitzant-se al voltant de 0.5. El comportament més particular és el de \texttt{syn03} (línia marró): comença amb una entropia relativament alta (al voltant de 0.75 per K=2), però després disminueix de manera constant a mesura que K augmenta, arribant a valors propers a 0.2 per a K alt. Aquesta inversió de la tendència (disminució de l'entropia amb K) és inusual i podria indicar que per a dades sintètiques de molt baixa densitat, la combinació de Pearson amb HAC podria portar a una situació on, en intentar definir més clústers, aquests esdevenen progressivament més desequilibrats o dominats per uns pocs grups més coherents segons Pearson, mentre que la resta es fragmenten de manera desigual.
+
+En conclusió, el clustering jeràrquic aplicat a dades sintètiques mostra que la precisió és relativament insensible al nombre de clústers per a \texttt{syn03}, mentre que per a \texttt{syn} i \texttt{syn80} tendeix a empitjorar amb K quan s'usa Euclidiana. Amb Pearson, \texttt{syn} mostra una millora en la precisió respecte a Euclidiana. L'aspecte més destacable és l'impacte sobre l'entropia. Amb la distància Euclidiana, les entropies inicials són baixes, augmentant amb K, però \texttt{syn80} manté una distribució menys equilibrada. Amb la distància de Pearson, \texttt{syn} aconsegueix distribucions molt equilibrades per a K alt, mentre que \texttt{syn03} mostra un comportament atípic de disminució de l'entropia amb K. Aquests resultats subratllen com l'estructura jeràrquica inherent de l'algorisme interactua amb les mètriques de distància i les propietats extremes de les dades sintètiques, generant patrons de distribució d'usuaris complexos i de vegades contraintuïtius. La interpretació d'aquests patrons ha de considerar sempre les simplificacions inherents als conjunts de dades generats.
+
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-hac-sin.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:hac-clustering-sin-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-fuzzy_pearson-sin.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:hac-clustering-sin-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hac-sin.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:hac-clustering-sin-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-hac_pearson-sin.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:hac-clustering-sin-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hac-sin.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:hac-clustering-sin-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-hac_pearson-sin.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:hac-clustering-sin-results-f}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (base)} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (baixa densitat)} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (alta densitat)} \\
+
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering jeràrquic dades sintètiques}
+    \label{fig:hac-clustering-sin-results}
+\end{figure}
 
 \printbibliography[heading=bibintoc]
 
