@@ -554,8 +554,6 @@ def density_cluster_pearson(sim):
     num_unassigned = np.sum(labels == -1)
     total_users = len(labels)
     percent_unassigned = 100 * num_unassigned / total_users
-    print(f"Porcentaje de usuarios sin clúster asignado: {percent_unassigned:.2f}%")
-
 
     # DBSCAN asigna -1 a ruido, convertimos en cluster separado o lo ignoramos
     unique_labels = set(labels)
@@ -583,14 +581,13 @@ def density_cluster(user_item):
 
     # 4) Aplicar DBSCAN
     # eps y min_samples pueden ajustarse según el dataset
-    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric='euclidian', n_jobs=-1)
+    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric='euclidean', n_jobs=-1)
     labels = dbscan.fit_predict(data_scaled)
 
     # Calcular y mostrar el porcentaje de usuarios sin clúster asignado
     num_unassigned = np.sum(labels == -1)
     total_users = len(labels)
     percent_unassigned = 100 * num_unassigned / total_users
-    print(f"Porcentaje de usuarios sin clúster asignado: {percent_unassigned:.2f}%")
 
 
     # DBSCAN asigna -1 a ruido, convertimos en cluster separado o lo ignoramos
@@ -891,7 +888,7 @@ def cross_validate(ratings, cluster_method):
     print(f'Average Time - Prediction: {np.mean(pred_times):.2f}s')
     print(f'Average Time - Fold: {np.mean(total_times):.2f}s')
     '''
-    return np.mean(nmae_scores), np.mean(nrmse_scores), np.mean(entropyes)
+    return np.mean(nmae_scores), np.mean(nrmse_scores), np.mean(entropyes), np.mean(n_clusters)
 
 # --------------------
 # 6) MAIN
@@ -970,7 +967,7 @@ if __name__ == '__main__':
     MIN_RATING = ratings['rating'].min()
     MAX_RATING = ratings['rating'].max()
 
-    eps = 0.85
+    eps = 30
     min_samples = 5
 
     cross_validate(ratings, cluster_method=args.method)

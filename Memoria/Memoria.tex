@@ -63,7 +63,7 @@ RECOMANACIÓ}
     \vspace{0.5cm}
     \textbf{Treball Final de Grau}\\
     \vspace{0.5cm}
-    \Large 19 de març de 2025
+    \Large \today
 
     % información de la universidad
     \vspace{3cm}
@@ -2024,6 +2024,212 @@ La justificació per utilitzar l'enllaç promig (\textit{average linkage}) en el
 \end{figure}
 
 \section{Resultats clustering per densitat}
+
+Per a l'avaluació del clustering basat en densitat, s'ha utilitzat l'algorisme DBSCAN. Aquest algorisme requereix la definició de dos paràmetres clau: \(\varepsilon\) (el radi del veïnat) i \(\mathit{MinPts}\) (el nombre mínim de punts dins d'aquest radi per considerar una regió com a densa).
+
+En aquest estudi, s'ha decidit mantenir el paràmetre \(\mathit{MinPts}\) fix en un valor de 5. Aquesta elecció es basa en la pràctica comuna i les recomanacions trobades a la literatura \cite{satsiou2017hybrid}, on sovint s'utilitzen valors petits per a \(\mathit{MinPts}\). Un valor de 5 es considera un bon compromís que permet identificar regions raonablement denses sense ser excessivament restrictiu ni massa permissiu amb el soroll, especialment considerant que el nostre espai de característiques (vectors de valoracions d'usuaris) pot ser d'alta dimensionalitat.
+
+Amb \(\mathit{MinPts}\) fixat, l'atenció es centra en la selecció del paràmetre \(\varepsilon\). Per determinar un rang adequat de valors per a \(\varepsilon\), s'ha emprat la tècnica del gràfic de k-distància (k-distance graph). Aquesta tècnica consisteix a calcular la distància de cada punt al seu k-èssim veí més proper, on k en aquest context correspon directament al valor de \(\mathit{MinPts}\) (és a dir, la distància al 5è veí més proper, ja que \(\mathit{MinPts}=5\)). Després, aquestes distàncies s'ordenen de manera ascendent i es representen gràficament. El punt on la corba mostra un ``colze'' (elbow) o un canvi brusc de pendent suggereix un valor òptim o un llindar natural per a \(\varepsilon\). Els valors de \(\varepsilon\) per sota d'aquest colze podrien resultar en massa clústers petits o considerar molts punts com a soroll, mentre que valors molt per sobre podrien fusionar clústers diferents.
+
+A la Figura~\ref{fig:k-distance-example} es mostra un exemple d'un gràfic de k-distància (específicament, la distància al 5è veí, assumint \(\mathit{MinPts}=5\)) per al conjunt de dades \texttt{ml-small} utilitzant la distància Euclidiana. En aquest exemple il·lustratiu, s'observa que la corba comença a mostrar un canvi significatiu de pendent en un cert rang. Basant-nos en l'anàlisi d'aquests gràfics per a cada combinació de dataset i mètrica de distància, s'ha seleccionat un rang de valors d'\(\varepsilon\) per explorar el comportament de DBSCAN. Per exemple, en el cas il·lustrat a la figura, un rang raonable per a \(\varepsilon\) podria ser entre 25 i 75.
+
+Per tant, en els resultats que es presenten a continuació per al clustering per densitat, l'eix horitzontal no representarà el nombre de clústers K (ja que DBSCAN determina el nombre de clústers automàticament), sinó que mostrarà la variació del paràmetre \(\varepsilon\) dins del rang seleccionat per a cada cas. S'analitzarà com canvien el NMAE, el NRMSE i l'entropia normalitzada en funció d'\(\varepsilon\). És important notar que els usuaris identificats com a soroll per DBSCAN (que no pertanyen a cap clúster) seran tractats com un grup separat.
+
+A causa de les diferències significatives en els rangs òptims d'\(\varepsilon\) trobats per als diferents conjunts de dades, els resultats es presentaran en dos blocs separats. El primer bloc (Figura~\ref{fig:dbscan-clustering-results}) se centra en els conjunts \texttt{ml-small} i \texttt{ml-1m}, que comparteixen rangs d'\(\varepsilon\) relativament similars. Posteriorment, s'analitzaran els resultats per als conjunts \texttt{books} i \texttt{jester} (Figura \ref{fig:dbscan2-clustering-results}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figuras/DBSCAN/k-distancia-ml-small-5.png}
+    \caption{Exemple de gràfic de k-distància (MovieLens Small, \(\mathit{MinPts}=5\))}
+    \label{fig:k-distance-example}
+\end{figure}
+
+Observant els resultats per a \texttt{ml-small} i \texttt{ml-1m} a la Figura~\ref{fig:dbscan-clustering-results}, es poden extreure diverses conclusions importants.
+
+Amb la distància Euclidiana (columna esquerra de la Figura~\ref{fig:dbscan-clustering-results}), la precisió (NMAE i NRMSE, Figures~\ref{fig:dbscan-clustering-results-a} i~\ref{fig:dbscan-clustering-results-c}) per a \texttt{ml-small} (línia blava) mostra una lleugera millora (disminució de l'error) a mesura que \(\varepsilon\) augmenta, assolint un mínim al voltant d'\(\varepsilon=75\). Per a \texttt{ml-1m} (línia taronja), la precisió es manté pràcticament constant, amb un error significativament més alt que \texttt{ml-small}, independentment del valor d'\(\varepsilon\) dins del rang explorat. Aquesta diferència en precisió podria atribuir-se a la major densitat i mida de \texttt{ml-1m}, que podria dificultar la formació de clústers ben definits i útils per DBSCAN.
+
+El nombre de clústers trobats amb la distància Euclidiana (Figura~\ref{fig:dbscan-clustering-results-g}) és particularment revelador. Per a ambdós datasets, quan \(\varepsilon\) és petit, es troben inicialment alguns clústers (per exemple, \texttt{ml-1m} troba al voltant de 2.6 clústers de mitjana per a \(\varepsilon \approx 25\), mentre que \texttt{ml-small} troba poc més de 2). No obstant això, a mesura que \(\varepsilon\) augmenta lleugerament (al voltant de 30-35), el nombre de clústers cau dràsticament a 2 per a ambdós (un clúster principal que engloba gairebé tots els punts i el clúster de soroll). Per a \texttt{ml-small}, hi ha un petit repunt on es tornen a identificar més de 2 clústers (2.2) per a \(\varepsilon\) entre 38 i 52, abans de tornar a caure a 2. Aquesta tendència a formar només un clúster principal més el soroll per a la majoria dels valors d'\(\varepsilon\) és un indicador clau que DBSCAN, amb aquests paràmetres i distància Euclidiana, està tenint serioses dificultats per segmentar els usuaris de manera efectiva. Si gairebé tots els usuaris acaben en un únic gran clúster, l'estratègia de clustering no està aportant el valor de segmentació desitjat.
+
+L'entropia amb distància Euclidiana (Figura~\ref{fig:dbscan-clustering-results-e}) reflecteix aquesta situació. Comença relativament alta quan hi ha més clústers (i possiblement més soroll distribuït), però disminueix ràpidament a mesura que el nombre de clústers es redueix a 2, estabilitzant-se en valors molt baixos. Una entropia baixa quan només hi ha 2 agrupacions (el clúster principal i el soroll) indica que la gran majoria dels usuaris pertanyen al clúster principal.
+
+Quan s'utilitza la distància de Pearson (columna dreta de la Figura~\ref{fig:dbscan-clustering-results}), els resultats canvien. La precisió per a \texttt{ml-small} (Figures~\ref{fig:dbscan-clustering-results-b} i~\ref{fig:dbscan-clustering-results-d}, línia blava) es manté estable per a valors baixos d'\(\varepsilon\) (fins a 0.400), després mostra un pic d'empitjorament (augment de l'error) al voltant d'\(\varepsilon=0.425\), per després millorar de nou. Per a \texttt{ml-1m} (línia taronja), la precisió es manté gairebé constant, similar al cas Euclidià.
+
+El nombre de clústers trobats amb la distància de Pearson (Figura~\ref{fig:dbscan-clustering-results-h}) és molt més dinàmic, especialment per a \texttt{ml-1m}. Aquest dataset arriba a formar una mitjana de més de 30 clústers per a \(\varepsilon \approx 0.360\), abans de disminuir ràpidament. \texttt{ml-small} també forma un nombre variable de clústers, arribant a un màxim de 4, però en general troba menys clústers que \texttt{ml-1m} amb Pearson. No obstant això, per a valors d'\(\varepsilon\) alts (superiors a 0.425), ambdós datasets tendeixen a formar només 2 clústers (el principal i el soroll).
+
+L’entropia amb distància de Pearson (Figura~\ref{fig:dbscan-clustering-results-f}) mostra un comportament desalineat respecte al nombre de clústers. De fet, el nombre de clústers per a \texttt{ml-small} arriba a un màxim al voltant d’\(\varepsilon=0.360\) (fins a 4 clústers), mentre que el pic d’entropia es produeix més tard, prop d’\(\varepsilon=0.410\), on l’entropia supera 0,7. Aquesta desalineació significa que, quan realment hi ha més clústers, la distribució dels usuaris entre ells no arriba a l’equilibri òptim, i quan l’entropia és màxima, el nombre de clústers ja ha començat a disminuir. Per a \texttt{ml-1m}, es dona un fenomen semblant: el nombre de clústers és més alt cap a \(\varepsilon=0.360\) (més de 30 clústers), però l’entropia no arriba al seu punt màxim fins a valors d’\(\varepsilon\) superiors, on molts clústers ja han desaparegut. En altres paraules, el moment de màxima dispersió dels usuaris (entropia) no coincideix amb el moment de màxima fragmentació en clústers, fet que indica que no es troba una segmentació bona ni estable.
+
+En general, tant per a \texttt{ml-small} com per a \texttt{ml-1m}, l’algorisme DBSCAN amb distància Euclidiana i amb distància Pearson lluita per generar una segmentació consistent a causa d’aquesta desalineació entre els pics de nombre de clústers i els pics d’entropia. Amb la distància Euclidiana, la tendència és formar un únic gran clúster més el soroll, la qual cosa limita considerablement la utilitat del clustering. Amb la distància de Pearson, tot i que existeixen fines finestres d’\(\varepsilon\) on es formen diversos clústers i l’entropia és relativament elevada, aquestes finestres són molt estretes i no coincideixen amb el punt on realment hi ha més clústers. Això dificulta l’elecció d’un \(\varepsilon\) òptim que proporcioni alhora una bona fragmentació (més clústers) i una bona distribució dels usuaris entre ells (alta entropia). Per tant, la dificultat per obtenir una segmentació robusta suggereix que les estructures de densitat que DBSCAN identifica basant-se en la similitud de Pearson no són prou pronunciades o que aquesta mètrica no s’alinea bé amb les característiques reals dels usuaris per generar clústers útils.
+
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:dbscan-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:dbscan-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:dbscan-clustering-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:dbscan-clustering-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:dbscan-clustering-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:dbscan-clustering-results-f}
+    \end{subfigure}
+
+    %---- CUARTA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png}
+        \caption{Mitjana de clústers, distància Euclidiana}
+        \label{fig:dbscan-clustering-results-g}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png}
+        \caption{Mitjana de clústers, distància Pearson}
+        \label{fig:dbscan-clustering-results-h}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens Small} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens 1M} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering per densitat (MovieLens)}
+    \label{fig:dbscan-clustering-results}
+\end{figure}
+
+Continuant amb l'anàlisi del clustering per densitat, la Figura~\ref{fig:dbscan2-clustering-results} presenta els resultats per als conjunts de dades \texttt{books} i \texttt{jester}. Aquests dos conjunts requereixen rangs d'\(\varepsilon\) diferents dels utilitzats per a MovieLens, d'aquí la seva presentació separada.
+
+Amb la distància Euclidiana (columna esquerra de la Figura~\ref{fig:dbscan2-clustering-results}), el conjunt \texttt{books} (línia verda) mostra una lleugera millora en la precisió (NMAE i NRMSE, Figures~\ref{fig:dbscan2-clustering-results-a} i~\ref{fig:dbscan2-clustering-results-c}) a mesura que \(\varepsilon\) augmenta dins del seu rang òptim, assolint els seus millors valors d'error cap al final del rang explorat. Per al conjunt \texttt{jester} (línia vermella), la precisió es manté extremadament estable, amb un error NMAE al voltant de 0.168 i NRMSE al voltant de 0.216, pràcticament independent del valor d'\(\varepsilon\).
+
+El nombre de clústers trobats amb la distància Euclidiana (Figura~\ref{fig:dbscan2-clustering-results-g}) és, novament, un indicador crític. Per a \texttt{jester}, DBSCAN troba consistentment només 2 clústers (el clúster principal i el soroll) per a tots els valors d'\(\varepsilon\) provats. Aquesta incapacitat per segmentar \texttt{jester} en més de dos grups amb Euclidiana explica la seva precisió constant: el sistema es comporta essencialment com si no hi hagués clustering o com si tots els usuaris estiguessin en un gran clúster. Per a \texttt{books}, es troba un nombre més variable de clústers, començant amb més de 8 per a valors petits d'\(\varepsilon\) i disminuint gradualment fins a estabilitzar-se al voltant de 3.8 clústers per a \(\varepsilon\) més alts. Tot i que es formen més de dos clústers, aquest nombre encara és relativament baix.
+
+L'entropia amb distància Euclidiana (Figura~\ref{fig:dbscan2-clustering-results-e}) reflecteix aquesta situació. Per a \texttt{jester}, l'entropia comença molt alta (propera a 1) per a valors petits d'\(\varepsilon\) (quan el soroll podria ser més significatiu o distribuït), però cau dràsticament a mesura que \(\varepsilon\) augmenta, arribant a valors propers a zero. Això confirma que la majoria dels usuaris de \texttt{jester} s'agrupen en el clúster principal. Per a \texttt{books}, l'entropia és generalment baixa, començant al voltant de 0.3 i disminuint a mesura que es formen menys clústers, indicant una distribució desigual dels usuaris fins i tot quan es troben més de dos clústers.
+
+Quan s'utilitza la distància de Pearson (columna dreta de la Figura~\ref{fig:dbscan2-clustering-results}), la precisió per a \texttt{jester} (línia vermella, Figures~\ref{fig:dbscan2-clustering-results-b} i~\ref{fig:dbscan2-clustering-results-d}) continua sent molt estable, amb un lleuger empitjorament cap a la meitat del rang d'\(\varepsilon\). Per a \texttt{books} (línia verda), la precisió es manté força constant per a la major part del rang d'\(\varepsilon\), amb un notable empitjorament (augment de l'error) quan \(\varepsilon\) s'acosta a 0.35, seguit d'una recuperació.
+
+El nombre de clústers trobats amb la distància de Pearson (Figura~\ref{fig:dbscan2-clustering-results-h}) és on s'observen els canvis més dramàtics. El conjunt \texttt{books} arriba a formar un nombre molt elevat de clústers, amb un pic de 120 clústers de mitjana per a \(\varepsilon \approx 0.3\), abans de caure abruptament. Aquesta capacitat de formar tants clústers és única entre totes les combinacions de dataset i mètrica provades amb DBSCAN. Per a \texttt{jester}, amb Pearson, també es forma un nombre variable de clústers, arribant a un màxim d'aproximadament 12 clústers, abans de caure a 2 per a valors més alts d'\(\varepsilon\).
+
+L’entropia amb distància de Pearson (Figura~\ref{fig:dbscan2-clustering-results-f}) per a \texttt{books} no coincideix exactament amb el nombre de clústers. De fet, el nombre de clústers per a \texttt{books} arriba al seu màxim en un valor d’\(\varepsilon\) inferior, mentre que el pic d’entropia (amb valors superiors a 0,7) es produeix posteriorment, a un \(\varepsilon\) més alt. Això indica que quan realment hi ha més clústers, la distribució dels usuaris entre ells encara no és òptima, i quan l’entropia és màxima, el nombre de clústers ja ha començat a disminuir. Per a \texttt{jester}, passa un fenomen semblant: el nombre de clústers arriba al seu màxim en un cert \(\varepsilon\), però el pic d’entropia (al voltant de 0,68) es produeix quan el nombre de clústers ja està en descens. El moment de màxima dispersió (entropia) no coincideix amb el moment de màxima fragmentació en clústers, fet que indica que no es troba una segmentació bona ni estable en aquests punts.
+
+En resum, l’algorisme DBSCAN mostra una gran dificultat per aconseguir una segmentació efectiva i equilibrada dels usuaris en els conjunts de dades reals analitzats. Amb la distància Euclidiana, la tendència predominant és la formació d’un únic gran clúster més el soroll, especialment per a \texttt{jester} i, en gran mesura, per als conjunts MovieLens. Això resulta en una entropia baixa i poc impacte en la precisió, ja que el sistema opera de manera similar a no tenir clustering. Tot i que \texttt{books} amb Euclidiana forma alguns clústers addicionals, la seva distribució continua sent desequilibrada. Amb la distància de Pearson, tot i que es poden arribar a identificar un nombre significativament més gran de clústers en rangs específics d’\(\varepsilon\) (especialment per a \texttt{books} i \texttt{ml-1m}), aquesta segmentació és altament sensible al valor d’\(\varepsilon\) i no ve acompañada en ningún cas de una bona distribució dels usuaris. L’objectiu fonamental del clustering, que és dividir els usuaris en grups significatius i ben distribuïts per millorar les recomanacions, no sembla assolir-se de manera satisfactòria amb DBSCAN en les configuracions explorades. La formació de pocs clústers (sovint només 2, incloent el soroll) o la inestabilitat en el nombre de clústers i la seva distribució (entropia) són indicadors clars d’aquestes limitacions.
+
+Donada la manca de resultats clarament afavoridors (combinació d'un nombre elevat de clústers i una entropia alta que suggereixi una bona segmentació) amb els conjunts de dades reals, s'ha decidit no estendre l'anàlisi del clustering per densitat als conjunts de dades sintètiques. És poc probable que aquests, essent simplificacions, ofereixin un escenari més propici per a DBSCAN si ja amb les dades reals no s'han observat les condicions desitjades per a una aplicació efectiva del clustering en aquest context de sistemes de recomanació.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png}
+        \caption{NMAE, distància Euclidiana}
+        \label{fig:dbscan2-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png}
+        \caption{NMAE, distància Pearson}
+        \label{fig:dbscan2-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png}
+        \caption{NRMSE, distància Euclidiana}
+        \label{fig:dbscan2-clustering-results-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png}
+        \caption{NRMSE, distància Pearson}
+        \label{fig:dbscan2-clustering-results-d}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- TERCERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png}
+        \caption{Entropia, distància Euclidiana}
+        \label{fig:dbscan2-clustering-results-e}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png}
+        \caption{Entropia, distància Pearson}
+        \label{fig:dbscan2-clustering-results-f}
+    \end{subfigure}
+
+    %---- CUARTA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png}
+        \caption{Mitjana de clústers, distància Euclidiana}
+        \label{fig:dbscan2-clustering-results-g}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png}
+        \caption{Mitjana de clústers, distància Pearson}
+        \label{fig:dbscan2-clustering-results-h}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Book-Crossing} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Jester} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering per densitat (MovieLens)}
+    \label{fig:dbscan2-clustering-results}
+\end{figure}
+
+\section{Resultats clustering per model}
+
+
 
 \printbibliography[heading=bibintoc]
 

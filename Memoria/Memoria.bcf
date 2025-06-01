@@ -2400,6 +2400,7 @@
     <bcf:citekey order="39" intorder="1">pedregosa2011scikit</bcf:citekey>
     <bcf:citekey order="40" intorder="1">yan2019collaborative</bcf:citekey>
     <bcf:citekey order="41" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">satsiou2017hybrid</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

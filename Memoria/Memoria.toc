@@ -74,4 +74,5 @@
 \contentsline {section}{\numberline {6.2}Resultats clustering difús}{62}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Resultats clustering jeràrquic}{68}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Resultats clustering per densitat}{77}{section.6.4}%
-\contentsline {chapter}{Bibliografia}{78}{chapter*.32}%
+\contentsline {section}{\numberline {6.5}Resultats clustering per model}{84}{section.6.5}%
+\contentsline {chapter}{Bibliografia}{85}{chapter*.35}%

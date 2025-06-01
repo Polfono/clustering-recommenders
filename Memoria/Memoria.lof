@@ -23,3 +23,6 @@
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Resultats clustering jeràrquic}}{70}{figure.caption.29}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Resultats clustering jeràrquic dades sintètiques}}{73}{figure.caption.30}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Resultats clustering jeràrquic diferents mètodes d'enllaç (MovieLens Small)}}{76}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Exemple de gràfic de k-distància (MovieLens Small, \(\mathit {MinPts}=5\))}}{78}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Resultats clustering per densitat (MovieLens)}}{80}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Resultats clustering per densitat (MovieLens)}}{83}{figure.caption.34}%
