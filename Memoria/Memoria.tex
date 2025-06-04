@@ -1,11 +1,6 @@
 \documentclass[a4paper,12pt]{report}
-
-\usepackage{pdfpages}
-\usepackage[utf8]{inputenc}
-\usepackage[catalan]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{tikz}
 \usepackage{booktabs}
 \usepackage[sorting=none]{biblatex}
 \usepackage{float}
@@ -2229,6 +2224,109 @@ Donada la manca de resultats clarament afavoridors (combinació d'un nombre elev
 
 \section{Resultats clustering per model}
 
+L'últim enfocament de clustering avaluat és el clustering basat en models, utilitzant específicament el Gaussian Mixture Model (GMM). A diferència dels mètodes anteriors que depenen d'una mètrica de distància explícita (com Euclidiana o Pearson) per a l'agrupació, GMM assumeix que les dades provenen d'una barreja de K distribucions gaussianes i utilitza l'algorisme d'Expectation-Maximization (EM) per estimar els paràmetres d'aquestes distribucions (mitjanes, covariàncies i pesos de barreja). L'assignació final d'un usuari a un clúster es basa en la component gaussiana a la qual té la màxima probabilitat de pertinença (responsabilitat). Per aquest motiu, en els resultats presentats per a GMM (Figura~\ref{fig:gmm-clustering-results}), no hi ha una distinció entre diferents mètriques de distància com en els casos anteriors, ja que la "distància" o afinitat ve implícitament definida per la forma i posició de les gaussianes estimades. S'ha utilitzat una matriu de covariància diagonal per a cada component, una elecció comuna per equilibrar flexibilitat i complexitat del model.
+
+Observant la precisió (NMAE i NRMSE, Figures~\ref{fig:gmm-clustering-results-a} i~\ref{fig:gmm-clustering-results-b}) en funció del nombre de components K, el comportament dels diferents conjunts de dades reals és, en línies generals, bastant similar al que es va observar amb el clustering dur (K-means), especialment quan K-means utilitzava la distància Euclidiana. Per al conjunt \texttt{ml-small} (línia blava), l'error augmenta amb K, especialment en el rang inicial, per després estabilitzar-se a un nivell superior. El conjunt \texttt{ml-1m} (línia taronja) mostra un increment constant de l'error a mesura que K augmenta. El conjunt \texttt{jester} (línia vermella) presenta una precisió molt estable al llarg de tot el rang de K, amb un lleuger augment inicial. Novament, el conjunt \texttt{books} (línia verda) és el que mostra el comportament més favorable en termes de precisió, amb una disminució constant de l'error NMAE i NRMSE a mesura que K augmenta, assolint els valors més baixos entre tots els datasets. Aquesta similitud en les tendències de precisió amb K-means suggereix que, tot i les diferències fonamentals en els algorismes (partició dura basada en distància vs. model probabilístic), la manera com la segmentació en K grups afecta la predicció final (que utilitza la mateixa fórmula basada en similitud de Pearson dins de cada grup) és comparable. Tant K-means com GMM busquen una partició de l'espai, i si les particions resultants són estructuralment similars, l'impacte en la predicció també ho serà.
+
+L'anàlisi de l'entropia normalitzada (Figura~\ref{fig:gmm-clustering-results-c}) revela alguns matisos. Per a \texttt{ml-small}, l'entropia és relativament estable, al voltant de 0.8, indicant una bona distribució dels usuaris entre les components gaussianes. Per a \texttt{ml-1m}, l'entropia comença alta però disminueix gradualment amb K, suggerint que, a mesura que s'intenta modelar amb més components, la distribució dels usuaris es torna menys equilibrada. El conjunt \texttt{jester} mostra una entropia inicialment alta que fluctua però es manté en general per sobre de 0.85, la qual cosa és positiva. El conjunt \texttt{books} presenta un comportament interessant: comença amb una entropia molt alta (propera a 1), cau significativament al voltant de K=15, i després es recupera parcialment, mantenint-se en un nivell respectable però amb més variabilitat que \texttt{ml-small} o \texttt{jester}. Les fluctuacions en l'entropia per a GMM podrien deure's a la naturalesa de l'algorisme EM, que pot convergir a òptims locals, i la forma en què les components gaussianes s'ajusten a la distribució real de les dades pot variar amb K, afectant l'assignació final i, per tant, l'equilibri dels clústers.
+
+En general, els resultats del clustering per model amb GMM, pel que fa a la precisió en funció de K, no ofereixen un avantatge clar respecte al clustering dur amb K-means. Les tendències són molt semblants, amb \texttt{books} sent el cas més positiu on augmentar K millora la precisió. L'entropia obtinguda amb GMM és, en molts casos, comparable o fins i tot lleugerament pitjor que la de K-means amb distància Euclidiana. Això podria indicar que la capacitat de GMM per modelar clústers de formes més flexibles (el·líptiques, donades les covariàncies diagonals) i la seva naturalesa probabilística podrien portar a una assignació d'usuaris una mica més desequilibrada en certs casos. No obstant això, aquest petit empitjorament en l'entropia es tradueix en una millora molt lleugera en la precisió. La complexitat addicional de GMM (estimació de més paràmetres) no sembla justificar-se en termes de rendiment predictiu en comparació amb l'enfocament més simple de K-means per a aquesta aplicació particular i amb l'arquitectura de recomanació utilitzada.
+
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-gmm-all.png}
+        \caption{NMAE}
+        \label{fig:gmm-clustering-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-gmm-all.png}
+        \caption{NRMSE}
+        \label{fig:gmm-clustering-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-gmm-all.png}
+        \caption{Entropia}
+        \label{fig:gmm-clustering-results-c}
+    \end{subfigure}
+    \hfill
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens Small} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{MovieLens 1M} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Book-Crossing} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Jester} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering per model}
+    \label{fig:gmm-clustering-results}
+\end{figure}
+
+L'aplicació del Gaussian Mixture Model (GMM) als conjunts de dades sintètiques (Figura~\ref{fig:gmm-clustering-sin-results}) permet explorar com aquest mètode basat en models es comporta davant de dades amb característiques de densitat extremes i una naturalesa generada artificialment. Com en els casos anteriors amb GMM, no hi ha distinció per mètrica de distància.
+
+Pel que fa a la precisió (NMAE i NRMSE, Figures~\ref{fig:gmm-clustering-sin-results-a} i~\ref{fig:gmm-clustering-sin-results-b}), els resultats són força consistents amb el que s'ha observat amb altres mètodes de clustering per a aquests mateixos conjunts sintètics. El conjunt de baixa densitat (\texttt{syn03}, línia marró) manté una precisió pràcticament constant i amb errors relativament baixos, independentment del nombre de components K. El conjunt d'alta densitat (\texttt{syn80}, línia rosa) mostra un lleuger però constant increment de l'error a mesura que K augmenta, partint d'un nivell d'error inicial molt baix. El conjunt sintètic base (\texttt{syn}, línia porpra) exhibeix un augment de l'error amb K, especialment per a valors baixos, estabilitzant-se posteriorment en un nivell d'error superior. Aquestes tendències de precisió són notablement similars a les obtingudes amb K-means sobre les mateixes dades sintètiques, reforçant la idea que, per a aquests conjunts generats, la manera com la segmentació en K grups impacta la predicció és bastant robusta entre els dos mètodes, malgrat les seves diferències algorísmiques. La naturalesa potencialment més homogènia o amb menys patrons complexos de les dades sintètiques podria fer que els dos mètodes convergeixin a particions efectivament similars en termes del seu impacte en la predicció.
+
+L'entropia normalitzada (Figura~\ref{fig:gmm-clustering-sin-results-c}) presenta alguns patrons interessants i diferents dels observats amb K-means per a aquests mateixos conjunts sintètics. Per al conjunt sintètic base (\texttt{syn}), l'entropia comença molt alta (propera a 1), però disminueix gradualment a mesura que K augmenta, estabilitzant-se al voltant de 0.77. Això suggereix que GMM, per a aquest conjunt, aconsegueix una distribució inicial molt equilibrada que es torna lleugerament menys equilibrada amb més components. El conjunt de baixa densitat (\texttt{syn03}) mostra un comportament més erràtic: comença amb una entropia baixa (al voltant de 0.4), augmenta ràpidament fins a un pic proper a 0.85 per a K=5, per després disminuir de manera més o menys constant fins a valors al voltant de 0.65. Aquesta variabilitat podria indicar dificultats de l'algorisme EM per ajustar de manera estable les components gaussianes quan les dades són molt disperses i sintètiques. El conjunt d'alta densitat (\texttt{syn80}) és el que manté l'entropia més alta i estable, gairebé sempre per sobre de 0.82, la qual cosa indica que GMM aconsegueix una molt bona distribució dels usuaris entre les components per a aquest conjunt. Això contrasta amb alguns resultats de K-means on l'entropia podia ser més baixa per a \texttt{syn80} amb certes mètriques. La capacitat de GMM per modelar la densitat de probabilitat podria ser particularment efectiva quan les dades són molt denses, permetent un ajust més natural i equilibrat de les components.
+
+En conclusió, l'aplicació de GMM a les dades sintètiques mostra que, en termes de precisió, el seu comportament és molt similar al de K-means: poc impacte o empitjorament amb K, depenent de la densitat del conjunt sintètic. No obstant això, GMM demostra una capacitat generalment bona per mantenir una entropia elevada, especialment per al conjunt d'alta densitat (\texttt{syn80}) i, després d'un ajust inicial, per al conjunt base (\texttt{syn}). Això suggereix que l'enfocament basat en models pot ser més robust per aconseguir una distribució equilibrada dels usuaris en aquests escenaris sintètics, fins i tot si això no es tradueix en una millora de la precisió de les recomanacions. La naturalesa de les dades sintètiques, possiblement amb estructures menys complexes o més "netes" que les reals, podria afavorir l'ajust de models probabilístics com GMM en termes de la qualitat de la partició (entropia), encara que el benefici final per a la predicció romangui limitat per les mateixes raons que afecten altres mètodes de clustering en aquests conjunts.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nmae-gmm-sin.png}
+        \caption{NMAE}
+        \label{fig:gmm-clustering-sin-results-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/nrmse-gmm-sin.png}
+        \caption{NRMSE}
+        \label{fig:gmm-clustering-sin-results-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/entropy-gmm-sin.png}
+        \caption{Entropia}
+        \label{fig:gmm-clustering-sin-results-c}
+    \end{subfigure}
+    \hfill
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (base)} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (baixa densitat)} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Sintètic (alta densitat)} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats clustering per model}
+    \label{fig:gmm-clustering-sin-results}
+\end{figure}
+
+\section{Comparació entre mètodes}
 
 
 \printbibliography[heading=bibintoc]

@@ -617,7 +617,7 @@ def gmm_cluster(user_item):
 
     # 3) Ajustar Gaussian Mixture Model
     # n_components = n_clusters global, covariance_type puede ajustarse
-    gmm = GaussianMixture(n_components=n_clusters, covariance_type='diag', random_state=seed)
+    gmm = GaussianMixture(n_components=n_clusters, covariance_type='diag', random_state=seed, init_params='random_from_data')
     gmm.fit(data_scaled)
 
     # 4) Predecir etiquetas de cluster
