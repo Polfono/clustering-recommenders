@@ -715,6 +715,7 @@ def predict_rating(user_id, item_id, R_centered, means):
         
 
     if not candidate_neighbors.size:
+        print("No neighbors found for user:", user_id)
         return means[user_idx]
 
     sim_df_np_ = _SIM_DF_NP_CACHE['cached']
@@ -724,6 +725,7 @@ def predict_rating(user_id, item_id, R_centered, means):
     num_candidates = neighbor_sims.shape[0]
 
     if num_candidates == 0: 
+        print("No valid candidates found for user:", user_id)
         return means[user_idx]
 
     if top_k < num_candidates:
@@ -740,6 +742,7 @@ def predict_rating(user_id, item_id, R_centered, means):
     sum_abs_top_sims = np.sum(np.abs(top_sims))
     
     if sum_abs_top_sims < 1e-9:
+        print("Sum of absolute similarities is too small for user:", user_id)
         return means[user_idx]
 
     weighted_sum_devs = np.dot(top_sims, top_devs)

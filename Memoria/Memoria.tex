@@ -1,6 +1,10 @@
 \documentclass[a4paper,12pt]{report}
-\usepackage{multirow}
-\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage[sorting=none]{biblatex}
 \usepackage{float}
@@ -10,6 +14,9 @@
 \usepackage{subcaption}
 \usepackage{tikz}
 \usepackage{xcolor}
+\usepackage{multirow}
+
+
 
 \usepackage[x11names]{xcolor}      % o simplemente \usepackage{ xcolor }
 
@@ -79,6 +86,40 @@ RECOMANACIÓ}
 \end{titlepage}
 
 \newgeometry{top=2.5cm, left=3cm, right=2.5cm, bottom=2.5cm} % Ajustar el marge superior després de la portada
+
+% --- INICI SECCIONS DE RESUMS ---
+\selectlanguage{catalan}
+\chapter*{Resum}
+% \addcontentsline{toc}{chapter}{Resum} % Descomenta si vols que aparegui a l'índex
+Els sistemes de recomanació són fonamentals en l'entorn digital, però s'enfronten a reptes significatius com l'escalabilitat i la dispersió de dades. L'ús de tècniques de clustering, agrupant usuaris amb interessos similars, es presenta com una solució potencial per mitigar aquests problemes. Aquest treball de final de grau se centra en el disseny, la implementació i l'anàlisi comparativa de diverses tècniques de clustering (K-means, Fuzzy C-Means amb assignació dura, Aglomeratiu Jeràrquic, DBSCAN i Gaussian Mixture Models) aplicades com a pas previ al filtratge col·laboratiu en sistemes de recomanació. La metodologia emprada inclou l'ús de múltiples conjunts de dades, tant reals com sintètics, i l'anàlisi de diferents mètriques de distància com l'Euclidiana i la de Pearson. S'avalua la precisió de les prediccions mitjançant NMAE i NRMSE, i la qualitat de la segmentació dels clústers amb l'entropia normalitzada. L'objectiu és determinar com aquestes tècniques de clustering, amb les seves diferents configuracions, influeixen en el rendiment global dels sistemes de recomanació en diversos escenaris.
+\\
+\\
+Paraules clau: clustering, sistemes de recomanació, aprenentatge automàtic, anàlisi de dades.
+
+\clearpage % Opcional, per començar l'Abstract en una nova pàgina
+
+\selectlanguage{english}
+\chapter*{Abstract}
+% \addcontentsline{toc}{chapter}{Abstract} % Descomenta si vols que aparegui a l'índex
+Recommendation systems are fundamental in the digital environment but face significant challenges such as scalability and data sparsity. The use of clustering techniques, by grouping users with similar interests, is presented as a potential solution to mitigate these problems. This final degree project focuses on the design, implementation, and comparative analysis of various clustering techniques (K-means, Fuzzy C-Means with hard assignment, Hierarchical Agglomerative Clustering, DBSCAN, and Gaussian Mixture Models) applied as a preliminary step to collaborative filtering in recommendation systems. The methodology employed includes the use of multiple datasets, both real and synthetic, and the analysis of different distance metrics such as Euclidean and Pearson. Prediction accuracy is evaluated using NMAE and NRMSE, and cluster segmentation quality is assessed with normalized entropy. The aim is to determine how these clustering techniques, with their different configurations, influence the overall performance of recommendation systems in various scenarios.
+\\
+\\
+Keywords: clustering, recommendation systems, machine learning, data analysis.
+
+\clearpage % Opcional, per començar el Resumen en una nova pàgina
+
+\selectlanguage{spanish}
+\chapter*{Resumen}
+% \addcontentsline{toc}{chapter}{Resumen} % Descomenta si vols que aparegui a l'índex
+Los sistemas de recomendación son fundamentales en el entorno digital, pero se enfrentan a desafíos significativos como la escalabilidad y la dispersión de datos. El uso de técnicas de clustering, agrupando usuarios con intereses similares, se presenta como una solución potencial para mitigar estos problemas. Este trabajo de fin de grado se centra en el diseño, la implementación y el análisis comparativo de diversas técnicas de clustering (K-means, Fuzzy C-Means con asignación dura, Aglomerativo Jerárquico, DBSCAN y Gaussian Mixture Models) aplicadas como paso previo al filtrado colaborativo en sistemas de recomendación. La metodología empleada incluye el uso de múltiples conjuntos de datos, tanto reales como sintéticos, y el análisis de diferentes métricas de distancia como la Euclidiana y la de Pearson. Se evalúa la precisión de las predicciones mediante NMAE y NRMSE, y la calidad de la segmentación de los clústeres con la entropía normalizada. El objetivo es determinar cómo estas técnicas de clustering, con sus diferentes configuraciones, influyen en el rendimiento global de los sistemas de recomendación en diversos escenarios.
+\\
+\\
+Palabras clave: clustering, sistemas de recomendación, aprendizaje automático, análisis de datos.
+
+\selectlanguage{catalan} % Tornar a l'idioma principal del document
+% --- FI SECCIONS DE RESUMS ---
+
+\clearpage
 
 \tableofcontents
 
@@ -1443,6 +1484,7 @@ Finalment, la predicció de la valoració de l’usuari $u$ per l’ítem $v$ es
 Per a la implementació del \emph{Gaussian Mixture Model} s'ha fet ús de la classe \texttt{GaussianMixture} del mòdul \texttt{sklearn.mixture} de la biblioteca \texttt{scikit-learn} \cite{pedregosa2011scikit}.
 
 \chapter{Anàlisi de resultats}
+\label{chap:analisi_resultats}
 
 En aquest capítol es presenten i s'analitzen els resultats obtinguts en l'avaluació dels diferents mètodes de clustering aplicats al sistema de recomanació. Per tal d'assegurar la fiabilitat i generalitzabilitat de les conclusions, s'ha emprat una metodologia de validació creuada (cross-validation). Concretament, s'ha aplicat una validació creuada de 5 particions (5-fold cross-validation), on el conjunt de dades es divideix en 5 subconjunts o \textit{folds}. En cada iteració, un dels \textit{folds} s'utilitza com a conjunt de prova, mentre que els 4 restants s'empren com a conjunt d'entrenament. Aquest procés es repeteix 5 vegades, de manera que cada \textit{fold} actua com a conjunt de prova exactament una vegada. Les mètriques de rendiment obtingudes en cada una de les 5 iteracions es promedian per obtenir una estimació més robusta i menys susceptible a la particularitat d'una única partició de les dades.
 
@@ -2218,7 +2260,7 @@ Donada la manca de resultats clarament afavoridors (combinació d'un nombre elev
         \end{tabular}
     \end{minipage}
 
-    \caption{Resultats clustering per densitat (MovieLens)}
+    \caption{Resultats clustering per densitat (Book-Crossing i Jester)}
     \label{fig:dbscan2-clustering-results}
 \end{figure}
 
@@ -2322,12 +2364,252 @@ En conclusió, l'aplicació de GMM a les dades sintètiques mostra que, en terme
         \end{tabular}
     \end{minipage}
 
-    \caption{Resultats clustering per model}
+    \caption{Resultats clustering per model (dades sintètiques)}
     \label{fig:gmm-clustering-sin-results}
 \end{figure}
 
-\section{Comparació entre mètodes}
+\section{Síntesi i comparació entre mètodes}
 
+Després d'analitzar individualment cada mètode de clustering, és útil realitzar una comparativa global per identificar fortaleses, debilitats i patrons comuns. La Taula~\ref{tab:resum-clustering-global} presenta un resum qualitatiu del comportament general de cada algorisme sobre els conjunts de dades reals, considerant la precisió (NMAE/NRMSE) i la qualitat de la segmentació (Entropia i Nombre de Clústers per a DBSCAN).
+
+\begin{table}[H]
+    \centering
+    \small % Reduir la mida de la font per a millor ajust
+    \begin{tabular}{|p{2.5cm}|p{3cm}|p{4.5cm}|p{4.5cm}|}
+    \hline
+    \textbf{Mètode de Clustering} & \textbf{Mètrica Dist./Config.} & \textbf{Precisió (NMAE/NRMSE)} & \textbf{Segmentació (Entropia / Nº Clústers)} \\ \hline
+    
+    \multirow{2}{=}{K-means (Dur)} & Euclidiana & Resultats mixts. Millora per \texttt{books} amb K alt. Empitjora per \texttt{ml-1m}. Poca variació per \texttt{jester}. Petita pèrdua per \texttt{ml-small} amb K alt. & Entropia generalment decreixent amb K, però acceptablement alta per a la majoria. \\ \cline{2-4}
+     & Pearson & Empitjora la precisió en general vs Euclidiana. \texttt{books} encara és el millor però amb menys millora. & Problemes seriosos d'entropia per \texttt{books} (molt baixa).Entropia generalment més alta que amb Euclidiana per a la majoria de conjunts. \\ \hline
+     
+    \multirow{2}{=}{FCM + COG (Difús)} & Euclidiana & Resultats variats. Millora clara per \texttt{books} amb K. Error augmenta per \texttt{ml-small}. Estable per \texttt{jester}, \texttt{ml-1m}. & Bona entropia per \texttt{ml-small}, \texttt{books}. Baixa i variable per \texttt{jester}. Decreixent per \texttt{ml-1m}. \\ \cline{2-4}
+     & Pearson & Precisió inestable/oscil·latòria per \texttt{ml-small}, \texttt{books}. Estable per \texttt{ml-1m}, \texttt{jester}. & Entropia extremadament baixa (propera a 0) per \texttt{ml-small}, \texttt{ml-1m}, \texttt{jester} (quasi tots a 1 clúster). Millor per \texttt{books} (augmenta amb K). \\ \hline
+     
+    \multirow{2}{=}{HAC (Jeràrquic - Average Linkage)} & Euclidiana & Millora per \texttt{books}. Augment d'error per \texttt{ml-small}, \texttt{ml-1m}. Estable per \texttt{jester}. & Entropia acceptable per \texttt{ml-small} i \texttt{books}. Entropia baixa per \texttt{ml-1m} i \texttt{jester}. \\ \cline{2-4}
+     & Pearson & Precisió notablement millor per \texttt{ml-small} que Euclidiana. Similar per \texttt{ml-1m} i \texttt{books}. lleugerament pitjor per \texttt{jester}. & Entropia generalment molt millor que amb Euclidiana, augmenta amb K per a la majoria. Per a \texttt{jester} disminueix. \\ \hline
+     
+    \multirow{2}{=}{DBSCAN (Densitat)} & Euclidiana (\(\varepsilon\) variable) & Precisió bastant estable amb petites fluctuacions atribuïdes a variacions en el nombre de clústers i entropia. & Tendeix a formar molt pocs clústers (sovint 1 + soroll). Entropia generalment baixa reflectint això. \\ \cline{2-4}
+     & Pearson (\(\varepsilon\) variable) & Comportament similar a Euclidiana. Precisió generalment estable amb oscil·lacions lleus degudes a canvis en segmentació. & Nombre de clústers i entropia molt sensibles a \(\varepsilon\). Pot formar molts clústers (\texttt{books}, \texttt{ml-1m}) però en finestres estretes i amb entropia no sempre òptima. \\ \hline
+     
+    GMM (Model) & N/A (basat en probabilitat) & Comportament de precisió molt similar a K-means amb Euclidiana. Millora per \texttt{books}, empitjora/estable per altres. & Entropia generalment bona i estable. \\ \hline
+    
+    \end{tabular}
+    \caption{Resum qualitatiu comparatiu dels mètodes de clustering sobre dades reals.}
+    \label{tab:resum-clustering-global}
+\end{table}
+
+\textbf{Anàlisi de la Taula Resum}
+A continuació es presenten les principals conclusions extretes de la Taula~\ref{tab:resum-clustering-global}:
+
+\begin{itemize}
+  \item \textbf{Impacte de la mètrica de distància.}
+    L’elecció entre la distància euclidiana i la de Pearson afecta de manera significativa els resultats, especialment en els algorismes K-means, FCM i HAC:
+    \begin{itemize}
+      \item \textbf{K-means:} l’ús de la distància de Pearson tendeix a empitjorar la precisió. En el cas del dataset \texttt{books}, va comportar una entropia molt baixa i va degradar la segmentació.
+      \item \textbf{FCM+COG:} la distància de Pearson va resultar especialment problemàtica, produint entropies extremadament baixes en la majoria de datasets i invalidant la cohesió dels grups.
+      \item \textbf{HAC:} a diferència dels altres mètodes, la distància de Pearson va millorar notablement la distribució dels elements entre clusters (entropia més alta) i, en el cas de \texttt{ml-small}, va augmentar també la precisió.
+      \item \textbf{DBSCAN:} cap de les dues mètriques no va aconseguir una segmentació consistent; tanmateix, Pearson va permetre generar més clusters en intervals molt concrets de l’\(\varepsilon\).
+    \end{itemize}
+
+  \item \textbf{Comportament del dataset \texttt{books}.}
+    Aquest conjunt de dades mostra característiques singulars respecte als altres:
+    \begin{itemize}
+      \item Increment de la precisió amb l’augment de \(K\) en K-means (euclidiana), FCM (euclidiana) i HAC (ambdues distàncies).
+      \item GMM també registra una millora de la precisió.
+    \end{itemize}
+    Aquestes variacions indiquen que la baixa densitat, l’ampli rang de valoracions i la naturalesa dels ítems de \texttt{books} faciliten una segmentació més beneficiosa per aquests algorismes.
+
+  \item \textbf{Precisió vs. qualitat de la segmentació.}
+    Rarament es troba una combinació que maximitzi simultàniament la precisió i una segmentació de qualitat (entropia alta i nombre de clusters raonable). Sovint, augmentar la precisió comporta entropies més baixes o pocs grups ben definits.
+
+  \item \textbf{Limitacions de DBSCAN.}
+    DBSCAN presenta una gran sensibilitat al paràmetre \(\varepsilon\):
+    \begin{itemize}
+      \item Tendència a generar un únic cluster majoritari més soroll.
+      \item Necessita un ajustament molt fi per a obtenir múltiples clusters estables.
+    \end{itemize}
+    Això el fa menys pràctic sense una calibració molt específica per a cada dataset.
+
+  \item \textbf{Cap mètode universal.}
+    No existeix cap tècnica de clustering que superi de forma consistent totes les mètriques en tots els datasets. La selecció del mètode i la seva configuració han de basar-se en:
+    \begin{itemize}
+      \item Les característiques concretes de cada conjunt de dades.
+      \item Els objectius prioritaris (precisió vs. qualitat de la segmentació).
+    \end{itemize}
+\end{itemize}
+
+En resum, tot i que el clustering pot ajudar a gestionar la complexitat i a identificar subgrups rellevants d’usuaris, la seva implementació pràctica en sistemes de recomanació resulta exigent. Els guanys en precisió acostumen a ser moderats i dependents del dataset, i aconseguir una segmentació equilibrada i útil requereix un ajustament acurat dels paràmetres i una avaluació específica per a cada cas. 
+
+Després d'una anàlisi detallada de cada tècnica de clustering i les seves variants, aquesta secció presenta una comparativa final del seu rendiment en termes de precisió (NMAE) sobre els diferents conjunts de dades reals. Per a aquesta anàlisi final, s'han seleccionat només aquelles configuracions d'algorismes que van demostrar una capacitat mínima de segmentació, considerant com a llindar una entropia normalitzada mitjana superior a 0.5 en la majoria del rang de K (o \(\varepsilon\) per a DBSCAN). Aquest criteri busca assegurar que els mètodes comparats no només ofereixin una certa precisió, sinó que també realitzin una divisió mínimament equilibrada dels usuaris, ja que una entropia molt baixa indicaria que gairebé tots els usuaris acaben en un sol clúster, invalidant el propòsit del clustering. Per aquest motiu, s'han exclòs d'aquesta comparativa final les variants de K-means amb Pearson per a \texttt{books}, FCM+COG amb Pearson per a \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester}, i l'algorisme DBSCAN en general, ja que van presentar problemes severs d'entropia o de formació de molt pocs clústers en la majoria de les seves configuracions.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-ml-small.png}
+        \caption{MovieLens Small}
+        \label{fig:nmae-ml-small-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-ml-1m.png}
+        \caption{MovieLens 1M}
+        \label{fig:nmae-ml-1m-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-books.png}
+        \caption{Book-Crossing}
+        \label{fig:nmae-books-c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-jester.png}
+        \caption{Jester}
+        \label{fig:nmae-jester-d}
+    \end{subfigure}
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{K-means Euclidiana} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Kmeans Pearson} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Fuzzy C-means Euclidiana} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Fuzzy C-means Pearson} \\
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{HAC Euclidiana} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{HAC Pearson} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{GMM} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats finals de NMAE}
+    \label{fig:nmae-final-results}
+\end{figure}
+
+La Figura~\ref{fig:nmae-final-results} mostra l'evolució del NMAE per als mètodes de clustering restants en cada un dels quatre conjunts de dades reals.
+
+Per al conjunt de dades \textbf{\texttt{MovieLens Small}} (Figura~\ref{fig:nmae-ml-small-a}), s'observa que la majoria dels mètodes presenten un increment de l'error NMAE a mesura que augmenta el nombre de clústers K. K-means amb distància Euclidiana (línia blava) i GMM (línia rosa) tenen un comportament molt similar, amb un error que creix fins a estabilitzar-se al voltant de 0.17. FCM amb Euclidiana (línia verda) també segueix aquesta tendència, tot i que amb un error lleugerament superior. HAC amb distància Euclidiana (línia porpra) mostra un increment d'error més pronunciat. La variant més destacada en aquest conjunt és HAC amb distància de Pearson (línia marró), que, tot i començar amb un error similar als altres, aconsegueix mantenir un NMAE significativament més baix (al voltant de 0.156) a mesura que K augmenta, sent la millor opció en termes de precisió per a \texttt{ml-small} entre els mètodes que van superar el filtre d'entropia. K-means amb Pearson (línia taronja) també mostra un augment de l'error, assolint valors similars a les pitjors configuracions.
+
+En el cas de \textbf{\texttt{MovieLens 1M}} (Figura~\ref{fig:nmae-ml-1m-b}), on menys mètodes van superar el filtre d'entropia, K-means amb Euclidiana (línia blava) i GMM (línia rosa) tornen a mostrar un comportament molt similar, amb un NMAE que augmenta amb K, arribant a valors propers a 0.191. FCM amb Euclidiana (línia verda) presenta un error inicial més alt però una tendència més plana, acabant amb un NMAE al voltant de 0.183, que és millor que K-means Euclidiana i GMM per a K elevats. K-means amb Pearson (línia taronja) és el que obté l'error més alt, superant 0.194. Per a aquest dataset, sembla que mantenir un nombre de clústers baix o utilitzar FCM amb Euclidiana podria ser preferible si es prioritza la precisió.
+
+Per al conjunt de dades \textbf{\texttt{Book-Crossing}} (Figura~\ref{fig:nmae-books-c}), el panorama és més divers. K-means amb Euclidiana (línia blava) mostra una clara millora de la precisió a mesura que K augmenta, assolint el NMAE més baix de totes les combinacions, al voltant de 0.140. FCM amb Euclidiana (línia verda) i GMM (línia rosa) segueixen una tendència similar de millora, però amb errors lleugerament superiors, estabilitzant-se al voltant de 0.143. HAC amb Euclidiana (línia porpra) també millora amb K, quedant-se entre els millors. En canvi, FCM amb Pearson (línia vermella) i HAC amb Pearson (línia marró), tot i superar el filtre d'entropia per a aquest dataset, mostren un comportament més erràtic o una precisió inferior, amb NMAE al voltant de 0.146-0.148. Per a \texttt{books}, els mètodes basats en Euclidiana (K-means, FCM, HAC) i GMM són clarament superiors.
+
+Finalment, per al conjunt \textbf{\texttt{Jester}} (Figura~\ref{fig:nmae-jester-d}), només tres configuracions van superar el filtre d'entropia de manera consistent. K-means amb Euclidiana (línia blava) i GMM (línia rosa) mostren un comportament similar, amb un NMAE que augmenta lleugerament amb K. No obstant això, GMM (línia rosa) aconsegueix mantenir un NMAE lleugerament inferior a K-means Euclidiana (línia blava) al llarg de gairebé tot el rang de K, partint ambdós d'un NMAE proper a 0.168 i acabant GMM al voltant de 0.170 i K-means Euclidiana al voltant de 0.171. K-means amb Pearson (línia taronja) presenta un NMAE significativament més alt, augmentant des de 0.169 fins a gairebé 0.178. Per a \texttt{jester}, GMM sembla oferir un petit avantatge en precisió sobre K-means Euclidiana, sent ambdós considerablement millors que K-means Pearson.
+
+En síntesi, cap mètode de clustering ni configuració de distància emergeix com a universalment superior per a tots els conjunts de dades. Per a \texttt{ml-small}, HAC amb Pearson va oferir la millor precisió. Per a \texttt{ml-1m}, FCM amb Euclidiana va ser relativament millor per a K alts. Per a \texttt{books}, K-means amb Euclidiana va ser el guanyador clar. Per a \texttt{jester}, GMM va mostrar el millor rendiment, superant lleugerament K-means amb Euclidiana. Aquests resultats reforcen la idea que l'elecció òptima del mètode de clustering és altament dependent de les característiques específiques del conjunt de dades. La interacció entre l'algorisme de clustering, la mètrica de distància (quan aplica), i la naturalesa de les dades (densitat, escala de valoració, distribució de preferències) determina quina aproximació aconsegueix una segmentació que, en ser utilitzada per la fórmula de predicció, resulta en una millor o pitjor precisió. L'objectiu principal del clustering en aquest context no és necessàriament millorar la precisió respecte a un sistema no clusteritzat, sinó més aviat reduir la complexitat computacional del problema de recomanació restringint la cerca de veïns a subconjunts més petits d'usuaris. Tot i que s'ha intentat assegurar una segmentació mínimament útil mitjançant el filtre d'entropia, s'observa que aquesta reducció de complexitat sovint ve acompanyada d'una pèrdua de precisió, o, en el millor dels casos, d'una precisió comparable a la que s'obtindria amb pocs clústers o sense. Per exemple, per a \texttt{ml-small}, HAC amb Pearson ofereix una precisió relativament bona amb un nombre creixent de clústers. Per a \texttt{books}, K-means Euclidiana millora la precisió a mesura que segmenta més. No obstant això, per a \texttt{ml-1m} i \texttt{jester}, la tendència general és que una major segmentació (més clústers) no millora la precisió i sovint l'empitjora. Això planteja una qüestió fonamental sobre el compromís (trade-off) entre la reducció de la complexitat que ofereix el clustering i la potencial pèrdua de precisió. La decisió d'implementar una estratègia de clustering haurà de valorar si la disminució en el cost computacional o la possibilitat d'analitzar grups d'usuaris més petits compensa una eventual disminució en l'exactitud de les prediccions.escenaris.
+
+\begin{figure}[H]
+    \centering
+    %---- PRIMERA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-syn.png}
+        \caption{Sintètic (base)}
+        \label{fig:nmae-syn-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-syn03.png}
+        \caption{Sintètic (baixa densitat)}
+        \label{fig:nmae-syn03-b}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    %---- SEGONA FILA ----%
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/FinalResults/nmae-pear-syn80.png}
+        \caption{Sintètic (alta densitat)}
+        \label{fig:nmae-syn80-c}
+    \end{subfigure}
+    \hfill
+
+    %---- LLEGENDA COMUNA ----%
+    \vspace{1em}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \footnotesize
+        \textbf{Llegenda dades:}  
+        \begin{tabular}{@{}ll@{}}
+            \tikz{\draw[customBlue, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{K-means Euclidiana} \\
+            \tikz{\draw[customOrange, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Kmeans Pearson} \\
+            \tikz{\draw[customGreen, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Fuzzy C-means Euclidiana} \\
+            \tikz{\draw[customRed, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{Fuzzy C-means Pearson} \\
+            \tikz{\draw[customPurple, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{HAC Euclidiana} \\
+            \tikz{\draw[customBrown, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{HAC Pearson} \\
+            \tikz{\draw[customPink, line width=2pt] (0,0) -- (1.5cm,0);} & \texttt{GMM} \\
+        \end{tabular}
+    \end{minipage}
+
+    \caption{Resultats finals de NMAE (dades sintètiques)}
+    \label{fig:nmae-sin-final-results}
+\end{figure}
+
+L'anàlisi dels resultats de NMAE sobre els conjunts de dades sintètiques (Figura~\ref{fig:nmae-sin-final-results}), després d'aplicar el filtre d'entropia ($> 0.5$), revela comportaments distintius que reflecteixen les característiques extremes d'aquests conjunts generats.
+
+Per al conjunt \textbf{\texttt{Sintètic (base)}} (Figura~\ref{fig:nmae-syn-a}), que busca emular les propietats del \texttt{ml-small}, s'observa un comportament generalment similar al del seu homòleg real. La majoria dels mètodes de clustering mostren un increment de l'error NMAE a mesura que augmenta el nombre de clústers K. K-means amb Euclidiana (línia blava), K-means amb Pearson (línia taronja), GMM (línia rosa) i HAC amb Euclidiana (línia porpra) segueixen aquesta tendència d'empitjorament de la precisió amb més segmentació. FCM amb Euclidiana (línia verda) presenta més variabilitat, però també tendeix a augmentar l'error. Similar al cas de \texttt{ml-small} real, HAC amb Pearson (línia marró) destaca per oferir el NMAE més baix i més estable al llarg de K, suggerint que, fins i tot en dades sintètiques amb característiques similars a \texttt{ml-small}, aquesta combinació específica de clustering jeràrquic amb distància de Pearson aconsegueix una segmentació que resulta menys perjudicial, i fins i tot lleugerament millor, per a la precisió.
+
+En el cas del conjunt \textbf{\texttt{Sintètic (baixa densitat)}} (\texttt{syn03}, Figura~\ref{fig:nmae-syn03-b}), els resultats són notablement diferents. Pràcticament tots els mètodes de clustering que van superar el filtre d'entropia (K-means Euclidiana, FCM Euclidiana, HAC Euclidiana, i GMM) convergeixen a un valor de NMAE gairebé idèntic i constant, al voltant de 0.11375, independentment del nombre de clústers K (excepte per a K molt baixos on hi ha una petita variació inicial). Aquesta precisió extremadament estable i idèntica entre mètodes es pot atribuir a la manera com el sistema de predicció gestiona la manca d'informació. En un entorn de densitat tan baixa (0,29\,\%), és molt probable que per a moltes prediccions no es trobin veïns dins del clúster que hagin valorat l'ítem en qüestió. En aquests casos, tal com es va definir l'arquitectura del sistema, la predicció retorna la mitjana de les valoracions de l'usuari actiu. Si aquesta situació és predominant, l'algorisme de clustering té molt poc impacte, ja que la predicció es basa principalment en una heurística simple i no en la col·laboració dins del clúster. La petita fluctuació de FCM Euclidiana per a K=55 podria ser un artefacte o una inestabilitat puntual.
+
+Finalment, per al conjunt \textbf{\texttt{Sintètic (alta densitat)}} (\texttt{syn80}, Figura~\ref{fig:nmae-syn80-c}), on la densitat és del 83,9\,\% i els usuaris han valorat molts ítems, tots els mètodes de clustering que superen el filtre d'entropia mostren un increment de l'error NMAE a mesura que K augmenta. Aquest comportament és esperable: amb tanta informació disponible per a cada usuari, el sistema de recomanació sense una segmentació excessiva (o amb K baix) ja és capaç de fer prediccions molt precises. La segmentació addicional en múltiples clústers sembla diluir la informació i degradar lleugerament la precisió. K-means amb Euclidiana (línia blava) i K-means amb Pearson (línia taronja) tenen tendències similars d'augment. FCM amb Pearson (línia vermella) mostra un increment més pronunciat. És destacable que GMM (línia rosa) aconsegueix mantenir el NMAE més baix de manera consistent al llarg de tot el rang de K, tot i que també mostra una tendència a l'augment. Això suggereix que la capacitat de GMM per modelar la distribució de les dades podria ser particularment avantatjosa en aquest escenari d'alta densitat, aconseguint una segmentació que, tot i no millorar la precisió respecte a K baixos, és la menys perjudicial entre les opcions.
+
+\chapter{Conclusions}
+\label{chap:conclusions}
+
+Aquest capítol final resumeix les principals troballes del projecte, avalua l'assoliment dels objectius establerts, proposa línies de treball futur i reflexiona sobre l'experiència personal i acadèmica adquirida durant la realització d'aquest treball de final de grau.
+
+\section{Objectius assolits}
+\label{sec:objectius_assolits}
+
+El present treball de final de grau s'ha centrat en el disseny, la implementació i l'anàlisi comparativa de diverses tècniques de clustering aplicades com a pas previ al filtratge col·laboratiu en sistemes de recomanació. A continuació, s'avalua el grau d'assoliment dels objectius plantejats inicialment:
+
+\begin{itemize}
+    \item \textbf{Implementació d'un mòdul de clustering basat en tècniques particionals clàssiques, difuses, jeràrquiques, basades en densitat i en models:} S'han implementat i avaluat amb èxit els algorismes K-means (clustering dur), Fuzzy C-Means amb assignació dura (clustering difús), Aglomeratiu Jeràrquic (HAC), DBSCAN (clustering per densitat) i Gaussian Mixture Models (GMM). Cada algorisme s'ha provat amb diferents configuracions, incloent-hi l'ús de mètriques de distància Euclidiana i de Pearson (quan aplicable) i variant el nombre de clústers (K) o el paràmetre \(\varepsilon\) (per a DBSCAN).
+
+    \item \textbf{Anàlisi i comprensió del funcionament i les particularitats de cada mètode de clustering:} L'anàlisi detallada dels resultats, presentada al Capítol \ref{chap:analisi_resultats}, ha permès identificar les fortaleses i debilitats de cada tècnica en diferents escenaris. S'ha observat que no existeix un mètode universalment superior; el rendiment depèn fortament de les característiques del conjunt de dades (densitat, escala de valoració, nombre d'usuaris/ítems) i de la mètrica de distància emprada. Per exemple, mentre que K-means i GMM van mostrar comportaments de precisió similars, HAC amb distància de Pearson va destacar per al conjunt \texttt{ml-small}, i K-means amb Euclidiana per a \texttt{books}. DBSCAN, en canvi, va presentar dificultats significatives per generar una segmentació útil i equilibrada en la majoria dels casos.
+
+    \item \textbf{Avaluació, mitjançant mètriques específiques, de la precisió, l'eficiència computacional i la robustesa de cada enfocament:} La precisió s'ha avaluat exhaustivament mitjançant NMAE i NRMSE, i la qualitat de la segmentació amb l'entropia normalitzada. S'ha constatat que, si bé l'objectiu principal del clustering en aquest context pot ser la reducció de la complexitat computacional (restringint la cerca de veïns a clústers més petits), això sovint comporta una pèrdua de precisió o, en el millor dels casos, una precisió comparable a la que s'obtindria amb pocs clústers. La robustesa s'ha explorat mitjançant l'ús de múltiples conjunts de dades reals i sintètics, revelant la sensibilitat dels algorismes a aquestes variacions. L'eficiència computacional, tot i no ser el focus principal de les mètriques presentades gràficament, ha estat una consideració en el disseny i en la discussió de la complexitat dels algorismes.
+
+    \item \textbf{Contribució al coneixement en l'àmbit dels sistemes de recomanació:} Aquest treball aporta una comparativa sistemàtica i rigorosa de múltiples tècniques de clustering, oferint una visió detallada de com la seva aplicació prèvia al filtratge col·laboratiu impacta el rendiment. S'ha evidenciat la importància crítica de l'elecció de la mètrica de distància i la necessitat d'avaluar no només la precisió sinó també la qualitat de la segmentació (entropia). Els resultats subratllen que l'aplicació de clustering no garanteix una millora en la precisió i pot, en alguns casos, degradar-la, la qual cosa planteja un compromís important entre la reducció de la complexitat i el manteniment del rendiment predictiu.
+\end{itemize}
+
+En resum, s'han assolit els objectius principals del projecte, proporcionant una anàlisi exhaustiva i documentada que pot servir de referència per a futures investigacions i desenvolupaments en l'àrea dels sistemes de recomanació híbrids basats en clustering.
+
+\section{Treball futur}
+\label{sec:treball_futur}
+
+Tot i l'abast de l'anàlisi realitzada, aquest treball obre diverses línies d'investigació i millora que podrien abordar-se en el futur:
+
+\begin{itemize}
+    \item \textbf{Exploració d'altres algorismes de clustering:} Es podrien investigar altres famílies d'algorismes de clustering, com ara el clustering espectral, Affinity Propagation, o tècniques més avançades basades en densitat (com OPTICS o HDBSCAN, donades les limitacions trobades amb DBSCAN) per veure si ofereixen millors segmentacions o precisió.
+
+    \item \textbf{Integració amb altres mètodes de recomanació:} Investigar com aquestes tècniques de clustering interactuen amb altres paradigmes de recomanació, com ara el filtratge basat en contingut o mètodes de factorització de matrius aplicats dins de cada clúster.
+
+    \item \textbf{Aplicació a conjunts de dades més grans i escalabilitat:} Provar les tècniques en conjunts de dades de major volum i explorar solucions per millorar l'escalabilitat dels algorismes de clustering més costosos (per exemple, utilitzant versions aproximades o distribuïdes). Això inclouria l'ús de matrius disperses de manera més generalitzada per gestionar la mida de les dades.
+
+    \item \textbf{Clustering dinàmic i incremental:} Investigar com adaptar aquestes tècniques a entorns dinàmics on els usuaris, ítems i valoracions canvien amb el temps, explorant algorismes de clustering incremental.
+\end{itemize}
+
+Aquestes propostes podrien aprofundir en la comprensió de la interacció entre el clustering i els sistemes de recomanació, i potencialment conduir a sistemes més eficients i efectius.
+
+\section{Impacte i valoració personal}
+\label{sec:valoracio_personal}
+
+La realització d'aquest Treball de Final de Grau ha representat una experiència d'aprenentatge molt significativa tant a nivell personal com acadèmic. Des d'una perspectiva personal, el projecte ha suposat un repte considerable que ha requerit dedicació, organització i perseverança. La gestió del temps, la resolució autònoma de problemes tècnics i la necessitat d'aprofundir en conceptes complexos d'aprenentatge automàtic han estat aspectes clau que han contribuït al meu creixement i maduresa com a futur enginyer.
+
+Acadèmicament, el treball m'ha permès consolidar i aplicar coneixements adquirits durant el Grau en Enginyeria Informàtica, especialment en les àrees d'Intel·ligència Artificial, Aprenentatge Automàtic i Anàlisi de Dades. La necessitat de comprendre en detall el funcionament intern de diversos algorismes de clustering, les mètriques d'avaluació i els fonaments dels sistemes de recomanació ha enriquit enormement la meva formació. La implementació pràctica d'aquests conceptes utilitzant Python i llibreries especialitzades com Scikit-learn, Pandas, NumPy i Surprise, així com la redacció de la memòria amb LaTeX, han estat exercicis molt valuosos.
+
+Un dels aprenentatges més importants ha estat la constatació de la complexitat inherent a l'avaluació i comparació de tècniques d'aprenentatge automàtic en escenaris reals. Els resultats obtinguts han demostrat que no hi ha solucions universals i que l'elecció de la tècnica més adequada depèn intrínsecament de les característiques del problema i de les dades disponibles. Comprendre que la teoria sovint requereix adaptacions i anàlisis curoses quan s'aplica a la pràctica ha estat una lliçó fonamental.
+
+L'anàlisi dels resultats, en particular, ha estat un procés iteratiu de formulació d'hipòtesis, experimentació i interpretació, que m'ha ensenyat la importància del rigor metodològic i del pensament crític. Veure com diferents configuracions i algorismes produïen resultats diversos i, de vegades, contraintuïtius, ha reforçat la idea que l'anàlisi de dades és tant una ciència com un art.
+
+Finalment, considero que aquest treball no només compleix els requisits acadèmics, sinó que també m'ha proporcionat una base sòlida i una motivació per continuar explorant el fascinant camp de la intel·ligència artificial i els sistemes intel·ligents en la meva futura carrera professional.
 
 \printbibliography[heading=bibintoc]
 

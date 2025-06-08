@@ -168,7 +168,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>english</bcf:value>
+      <bcf:value>catalan</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -2364,4 +2364,61 @@
     <bcf:citekey order="4" intorder="1">Idrees_2024</bcf:citekey>
     <bcf:citekey order="5" intorder="1">Kantor_Ricci_Rokach_Shapira_2011</bcf:citekey>
     <bcf:citekey order="6" intorder="1">MacKenzie_Meyer_Noble_2013</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">sarwar2001item</bcf:cit
+    <bcf:citekey order="7" intorder="1">sarwar2001item</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">adomavicius2005toward</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">jain2008data</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Kantor_Ricci_Rokach_Shapira_2011</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">falk2019practical</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Jannach2011</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">falk2019practical</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">falk2019practical</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">jain2008data</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Person_2025</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Person_2025</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Person_2025</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">GanttPRO</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">GanttPRO</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">ProjectManager</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Research</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">SoftwareDeveloper</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">DataAnalyst</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">harper2015movielens</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">ziegler2005improving</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">jesterdataset</bcf:citekey>
+    <bcf:citekey order="27" intorder="2">goldberg2001eigentaste</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">monti2019all</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">chowdhury2024evaluating</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">herlocker2002empirical</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">zahra2015novel</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">ezugwu2022comprehensive</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">dakhel2011new</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">treerattanapitak2009items</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">koohi2016user</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">chalco2019hierarchical</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">satsiou2017hybrid</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">yan2019collaborative</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">satsiou2017hybrid</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="none">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

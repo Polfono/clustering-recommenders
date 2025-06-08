@@ -1,0 +1,19 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Memoria.blg'
+[53] biber:340> INFO - === dom jun  8, 2025, 22:23:44
+[64] Biber.pm:419> INFO - Reading 'Memoria.bcf'
+[115] Biber.pm:979> INFO - Found 30 citekeys in bib section 0
+[125] Biber.pm:4419> INFO - Processing section 0
+[132] Biber.pm:4610> INFO - Looking for bibtex file 'biblio.bib' for section 0
+[133] bibtex.pm:1713> INFO - LaTeX decoding ...
+[150] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio.bib'
+[316] UCollate.pm:68> INFO - Overriding locale 'ca-AD' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] UCollate.pm:68> INFO - Overriding locale 'ca-AD' defaults 'variable = shifted' with 'variable = non-ignorable'
+[316] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'ca-AD'
+[331] bbl.pm:660> INFO - Writing 'Memoria.bbl' with encoding 'UTF-8'
+[338] bbl.pm:763> INFO - Output to Memoria.bbl
+[339] Biber.pm:131> WARN - legacy month field 'Jun' in entry 'Idrees_2024' is not an integer - this will probably not sort properly.
+[339] Biber.pm:131> WARN - legacy month field 'Oct' in entry 'MacKenzie_Meyer_Noble_2013' is not an integer - this will probably not sort properly.
+[339] Biber.pm:131> WARN - legacy month field 'May' in entry 'ziegler2005improving' is not an integer - this will probably not sort properly.
+[339] Biber.pm:131> WARN - legacy month field 'July' in entry 'goldberg2001eigentaste' is not an integer - this will probably not sort properly.
+[339] Biber.pm:133> INFO - WARNINGS: 4

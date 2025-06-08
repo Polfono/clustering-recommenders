@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  4 JUN 2025 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  8 JUN 2025 22:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -24,89 +24,38 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip50
-\multirow@cntb=\count196
-\multirow@dima=\skip51
-\bigstrutjot=\dimen141
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks17
-\pgfutil@tempdima=\dimen142
-\pgfutil@tempdimb=\dimen143
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box51
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
-))
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count196
+\calc@Bcount=\count197
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count198
+\calc@Cskip=\skip52
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen143
+\ESO@tempdimb=\dimen144
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen144
-\Gin@req@width=\dimen145
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks19
-\pgfkeys@temptoks=\toks20
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks21
-))
-\pgf@x=\dimen146
-\pgf@y=\dimen147
-\pgf@xa=\dimen148
-\pgf@ya=\dimen149
-\pgf@xb=\dimen150
-\pgf@yb=\dimen151
-\pgf@xc=\dimen152
-\pgf@yc=\dimen153
-\pgf@xd=\dimen154
-\pgf@yd=\dimen155
-\w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count197
-\c@pgf@countb=\count198
-\c@pgf@countc=\count199
-\c@pgf@countd=\count266
-\t@pgf@toka=\toks22
-\t@pgf@tokb=\toks23
-\t@pgf@tokc=\toks24
-\pgf@sys@id@count=\count267
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
-)
-Driver file for pgf: pgfsys-pdftex.def
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count268
-\pgfsyssoftpath@bigbuffer@items=\count269
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
@@ -116,239 +65,313 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen156
-\pgfmath@count=\count270
-\pgfmath@box=\box52
-\pgfmath@toks=\toks25
-\pgfmath@stack@operand=\toks26
-\pgfmath@stack@operation=\toks27
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count271
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen157
-\pgf@picmaxx=\dimen158
-\pgf@picminy=\dimen159
-\pgf@picmaxy=\dimen160
-\pgf@pathminx=\dimen161
-\pgf@pathmaxx=\dimen162
-\pgf@pathminy=\dimen163
-\pgf@pathmaxy=\dimen164
-\pgf@xx=\dimen165
-\pgf@xy=\dimen166
-\pgf@yx=\dimen167
-\pgf@yy=\dimen168
-\pgf@zx=\dimen169
-\pgf@zy=\dimen170
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen171
-\pgf@path@lasty=\dimen172
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen173
-\pgf@shorten@start@additional=\dimen174
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box53
-\pgf@hbox=\box54
-\pgf@layerbox@main=\box55
-\pgf@picture@serial@count=\count272
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen175
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen176
-\pgf@pt@y=\dimen177
-\pgf@pt@temp=\dimen178
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen179
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen180
-\pgf@sys@shading@range@num=\count273
-\pgf@shadingcount=\count274
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box56
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box57
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen181
-\pgf@nodesepend=\dimen182
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen183
-\pgffor@skip=\dimen184
-\pgffor@stack=\toks28
-\pgffor@toks=\toks29
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count275
-\pgfplotmarksize=\dimen185
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-\tikz@lastx=\dimen186
-\tikz@lasty=\dimen187
-\tikz@lastxsaved=\dimen188
-\tikz@lastysaved=\dimen189
-\tikz@lastmovetox=\dimen190
-\tikz@lastmovetoy=\dimen191
-\tikzleveldistance=\dimen192
-\tikzsiblingdistance=\dimen193
-\tikz@figbox=\box58
-\tikz@figbox@bg=\box59
-\tikz@tempbox=\box60
-\tikz@tempbox@bg=\box61
-\tikztreelevel=\count276
-\tikznumberofchildren=\count277
-\tikznumberofcurrentchild=\count278
-\tikz@fig@count=\count279
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count280
-\pgfmatrixcurrentcolumn=\count281
-\pgf@matrix@numberofcolumns=\count282
+Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\tikz@expandcount=\count283
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen194
-\lightrulewidth=\dimen195
-\cmidrulewidth=\dimen196
-\belowrulesep=\dimen197
-\belowbottomsep=\dimen198
-\aboverulesep=\dimen199
-\abovetopsep=\dimen256
-\cmidrulesep=\dimen257
-\cmidrulekern=\dimen258
-\defaultaddspace=\dimen259
-\@cmidla=\count284
-\@cmidlb=\count285
-\@aboverulesep=\dimen260
-\@belowrulesep=\dimen261
-\@thisruleclass=\count286
-\@lastruleclass=\count287
-\@thisrulewidth=\dimen262
-) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
- (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+)
+\AM@pagewidth=\dimen147
+\AM@pageheight=\dimen148
+\AM@fboxrule=\dimen149
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count199
+\AM@pagebox=\box51
+\AM@global@opts=\toks18
+\AM@pagecnt=\count266
+\AM@toc@title=\toks19
+\AM@lof@heading=\toks20
+\c@AM@survey=\count267
+\AM@templatesizebox=\box52
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count268
+\U@D=\dimen150
+\l@unhyphenated=\language89
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count269
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-catalan/catalan.ldf
+Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
+Package babel Info: Making " an active character on input line 91.
+Warning: You are using encoding OT1 instead of T1.
+Some word breaks will not be found.
+\leftllkern=\dimen151
+\rightllkern=\dimen152
+\raiselldim=\dimen153
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/ca/babel-catalan.tex
+Package babel Info: Importing font and identification data for catalan
+(babel)             from babel-ca.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen154
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen155
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count270
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count271
+\leftroot@=\count272
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count273
+\DOTSCASE@=\count274
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen156
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count275
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count276
+\dotsspace@=\muskip16
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
+\tag@help=\toks24
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
+\andhelp@=\toks25
+\eqnshift@=\dimen157
+\alignsep@=\dimen158
+\tagshift@=\dimen159
+\tagwidth@=\dimen160
+\totwidth@=\dimen161
+\lineht@=\dimen162
+\@envbody=\toks26
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-) (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count282
 ) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count288
-) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count289
- (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip16
+\etb@tempcnta=\count283
+)
+\@linkdim=\dimen163
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count286
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count287
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count290
-\c@listtotal=\count291
-\c@listcount=\count292
-\c@liststart=\count293
-\c@liststop=\count294
-\c@citecount=\count295
-\c@citetotal=\count296
-\c@multicitecount=\count297
-\c@multicitetotal=\count298
-\c@instcount=\count299
-\c@maxnames=\count300
-\c@minnames=\count301
-\c@maxitems=\count302
-\c@minitems=\count303
-\c@citecounter=\count304
-\c@maxcitecounter=\count305
-\c@savedcitecounter=\count306
-\c@uniquelist=\count307
-\c@uniquename=\count308
-\c@refsection=\count309
-\c@refsegment=\count310
-\c@maxextratitle=\count311
-\c@maxextratitleyear=\count312
-\c@maxextraname=\count313
-\c@maxextradate=\count314
-\c@maxextraalpha=\count315
-\c@abbrvpenalty=\count316
-\c@highnamepenalty=\count317
-\c@lownamepenalty=\count318
-\c@maxparens=\count319
-\c@parenlevel=\count320
-\blx@tempcnta=\count321
-\blx@tempcntb=\count322
-\blx@tempcntc=\count323
-\c@blx@maxsection=\count324
-\blx@maxsegment@0=\count325
-\blx@notetype=\count326
-\blx@parenlevel@text=\count327
-\blx@parenlevel@foot=\count328
-\blx@sectionciteorder@0=\count329
-\blx@sectionciteorderinternal@0=\count330
-\blx@entrysetcounter=\count331
-\blx@biblioinstance=\count332
-\labelnumberwidth=\skip52
-\labelalphawidth=\skip53
-\biblabelsep=\skip54
-\bibitemsep=\skip55
-\bibnamesep=\skip56
-\bibinitsep=\skip57
-\bibparsep=\skip58
-\bibhang=\skip59
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen164
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count288
+\Field@Width=\dimen165
+\Fld@charsize=\dimen166
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count289
+\c@Item=\count290
+\c@Hfootnote=\count291
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip56
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen167
+\lightrulewidth=\dimen168
+\cmidrulewidth=\dimen169
+\belowrulesep=\dimen170
+\belowbottomsep=\dimen171
+\aboverulesep=\dimen172
+\abovetopsep=\dimen173
+\cmidrulesep=\dimen174
+\cmidrulekern=\dimen175
+\defaultaddspace=\dimen176
+\@cmidla=\count294
+\@cmidlb=\count295
+\@aboverulesep=\dimen177
+\@belowrulesep=\dimen178
+\@thisruleclass=\count296
+\@lastruleclass=\count297
+\@thisrulewidth=\dimen179
+) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count298
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count299
+\c@listtotal=\count300
+\c@listcount=\count301
+\c@liststart=\count302
+\c@liststop=\count303
+\c@citecount=\count304
+\c@citetotal=\count305
+\c@multicitecount=\count306
+\c@multicitetotal=\count307
+\c@instcount=\count308
+\c@maxnames=\count309
+\c@minnames=\count310
+\c@maxitems=\count311
+\c@minitems=\count312
+\c@citecounter=\count313
+\c@maxcitecounter=\count314
+\c@savedcitecounter=\count315
+\c@uniquelist=\count316
+\c@uniquename=\count317
+\c@refsection=\count318
+\c@refsegment=\count319
+\c@maxextratitle=\count320
+\c@maxextratitleyear=\count321
+\c@maxextraname=\count322
+\c@maxextradate=\count323
+\c@maxextraalpha=\count324
+\c@abbrvpenalty=\count325
+\c@highnamepenalty=\count326
+\c@lownamepenalty=\count327
+\c@maxparens=\count328
+\c@parenlevel=\count329
+\blx@tempcnta=\count330
+\blx@tempcntb=\count331
+\blx@tempcntc=\count332
+\c@blx@maxsection=\count333
+\blx@maxsegment@0=\count334
+\blx@notetype=\count335
+\blx@parenlevel@text=\count336
+\blx@parenlevel@foot=\count337
+\blx@sectionciteorder@0=\count338
+\blx@sectionciteorderinternal@0=\count339
+\blx@entrysetcounter=\count340
+\blx@biblioinstance=\count341
+\labelnumberwidth=\skip57
+\labelalphawidth=\skip58
+\biblabelsep=\skip59
+\bibitemsep=\skip60
+\bibnamesep=\skip61
+\bibinitsep=\skip62
+\bibparsep=\skip63
+\bibhang=\skip64
 \blx@bcfin=\read3
-\blx@bcfout=\write4
-\blx@langwohyphens=\language89
-\c@mincomprange=\count333
-\c@maxcomprange=\count334
-\c@mincompwidth=\count335
+\blx@bcfout=\write3
+\blx@langwohyphens=\language90
+\c@mincomprange=\count342
+\c@maxcomprange=\count343
+\c@mincompwidth=\count344
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -356,88 +379,88 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count336
-\c@savedafterword=\count337
-\c@annotator=\count338
-\c@savedannotator=\count339
-\c@author=\count340
-\c@savedauthor=\count341
-\c@bookauthor=\count342
-\c@savedbookauthor=\count343
-\c@commentator=\count344
-\c@savedcommentator=\count345
-\c@editor=\count346
-\c@savededitor=\count347
-\c@editora=\count348
-\c@savededitora=\count349
-\c@editorb=\count350
-\c@savededitorb=\count351
-\c@editorc=\count352
-\c@savededitorc=\count353
-\c@foreword=\count354
-\c@savedforeword=\count355
-\c@holder=\count356
-\c@savedholder=\count357
-\c@introduction=\count358
-\c@savedintroduction=\count359
-\c@namea=\count360
-\c@savednamea=\count361
-\c@nameb=\count362
-\c@savednameb=\count363
-\c@namec=\count364
-\c@savednamec=\count365
-\c@translator=\count366
-\c@savedtranslator=\count367
-\c@shortauthor=\count368
-\c@savedshortauthor=\count369
-\c@shorteditor=\count370
-\c@savedshorteditor=\count371
-\c@labelname=\count372
-\c@savedlabelname=\count373
-\c@institution=\count374
-\c@savedinstitution=\count375
-\c@lista=\count376
-\c@savedlista=\count377
-\c@listb=\count378
-\c@savedlistb=\count379
-\c@listc=\count380
-\c@savedlistc=\count381
-\c@listd=\count382
-\c@savedlistd=\count383
-\c@liste=\count384
-\c@savedliste=\count385
-\c@listf=\count386
-\c@savedlistf=\count387
-\c@location=\count388
-\c@savedlocation=\count389
-\c@organization=\count390
-\c@savedorganization=\count391
-\c@origlocation=\count392
-\c@savedoriglocation=\count393
-\c@origpublisher=\count394
-\c@savedorigpublisher=\count395
-\c@publisher=\count396
-\c@savedpublisher=\count397
-\c@language=\count398
-\c@savedlanguage=\count399
-\c@origlanguage=\count400
-\c@savedoriglanguage=\count401
-\c@pageref=\count402
-\c@savedpageref=\count403
-\shorthandwidth=\skip60
-\shortjournalwidth=\skip61
-\shortserieswidth=\skip62
-\shorttitlewidth=\skip63
-\shortauthorwidth=\skip64
-\shorteditorwidth=\skip65
-\locallabelnumberwidth=\skip66
-\locallabelalphawidth=\skip67
-\localshorthandwidth=\skip68
-\localshortjournalwidth=\skip69
-\localshortserieswidth=\skip70
-\localshorttitlewidth=\skip71
-\localshortauthorwidth=\skip72
-\localshorteditorwidth=\skip73
+\c@afterword=\count345
+\c@savedafterword=\count346
+\c@annotator=\count347
+\c@savedannotator=\count348
+\c@author=\count349
+\c@savedauthor=\count350
+\c@bookauthor=\count351
+\c@savedbookauthor=\count352
+\c@commentator=\count353
+\c@savedcommentator=\count354
+\c@editor=\count355
+\c@savededitor=\count356
+\c@editora=\count357
+\c@savededitora=\count358
+\c@editorb=\count359
+\c@savededitorb=\count360
+\c@editorc=\count361
+\c@savededitorc=\count362
+\c@foreword=\count363
+\c@savedforeword=\count364
+\c@holder=\count365
+\c@savedholder=\count366
+\c@introduction=\count367
+\c@savedintroduction=\count368
+\c@namea=\count369
+\c@savednamea=\count370
+\c@nameb=\count371
+\c@savednameb=\count372
+\c@namec=\count373
+\c@savednamec=\count374
+\c@translator=\count375
+\c@savedtranslator=\count376
+\c@shortauthor=\count377
+\c@savedshortauthor=\count378
+\c@shorteditor=\count379
+\c@savedshorteditor=\count380
+\c@labelname=\count381
+\c@savedlabelname=\count382
+\c@institution=\count383
+\c@savedinstitution=\count384
+\c@lista=\count385
+\c@savedlista=\count386
+\c@listb=\count387
+\c@savedlistb=\count388
+\c@listc=\count389
+\c@savedlistc=\count390
+\c@listd=\count391
+\c@savedlistd=\count392
+\c@liste=\count393
+\c@savedliste=\count394
+\c@listf=\count395
+\c@savedlistf=\count396
+\c@location=\count397
+\c@savedlocation=\count398
+\c@organization=\count399
+\c@savedorganization=\count400
+\c@origlocation=\count401
+\c@savedoriglocation=\count402
+\c@origpublisher=\count403
+\c@savedorigpublisher=\count404
+\c@publisher=\count405
+\c@savedpublisher=\count406
+\c@language=\count407
+\c@savedlanguage=\count408
+\c@origlanguage=\count409
+\c@savedoriglanguage=\count410
+\c@pageref=\count411
+\c@savedpageref=\count412
+\shorthandwidth=\skip65
+\shortjournalwidth=\skip66
+\shortserieswidth=\skip67
+\shorttitlewidth=\skip68
+\shortauthorwidth=\skip69
+\shorteditorwidth=\skip70
+\locallabelnumberwidth=\skip71
+\locallabelalphawidth=\skip72
+\localshorthandwidth=\skip73
+\localshortjournalwidth=\skip74
+\localshortserieswidth=\skip75
+\localshorttitlewidth=\skip76
+\localshortauthorwidth=\skip77
+\localshorteditorwidth=\skip78
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -447,19 +470,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count404
-\c@textcitetotal=\count405
-\c@textcitemaxnames=\count406
-\c@biburlbigbreakpenalty=\count407
-\c@biburlbreakpenalty=\count408
-\c@biburlnumpenalty=\count409
-\c@biburlucpenalty=\count410
-\c@biburllcpenalty=\count411
-\biburlbigskip=\muskip17
-\biburlnumskip=\muskip18
-\biburlucskip=\muskip19
-\biburllcskip=\muskip20
-\c@smartand=\count412
+\c@textcitecount=\count413
+\c@textcitetotal=\count414
+\c@textcitemaxnames=\count415
+\c@biburlbigbreakpenalty=\count416
+\c@biburlbreakpenalty=\count417
+\c@biburlnumpenalty=\count418
+\c@biburlucpenalty=\count419
+\c@biburllcpenalty=\count420
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count421
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -469,8 +492,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count413
-\c@bbx:relatedtotal=\count414
+\c@bbx:relatedcount=\count422
+\c@bbx:relatedtotal=\count423
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -499,8 +522,8 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2024-01-22 L3 programming layer (loader) 
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count415
-\l__pdf_internal_box=\box62
+\l__color_backend_stack_int=\count424
+\l__pdf_internal_box=\box55
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2024-01-22 L3 programming layer (loader) 
@@ -512,33 +535,33 @@ Package: xparse 2023-10-10 L3 Experimental document command parser
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 )) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count416
-\float@exts=\toks30
-\float@box=\box63
-\@float@everytoks=\toks31
-\@floatcapt=\box64
+\c@float@type=\count425
+\float@exts=\toks28
+\float@box=\box56
+\@float@everytoks=\toks29
+\@floatcapt=\box57
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks32
-\verbatim@line=\toks33
+\every@verbatim=\toks30
+\verbatim@line=\toks31
 \verbatim@in@stream=\read4
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count417
-\Gm@cntv=\count418
-\c@Gm@tempcnt=\count419
-\Gm@bindingoffset=\dimen263
-\Gm@wd@mp=\dimen264
-\Gm@odd@mp=\dimen265
-\Gm@even@mp=\dimen266
-\Gm@layoutwidth=\dimen267
-\Gm@layoutheight=\dimen268
-\Gm@layouthoffset=\dimen269
-\Gm@layoutvoffset=\dimen270
-\Gm@dimlist=\toks34
+\Gm@cnth=\count426
+\Gm@cntv=\count427
+\c@Gm@tempcnt=\count428
+\Gm@bindingoffset=\dimen180
+\Gm@wd@mp=\dimen181
+\Gm@odd@mp=\dimen182
+\Gm@even@mp=\dimen183
+\Gm@layoutwidth=\dimen184
+\Gm@layoutheight=\dimen185
+\Gm@layouthoffset=\dimen186
+\Gm@layoutvoffset=\dimen187
+\Gm@dimlist=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -553,80 +576,295 @@ Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen271
-\captionmargin=\dimen272
-\caption@leftmargin=\dimen273
-\caption@rightmargin=\dimen274
-\caption@width=\dimen275
-\caption@indent=\dimen276
-\caption@parindent=\dimen277
-\caption@hangindent=\dimen278
+\caption@tempdima=\dimen188
+\captionmargin=\dimen189
+\caption@leftmargin=\dimen190
+\caption@rightmargin=\dimen191
+\caption@width=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count420
-\c@continuedfloat=\count421
+\c@caption@flags=\count429
+\c@continuedfloat=\count430
 Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count422
+\c@subfigure=\count431
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count423
+\c@subtable=\count432
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen196
+\pgfutil@tempdimb=\dimen197
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks36
+))
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
+\w@pgf@writea=\write4
+\r@pgf@reada=\read5
+\c@pgf@counta=\count433
+\c@pgf@countb=\count434
+\c@pgf@countc=\count435
+\c@pgf@countd=\count436
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count437
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count438
+\pgfsyssoftpath@bigbuffer@items=\count439
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen264
+\pgfmath@count=\count440
+\pgfmath@box=\box59
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count441
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count442
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen283
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen287
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen288
+\pgf@sys@shading@range@num=\count443
+\pgf@shadingcount=\count444
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box63
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box64
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count445
+\pgfplotmarksize=\dimen293
+)
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count446
+\tikznumberofchildren=\count447
+\tikznumberofcurrentchild=\count448
+\tikz@fig@count=\count449
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count450
+\pgfmatrixcurrentcolumn=\count451
+\pgf@matrix@numberofcolumns=\count452
+)
+\tikz@expandcount=\count453
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip79
+\multirow@cntb=\count454
+\multirow@dima=\skip80
+\bigstrutjot=\dimen302
 ) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
 File: x11nam.def 2023/11/15 v3.01 Predefined colors according to Unix/X11 (UK)
 )
-\@quotelevel=\count424
-\@quotereset=\count425
- (./Memoria.aux)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count455
+\@quotereset=\count456
+(./Memoria.aux (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing basic data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing basic data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+))
 \openout1 = `Memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count426
-\scratchdimen=\dimen279
-\scratchbox=\box65
-\nofMPsegments=\count427
-\nofMParguments=\count428
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count429
-\MPscratchDim=\dimen280
-\MPnumerator=\count430
-\makeMPintoPDFobject=\count431
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count457
+\scratchdimen=\dimen303
+\scratchbox=\box69
+\nofMPsegments=\count458
+\nofMParguments=\count459
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count460
+\MPscratchDim=\dimen304
+\MPnumerator=\count461
+\makeMPintoPDFobject=\count462
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+LaTeX Info: Redefining \l on input line 40.
+LaTeX Info: Redefining \L on input line 40.
+Package hyperref Info: Link coloring OFF on input line 40.
+ (./Memoria.out) (./Memoria.out)
+\@outlinefile=\write5
+\openout5 = `Memoria.out'.
+
+Package biblatex Info: Trying to load language 'catalan'...
+Package biblatex Info: ... file 'catalan.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/catalan.lbx
+File: catalan.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Memoria.bcf'.
+\openout3 = `Memoria.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Memoria.bbl' found.
  (./Memoria.bbl)
-Package biblatex Info: Reference section=0 on input line 33.
-Package biblatex Info: Reference segment=0 on input line 33.
+Package biblatex Info: Reference section=0 on input line 40.
+Package biblatex Info: Reference segment=0 on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -664,18 +902,18 @@ Package biblatex Info: Reference segment=0 on input line 33.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<Figuras/logoUPC.png, id=4, 197.73875pt x 196.735pt>
+<Figuras/logoUPC.png, id=296, 197.73875pt x 196.735pt>
 File: Figuras/logoUPC.png Graphic file (type png)
 <use Figuras/logoUPC.png>
-Package pdftex.def Info: Figuras/logoUPC.png  used on input line 45.
+Package pdftex.def Info: Figuras/logoUPC.png  used on input line 52.
 (pdftex.def)             Requested size: 62.73549pt x 62.41612pt.
-<Figuras/logoFIB.png, id=6, 580.1675pt x 87.32625pt>
+<Figuras/logoFIB.png, id=298, 580.1675pt x 87.32625pt>
 File: Figuras/logoFIB.png Graphic file (type png)
 <use Figuras/logoFIB.png>
-Package pdftex.def Info: Figuras/logoFIB.png  used on input line 47.
+Package pdftex.def Info: Figuras/logoFIB.png  used on input line 54.
 (pdftex.def)             Requested size: 418.25368pt x 62.95613pt.
 
-Overfull \hbox (33.82492pt too wide) in paragraph at lines 44--47
+Overfull \hbox (33.82492pt too wide) in paragraph at lines 51--54
 []  []   [] 
  []
 
@@ -714,1250 +952,846 @@ Overfull \hbox (33.82492pt too wide) in paragraph at lines 44--47
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./Memoria.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
- [1
 
+Underfull \hbox (badness 10000) in paragraph at lines 94--98
 
-] [2])
-\tf@toc=\write5
-\openout5 = `Memoria.toc'.
-
- [3] (./Memoria.lof
-Overfull \hbox (0.50832pt too wide) in paragraph at lines 24--24
- [][] []\OT1/cmr/m/n/12 Resultats clus-ter-ing jer^^Rarquic difer-ents m^^Retodes d'enlla^^Xc (Movie-Lens Small) [][]  
  []
 
-[4
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-\tf@lof=\write6
-\openout6 = `Memoria.lof'.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.99 \clearpage
+                % Opcional, per començar l'Abstract en una nova pàgina [1
 
- [5] (./Memoria.lot)
-\tf@lot=\write7
-\openout7 = `Memoria.lot'.
 
- [6
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
+
+ []
+
+[2
+
 
 ]
-Chapter 1.
+Underfull \hbox (badness 10000) in paragraph at lines 114--118
+
+ []
+
+[3
+
+
+] (./Memoria.toc [4
+
+
+] [5])
+\tf@toc=\write6
+\openout6 = `Memoria.toc'.
+
+ [6] (./Memoria.lof
+Overfull \hbox (0.50832pt too wide) in paragraph at lines 29--29
+ [][] [][]\OT1/cmr/m/n/12 Resultats clus-te-ring jer^^Rarquic di-fe-rents m^^Retodes d'en-lla^^Xc (Mo-vi-e-Lens Small)[] [][]  
+ []
+
 [7
 
+])
+\tf@lof=\write7
+\openout7 = `Memoria.lof'.
+
+ [8] (./Memoria.lot)
+\tf@lot=\write8
+\openout8 = `Memoria.lot'.
+
+ [9
+
 ]
-<Figuras/DiagramaFiltratgeCol.jpg, id=43, 1031.855pt x 575.14874pt>
+Cap\'{\i }tol 1.
+[10
+
+]
+<Figuras/DiagramaFiltratgeCol.jpg, id=525, 1031.855pt x 575.14874pt>
 File: Figuras/DiagramaFiltratgeCol.jpg Graphic file (type jpg)
 <use Figuras/DiagramaFiltratgeCol.jpg>
-Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 129.
+Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 170.
 (pdftex.def)             Requested size: 352.81552pt x 196.65376pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <./Figuras/DiagramaFiltratgeCol.jpg>] [10]
-Overfull \hbox (4.60959pt too wide) in paragraph at lines 202--203
-\OT1/cmr/bx/n/12 Pan-das\OT1/cmr/m/n/12 . NumPy fa-cilita la ma-nip-u-laci^^So d'arrays i l'execuci^^So d'operacions matem^^Ratiques
- []
-
-[11] [12] [13]
-<Figuras/KANBAN.png, id=64, 888.31876pt x 511.9125pt>
+[11] [12 <./Figuras/DiagramaFiltratgeCol.jpg>] [13] [14] [15] [16]
+<Figuras/KANBAN.png, id=568, 888.31876pt x 511.9125pt>
 File: Figuras/KANBAN.png Graphic file (type png)
 <use Figuras/KANBAN.png>
-Package pdftex.def Info: Figuras/KANBAN.png  used on input line 296.
+Package pdftex.def Info: Figuras/KANBAN.png  used on input line 337.
 (pdftex.def)             Requested size: 352.81552pt x 203.31631pt.
- [14]
-<Figuras/Notion.png, id=68, 878.28125pt x 580.1675pt>
+ [17]
+<Figuras/Notion.png, id=577, 878.28125pt x 580.1675pt>
 File: Figuras/Notion.png Graphic file (type png)
 <use Figuras/Notion.png>
-Package pdftex.def Info: Figuras/Notion.png  used on input line 306.
+Package pdftex.def Info: Figuras/Notion.png  used on input line 347.
 (pdftex.def)             Requested size: 352.81552pt x 233.06322pt.
- [15 <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [16]
-Chapter 2.
-[17
+ [18 <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [19]
+Cap\'{\i }tol 2.
+[20
 
-] [18] [19] [20]
-Overfull \hbox (9.77583pt too wide) in paragraph at lines 493--494
-[]\OT1/cmr/bx/n/12 Investigador (I): \OT1/cmr/m/n/12 En-car-regat de la re-cerca bib-li-ogr^^Rafica, de l'estudi de les t^^Recniques
+] [21] [22] [23]
+Overfull \hbox (9.77583pt too wide) in paragraph at lines 534--535
+[]\OT1/cmr/bx/n/12 Investigador (I): \OT1/cmr/m/n/12 En-car-re-gat de la re-cer-ca bi-bli-ogr^^Rafica, de l'es-tu-di de les t^^Recniques
  []
 
-[21]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 516.
- [22]
-<Figuras/DiagramaGantt.png, id=97, 1740.5025pt x 700.6175pt>
+[24] [25]
+<Figuras/DiagramaGantt.png, id=621, 1740.5025pt x 700.6175pt>
 File: Figuras/DiagramaGantt.png Graphic file (type png)
 <use Figuras/DiagramaGantt.png>
-Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 557.
+Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 598.
 (pdftex.def)             Requested size: 661.5266pt x 266.29086pt.
- [23
+ [26
 
- <./Figuras/DiagramaGantt.png>] [24
+ <./Figuras/DiagramaGantt.png>] [27
 
 ]
-Chapter 3.
+Cap\'{\i }tol 3.
 
-Overfull \hbox (18.05974pt too wide) in paragraph at lines 627--655
+Overfull \hbox (18.05974pt too wide) in paragraph at lines 668--696
  [][] 
  []
 
-[25
+[28
 
-]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-l.672     \text
-               {Amortització} = \frac{\text{Preu ordinador}}{\text{Dies lab...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 672.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.672     \text{Amortització
-                             } = \frac{\text{Preu ordinador}}{\text{Dies lab...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-<argument> \text 
-                 {Preu ordinador}
-l.672 ...res laborables} \times \text{Vida útil}}
-                                                   \times \text{Hores d'ús}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-<argument> \text 
-                 {Dies laborables} \times \text {Hores laborables} \times \t...
-l.672 ...res laborables} \times \text{Vida útil}}
-                                                   \times \text{Hores d'ús}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-<argument> \text {Dies laborables} \times \text 
-                                                {Hores laborables} \times \t...
-l.672 ...res laborables} \times \text{Vida útil}}
-                                                   \times \text{Hores d'ús}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-<argument> ...ext {Hores laborables} \times \text 
-                                                  {Vida útil}
-l.672 ...res laborables} \times \text{Vida útil}}
-                                                   \times \text{Hores d'ús}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 672.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.672 ...res laborables} \times \text{Vida útil}}
-                                                   \times \text{Hores d'ús}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Undefined control sequence.
-l.672 ...s} \times \text{Vida útil}} \times \text
-                                                  {Hores d'ús}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 672.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:672: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.672 ...text{Vida útil}} \times \text{Hores d'ú
-                                                  s}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-[26]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:676: Undefined control sequence.
-l.676     \text
-               {Amortització} = \frac{699}{220 \times 8 \times 5} \times 45...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 676.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:676: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.676     \text{Amortització
-                             } = \frac{699}{220 \times 8 \times 5} \times 45...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:676: Undefined control sequence.
-l.676 ...imes 8 \times 5} \times 450 = 35,74 \text
-                                                  {€}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 676.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 676.
-
-Missing character: There is no � in font cmr12!
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:713: Undefined control sequence.
-l.713     \text
-               {Cost contingència} = (\text{Cost total de personal} + \text...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 713.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:713: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.713     \text{Cost contingè
-                              ncia} = (\text{Cost total de personal} + \text...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:713: Undefined control sequence.
-l.713     \text{Cost contingència} = (\text
-                                            {Cost total de personal} + \text...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:713: Undefined control sequence.
-l.713 ... = (\text{Cost total de personal} + \text
-                                                  {Cost total genèric}) \ti...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 713.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:713: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.713 ...tal de personal} + \text{Cost total genè
-                                                  ric}) \times 0,15
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:717: Undefined control sequence.
-l.717     \text
-               {Cost contingència} = (9484,35 + 2277,9) \times 0,15 = 1764,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 717.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:717: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.717     \text{Cost contingè
-                              ncia} = (9484,35 + 2277,9) \times 0,15 = 1764,...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:717: Undefined control sequence.
-l.717 ...,35 + 2277,9) \times 0,15 = 1764,34 \text
-                                                  {€}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 717.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 717.
-
-Missing character: There is no � in font cmr12!
-[27]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:727: Undefined control sequence.
-l.727     \text
-               {Cost imprevist} = \text{Cost} \times \frac{\text{Probabilita...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:727: Undefined control sequence.
-l.727     \text{Cost imprevist} = \text
-                                       {Cost} \times \frac{\text{Probabilita...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:727: Undefined control sequence.
-<argument> \text 
-                 {Probabilitat (\%)}
-l.727 ...imes \frac{\text{Probabilitat (\%)}}{100}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (43.57405pt too wide) in paragraph at lines 732--741
+] [29] [30]
+Overfull \hbox (43.57405pt too wide) in paragraph at lines 773--782
  [][] 
  []
 
-[28]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:777: Undefined control sequence.
-l.777     (\text
-                {cost\_estimat} - \text{cost\_real}) * \text{hores\_reals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[31] [32] [33] [34]
+Cap\'{\i }tol 4.
+[35
 
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:777: Undefined control sequence.
-l.777     (\text{cost\_estimat} - \text
-                                       {cost\_real}) * \text{hores\_reals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:777: Undefined control sequence.
-l.777 ...st\_estimat} - \text{cost\_real}) * \text
-                                                  {hores\_reals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:782: Undefined control sequence.
-l.782     (\text
-                {hores\_estimades} - \text{hores\_reals}) * \text{cost\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:782: Undefined control sequence.
-l.782     (\text{hores\_estimades} - \text
-                                          {hores\_reals}) * \text{cost\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:782: Undefined control sequence.
-l.782 ...estimades} - \text{hores\_reals}) * \text
-                                                  {cost\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:787: Undefined control sequence.
-l.787     \text
-               {cost\_estimat} - \text{cost\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:787: Undefined control sequence.
-l.787     \text{cost\_estimat} - \text
-                                      {cost\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:792: Undefined control sequence.
-l.792     \text
-               {cost\_estimat\_genèric} - \text{cost\_real\_genèric}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 792.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:792: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.792     \text{cost\_estimat\_genè
-                                    ric} - \text{cost\_real\_genèric}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:792: Undefined control sequence.
-l.792     \text{cost\_estimat\_genèric} - \text
-                                                {cost\_real\_genèric}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 792.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:792: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.792 ...imat\_genèric} - \text{cost\_real\_genè
-                                                  ric}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:797: Undefined control sequence.
-l.797     \text
-               {cost\_imprevistos\_estimat} - \text{cost\_imprevistos\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:797: Undefined control sequence.
-l.797 ...\text{cost\_imprevistos\_estimat} - \text
-                                                  {cost\_imprevistos\_real}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:802: Undefined control sequence.
-l.802     \text
-               {hores\_estimades} - \text{hores\_reals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:802: Undefined control sequence.
-l.802     \text{hores\_estimades} - \text
-                                         {hores\_reals}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[29] [30] [31]
-Chapter 4.
-[32
-
-]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:883: Undefined control sequence.
-l.883 \text
-           {Nombre d’usuaris}^2 \times 8 \text{ bytes}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 883.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:883: Undefined control sequence.
-l.883 \text{Nombre d’usuaris}^2 \times 8 \text
-                                                { bytes}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:899: Undefined control sequence.
-l.899 \text
-           {Nombre d’usuaris} \times \text{Nombre d’elements} \times 8 \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 899.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:899: Undefined control sequence.
-l.899 \text{Nombre d’usuaris} \times \text
-                                            {Nombre d’elements} \times 8 \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 899.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:899: Undefined control sequence.
-l.899 ...\text{Nombre d’elements} \times 8 \text
-                                                  { bytes}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[33]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Undefined control sequence.
-l.929 \text
-           {Densitat} = \frac{\text{Nombre de valoracions}}{\text{Nombre d�...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Undefined control sequence.
-<argument> \text 
-                 {Nombre de valoracions}
-l.929 ...s} \times \text{Nombre de pel·lícules}}
-                                                   \times 100
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Undefined control sequence.
-<argument> \text 
-                 {Nombre d’usuaris} \times \text {Nombre de pel·lícules}
-l.929 ...s} \times \text{Nombre de pel·lícules}}
-                                                   \times 100
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 929.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Undefined control sequence.
-<argument> ...t {Nombre d’usuaris} \times \text 
-                                                  {Nombre de pel·lícules}
-l.929 ...s} \times \text{Nombre de pel·lícules}}
-                                                   \times 100
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 929.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 929.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 929.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.929 ...s} \times \text{Nombre de pel·lícules}}
-                                                   \times 100
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:929: Missing { inserted.
-<to be read again> 
-                   \begingroup 
-l.929 ...s} \times \text{Nombre de pel·lícules}}
-                                                   \times 100
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 929.
-
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:930: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.930 \]
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:931: Missing $ inserted.
-<inserted text> 
-                $
-l.931 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:931: Missing } inserted.
-<inserted text> 
-                }
-l.931 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:931: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.931 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-Missing character: There is no � in font cmr12!
-<Figuras/ml-small-ratings.png, id=138, 462.528pt x 346.896pt>
+] [36]
+<Figuras/ml-small-ratings.png, id=701, 462.528pt x 346.896pt>
 File: Figuras/ml-small-ratings.png Graphic file (type png)
 <use Figuras/ml-small-ratings.png>
-Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 938.
+Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 979.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-users.png, id=139, 462.528pt x 346.896pt>
+<Figuras/ml-small-users.png, id=702, 462.528pt x 346.896pt>
 File: Figuras/ml-small-users.png Graphic file (type png)
 <use Figuras/ml-small-users.png>
-Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 940.
+Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 981.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-items.png, id=140, 462.528pt x 346.896pt>
+<Figuras/ml-small-items.png, id=703, 462.528pt x 346.896pt>
 File: Figuras/ml-small-items.png Graphic file (type png)
 <use Figuras/ml-small-items.png>
-Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 942.
+Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 983.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-[34]
-<Figuras/ml-1m-ratings.png, id=144, 462.528pt x 346.896pt>
+ [37]
+<Figuras/ml-1m-ratings.png, id=710, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-ratings.png Graphic file (type png)
 <use Figuras/ml-1m-ratings.png>
-Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 958.
+Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 999.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-users.png, id=145, 462.528pt x 346.896pt>
+<Figuras/ml-1m-users.png, id=711, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-users.png Graphic file (type png)
 <use Figuras/ml-1m-users.png>
-Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 960.
+Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 1001.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-items.png, id=146, 462.528pt x 346.896pt>
+<Figuras/ml-1m-items.png, id=712, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-items.png Graphic file (type png)
 <use Figuras/ml-1m-items.png>
-Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 962.
+Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 1003.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [35 <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [36 <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
-<Figuras/books-ratings.png, id=160, 462.528pt x 346.896pt>
+ [38 <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [39 <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
+<Figuras/books-ratings.png, id=731, 462.528pt x 346.896pt>
 File: Figuras/books-ratings.png Graphic file (type png)
 <use Figuras/books-ratings.png>
-Package pdftex.def Info: Figuras/books-ratings.png  used on input line 1001.
+Package pdftex.def Info: Figuras/books-ratings.png  used on input line 1042.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-users.png, id=161, 462.528pt x 346.896pt>
+<Figuras/books-users.png, id=732, 462.528pt x 346.896pt>
 File: Figuras/books-users.png Graphic file (type png)
 <use Figuras/books-users.png>
-Package pdftex.def Info: Figuras/books-users.png  used on input line 1003.
+Package pdftex.def Info: Figuras/books-users.png  used on input line 1044.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-items.png, id=162, 462.528pt x 346.896pt>
+<Figuras/books-items.png, id=733, 462.528pt x 346.896pt>
 File: Figuras/books-items.png Graphic file (type png)
 <use Figuras/books-items.png>
-Package pdftex.def Info: Figuras/books-items.png  used on input line 1005.
+Package pdftex.def Info: Figuras/books-items.png  used on input line 1046.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [37] [38 <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
-<Figuras/jester-ratings.png, id=172, 462.528pt x 346.896pt>
+ [40] [41 <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
+<Figuras/jester-ratings.png, id=750, 462.528pt x 346.896pt>
 File: Figuras/jester-ratings.png Graphic file (type png)
 <use Figuras/jester-ratings.png>
-Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 1026.
+Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 1067.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-users.png, id=173, 462.528pt x 346.896pt>
+<Figuras/jester-users.png, id=751, 462.528pt x 346.896pt>
 File: Figuras/jester-users.png Graphic file (type png)
 <use Figuras/jester-users.png>
-Package pdftex.def Info: Figuras/jester-users.png  used on input line 1028.
+Package pdftex.def Info: Figuras/jester-users.png  used on input line 1069.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-items.png, id=174, 462.528pt x 346.896pt>
+<Figuras/jester-items.png, id=752, 462.528pt x 346.896pt>
 File: Figuras/jester-items.png Graphic file (type png)
 <use Figuras/jester-items.png>
-Package pdftex.def Info: Figuras/jester-items.png  used on input line 1030.
+Package pdftex.def Info: Figuras/jester-items.png  used on input line 1071.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [39 <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [40] [41]
-<Figuras/syn-ratings.png, id=189, 462.528pt x 346.896pt>
+ [42 <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [43] [44]
+<Figuras/syn-ratings.png, id=778, 462.528pt x 346.896pt>
 File: Figuras/syn-ratings.png Graphic file (type png)
 <use Figuras/syn-ratings.png>
-Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 1121.
+Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 1162.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-users.png, id=190, 462.528pt x 346.896pt>
+<Figuras/syn-users.png, id=779, 462.528pt x 346.896pt>
 File: Figuras/syn-users.png Graphic file (type png)
 <use Figuras/syn-users.png>
-Package pdftex.def Info: Figuras/syn-users.png  used on input line 1123.
+Package pdftex.def Info: Figuras/syn-users.png  used on input line 1164.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-items.png, id=191, 462.528pt x 346.896pt>
+<Figuras/syn-items.png, id=780, 462.528pt x 346.896pt>
 File: Figuras/syn-items.png Graphic file (type png)
 <use Figuras/syn-items.png>
-Package pdftex.def Info: Figuras/syn-items.png  used on input line 1125.
+Package pdftex.def Info: Figuras/syn-items.png  used on input line 1166.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [42]
-<Figuras/syn03-ratings.png, id=196, 462.528pt x 346.896pt>
+ [45]
+<Figuras/syn03-ratings.png, id=786, 462.528pt x 346.896pt>
 File: Figuras/syn03-ratings.png Graphic file (type png)
 <use Figuras/syn03-ratings.png>
-Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 1141.
+Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 1182.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-users.png, id=197, 462.528pt x 346.896pt>
+<Figuras/syn03-users.png, id=787, 462.528pt x 346.896pt>
 File: Figuras/syn03-users.png Graphic file (type png)
 <use Figuras/syn03-users.png>
-Package pdftex.def Info: Figuras/syn03-users.png  used on input line 1143.
+Package pdftex.def Info: Figuras/syn03-users.png  used on input line 1184.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-items.png, id=198, 462.528pt x 346.896pt>
+<Figuras/syn03-items.png, id=788, 462.528pt x 346.896pt>
 File: Figuras/syn03-items.png Graphic file (type png)
 <use Figuras/syn03-items.png>
-Package pdftex.def Info: Figuras/syn03-items.png  used on input line 1145.
+Package pdftex.def Info: Figuras/syn03-items.png  used on input line 1186.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [43 <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
-<Figuras/syn80-ratings.png, id=205, 462.528pt x 346.896pt>
+ [46 <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
+<Figuras/syn80-ratings.png, id=797, 462.528pt x 346.896pt>
 File: Figuras/syn80-ratings.png Graphic file (type png)
 <use Figuras/syn80-ratings.png>
-Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 1159.
+Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 1200.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-users.png, id=206, 462.528pt x 346.896pt>
+<Figuras/syn80-users.png, id=798, 462.528pt x 346.896pt>
 File: Figuras/syn80-users.png Graphic file (type png)
 <use Figuras/syn80-users.png>
-Package pdftex.def Info: Figuras/syn80-users.png  used on input line 1161.
+Package pdftex.def Info: Figuras/syn80-users.png  used on input line 1202.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-items.png, id=207, 462.528pt x 346.896pt>
+<Figuras/syn80-items.png, id=799, 462.528pt x 346.896pt>
 File: Figuras/syn80-items.png Graphic file (type png)
 <use Figuras/syn80-items.png>
-Package pdftex.def Info: Figuras/syn80-items.png  used on input line 1163.
+Package pdftex.def Info: Figuras/syn80-items.png  used on input line 1204.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [44 <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
-Overfull \hbox (34.94783pt too wide) in paragraph at lines 1172--1179
+ [47 <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
+Overfull \hbox (34.94783pt too wide) in paragraph at lines 1213--1220
  [][] 
  []
 
-[45 <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
-Chapter 5.
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1196: Undefined control sequence.
-l.1196 \text
-            {sim}(u,v) = \frac{\sum_{i \in I_{uv}} (r_{u,i} - \bar{r}_u)(r_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[48 <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
+Cap\'{\i }tol 5.
+[49
 
-[46
-
-]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1206: Undefined control sequence.
-<argument> \sum _{v \in N(u)} \text 
-                                    {sim}(u,v) \cdot (r_{v,i} - \bar {r}_v)
-l.1206 ...v)}{\sum_{v \in N(u)} |\text{sim}(u,v)|}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1206: Undefined control sequence.
-<argument> \sum _{v \in N(u)} |\text 
-                                     {sim}(u,v)|
-l.1206 ...v)}{\sum_{v \in N(u)} |\text{sim}(u,v)|}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1209: Undefined control sequence.
-l.1209 ... valorat l’element \( i \), i \( \text
-                                                  {sim}(u,v) \) és la simil...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[47]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1236: Undefined control sequence.
-<argument> 1 + \text 
-                     {sim}(x,y)
-l.1236 ...on}(x,y) = \frac{1}{1 + \text{sim}(x,y)}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1243: Undefined control sequence.
-<argument> 1 - \text 
-                     {sim}(x,y)
-l.1243 ...on}(x,y) = \frac{1 - \text{sim}(x,y)}{2}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (0.83pt too wide) in paragraph at lines 1257--1258
-\OT1/cmr/m/n/12 els al-go-rismes aglom-er-atius i di-vi-soris. En aquest tre-ball ens cen-trarem en l'aglomeratiu,
+] [50] [51]
+Overfull \hbox (7.92615pt too wide) in paragraph at lines 1329--1330
+[]\OT1/cmr/bx/n/12 Assignaci^^So d'u-su-a-ris: \OT1/cmr/m/n/12 Ca-da usu-a-ri, re-pre-sen-tat com un vec-tor de ca-rac-ter^^S^^Pstiques
  []
 
-[48]
-Overfull \hbox (7.92615pt too wide) in paragraph at lines 1288--1289
-[]\OT1/cmr/bx/n/12 Assignaci^^So d'usuaris: \OT1/cmr/m/n/12 Cada usuari, rep-re-sen-tat com un vec-tor de car-ac-ter^^S^^Pstiques
+[52] [53] [54] [55] [56]
+Overfull \hbox (15.99088pt too wide) in paragraph at lines 1451--1452
+[]\OT1/cmr/bx/n/12 Inicialitzaci^^So: \OT1/cmr/m/n/12 Es de-fi-neix el nom-bre de com-po-nents $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 i s'i-ni-ci-a-lit-zen els par^^Rametres
  []
 
-[49] [50]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1331: Undefined control sequence.
-l.1331 \text
-            {COG}_i = \sum_{j=1}^{K} u_{ij} \cdot j, \quad \text{cluster}_i ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1331: Undefined control sequence.
-l.1331 ...um_{j=1}^{K} u_{ij} \cdot j, \quad \text
-                                                  {cluster}_i = \text{round}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1331: Undefined control sequence.
-l.1331 ... \cdot j, \quad \text{cluster}_i = \text
-                                                  {round}(\text{COG}_i)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1331: Undefined control sequence.
-l.1331 ...ad \text{cluster}_i = \text{round}(\text
-                                                  {COG}_i)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[51] [52] [53]
-Overfull \hbox (15.99088pt too wide) in paragraph at lines 1410--1411
-[]\OT1/cmr/bx/n/12 Inicialitzaci^^So: \OT1/cmr/m/n/12 Es de-fineix el nom-bre de com-po-nents $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 i s'inicialitzen els par^^Rametres
+Overfull \hbox (40.94884pt too wide) in paragraph at lines 1484--1485
+[]\OT1/cmr/m/n/12 Per a la im-ple-men-ta-ci^^So del \OT1/cmr/m/it/12 Gaus-si-an Mix-tu-re Mo-del \OT1/cmr/m/n/12 s'-ha fet ^^Sus de la clas-se \OT1/cmtt/m/n/12 GaussianMixture
  []
 
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1427: Undefined control sequence.
-l.1427     \pi_j^{\text
-                       {new}} = \frac{N_j}{N}, \quad
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[57]
+Cap\'{\i }tol 6.
+[58
 
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1428: Undefined control sequence.
-l.1428     \mu_j^{\text
-                       {new}} = \frac{1}{N_j} \sum_{i=1}^N \gamma_{ij}\, x_i...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1429: Undefined control sequence.
-l.1429     \Sigma_j^{\text
-                          {new}} = \frac{1}{N_j} \sum_{i=1}^N \gamma_{ij}\, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1429: Undefined control sequence.
-l.1429 ...i=1}^N \gamma_{ij}\, (x_i - \mu_j^{\text
-                                                  {new}})(x_i - \mu_j^{\text...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1429: Undefined control sequence.
-l.1429 ...- \mu_j^{\text{new}})(x_i - \mu_j^{\text
-                                                  {new}})^\top.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (40.94884pt too wide) in paragraph at lines 1443--1444
-[]\OT1/cmr/m/n/12 Per a la im-ple-mentaci^^So del \OT1/cmr/m/it/12 Gaus-sian Mix-ture Model \OT1/cmr/m/n/12 s'ha fet ^^Sus de la classe \OT1/cmtt/m/n/12 GaussianMixture
- []
-
-[54]
-Chapter 6.
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1453: Undefined control sequence.
-l.1453 \text
-            {MAE} = \frac{1}{N} \sum_{i=1}^{N} | \hat{r}_{u,i} - r_{u,i} |
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1456: Undefined control sequence.
-l.1456 \text
-            {RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (\hat{r}_{u,i} - r_{u,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1459: Undefined control sequence.
-l.1459 ...s presents al conjunt de dades (\( \text
-                                                  {rating}_{\text{max}} - \t...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1459: Undefined control sequence.
-l.1459 ...onjunt de dades (\( \text{rating}_{\text
-                                                  {max}} - \text{rating}_{\t...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1459: Undefined control sequence.
-l.1459 ...s (\( \text{rating}_{\text{max}} - \text
-                                                  {rating}_{\text{min}} \)):
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1459: Undefined control sequence.
-l.1459 ...ing}_{\text{max}} - \text{rating}_{\text
-                                                  {min}} \)):
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-l.1461 \text
-            {NMAE} = \frac{\text{MAE}}{\text{rating}_{\text{max}} - \text{ra...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-<argument> \text 
-                 {MAE}
-l.1461 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-<argument> \text 
-                 {rating}_{\text {max}} - \text {rating}_{\text {min}}
-l.1461 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-<argument> \text {rating}_{\text 
-                                 {max}} - \text {rating}_{\text {min}}
-l.1461 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-<argument> \text {rating}_{\text {max}} - \text 
-                                                {rating}_{\text {min}}
-l.1461 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1461: Undefined control sequence.
-<argument> ...text {max}} - \text {rating}_{\text 
-                                                  {min}}
-l.1461 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-l.1464 \text
-            {NRMSE} = \frac{\text{RMSE}}{\text{rating}_{\text{max}} - \text{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-<argument> \text 
-                 {RMSE}
-l.1464 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-<argument> \text 
-                 {rating}_{\text {max}} - \text {rating}_{\text {min}}
-l.1464 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-<argument> \text {rating}_{\text 
-                                 {max}} - \text {rating}_{\text {min}}
-l.1464 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-<argument> \text {rating}_{\text {max}} - \text 
-                                                {rating}_{\text {min}}
-l.1464 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1464: Undefined control sequence.
-<argument> ...text {max}} - \text {rating}_{\text 
-                                                  {min}}
-l.1464 ...text{max}} - \text{rating}_{\text{min}}}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[55
-
-]
-/home/pol/Escritorio/clustering-recommenders/Memoria/Memoria.tex:1470: Undefined control sequence.
-l.1470 H_{\text
-               {norm}} = \frac{-\sum_{j=1}^{K} p_j \log_2(p_j)}{\log_2(K)}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[56] [57]
-Overfull \hbox (17.18863pt too wide) in paragraph at lines 1493--1494
-[]\OT1/cmr/m/n/12 En con-clusi^^So, l'efic^^Racia del clus-ter-ing dur amb K-means dep^^Ren cr^^S^^Pticament de l'harmonia
- []
-
-<Figuras/nmae-hard-all.png, id=264, 508.0581pt x 395.076pt>
+] [59] [60]
+<Figuras/nmae-hard-all.png, id=933, 508.0581pt x 395.076pt>
 File: Figuras/nmae-hard-all.png Graphic file (type png)
 <use Figuras/nmae-hard-all.png>
-Package pdftex.def Info: Figuras/nmae-hard-all.png  used on input line 1499.
+Package pdftex.def Info: Figuras/nmae-hard-all.png  used on input line 1541.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nmae-hard_pearson-all.png, id=265, 508.0581pt x 395.076pt>
+<Figuras/nmae-hard_pearson-all.png, id=934, 508.0581pt x 395.076pt>
 File: Figuras/nmae-hard_pearson-all.png Graphic file (type png)
 <use Figuras/nmae-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/nmae-hard_pearson-all.png  used on input line 1505.
+Package pdftex.def Info: Figuras/nmae-hard_pearson-all.png  used on input line 1547.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hard-all.png, id=266, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hard-all.png, id=935, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hard-all.png Graphic file (type png)
 <use Figuras/nrmse-hard-all.png>
-Package pdftex.def Info: Figuras/nrmse-hard-all.png  used on input line 1514.
+Package pdftex.def Info: Figuras/nrmse-hard-all.png  used on input line 1556.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hard_pearson-all.png, id=267, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hard_pearson-all.png, id=936, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hard_pearson-all.png Graphic file (type png)
 <use Figuras/nrmse-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/nrmse-hard_pearson-all.png  used on input line 1520.
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-all.png  used on input line 1562.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard-all.png, id=268, 508.0581pt x 395.076pt>
+<Figuras/entropy-hard-all.png, id=937, 508.0581pt x 395.076pt>
 File: Figuras/entropy-hard-all.png Graphic file (type png)
 <use Figuras/entropy-hard-all.png>
-Package pdftex.def Info: Figuras/entropy-hard-all.png  used on input line 1529.
+Package pdftex.def Info: Figuras/entropy-hard-all.png  used on input line 1571.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard_pearson-all.png, id=269, 501.5538pt x 395.076pt>
+<Figuras/entropy-hard_pearson-all.png, id=938, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hard_pearson-all.png Graphic file (type png)
 <use Figuras/entropy-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/entropy-hard_pearson-all.png  used on input line 1535.
+Package pdftex.def Info: Figuras/entropy-hard_pearson-all.png  used on input line 1577.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 1546.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 1546.
-[58]
-Overfull \hbox (3.28877pt too wide) in paragraph at lines 1558--1559
-\OT1/cmr/m/n/12 sint^^Retiques (Figura 6.2[]) ofer-eix una per-spec-tiva in-ter-es-sant so-bre com les car-ac-ter^^S^^Pstiques
+ [61]
+Overfull \hbox (3.28877pt too wide) in paragraph at lines 1600--1601
+\OT1/cmr/m/n/12 sint^^Retiques (Fi-gu-ra []6.2[]) ofe-reix una pers-pec-ti-va in-teres-sant so-bre com les ca-rac-ter^^S^^Pstiques
  []
 
-[59 <./Figuras/nmae-hard-all.png> <./Figuras/nmae-hard_pearson-all.png> <./Figuras/nrmse-hard-all.png> <./Figuras/nrmse-hard_pearson-all.png> <./Figuras/entropy-hard-all.png> <./Figuras/entropy-hard_pearson-all.png>] [60]
-<Figuras/nmae-hard-sin.png, id=287, 514.3215pt x 395.076pt>
+[62 <./Figuras/nmae-hard-all.png> <./Figuras/nmae-hard_pearson-all.png> <./Figuras/nrmse-hard-all.png> <./Figuras/nrmse-hard_pearson-all.png> <./Figuras/entropy-hard-all.png> <./Figuras/entropy-hard_pearson-all.png>] [63]
+<Figuras/nmae-hard-sin.png, id=967, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hard-sin.png Graphic file (type png)
 <use Figuras/nmae-hard-sin.png>
-Package pdftex.def Info: Figuras/nmae-hard-sin.png  used on input line 1576.
+Package pdftex.def Info: Figuras/nmae-hard-sin.png  used on input line 1618.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nmae-hard_pearson-sin.png, id=288, 514.3215pt x 395.076pt>
+<Figuras/nmae-hard_pearson-sin.png, id=968, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/nmae-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/nmae-hard_pearson-sin.png  used on input line 1582.
+Package pdftex.def Info: Figuras/nmae-hard_pearson-sin.png  used on input line 1624.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hard-sin.png, id=289, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hard-sin.png, id=969, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hard-sin.png Graphic file (type png)
 <use Figuras/nrmse-hard-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hard-sin.png  used on input line 1591.
+Package pdftex.def Info: Figuras/nrmse-hard-sin.png  used on input line 1633.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hard_pearson-sin.png, id=290, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hard_pearson-sin.png, id=970, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/nrmse-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hard_pearson-sin.png  used on input line 1597.
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-sin.png  used on input line 1639.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/entropy-hard-sin.png, id=291, 508.0581pt x 395.076pt>
+<Figuras/entropy-hard-sin.png, id=971, 508.0581pt x 395.076pt>
 File: Figuras/entropy-hard-sin.png Graphic file (type png)
 <use Figuras/entropy-hard-sin.png>
-Package pdftex.def Info: Figuras/entropy-hard-sin.png  used on input line 1606.
+Package pdftex.def Info: Figuras/entropy-hard-sin.png  used on input line 1648.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard_pearson-sin.png, id=292, 501.5538pt x 395.076pt>
+<Figuras/entropy-hard_pearson-sin.png, id=972, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/entropy-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/entropy-hard_pearson-sin.png  used on input line 1612.
+Package pdftex.def Info: Figuras/entropy-hard_pearson-sin.png  used on input line 1654.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [61] [62 <./Figuras/nmae-hard-sin.png> <./Figuras/nmae-hard_pearson-sin.png> <./Figuras/nrmse-hard-sin.png> <./Figuras/nrmse-hard_pearson-sin.png> <./Figuras/entropy-hard-sin.png> <./Figuras/entropy-hard_pearson-sin.png>] [63]
-Overfull \hbox (23.91219pt too wide) in paragraph at lines 1645--1646
-[]\OT1/cmr/m/n/12 La situaci^^So de l'entropia amb la dist^^Rancia de Pear-son ^^Ses en-cara m^^Ses ex-trema (Figura 6.3f[]).
- []
-
-<Figuras/nmae-fuzzy-all.png, id=308, 508.0581pt x 395.076pt>
+ [64] [65 <./Figuras/nmae-hard-sin.png> <./Figuras/nmae-hard_pearson-sin.png> <./Figuras/nrmse-hard-sin.png> <./Figuras/nrmse-hard_pearson-sin.png> <./Figuras/entropy-hard-sin.png> <./Figuras/entropy-hard_pearson-sin.png>] [66]
+<Figuras/nmae-fuzzy-all.png, id=1001, 508.0581pt x 395.076pt>
 File: Figuras/nmae-fuzzy-all.png Graphic file (type png)
 <use Figuras/nmae-fuzzy-all.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy-all.png  used on input line 1653.
+Package pdftex.def Info: Figuras/nmae-fuzzy-all.png  used on input line 1695.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nmae-fuzzy_pearson-all.png, id=309, 514.3215pt x 395.076pt>
+<Figuras/nmae-fuzzy_pearson-all.png, id=1002, 514.3215pt x 395.076pt>
 File: Figuras/nmae-fuzzy_pearson-all.png Graphic file (type png)
 <use Figuras/nmae-fuzzy_pearson-all.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-all.png  used on input line 1659.
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-all.png  used on input line 1701.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-fuzzy-all.png, id=310, 508.0581pt x 395.076pt>
+<Figuras/nrmse-fuzzy-all.png, id=1003, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-fuzzy-all.png Graphic file (type png)
 <use Figuras/nrmse-fuzzy-all.png>
-Package pdftex.def Info: Figuras/nrmse-fuzzy-all.png  u
+Package pdftex.def Info: Figuras/nrmse-fuzzy-all.png  used on input line 1710.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-fuzzy_pearson-all.png, id=1004, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-fuzzy_pearson-all.png Graphic file (type png)
+<use Figuras/nrmse-fuzzy_pearson-all.png>
+Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-all.png  used on input line 1716.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/entropy-fuzzy-all.png, id=1005, 501.5538pt x 395.076pt>
+File: Figuras/entropy-fuzzy-all.png Graphic file (type png)
+<use Figuras/entropy-fuzzy-all.png>
+Package pdftex.def Info: Figuras/entropy-fuzzy-all.png  used on input line 1725.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+<Figuras/entropy-fuzzy_pearson-all.png, id=1006, 501.5538pt x 395.076pt>
+File: Figuras/entropy-fuzzy_pearson-all.png Graphic file (type png)
+<use Figuras/entropy-fuzzy_pearson-all.png>
+Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-all.png  used on input line 1731.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [67] [68 <./Figuras/nmae-fuzzy-all.png> <./Figuras/nmae-fuzzy_pearson-all.png> <./Figuras/nrmse-fuzzy-all.png> <./Figuras/nrmse-fuzzy_pearson-all.png> <./Figuras/entropy-fuzzy-all.png> <./Figuras/entropy-fuzzy_pearson-all.png>] [69]
+<Figuras/nmae-fuzzy-sin.png, id=1035, 514.3215pt x 395.076pt>
+File: Figuras/nmae-fuzzy-sin.png Graphic file (type png)
+<use Figuras/nmae-fuzzy-sin.png>
+Package pdftex.def Info: Figuras/nmae-fuzzy-sin.png  used on input line 1770.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nmae-fuzzy_pearson-sin.png, id=1036, 508.0581pt x 395.076pt>
+File: Figuras/nmae-fuzzy_pearson-sin.png Graphic file (type png)
+<use Figuras/nmae-fuzzy_pearson-sin.png>
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1776.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-fuzzy-sin.png, id=1037, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-fuzzy-sin.png Graphic file (type png)
+<use Figuras/nrmse-fuzzy-sin.png>
+Package pdftex.def Info: Figuras/nrmse-fuzzy-sin.png  used on input line 1785.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-fuzzy_pearson-sin.png, id=1038, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-fuzzy_pearson-sin.png Graphic file (type png)
+<use Figuras/nrmse-fuzzy_pearson-sin.png>
+Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-sin.png  used on input line 1791.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-fuzzy-sin.png, id=1039, 501.5538pt x 395.076pt>
+File: Figuras/entropy-fuzzy-sin.png Graphic file (type png)
+<use Figuras/entropy-fuzzy-sin.png>
+Package pdftex.def Info: Figuras/entropy-fuzzy-sin.png  used on input line 1800.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+<Figuras/entropy-fuzzy_pearson-sin.png, id=1040, 501.5538pt x 395.076pt>
+File: Figuras/entropy-fuzzy_pearson-sin.png Graphic file (type png)
+<use Figuras/entropy-fuzzy_pearson-sin.png>
+Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-sin.png  used on input line 1806.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [70] [71 <./Figuras/nmae-fuzzy-sin.png> <./Figuras/nmae-fuzzy_pearson-sin.png> <./Figuras/nrmse-fuzzy-sin.png> <./Figuras/nrmse-fuzzy_pearson-sin.png> <./Figuras/entropy-fuzzy-sin.png> <./Figuras/entropy-fuzzy_pearson-sin.png>] [72]
+<Figuras/nmae-hac-all.png, id=1069, 514.3215pt x 395.076pt>
+File: Figuras/nmae-hac-all.png Graphic file (type png)
+<use Figuras/nmae-hac-all.png>
+Package pdftex.def Info: Figuras/nmae-hac-all.png  used on input line 1847.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nmae-hac_pearson-all.png, id=1070, 514.3215pt x 395.076pt>
+File: Figuras/nmae-hac_pearson-all.png Graphic file (type png)
+<use Figuras/nmae-hac_pearson-all.png>
+Package pdftex.def Info: Figuras/nmae-hac_pearson-all.png  used on input line 1853.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-hac-all.png, id=1071, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-hac-all.png Graphic file (type png)
+<use Figuras/nrmse-hac-all.png>
+Package pdftex.def Info: Figuras/nrmse-hac-all.png  used on input line 1862.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-hac_pearson-all.png, id=1072, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-hac_pearson-all.png Graphic file (type png)
+<use Figuras/nrmse-hac_pearson-all.png>
+Package pdftex.def Info: Figuras/nrmse-hac_pearson-all.png  used on input line 1868.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-hac-all.png, id=1073, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hac-all.png Graphic file (type png)
+<use Figuras/entropy-hac-all.png>
+Package pdftex.def Info: Figuras/entropy-hac-all.png  used on input line 1877.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+<Figuras/entropy-hac_pearson-all.png, id=1074, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hac_pearson-all.png Graphic file (type png)
+<use Figuras/entropy-hac_pearson-all.png>
+Package pdftex.def Info: Figuras/entropy-hac_pearson-all.png  used on input line 1883.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [73]
+Overfull \hbox (18.09705pt too wide) in paragraph at lines 1906--1907
+[]\OT1/cmr/m/n/12 L'aplicaci^^So del clus-te-ring jer^^Rarquic aglo-me-ra-tiu (HAC) als con-junts de da-des sint^^Retiques,
+ []
+
+[74 <./Figuras/nmae-hac-all.png> <./Figuras/nmae-hac_pearson-all.png> <./Figuras/nrmse-hac-all.png> <./Figuras/nrmse-hac_pearson-all.png> <./Figuras/entropy-hac-all.png> <./Figuras/entropy-hac_pearson-all.png>]
+Overfull \hbox (13.89006pt too wide) in paragraph at lines 1914--1915
+[]\OT1/cmr/m/n/12 Amb la dist^^Rancia de Pe-ar-son (Fi-gu-ra []6.6f[]), els pa-trons d'en-tro-pia can-vi-en dr^^Rasticament.
+ []
+
+[75]
+<Figuras/nmae-hac-sin.png, id=1102, 508.0581pt x 395.076pt>
+File: Figuras/nmae-hac-sin.png Graphic file (type png)
+<use Figuras/nmae-hac-sin.png>
+Package pdftex.def Info: Figuras/nmae-hac-sin.png  used on input line 1923.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+File: Figuras/nmae-fuzzy_pearson-sin.png Graphic file (type png)
+<use Figuras/nmae-fuzzy_pearson-sin.png>
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1929.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-hac-sin.png, id=1103, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-hac-sin.png Graphic file (type png)
+<use Figuras/nrmse-hac-sin.png>
+Package pdftex.def Info: Figuras/nrmse-hac-sin.png  used on input line 1938.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-hac_pearson-sin.png, id=1104, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-hac_pearson-sin.png Graphic file (type png)
+<use Figuras/nrmse-hac_pearson-sin.png>
+Package pdftex.def Info: Figuras/nrmse-hac_pearson-sin.png  used on input line 1944.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/entropy-hac-sin.png, id=1105, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hac-sin.png Graphic file (type png)
+<use Figuras/entropy-hac-sin.png>
+Package pdftex.def Info: Figuras/entropy-hac-sin.png  used on input line 1953.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+<Figuras/entropy-hac_pearson-sin.png, id=1106, 501.5538pt x 395.076pt>
+File: Figuras/entropy-hac_pearson-sin.png Graphic file (type png)
+<use Figuras/entropy-hac_pearson-sin.png>
+Package pdftex.def Info: Figuras/entropy-hac_pearson-sin.png  used on input line 1959.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+ [76] [77 <./Figuras/nmae-hac-sin.png> <./Figuras/nrmse-hac-sin.png> <./Figuras/nrmse-hac_pearson-sin.png> <./Figuras/entropy-hac-sin.png> <./Figuras/entropy-hac_pearson-sin.png>] [78]
+<Figuras/nmae-euc-ml-small.png, id=1132, 569.9694pt x 423.7431pt>
+File: Figuras/nmae-euc-ml-small.png Graphic file (type png)
+<use Figuras/nmae-euc-ml-small.png>
+Package pdftex.def Info: Figuras/nmae-euc-ml-small.png  used on input line 2003.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/nmae-pear-ml-small.png, id=1133, 570.2103pt x 423.7431pt>
+File: Figuras/nmae-pear-ml-small.png Graphic file (type png)
+<use Figuras/nmae-pear-ml-small.png>
+Package pdftex.def Info: Figuras/nmae-pear-ml-small.png  used on input line 2009.
+(pdftex.def)             Requested size: 216.1011pt x 160.59084pt.
+<Figuras/nrmse-euc-ml-small.png, id=1134, 569.9694pt x 423.7431pt>
+File: Figuras/nrmse-euc-ml-small.png Graphic file (type png)
+<use Figuras/nrmse-euc-ml-small.png>
+Package pdftex.def Info: Figuras/nrmse-euc-ml-small.png  used on input line 2018.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/nrmse-pear-ml-small.png, id=1135, 569.9694pt x 423.7431pt>
+File: Figuras/nrmse-pear-ml-small.png Graphic file (type png)
+<use Figuras/nrmse-pear-ml-small.png>
+Package pdftex.def Info: Figuras/nrmse-pear-ml-small.png  used on input line 2024.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/entropy-euc-ml-small.png, id=1136, 569.7285pt x 423.7431pt>
+File: Figuras/entropy-euc-ml-small.png Graphic file (type png)
+<use Figuras/entropy-euc-ml-small.png>
+Package pdftex.def Info: Figuras/entropy-euc-ml-small.png  used on input line 2033.
+(pdftex.def)             Requested size: 216.1011pt x 160.72661pt.
+<Figuras/entropy-pear-ml-small.png, id=1137, 569.7285pt x 423.7431pt>
+File: Figuras/entropy-pear-ml-small.png Graphic file (type png)
+<use Figuras/entropy-pear-ml-small.png>
+Package pdftex.def Info: Figuras/entropy-pear-ml-small.png  used on input line 2039.
+(pdftex.def)             Requested size: 216.1011pt x 160.72661pt.
+ [79] [80 <./Figuras/nmae-euc-ml-small.png> <./Figuras/nmae-pear-ml-small.png> <./Figuras/nrmse-euc-ml-small.png> <./Figuras/nrmse-pear-ml-small.png> <./Figuras/entropy-euc-ml-small.png> <./Figuras/entropy-pear-ml-small.png>]
+<Figuras/DBSCAN/k-distancia-ml-small-5.png, id=1156, 433.62pt x 289.08pt>
+File: Figuras/DBSCAN/k-distancia-ml-small-5.png Graphic file (type png)
+<use Figuras/DBSCAN/k-distancia-ml-small-5.png>
+Package pdftex.def Info: Figuras/DBSCAN/k-distancia-ml-small-5.png  used on input line 2079.
+(pdftex.def)             Requested size: 308.71106pt x 205.81725pt.
+ [81] [82 <./Figuras/DBSCAN/k-distancia-ml-small-5.png>]
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png, id=1177, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png  used on input line 2105.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png, id=1178, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png  used on input line 2111.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png, id=1179, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png  used on input line 2120.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png, id=1180, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png  used on input line 2126.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png, id=1181, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png  used on input line 2135.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png, id=1182, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png  used on input line 2141.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png, id=1183, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png  used on input line 2148.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png, id=1184, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png  used on input line 2154.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+ [83] [84 <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png>] [85]
+<Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png, id=1218, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png  used on input line 2197.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png, id=1219, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png  used on input line 2203.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png, id=1220, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png  used on input line 2212.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png, id=1221, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png  used on input line 2218.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png, id=1222, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png  used on input line 2227.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png, id=1223, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png  used on input line 2233.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png, id=1224, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png  used on input line 2240.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+<Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png, id=1225, 722.7pt x 433.62pt>
+File: Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png Graphic file (type png)
+<use Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png>
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png  used on input line 2246.
+(pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
+ [86] [87 <./Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png>] [88]
+<Figuras/nmae-gmm-all.png, id=1250, 508.0581pt x 395.076pt>
+File: Figuras/nmae-gmm-all.png Graphic file (type png)
+<use Figuras/nmae-gmm-all.png>
+Package pdftex.def Info: Figuras/nmae-gmm-all.png  used on input line 2282.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/nrmse-gmm-all.png, id=1251, 508.0581pt x 395.076pt>
+File: Figuras/nrmse-gmm-all.png Graphic file (type png)
+<use Figuras/nrmse-gmm-all.png>
+Package pdftex.def Info: Figuras/nrmse-gmm-all.png  used on input line 2288.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+<Figuras/entropy-gmm-all.png, id=1252, 508.0581pt x 395.076pt>
+File: Figuras/entropy-gmm-all.png Graphic file (type png)
+<use Figuras/entropy-gmm-all.png>
+Package pdftex.def Info: Figuras/entropy-gmm-all.png  used on input line 2297.
+(pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
+ [89 <./Figuras/nmae-gmm-all.png> <./Figuras/nrmse-gmm-all.png> <./Figuras/entropy-gmm-all.png>] [90]
+<Figuras/nmae-gmm-sin.png, id=1269, 514.3215pt x 395.076pt>
+File: Figuras/nmae-gmm-sin.png Graphic file (type png)
+<use Figuras/nmae-gmm-sin.png>
+Package pdftex.def Info: Figuras/nmae-gmm-sin.png  used on input line 2333.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/nrmse-gmm-sin.png, id=1270, 514.3215pt x 395.076pt>
+File: Figuras/nrmse-gmm-sin.png Graphic file (type png)
+<use Figuras/nrmse-gmm-sin.png>
+Package pdftex.def Info: Figuras/nrmse-gmm-sin.png  used on input line 2339.
+(pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
+<Figuras/entropy-gmm-sin.png, id=1271, 501.5538pt x 395.076pt>
+File: Figuras/entropy-gmm-sin.png Graphic file (type png)
+<use Figuras/entropy-gmm-sin.png>
+Package pdftex.def Info: Figuras/entropy-gmm-sin.png  used on input line 2348.
+(pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2380--2380
+[]\OT1/cmr/bx/n/10.95 M^^Retode de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2380--2380
+[]\OT1/cmr/bx/n/10.95 M^^Retrica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2380--2380
+[]\OT1/cmr/bx/n/10.95 Precisi^^So
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 2383--2383
+\OT1/cmr/m/n/10.95 en-ca-ra ^^Ses el mi-llor per^^Ro
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 2383--2383
+\OT1/cmr/m/n/10.95 xa).Entropia ge-ne-ral-ment
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 2385--2385
+\OT1/cmr/m/n/10.95 ra clara per \OT1/cmtt/m/n/10.95 books \OT1/cmr/m/n/10.95 amb
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 2385--2385
+\OT1/cmr/m/n/10.95 K. Er-ror aug-men-ta per
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 2385--2385
+\OT1/cmtt/m/n/10.95 ml-small\OT1/cmr/m/n/10.95 . Es-ta-ble per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2385--2385
+[]\OT1/cmr/m/n/10.95 Bona en-tro-pia per
+ []
+
+
+Underfull \hbox (badness 7925) in paragraph at lines 2385--2385
+\OT1/cmr/m/n/10.95 i va-ri-a-ble per \OT1/cmtt/m/n/10.95 jester\OT1/cmr/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2386
+[]\OT1/cmr/m/n/10.95 Precisi^^So in-es-ta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2386
+\OT1/cmr/m/n/10.95 ble/oscil\TS1/cmr/m/n/10.95 �\OT1/cmr/m/n/10.95 lat^^Roria per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2386
+[]\OT1/cmr/m/n/10.95 Entropia ex-tre-ma-da-ment
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 2386--2386
+\OT1/cmr/m/n/10.95 (qua-si tots a 1 cl^^Suster).
+ []
+
+
+Overfull \vbox (27.20003pt too high) detected at line 2388
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2388--2388
+[]\OT1/cmr/m/n/10.95 Millora per \OT1/cmtt/m/n/10.95 books\OT1/cmr/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2388--2388
+\OT1/cmr/m/n/10.95 Aug-ment d'er-ror per
+ []
+
+
+Underfull \hbox (badness 5008) in paragraph at lines 2388--2388
+[]\OT1/cmr/m/n/10.95 Entropia ac-cep-ta-ble per
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 2389--2389
+[]\OT1/cmr/m/n/10.95 Precisi^^So no-ta-ble-ment mi-
+ []
+
+
+Underfull \hbox (badness 6691) in paragraph at lines 2391--2391
+[]\OT1/cmr/m/n/10.95 Precisi^^So bas-tant es-ta-ble
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 2391--2391
+\OT1/cmr/m/n/10.95 amb pe-ti-tes fluc-tu-a-ci-ons
+ []
+
+
+Underfull \hbox (badness 4859) in paragraph at lines 2391--2391
+[]\OT1/cmr/m/n/10.95 Tendeix a for-mar molt
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 2392--2392
+[]\OT1/cmr/m/n/10.95 Comportament si-mi-lar a
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 2394--2394
+[]\OT1/cmr/m/n/10.95 N/A (ba-sat en
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 2394--2394
+\OT1/cmr/m/n/10.95 molt si-mi-lar a K-means
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 2394--2394
+\OT1/cmr/m/n/10.95 amb Eu-cli-di-a-na. Mi-llo-
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 2394--2394
+\OT1/cmr/m/n/10.95 ra per \OT1/cmtt/m/n/10.95 books\OT1/cmr/m/n/10.95 , em-pit-jo-
+ []
+
+
+Overfull \hbox (19.54721pt too wide) in paragraph at lines 2378--2397
+ [][] 
+ []
+
+[91 <./Figuras/nmae-gmm-sin.png> <./Figuras/nrmse-gmm-sin.png> <./Figuras/entropy-gmm-sin.png>]
+Overfull \vbox (4.51701pt too high) has occurred while \output is active []
+
+ [92]
+Overfull \hbox (3.37561pt too wide) in paragraph at lines 2409--2410
+[]\OT1/cmr/bx/n/12 FCM+COG: \OT1/cmr/m/n/12 la dist^^Rancia de Pe-ar-son va re-sul-tar es-pe-ci-al-ment pro-blem^^Ratica,
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2414.
+
+Overfull \hbox (7.48625pt too wide) in paragraph at lines 2425--2427
+[]\OT1/cmr/bx/n/12 Limitacions de DBS-CAN. \OT1/cmr/m/n/12 DBS-CAN pre-sen-ta una gran sen-si-bi-li-tat al par^^Rametre
+ []
+
+[93]
+<Figuras/FinalResults/nmae-pear-ml-small.png, id=1291, 569.9694pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-ml-small.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-ml-small.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-small.png  used on input line 2449.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/FinalResults/nmae-pear-ml-1m.png, id=1292, 570.2103pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-ml-1m.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-ml-1m.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-1m.png  used on input line 2455.
+(pdftex.def)             Requested size: 216.1011pt x 160.59084pt.
+<Figuras/FinalResults/nmae-pear-books.png, id=1293, 569.9694pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-books.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-books.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-books.png  used on input line 2464.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/FinalResults/nmae-pear-jester.png, id=1294, 569.9694pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-jester.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-jester.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-jester.png  used on input line 2470.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+ [94] [95 <./Figuras/FinalResults/nmae-pear-ml-small.png> <./Figuras/FinalResults/nmae-pear-ml-1m.png> <./Figuras/FinalResults/nmae-pear-books.png> <./Figuras/FinalResults/nmae-pear-jester.png>] [96]
+<Figuras/FinalResults/nmae-pear-syn.png, id=1317, 569.9694pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-syn.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-syn.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn.png  used on input line 2512.
+(pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
+<Figuras/FinalResults/nmae-pear-syn03.png, id=1318, 570.4512pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-syn03.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-syn03.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn03.png  used on input line 2518.
+(pdftex.def)             Requested size: 216.1011pt x 160.52617pt.
+<Figuras/FinalResults/nmae-pear-syn80.png, id=1319, 570.4512pt x 423.7431pt>
+File: Figuras/FinalResults/nmae-pear-syn80.png Graphic file (type png)
+<use Figuras/FinalResults/nmae-pear-syn80.png>
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn80.png  used on input line 2527.
+(pdftex.def)             Requested size: 216.1011pt x 160.52617pt.
+ [97] [98 <./Figuras/FinalResults/nmae-pear-syn.png> <./Figuras/FinalResults/nmae-pear-syn03.png> <./Figuras/FinalResults/nmae-pear-syn80.png>] [99]
+Cap\'{\i }tol 7.
+[100
+
+] [101] [102] [103
+
+]
+Overfull \hbox (11.25876pt too wide) in paragraph at lines 2614--2614
+\OT1/cmr/m/n/12 clus-te-ring for co-lla-bo-ra-ti-ve fil-te-ring''. A: \OT1/cmr/m/it/12 In-for-ma-ti-on Tech-no-logy Jour-nal KMUTNB
+ []
+
+[104] [105] (./Memoria.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `Memoria.out' has not changed.
+(rerunfilecheck)             Checksum: F62691C98CDC94FD057A1B5E5BEDB5B7;12240.
+
+Package biblatex Warning: Please rerun LaTeX.
+
+Package logreq Info: Writing requests to 'Memoria.run.xml'.
+\openout1 = `Memoria.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 32769 strings out of 474222
+ 638654 string characters out of 5748734
+ 1950975 words of memory out of 5000000
+ 54257 multiletter control sequences out of 15000+600000
+ 572338 words of font info for 84 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,12n,87p,2483b,2979s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Memoria.pdf (106 pages, 11178919 bytes).
+PDF statistics:
+ 1560 PDF objects out of 1728 (max. 8388607)
+ 1194 compressed objects within 12 object streams
+ 295 named destinations out of 1000 (max. 500000)
+ 1079 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,37 @@
+\babel@toc {catalan}{}\relax 
+\babel@toc {catalan}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {catalan}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagrama de filtratge col·laboratiu \blx@tocontentsinit {0}\cite {falk2019practical}}}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Diagrama il·lustratiu del flux de treball segons la metodologia Kanban \blx@tocontentsinit {0}\cite {Person_2025}}}{18}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Captura de pantalla de la plataforma Notion}}{18}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de Gantt creat amb GanttPro \blx@tocontentsinit {0}\cite {GanttPRO}}}{26}{figure.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Anàlisi exploratòria del conjunt MovieLens Latest Small}}{38}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Anàlisi exploratòria del conjunt MovieLens 1M}}{39}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Anàlisi exploratòria del conjunt Book-Crossing}}{41}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Anàlisi exploratòria del conjunt Jester}}{42}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Anàlisi exploratòria del conjunt MovieLens sintètic (base)}}{46}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Anàlisi exploratòria del conjunt MovieLens sintètic (baixa densitat)}}{47}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Anàlisi exploratòria del conjunt MovieLens sintètic (alta densitat)}}{48}{figure.caption.25}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Resultats clustering dur}}{62}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultats clustering dur dades sintètiques}}{65}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultats clustering difús}}{68}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Resultats clustering difús dades sintètiques}}{71}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Resultats clustering jeràrquic}}{74}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Resultats clustering jeràrquic dades sintètiques}}{77}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Resultats clustering jeràrquic diferents mètodes d'enllaç (MovieLens Small)}}{80}{figure.caption.34}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Exemple de gràfic de k-distància (MovieLens Small, \(\mathit {MinPts}=5\))}}{82}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Resultats clustering per densitat (MovieLens)}}{84}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Resultats clustering per densitat (Book-Crossing i Jester)}}{87}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Resultats clustering per model}}{89}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Resultats clustering per model (dades sintètiques)}}{91}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Resultats finals de NMAE}}{95}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Resultats finals de NMAE (dades sintètiques)}}{98}{figure.caption.42}%
+\addvspace {10\p@ }
