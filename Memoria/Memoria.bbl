@@ -323,71 +323,6 @@
       \verb https://kissflow.com/project/agile/kanban-methodology/
       \endverb
     \endentry
-    \entry{GanttPRO}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{GanttPRO}
-      \field{title}{Online gantt chart maker for Project Planning}
-      \verb{urlraw}
-      \verb https://app.ganttpro.com/
-      \endverb
-      \verb{url}
-      \verb https://app.ganttpro.com/
-      \endverb
-    \endentry
-    \entry{ProjectManager}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PayScale}
-      \field{title}{Project Manager, Information Technology (IT) Salary in Spain in 2025 -- PayScale}
-      \verb{urlraw}
-      \verb https://www.payscale.com/research/ES/Job=Project_Manager,_Information_Technology_(IT)/Salary
-      \endverb
-      \verb{url}
-      \verb https://www.payscale.com/research/ES/Job=Project_Manager,_Information_Technology_(IT)/Salary
-      \endverb
-    \endentry
-    \entry{Research}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PayScale}
-      \field{title}{Researcher, Scientific Salary in Spain in 2025 -- PayScale}
-      \verb{urlraw}
-      \verb https://www.payscale.com/research/ES/Job=Research_Scientist/Salary
-      \endverb
-      \verb{url}
-      \verb https://www.payscale.com/research/ES/Job=Research_Scientist/Salary
-      \endverb
-    \endentry
-    \entry{SoftwareDeveloper}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PayScale}
-      \field{title}{Software Developer Salary in Spain in 2025 -- PayScale}
-      \verb{urlraw}
-      \verb https://www.payscale.com/research/ES/Job=Software_Developer/Salary
-      \endverb
-      \verb{url}
-      \verb https://www.payscale.com/research/ES/Job=Software_Developer/Salary
-      \endverb
-    \endentry
-    \entry{DataAnalyst}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PayScale}
-      \field{title}{Data Analyst Salary in Spain in 2025 -- PayScale}
-      \verb{urlraw}
-      \verb https://www.payscale.com/research/ES/Job=Data_Analyst/Salary
-      \endverb
-      \verb{url}
-      \verb https://www.payscale.com/research/ES/Job=Data_Analyst/Salary
-      \endverb
-    \endentry
     \entry{harper2015movielens}{article}{}
       \name{author}{2}{}{%
         {{hash=95c1b94af421fa579fafe01078c70b37}{%
@@ -407,8 +342,8 @@
       \strng{authorbibnamehash}{554cf1fd98e104b27affb7024863dca3}
       \strng{authornamehash}{554cf1fd98e104b27affb7024863dca3}
       \strng{authorfullhash}{554cf1fd98e104b27affb7024863dca3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Transactions on Interactive Intelligent Systems (TiiS)}
@@ -640,8 +575,8 @@
       \strng{authorbibnamehash}{989946e809ab65102c0c9d4ecffd9aaa}
       \strng{authornamehash}{989946e809ab65102c0c9d4ecffd9aaa}
       \strng{authorfullhash}{989946e809ab65102c0c9d4ecffd9aaa}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information retrieval}
@@ -693,8 +628,8 @@
       \strng{authorbibnamehash}{c7512f2adc07689762e019a232b4c9c3}
       \strng{authornamehash}{c7512f2adc07689762e019a232b4c9c3}
       \strng{authorfullhash}{45e11b5343c0c1e23900657f1563e43a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information sciences}
@@ -751,8 +686,8 @@
       \strng{authorbibnamehash}{807259ce4e143ec9eeff43ec37ef7da0}
       \strng{authornamehash}{807259ce4e143ec9eeff43ec37ef7da0}
       \strng{authorfullhash}{6a323fb1f6ba12efa956f74eae07eeb2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Engineering Applications of Artificial Intelligence}
@@ -784,8 +719,8 @@
       \strng{authorbibnamehash}{9e5af5b93d1302c3f25083a735dd6718}
       \strng{authornamehash}{9e5af5b93d1302c3f25083a735dd6718}
       \strng{authorfullhash}{9e5af5b93d1302c3f25083a735dd6718}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2011 11th International conference on hybrid intelligent systems (HIS)}
@@ -858,8 +793,8 @@
       \strng{authorbibnamehash}{9ec95d747bac3417f92265a9a44f8bb4}
       \strng{authornamehash}{9ec95d747bac3417f92265a9a44f8bb4}
       \strng{authorfullhash}{9c0daf119a88f60278a791d01ffdd5ec}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{the Journal of machine Learning research}
@@ -888,8 +823,8 @@
       \strng{authorbibnamehash}{71161b22cfe8edd7acc146038a2c03ae}
       \strng{authornamehash}{71161b22cfe8edd7acc146038a2c03ae}
       \strng{authorfullhash}{71161b22cfe8edd7acc146038a2c03ae}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information Technology Journal KMUTNB}
@@ -1029,8 +964,8 @@
       \strng{authorbibnamehash}{a5fdc25541ae5faa8110b19759877a37}
       \strng{authornamehash}{a5fdc25541ae5faa8110b19759877a37}
       \strng{authorfullhash}{a5fdc25541ae5faa8110b19759877a37}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ieee Access}
@@ -1039,6 +974,71 @@
       \field{year}{2019}
       \field{pages}{118690\bibrangedash 118701}
       \range{pages}{12}
+    \endentry
+    \entry{GanttPRO}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GanttPRO}
+      \field{title}{Online gantt chart maker for Project Planning}
+      \verb{urlraw}
+      \verb https://app.ganttpro.com/
+      \endverb
+      \verb{url}
+      \verb https://app.ganttpro.com/
+      \endverb
+    \endentry
+    \entry{ProjectManager}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PayScale}
+      \field{title}{Project Manager, Information Technology (IT) Salary in Spain in 2025 -- PayScale}
+      \verb{urlraw}
+      \verb https://www.payscale.com/research/ES/Job=Project_Manager,_Information_Technology_(IT)/Salary
+      \endverb
+      \verb{url}
+      \verb https://www.payscale.com/research/ES/Job=Project_Manager,_Information_Technology_(IT)/Salary
+      \endverb
+    \endentry
+    \entry{Research}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PayScale}
+      \field{title}{Researcher, Scientific Salary in Spain in 2025 -- PayScale}
+      \verb{urlraw}
+      \verb https://www.payscale.com/research/ES/Job=Research_Scientist/Salary
+      \endverb
+      \verb{url}
+      \verb https://www.payscale.com/research/ES/Job=Research_Scientist/Salary
+      \endverb
+    \endentry
+    \entry{SoftwareDeveloper}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PayScale}
+      \field{title}{Software Developer Salary in Spain in 2025 -- PayScale}
+      \verb{urlraw}
+      \verb https://www.payscale.com/research/ES/Job=Software_Developer/Salary
+      \endverb
+      \verb{url}
+      \verb https://www.payscale.com/research/ES/Job=Software_Developer/Salary
+      \endverb
+    \endentry
+    \entry{DataAnalyst}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PayScale}
+      \field{title}{Data Analyst Salary in Spain in 2025 -- PayScale}
+      \verb{urlraw}
+      \verb https://www.payscale.com/research/ES/Job=Data_Analyst/Salary
+      \endverb
+      \verb{url}
+      \verb https://www.payscale.com/research/ES/Job=Data_Analyst/Salary
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
