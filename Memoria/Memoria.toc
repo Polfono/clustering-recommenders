@@ -3,87 +3,89 @@
 \babel@toc {english}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {catalan}{}\relax 
-\contentsline {part}{I\hspace {1em}Memoria Tècnica}{10}{part.1}%
-\contentsline {chapter}{\numberline {1}Contextualització i Abast del projecte}{11}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introducció}{11}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Context}{11}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Conceptes}{12}{subsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.1}Sistema de Recomanació}{12}{subsubsection.1.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.1.2.2}Filtratge Col·laboratiu}{12}{subsubsection.1.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.3}Clustering}{13}{subsubsection.1.1.2.3}%
-\contentsline {subsection}{\numberline {1.1.3}Identificació del problema}{13}{subsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.3.1}Selecció i tractament del conjunt de dades}{13}{subsubsection.1.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.1.3.2}Desenvolupament del sistema de recomanació}{13}{subsubsection.1.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.1.3.3}Comparació de resultats i anàlisi del rendiment}{14}{subsubsection.1.1.3.3}%
-\contentsline {subsection}{\numberline {1.1.4}Actors implicats}{14}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Justificació}{14}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Estat de l'art}{15}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Selecció d'eines}{15}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Abast}{16}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Objectius}{16}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Subobjectius}{16}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Requeriments}{17}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Funcionals}{17}{subsubsection.1.3.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.3.2}No funcionals}{17}{subsubsection.1.3.3.2}%
-\contentsline {subsection}{\numberline {1.3.4}Obstacles i riscos}{17}{subsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.4.1}Obstacles}{17}{subsubsection.1.3.4.1}%
-\contentsline {subsubsection}{\numberline {1.3.4.2}Riscos}{18}{subsubsection.1.3.4.2}%
-\contentsline {section}{\numberline {1.4}Metodologia i rigor}{18}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Metodologia de treball}{18}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Seguiment}{20}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Conjunt de dades}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Restriccions i requisits dels conjunts de dades}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Conjunt de dades utilitzades}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Conjunt de dades MovieLens}{23}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Conjunt de dades Book-Crossing}{25}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Conjunt de dades Jester}{27}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Conjunts de dades sintètiques}{29}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}MovieLens sintètic (base)}{31}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}MovieLens sintètic (baixa densitat)}{32}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}MovieLens sintètic (alta densitat)}{33}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}Sistema de recomanació}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Clustering dur}{38}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Clustering difús}{39}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Clustering jeràrquic}{40}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Clustering per densitat}{41}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Clustering per model}{42}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Anàlisi de resultats}{44}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultats clustering dur}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultats clustering difús}{52}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Resultats clustering jeràrquic}{58}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Resultats clustering per densitat}{67}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Resultats clustering per model}{74}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Síntesi i comparació entre mètodes}{77}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Conclusions}{86}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Objectius assolits}{86}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Treball futur}{87}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Impacte i valoració personal}{88}{section.5.3}%
-\contentsline {part}{II\hspace {1em}Memoria de Gestió}{89}{part.2}%
-\contentsline {chapter}{\numberline {6}Planificació temporal}{90}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Descripció de les tasques}{90}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}GP - Gestió del Projecte}{90}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}TP - Treball Previ}{91}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}SD - Selecció i tractament del conjunt de dades}{92}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}SR - Desenvolupament del sistema de recomanació}{92}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}AR - Comparació de resultats i anàlisi del rendiment}{93}{subsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.1.6}D - Documentació}{93}{subsection.6.1.6}%
-\contentsline {subsection}{\numberline {6.1.7}DT - Defensa del treball}{94}{subsection.6.1.7}%
-\contentsline {section}{\numberline {6.2}Recursos}{94}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Recursos humans}{94}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Recursos materials}{94}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Taula resum de les tasques}{95}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Diagrama de Gantt}{96}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Gestió del risc}{97}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Gestió Econòmica i sostenibilitat}{98}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Gestió Econòmica}{98}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Costos de personal}{98}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Costos genèrics}{99}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Contingències}{100}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}Imprevistos}{101}{subsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.1.5}Cost total}{101}{subsection.7.1.5}%
-\contentsline {subsection}{\numberline {7.1.6}Control de gestió}{102}{subsection.7.1.6}%
-\contentsline {section}{\numberline {7.2}Sostenibilitat}{103}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Dimensió econòmica}{103}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Dimensió ambiental}{104}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Dimensió social}{104}{subsection.7.2.3}%
-\contentsline {chapter}{Bibliografia}{105}{chapter*.43}%
+\contentsline {part}{I\hspace {1em}Memoria Tècnica}{11}{part.1}%
+\contentsline {chapter}{\numberline {1}Contextualització i Abast del projecte}{12}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introducció}{12}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Context}{12}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Conceptes}{13}{subsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.1}Sistema de Recomanació}{13}{subsubsection.1.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.1.2.2}Filtratge Col·laboratiu}{13}{subsubsection.1.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.3}Clustering}{14}{subsubsection.1.1.2.3}%
+\contentsline {subsection}{\numberline {1.1.3}Identificació del problema}{14}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Selecció i tractament del conjunt de dades}{14}{subsubsection.1.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.1.3.2}Desenvolupament del sistema de recomanació}{14}{subsubsection.1.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.1.3.3}Comparació de resultats i anàlisi del rendiment}{15}{subsubsection.1.1.3.3}%
+\contentsline {subsection}{\numberline {1.1.4}Actors implicats}{15}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Justificació}{15}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Estat de l'art}{16}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Selecció d'eines}{16}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Abast}{17}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Objectius}{17}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Subobjectius}{17}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Requeriments}{18}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Funcionals}{18}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}No funcionals}{18}{subsubsection.1.3.3.2}%
+\contentsline {subsection}{\numberline {1.3.4}Obstacles i riscos}{18}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Obstacles}{18}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Riscos}{19}{subsubsection.1.3.4.2}%
+\contentsline {section}{\numberline {1.4}Metodologia i rigor}{19}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Metodologia de treball}{19}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Seguiment}{21}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Conjunt de dades}{22}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Restriccions i requisits dels conjunts de dades}{22}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Conjunt de dades utilitzades}{24}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Conjunt de dades MovieLens}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Conjunt de dades Book-Crossing}{26}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Conjunt de dades Jester}{28}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Conjunts de dades sintètiques}{30}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}MovieLens sintètic (base)}{32}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}MovieLens sintètic (baixa densitat)}{33}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}MovieLens sintètic (alta densitat)}{34}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Sistema de recomanació}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Arquitectura comuna del sistema de recomanació}{36}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Algorismes de clustering emprats}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Clustering dur}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Clustering difús}{40}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Clustering jeràrquic}{42}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Clustering per densitat}{43}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Clustering per model}{44}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Anàlisi de resultats}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultats clustering dur}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Resultats clustering difús}{54}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Resultats clustering jeràrquic}{60}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Resultats clustering per densitat}{69}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Resultats clustering per model}{76}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Síntesi i comparació entre mètodes}{79}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conclusions}{88}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Objectius assolits}{88}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Treball futur}{89}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Impacte i valoració personal}{90}{section.5.3}%
+\contentsline {part}{II\hspace {1em}Memoria de Gestió}{91}{part.2}%
+\contentsline {chapter}{\numberline {6}Planificació temporal}{92}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Descripció de les tasques}{92}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}GP - Gestió del Projecte}{92}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}TP - Treball Previ}{93}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}SD - Selecció i tractament del conjunt de dades}{94}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}SR - Desenvolupament del sistema de recomanació}{94}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}AR - Comparació de resultats i anàlisi del rendiment}{95}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}D - Documentació}{95}{subsection.6.1.6}%
+\contentsline {subsection}{\numberline {6.1.7}DT - Defensa del treball}{96}{subsection.6.1.7}%
+\contentsline {section}{\numberline {6.2}Recursos}{96}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Recursos humans}{96}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Recursos materials}{96}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Taula resum de les tasques}{97}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Diagrama de Gantt}{98}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Gestió del risc}{99}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Gestió Econòmica i sostenibilitat}{100}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Gestió Econòmica}{100}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Costos de personal}{100}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Costos genèrics}{101}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Contingències}{102}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Imprevistos}{103}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Cost total}{103}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Control de gestió}{104}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Sostenibilitat}{105}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Dimensió econòmica}{105}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Dimensió ambiental}{106}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Dimensió social}{106}{subsection.7.2.3}%
+\contentsline {chapter}{Bibliografia}{107}{chapter*.43}%

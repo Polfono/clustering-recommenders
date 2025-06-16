@@ -357,7 +357,7 @@ Com es veu a la figura \ref{fig:notion}, permet dividir les tasques en els tres 
 
 \subsection{Seguiment}
 
-Per tal de verificar que el desenvolupament del projecte s’ajusta als requeriments establerts i per corregir sense dilació qualsevol desviació que pugui sorgir, es realitzarà el seguiment del projecte mitjançant reunions presencials cada dues setmanes. En aquestes trobades es procedirà a:
+Per tal de verificar que el desenvolupament del projecte s’ajusta als requeriments establerts i per corregir sense dilació qualsevol desviació que pugui sorgir, es realitzarà el seguiment del projecte mitjançant reunions presencials amb el director cada dues setmanes. En aquestes trobades es procedirà a:
 
 \begin{itemize}
     \item \textbf{Analitzar el progrés global:} Revisarem l’evolució tant del programari com de la documentació, identificant els avanços assolits i les possibles àrees de millora.
@@ -406,6 +406,9 @@ Assumint 10.000 usuaris, això suposa un total de $10^8$ posicions, amb un reque
 
 Una solució senzilla seria calcular la similitud entre usuaris de manera dinàmica, només quan sigui necessària, en lloc de calcular-les totes prèviament i emmagatzemar-les.
 Tanmateix, aquesta estratègia implica un increment significatiu del temps de càlcul, que pot resultar inviable per a una execució local.
+
+Això es deu a diversos motius. En primer lloc, la matriu de similituds pot ser reutilitzada per a càlculs de distància posteriors. A més, el càlcul de totes les similituds entre tots els usuaris d’una sola vegada permet aprofitar les operacions vectoritzades, que, en entorns com Python, estan altament optimitzades i s’executen molt més ràpidament que els càlculs individuals. Finalment, un cop la matriu de similituds ha estat calculada, pot ser desada i reutilitzada en múltiples execucions o experiments posteriors.
+
 Per aquest motiu, s’ha descartat aquesta opció.
 
 De manera similar a l’anterior, s’imposarà un màxim d’uns 10.000 elements.
@@ -425,9 +428,9 @@ El motiu d’això és el fet que la majoria d’elements no solen estar valorat
 
 L’ús de matrius disperses permet emmagatzemar només les posicions que contenen informació rellevant (és a dir, valoracions efectives), reduint dràsticament l’espai requerit.
 
-Tot i això, finalment s’ha descartat l’ús de matrius disperses, ja que, malgrat l’estalvi d’espai, aquest enfocament incrementa considerablement la complexitat del codi i el temps de càlcul.
-La gestió de matrius disperses implica estructures de dades més sofisticades i operacions més costoses, especialment en operacions massives o en entorns on es requereix un accés ràpid i freqüent a les valoracions.
-Per aquest motiu, s’ha optat per mantenir l’enfocament basat en matrius densament poblades, tot i la limitació del nombre màxim d’elements.
+Tot i l’estalvi d’espai que ofereixen les matrius disperses, finalment s’ha descartat el seu ús perquè augmenten significativament la complexitat del codi i el temps de càlcul. La gestió de matrius disperses requereix estructures de dades més sofisticades i operacions més costoses, especialment en escenaris de processament massiu o quan es necessita un accés ràpid i freqüent a les valoracions.
+
+En el marc d’aquest estudi, l’objectiu principal és avaluar l’impacte de diferents tècniques de clustering, de manera que les restriccions derivades del nombre d’usuaris o del nombre màxim d’elements no resulten determinants. Per exemple, el dataset MovieLens 1M emprat en l’estudi encaixa perfectament dins aquestes limitacions. Apostar per matrius densament poblades simplifica el desenvolupament del codi i accelera la implementació de la resta del sistema. A més a més, moltes de les llibreries estàndard que implementen els algorismes de clustering estan optimitzades per a, o directament esperen, matrius denses com a entrada. Això permet destinar més esforços a l’anàlisi comparativa de les tècniques de clustering. D'altra banda, treballar amb matrius denses ens permet aprofitar de manera eficient les operacions vectoritzades, de forma similar a com es fa amb les matrius de similitud, la qual cosa pot comportar guanys significatius de rendiment en els càlculs.
 
 \section{Conjunt de dades utilitzades}
 
@@ -702,7 +705,7 @@ Encara que s’utilitzin dades sintètiques, es donarà més importància a les 
 
 \chapter{Sistema de recomanació}
 
-\textbf{Arquitectura comuna del sistema de recomanació}
+\section{Arquitectura comuna del sistema de recomanació}
 
 Aquest capítol descriu el sistema de recomanació implementat per a l’avaluació dels diferents mètodes de clustering considerats en aquest estudi. Amb l’objectiu de garantir una comparació justa entre les diferents variants, s’ha establert una arquitectura comuna que comparteix tant la funció de similitud com la metodologia de predicció. Això permet que qualsevol diferència en el rendiment dels sistemes sigui atribuïble únicament a la tècnica de clustering emprada.
 
@@ -710,9 +713,13 @@ Per mesurar la similitud entre usuaris, s’ha optat per la correlació de Pears
 
 Aquesta mesura és àmpliament utilitzada en sistemes de recomanació basats en el filtratge col·laboratiu, ja que captura la correlació lineal entre els patrons de valoració dels usuaris, tot tenint en compte les diferències en les seves escales personals de valoració. Donats dos usuaris \( u \) i \( v \), i el conjunt d’elements que ambdós han valorat \( I_{uv} \), la correlació de Pearson s’expressa de la forma següent:
 
-\[
-\text{sim}(u,v) = \frac{\sum_{i \in I_{uv}} (r_{u,i} - \bar{r}_u)(r_{v,i} - \bar{r}_v)}{\sqrt{\sum_{i \in I_{uv}} (r_{u,i} - \bar{r}_u)^2} \cdot \sqrt{\sum_{i \in I_{uv}} (r_{v,i} - \bar{r}_v)^2}}
-\]
+\begin{equation}\label{eq:pearson}
+\mathrm{sim}(u,v) \;=\; 
+\frac{\sum_{i \in I_{uv}} (r_{u,i} - \bar r_u)\,(r_{v,i} - \bar r_v)}
+     {\sqrt{\sum_{i \in I_{uv}} (r_{u,i} - \bar r_u)^2}\;
+      \sqrt{\sum_{i \in I_{uv}} (r_{v,i} - \bar r_v)^2}}
+\end{equation}
+
 
 on \( r_{u,i} \) és la valoració de l’usuari \( u \) sobre l’element \( i \), i \( \bar{r}_u \) és la mitjana de les valoracions de l’usuari \( u \). Aquesta mesura ofereix una normalització implícita respecte a les mitjanes individuals i afavoreix els casos on els usuaris valoren de forma coherent, encara que utilitzin escales diferents.
 
@@ -721,10 +728,13 @@ La correlació de Pearson oscil·la típicament entre -1 i +1, on -1 indica una 
 Per a la predicció de valoracions, s’utilitza la tècnica coneguda com a predicció centrada en la mitjana o basada en la desviació respecte a la mitjana. Aquesta metodologia es basa en ajustar la predicció a partir de la mitjana de l’usuari i les desviacions observades en altres usuaris similars. La predicció \( \hat{r}_{u,i} \) que fa l’usuari \( u \) sobre l’element \( i \) es calcula com:
 
 \[
-\hat{r}_{u,i} = \bar{r}_u + \frac{\sum_{v \in N(u)} \text{sim}(u,v) \cdot (r_{v,i} - \bar{r}_v)}{\sum_{v \in N(u)} |\text{sim}(u,v)|}
+\hat r_{u,i}
+= \bar r_u
++ \frac{\sum_{v\in N_i(u)} \text{sim}(u,v)\,(r_{v,i}-\bar r_v)}
+       {\sum_{v\in N_i(u)} |\text{sim}(u,v)|}
 \]
 
-on \( N(u) \) és el conjunt d’usuaris més similars a \( u \) que han valorat l’element \( i \), i \( \text{sim}(u,v) \) és la similitud entre els usuaris \( u \) i \( v \), segons la correlació de Pearson. De manera similar a la mesura de similitud, la predicció centrada en la mitjana també té en compte les escales personals de valoració, cosa que permet obtenir estimacions més precises i comparables entre usuaris.
+on \( N_i(u) \) és el conjunt d’usuaris més similars a \( u \) que han valorat l’element \( i \), i \( \text{sim}(u,v) \) és la similitud entre els usuaris \( u \) i \( v \), segons la correlació de Pearson \ref{eq:pearson}. De manera similar a la mesura de similitud, la predicció centrada en la mitjana també té en compte les escales personals de valoració, cosa que permet obtenir estimacions més precises i comparables entre usuaris.
 
 Segons l’anàlisi empírica presentada a \cite{herlocker2002empirical}, la formulació basada en la desviació respecte a la mitjana resulta ser una de les estratègies de predicció no personalitzada més precises, superant altres enfocaments habituals. Això reforça l’ús d’aquest model com a base de comparació robusta en aquest estudi.
 
@@ -754,6 +764,8 @@ En una primera instancia es va implementar la mesura de distància proposada a \
 d_{Pearson}(x,y) = \frac{1}{1 + \text{sim}(x,y)}
 \]
 
+\( \text{sim}(u,v) \) és la similitud entre els usuaris \( u \) i \( v \), segons la correlació de Pearson \ref{eq:pearson}. 
+
 Tanmateix, es va acabar descartant aquesta mesura perquè no compleix les propietats d’una mètrica de distància (identitat, simetria i desigualtat triangular).
 Tot i que es va considerar utilitzar la distància angular, finalment es va optar per implementar la transformació:
 
@@ -761,10 +773,10 @@ Tot i que es va considerar utilitzar la distància angular, finalment es va opta
 d_{Pearson}(x,y) = \frac{1 - \text{sim}(x,y)}{2}
 \]
 
-Ja que és més senzilla de calcular i compleix les propietats requerides d’una mètrica
+Ja que és més senzilla de calcular que la distància angular i, de la mateixa manera, compleix les propietats requerides d’una mètrica.
 
 \vspace{0.5cm}
-\textbf{Algorismes de clustering emprats}
+\section{Algorismes de clustering emprats}
 
 A grans trets, els algorismes de clustering més comuns, i que tractarem en aquest treball, es poden agrupar en cinc famílies principals segons com entenen i construeixen els grups. \cite{ezugwu2022comprehensive}
 
@@ -794,10 +806,12 @@ A continuació es presenta una taula resum amb els algorismes de clustering anal
     \caption{Algorismes de clustering analitzats}
     \label{tab:algorithms}
 \end{table}
+
+Les complexitats mostrades són simplificacions on $i$ (nombre d'iteracions), $k$ (nombre de clústers o components) i $d$ (nombre de dimensions) es consideren constants. En la pràctica, aquests són factors que multipliquen la dependència en $n$.
  
 \section{Clustering dur}
 
-Tal com es fa en altres treballs \cite{dakhel2011new}, els usuaris s’agrupen exclusivament en un únic clúster mitjançant l’algorisme K-means. Aquesta tècnica de partició busca dividir l’espai d’usuaris en $K$ grups disjunts, de manera que cada usuari pertanyi al clúster amb el centre (centroid) més proper.
+Seguint la línia d'altres treballs \cite{dakhel2011new}, s'aplica un algorisme de partició per agrupar els usuaris. Com a representant d'aquesta família d'algorismes, s'ha escollit K-means. Aquesta tècnica assigna cada usuari exclusivament a un únic clúster dels $K$ possibles, buscant dividir l'espai d'usuaris en $K$ grups disjunts. L'assignació es realitza de manera que cada usuari pertanyi al clúster amb el centre (centroide) més proper.
 
 L’algorisme K-means funciona de la manera següent:
 
@@ -1882,22 +1896,22 @@ A continuació es presenten les principals conclusions extretes de la Taula~\ref
   \item \textbf{Impacte de la mètrica de distància.}
     L’elecció entre la distància euclidiana i la de Pearson afecta de manera significativa els resultats, especialment en els algorismes K-means, FCM i HAC:
     \begin{itemize}
-      \item \textbf{K-means:} l’ús de la distància de Pearson tendeix a empitjorar la precisió. En el cas del dataset \texttt{books}, va comportar una entropia molt baixa i va degradar la segmentació.
+      \item \textbf{K-means:} l’ús de la distància de Pearson tendeix a empitjorar la qualitat de predicció. En el cas del dataset \texttt{books}, va comportar una entropia molt baixa i va degradar la segmentació.
       \item \textbf{FCM+COG:} la distància de Pearson va resultar especialment problemàtica, produint entropies extremadament baixes en la majoria de datasets i invalidant la cohesió dels grups.
-      \item \textbf{HAC:} a diferència dels altres mètodes, la distància de Pearson va millorar notablement la distribució dels elements entre clusters (entropia més alta) i, en el cas de \texttt{ml-small}, va augmentar també la precisió.
+      \item \textbf{HAC:} a diferència dels altres mètodes, la distància de Pearson va millorar notablement la distribució dels elements entre clusters (entropia més alta) i, en el cas de \texttt{ml-small}, va disminuir també l'error.
       \item \textbf{DBSCAN:} cap de les dues mètriques no va aconseguir una segmentació consistent; tanmateix, Pearson va permetre generar més clusters en intervals molt concrets de l’\(\varepsilon\).
     \end{itemize}
 
   \item \textbf{Comportament del dataset \texttt{books}.}
     Aquest conjunt de dades mostra característiques singulars respecte als altres:
     \begin{itemize}
-      \item Increment de la precisió amb l’augment de \(K\) en K-means (euclidiana), FCM (euclidiana) i HAC (ambdues distàncies).
-      \item GMM també registra una millora de la precisió.
+      \item disminució de l'error amb l’augment de \(K\) en K-means (euclidiana), FCM (euclidiana) i HAC (ambdues distàncies).
+      \item GMM també registra una millora de la qualitat de predicció.
     \end{itemize}
     Aquestes variacions indiquen que la baixa densitat, l’ampli rang de valoracions i la naturalesa dels ítems de \texttt{books} faciliten una segmentació més beneficiosa per aquests algorismes.
 
-  \item \textbf{Precisió vs. qualitat de la segmentació.}
-    Rarament es troba una combinació que maximitzi simultàniament la precisió i una segmentació de qualitat (entropia alta i nombre de clusters raonable). Sovint, augmentar la precisió comporta entropies més baixes o pocs grups ben definits.
+  \item \textbf{Error vs. qualitat de la segmentació.}
+    Rarament es troba una combinació que maximitzi simultàniament la qualitat de predicció i una segmentació de qualitat (entropia alta i nombre de clusters raonable). Sovint, disminuir l'error comporta entropies més baixes o pocs grups ben definits.
 
   \item \textbf{Limitacions de DBSCAN.}
     DBSCAN presenta una gran sensibilitat al paràmetre \(\varepsilon\):
@@ -1911,13 +1925,13 @@ A continuació es presenten les principals conclusions extretes de la Taula~\ref
     No existeix cap tècnica de clustering que superi de forma consistent totes les mètriques en tots els datasets. La selecció del mètode i la seva configuració han de basar-se en:
     \begin{itemize}
       \item Les característiques concretes de cada conjunt de dades.
-      \item Els objectius prioritaris (precisió vs. qualitat de la segmentació).
+      \item Els objectius prioritaris (error vs. qualitat de la segmentació).
     \end{itemize}
 \end{itemize}
 
-En resum, tot i que el clustering pot ajudar a gestionar la complexitat i a identificar subgrups rellevants d’usuaris, la seva implementació pràctica en sistemes de recomanació resulta exigent. Els guanys en precisió acostumen a ser moderats i dependents del dataset, i aconseguir una segmentació equilibrada i útil requereix un ajustament acurat dels paràmetres i una avaluació específica per a cada cas. 
+En resum, tot i que el clustering pot ajudar a gestionar la complexitat i a identificar subgrups rellevants d’usuaris, la seva implementació pràctica en sistemes de recomanació resulta exigent. Els guanys en la qualitat de la predicció acostumen a ser moderats i dependents del dataset, i aconseguir una segmentació equilibrada i útil requereix un ajustament acurat dels paràmetres i una avaluació específica per a cada cas. 
 
-Després d'una anàlisi detallada de cada tècnica de clustering i les seves variants, aquesta secció presenta una comparativa final del seu rendiment en termes de precisió (NMAE) sobre els diferents conjunts de dades reals. Per a aquesta anàlisi final, s'han seleccionat només aquelles configuracions d'algorismes que van demostrar una capacitat mínima de segmentació, considerant com a llindar una entropia normalitzada mitjana superior a 0.5 en la majoria del rang de K (o \(\varepsilon\) per a DBSCAN). Aquest criteri busca assegurar que els mètodes comparats no només ofereixin una certa precisió, sinó que també realitzin una divisió mínimament equilibrada dels usuaris, ja que una entropia molt baixa indicaria que gairebé tots els usuaris acaben en un sol clúster, invalidant el propòsit del clustering. Per aquest motiu, s'han exclòs d'aquesta comparativa final les variants de K-means amb Pearson per a \texttt{books}, FCM+COG amb Pearson per a \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester}, i l'algorisme DBSCAN en general, ja que van presentar problemes severs d'entropia o de formació de molt pocs clústers en la majoria de les seves configuracions.
+Després d'una anàlisi detallada de cada tècnica de clustering i les seves variants, aquesta secció presenta una comparativa final del seu rendiment en termes de error (NMAE) sobre els diferents conjunts de dades reals. Per a aquesta anàlisi final, s'han seleccionat només aquelles configuracions d'algorismes que van demostrar una capacitat mínima de segmentació, considerant com a llindar una entropia normalitzada mitjana superior a 0.5 en la majoria del rang de K (o \(\varepsilon\) per a DBSCAN). Aquest criteri busca assegurar que els mètodes comparats no només ofereixin una certa precisió, sinó que també realitzin una divisió mínimament equilibrada dels usuaris, ja que una entropia molt baixa indicaria que gairebé tots els usuaris acaben en un sol clúster, invalidant el propòsit del clustering. Per aquest motiu, s'han exclòs d'aquesta comparativa final les variants de K-means amb Pearson per a \texttt{books}, FCM+COG amb Pearson per a \texttt{ml-small}, \texttt{ml-1m} i \texttt{jester}, i l'algorisme DBSCAN en general, ja que van presentar problemes severs d'entropia o de formació de molt pocs clústers en la majoria de les seves configuracions.
 
 \begin{figure}[H]
     \centering

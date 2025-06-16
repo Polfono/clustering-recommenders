@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  13 JUN 2025 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.5)  16 JUN 2025 17:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -902,12 +902,12 @@ Package biblatex Info: Reference segment=0 on input line 40.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<Figuras/logoUPC.png, id=304, 197.73875pt x 196.735pt>
+<Figuras/logoUPC.png, id=312, 197.73875pt x 196.735pt>
 File: Figuras/logoUPC.png Graphic file (type png)
 <use Figuras/logoUPC.png>
 Package pdftex.def Info: Figuras/logoUPC.png  used on input line 52.
 (pdftex.def)             Requested size: 62.73549pt x 62.41612pt.
-<Figuras/logoFIB.png, id=306, 580.1675pt x 87.32625pt>
+<Figuras/logoFIB.png, id=314, 580.1675pt x 87.32625pt>
 File: Figuras/logoFIB.png Graphic file (type png)
 <use Figuras/logoFIB.png>
 Package pdftex.def Info: Figuras/logoFIB.png  used on input line 54.
@@ -984,35 +984,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--118
 ] (./Memoria.toc [4
 
 
-] [5])
+] [5] [6])
 \tf@toc=\write6
 \openout6 = `Memoria.toc'.
 
- [6] (./Memoria.lof
+ [7] (./Memoria.lof
 Overfull \hbox (0.50832pt too wide) in paragraph at lines 26--26
  [][] [][]\OT1/cmr/m/n/12 Resultats clus-te-ring jer^^Rarquic di-fe-rents m^^Retodes d'en-lla^^Xc (Mo-vi-e-Lens Small)[] [][]  
  []
 
-[7
+[8
 
 ])
 \tf@lof=\write7
 \openout7 = `Memoria.lof'.
 
- [8] (./Memoria.lot)
+ [9] (./Memoria.lot)
 \tf@lot=\write8
 \openout8 = `Memoria.lot'.
 
- [9
+ [10
 
-] [10
+] [11
 
 ]
 Cap\'{\i }tol 1.
-[11
+[12
 
 ]
-<Figuras/DiagramaFiltratgeCol.jpg, id=539, 1031.855pt x 575.14874pt>
+<Figuras/DiagramaFiltratgeCol.jpg, id=554, 1031.855pt x 575.14874pt>
 File: Figuras/DiagramaFiltratgeCol.jpg Graphic file (type jpg)
 <use Figuras/DiagramaFiltratgeCol.jpg>
 Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 172.
@@ -1021,751 +1021,751 @@ Package pdftex.def Info: Figuras/DiagramaFiltratgeCol.jpg  used on input line 17
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] [13 <./Figuras/DiagramaFiltratgeCol.jpg>] [14] [15] [16] [17]
-<Figuras/KANBAN.png, id=582, 888.31876pt x 511.9125pt>
+[13] [14 <./Figuras/DiagramaFiltratgeCol.jpg>] [15] [16] [17] [18]
+<Figuras/KANBAN.png, id=597, 888.31876pt x 511.9125pt>
 File: Figuras/KANBAN.png Graphic file (type png)
 <use Figuras/KANBAN.png>
 Package pdftex.def Info: Figuras/KANBAN.png  used on input line 339.
 (pdftex.def)             Requested size: 352.81552pt x 203.31631pt.
- [18]
-<Figuras/Notion.png, id=592, 878.28125pt x 580.1675pt>
+ [19]
+<Figuras/Notion.png, id=606, 878.28125pt x 580.1675pt>
 File: Figuras/Notion.png Graphic file (type png)
 <use Figuras/Notion.png>
 Package pdftex.def Info: Figuras/Notion.png  used on input line 349.
 (pdftex.def)             Requested size: 352.81552pt x 233.06322pt.
- [19 <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [20]
+ [20 <./Figuras/KANBAN.png> <./Figuras/Notion.png>] [21]
 Cap\'{\i }tol 2.
-[21
+[22
 
-] [22]
-<Figuras/ml-small-ratings.png, id=616, 462.528pt x 346.896pt>
+] [23] [24]
+<Figuras/ml-small-ratings.png, id=637, 462.528pt x 346.896pt>
 File: Figuras/ml-small-ratings.png Graphic file (type png)
 <use Figuras/ml-small-ratings.png>
-Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 456.
+Package pdftex.def Info: Figuras/ml-small-ratings.png  used on input line 459.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-users.png, id=617, 462.528pt x 346.896pt>
+<Figuras/ml-small-users.png, id=638, 462.528pt x 346.896pt>
 File: Figuras/ml-small-users.png Graphic file (type png)
 <use Figuras/ml-small-users.png>
-Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 458.
+Package pdftex.def Info: Figuras/ml-small-users.png  used on input line 461.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-small-items.png, id=618, 462.528pt x 346.896pt>
+<Figuras/ml-small-items.png, id=639, 462.528pt x 346.896pt>
 File: Figuras/ml-small-items.png Graphic file (type png)
 <use Figuras/ml-small-items.png>
-Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 460.
+Package pdftex.def Info: Figuras/ml-small-items.png  used on input line 463.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [23]
-<Figuras/ml-1m-ratings.png, id=625, 462.528pt x 346.896pt>
+ [25 <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>]
+<Figuras/ml-1m-ratings.png, id=648, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-ratings.png Graphic file (type png)
 <use Figuras/ml-1m-ratings.png>
-Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 476.
+Package pdftex.def Info: Figuras/ml-1m-ratings.png  used on input line 479.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-users.png, id=626, 462.528pt x 346.896pt>
+<Figuras/ml-1m-users.png, id=649, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-users.png Graphic file (type png)
 <use Figuras/ml-1m-users.png>
-Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 478.
+Package pdftex.def Info: Figuras/ml-1m-users.png  used on input line 481.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/ml-1m-items.png, id=627, 462.528pt x 346.896pt>
+<Figuras/ml-1m-items.png, id=650, 462.528pt x 346.896pt>
 File: Figuras/ml-1m-items.png Graphic file (type png)
 <use Figuras/ml-1m-items.png>
-Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 480.
+Package pdftex.def Info: Figuras/ml-1m-items.png  used on input line 483.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [24 <./Figuras/ml-small-ratings.png> <./Figuras/ml-small-users.png> <./Figuras/ml-small-items.png>] [25 <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
-<Figuras/books-ratings.png, id=647, 462.528pt x 346.896pt>
+ [26 <./Figuras/ml-1m-ratings.png> <./Figuras/ml-1m-users.png> <./Figuras/ml-1m-items.png>]
+<Figuras/books-ratings.png, id=661, 462.528pt x 346.896pt>
 File: Figuras/books-ratings.png Graphic file (type png)
 <use Figuras/books-ratings.png>
-Package pdftex.def Info: Figuras/books-ratings.png  used on input line 519.
+Package pdftex.def Info: Figuras/books-ratings.png  used on input line 522.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-users.png, id=648, 462.528pt x 346.896pt>
+<Figuras/books-users.png, id=662, 462.528pt x 346.896pt>
 File: Figuras/books-users.png Graphic file (type png)
 <use Figuras/books-users.png>
-Package pdftex.def Info: Figuras/books-users.png  used on input line 521.
+Package pdftex.def Info: Figuras/books-users.png  used on input line 524.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/books-items.png, id=649, 462.528pt x 346.896pt>
+<Figuras/books-items.png, id=663, 462.528pt x 346.896pt>
 File: Figuras/books-items.png Graphic file (type png)
 <use Figuras/books-items.png>
-Package pdftex.def Info: Figuras/books-items.png  used on input line 523.
+Package pdftex.def Info: Figuras/books-items.png  used on input line 526.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [26] [27 <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
-<Figuras/jester-ratings.png, id=666, 462.528pt x 346.896pt>
+ [27] [28 <./Figuras/books-ratings.png> <./Figuras/books-users.png> <./Figuras/books-items.png>]
+<Figuras/jester-ratings.png, id=680, 462.528pt x 346.896pt>
 File: Figuras/jester-ratings.png Graphic file (type png)
 <use Figuras/jester-ratings.png>
-Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 544.
+Package pdftex.def Info: Figuras/jester-ratings.png  used on input line 547.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-users.png, id=667, 462.528pt x 346.896pt>
+<Figuras/jester-users.png, id=681, 462.528pt x 346.896pt>
 File: Figuras/jester-users.png Graphic file (type png)
 <use Figuras/jester-users.png>
-Package pdftex.def Info: Figuras/jester-users.png  used on input line 546.
+Package pdftex.def Info: Figuras/jester-users.png  used on input line 549.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/jester-items.png, id=668, 462.528pt x 346.896pt>
+<Figuras/jester-items.png, id=682, 462.528pt x 346.896pt>
 File: Figuras/jester-items.png Graphic file (type png)
 <use Figuras/jester-items.png>
-Package pdftex.def Info: Figuras/jester-items.png  used on input line 548.
+Package pdftex.def Info: Figuras/jester-items.png  used on input line 551.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [28 <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [29] [30]
-<Figuras/syn-ratings.png, id=695, 462.528pt x 346.896pt>
+ [29 <./Figuras/jester-ratings.png> <./Figuras/jester-users.png> <./Figuras/jester-items.png>] [30] [31]
+<Figuras/syn-ratings.png, id=709, 462.528pt x 346.896pt>
 File: Figuras/syn-ratings.png Graphic file (type png)
 <use Figuras/syn-ratings.png>
-Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 639.
+Package pdftex.def Info: Figuras/syn-ratings.png  used on input line 642.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-users.png, id=696, 462.528pt x 346.896pt>
+<Figuras/syn-users.png, id=710, 462.528pt x 346.896pt>
 File: Figuras/syn-users.png Graphic file (type png)
 <use Figuras/syn-users.png>
-Package pdftex.def Info: Figuras/syn-users.png  used on input line 641.
+Package pdftex.def Info: Figuras/syn-users.png  used on input line 644.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn-items.png, id=697, 462.528pt x 346.896pt>
+<Figuras/syn-items.png, id=711, 462.528pt x 346.896pt>
 File: Figuras/syn-items.png Graphic file (type png)
 <use Figuras/syn-items.png>
-Package pdftex.def Info: Figuras/syn-items.png  used on input line 643.
+Package pdftex.def Info: Figuras/syn-items.png  used on input line 646.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [31]
-<Figuras/syn03-ratings.png, id=703, 462.528pt x 346.896pt>
+ [32]
+<Figuras/syn03-ratings.png, id=717, 462.528pt x 346.896pt>
 File: Figuras/syn03-ratings.png Graphic file (type png)
 <use Figuras/syn03-ratings.png>
-Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 659.
+Package pdftex.def Info: Figuras/syn03-ratings.png  used on input line 662.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-users.png, id=704, 462.528pt x 346.896pt>
+<Figuras/syn03-users.png, id=718, 462.528pt x 346.896pt>
 File: Figuras/syn03-users.png Graphic file (type png)
 <use Figuras/syn03-users.png>
-Package pdftex.def Info: Figuras/syn03-users.png  used on input line 661.
+Package pdftex.def Info: Figuras/syn03-users.png  used on input line 664.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn03-items.png, id=705, 462.528pt x 346.896pt>
+<Figuras/syn03-items.png, id=719, 462.528pt x 346.896pt>
 File: Figuras/syn03-items.png Graphic file (type png)
 <use Figuras/syn03-items.png>
-Package pdftex.def Info: Figuras/syn03-items.png  used on input line 663.
+Package pdftex.def Info: Figuras/syn03-items.png  used on input line 666.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [32 <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
-<Figuras/syn80-ratings.png, id=714, 462.528pt x 346.896pt>
+ [33 <./Figuras/syn-ratings.png> <./Figuras/syn-users.png> <./Figuras/syn-items.png>]
+<Figuras/syn80-ratings.png, id=728, 462.528pt x 346.896pt>
 File: Figuras/syn80-ratings.png Graphic file (type png)
 <use Figuras/syn80-ratings.png>
-Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 677.
+Package pdftex.def Info: Figuras/syn80-ratings.png  used on input line 680.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-users.png, id=715, 462.528pt x 346.896pt>
+<Figuras/syn80-users.png, id=729, 462.528pt x 346.896pt>
 File: Figuras/syn80-users.png Graphic file (type png)
 <use Figuras/syn80-users.png>
-Package pdftex.def Info: Figuras/syn80-users.png  used on input line 679.
+Package pdftex.def Info: Figuras/syn80-users.png  used on input line 682.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
-<Figuras/syn80-items.png, id=716, 462.528pt x 346.896pt>
+<Figuras/syn80-items.png, id=730, 462.528pt x 346.896pt>
 File: Figuras/syn80-items.png Graphic file (type png)
 <use Figuras/syn80-items.png>
-Package pdftex.def Info: Figuras/syn80-items.png  used on input line 681.
+Package pdftex.def Info: Figuras/syn80-items.png  used on input line 684.
 (pdftex.def)             Requested size: 216.1011pt x 162.07777pt.
- [33 <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
-Overfull \hbox (34.94783pt too wide) in paragraph at lines 690--697
+ [34 <./Figuras/syn03-ratings.png> <./Figuras/syn03-users.png> <./Figuras/syn03-items.png>]
+Overfull \hbox (34.94783pt too wide) in paragraph at lines 693--700
  [][] 
  []
 
-[34 <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
+[35 <./Figuras/syn80-ratings.png> <./Figuras/syn80-users.png> <./Figuras/syn80-items.png>]
 Cap\'{\i }tol 3.
-[35
+[36
 
-] [36] [37]
-Overfull \hbox (7.92615pt too wide) in paragraph at lines 806--807
+] [37] [38] [39]
+Overfull \hbox (7.92615pt too wide) in paragraph at lines 820--821
 []\OT1/cmr/bx/n/12 Assignaci^^So d'u-su-a-ris: \OT1/cmr/m/n/12 Ca-da usu-a-ri, re-pre-sen-tat com un vec-tor de ca-rac-ter^^S^^Pstiques
  []
 
-[38] [39] [40] [41] [42]
-Overfull \hbox (15.99088pt too wide) in paragraph at lines 928--929
+[40] [41] [42] [43]
+Overfull \hbox (15.99088pt too wide) in paragraph at lines 942--943
 []\OT1/cmr/bx/n/12 Inicialitzaci^^So: \OT1/cmr/m/n/12 Es de-fi-neix el nom-bre de com-po-nents $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 i s'i-ni-ci-a-lit-zen els par^^Rametres
  []
 
 
-Overfull \hbox (40.94884pt too wide) in paragraph at lines 961--962
+Overfull \hbox (40.94884pt too wide) in paragraph at lines 975--976
 []\OT1/cmr/m/n/12 Per a la im-ple-men-ta-ci^^So del \OT1/cmr/m/it/12 Gaus-si-an Mix-tu-re Mo-del \OT1/cmr/m/n/12 s'-ha fet ^^Sus de la clas-se \OT1/cmtt/m/n/12 GaussianMixture
  []
 
-[43]
+[44] [45]
 Cap\'{\i }tol 4.
-[44
+[46
 
-] [45] [46]
-<Figuras/nmae-hard-all.png, id=849, 508.0581pt x 395.076pt>
+] [47] [48]
+<Figuras/nmae-hard-all.png, id=871, 508.0581pt x 395.076pt>
 File: Figuras/nmae-hard-all.png Graphic file (type png)
 <use Figuras/nmae-hard-all.png>
-Package pdftex.def Info: Figuras/nmae-hard-all.png  used on input line 1018.
+Package pdftex.def Info: Figuras/nmae-hard-all.png  used on input line 1032.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nmae-hard_pearson-all.png, id=850, 508.0581pt x 395.076pt>
+<Figuras/nmae-hard_pearson-all.png, id=872, 508.0581pt x 395.076pt>
 File: Figuras/nmae-hard_pearson-all.png Graphic file (type png)
 <use Figuras/nmae-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/nmae-hard_pearson-all.png  used on input line 1024.
+Package pdftex.def Info: Figuras/nmae-hard_pearson-all.png  used on input line 1038.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hard-all.png, id=851, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hard-all.png, id=873, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hard-all.png Graphic file (type png)
 <use Figuras/nrmse-hard-all.png>
-Package pdftex.def Info: Figuras/nrmse-hard-all.png  used on input line 1033.
+Package pdftex.def Info: Figuras/nrmse-hard-all.png  used on input line 1047.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hard_pearson-all.png, id=852, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hard_pearson-all.png, id=874, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hard_pearson-all.png Graphic file (type png)
 <use Figuras/nrmse-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/nrmse-hard_pearson-all.png  used on input line 1039.
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-all.png  used on input line 1053.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard-all.png, id=853, 508.0581pt x 395.076pt>
+<Figuras/entropy-hard-all.png, id=875, 508.0581pt x 395.076pt>
 File: Figuras/entropy-hard-all.png Graphic file (type png)
 <use Figuras/entropy-hard-all.png>
-Package pdftex.def Info: Figuras/entropy-hard-all.png  used on input line 1048.
+Package pdftex.def Info: Figuras/entropy-hard-all.png  used on input line 1062.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard_pearson-all.png, id=854, 501.5538pt x 395.076pt>
+<Figuras/entropy-hard_pearson-all.png, id=876, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hard_pearson-all.png Graphic file (type png)
 <use Figuras/entropy-hard_pearson-all.png>
-Package pdftex.def Info: Figuras/entropy-hard_pearson-all.png  used on input line 1054.
+Package pdftex.def Info: Figuras/entropy-hard_pearson-all.png  used on input line 1068.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [47]
-Overfull \hbox (3.28877pt too wide) in paragraph at lines 1077--1078
+ [49]
+Overfull \hbox (3.28877pt too wide) in paragraph at lines 1091--1092
 \OT1/cmr/m/n/12 sint^^Retiques (Fi-gu-ra []4.2[]) ofe-reix una pers-pec-ti-va in-teres-sant so-bre com les ca-rac-ter^^S^^Pstiques
  []
 
-[48 <./Figuras/nmae-hard-all.png> <./Figuras/nmae-hard_pearson-all.png> <./Figuras/nrmse-hard-all.png> <./Figuras/nrmse-hard_pearson-all.png> <./Figuras/entropy-hard-all.png> <./Figuras/entropy-hard_pearson-all.png>] [49]
-<Figuras/nmae-hard-sin.png, id=884, 514.3215pt x 395.076pt>
+[50 <./Figuras/nmae-hard-all.png> <./Figuras/nmae-hard_pearson-all.png> <./Figuras/nrmse-hard-all.png> <./Figuras/nrmse-hard_pearson-all.png> <./Figuras/entropy-hard-all.png> <./Figuras/entropy-hard_pearson-all.png>] [51]
+<Figuras/nmae-hard-sin.png, id=905, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hard-sin.png Graphic file (type png)
 <use Figuras/nmae-hard-sin.png>
-Package pdftex.def Info: Figuras/nmae-hard-sin.png  used on input line 1095.
+Package pdftex.def Info: Figuras/nmae-hard-sin.png  used on input line 1109.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nmae-hard_pearson-sin.png, id=885, 514.3215pt x 395.076pt>
+<Figuras/nmae-hard_pearson-sin.png, id=906, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/nmae-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/nmae-hard_pearson-sin.png  used on input line 1101.
+Package pdftex.def Info: Figuras/nmae-hard_pearson-sin.png  used on input line 1115.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hard-sin.png, id=886, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hard-sin.png, id=907, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hard-sin.png Graphic file (type png)
 <use Figuras/nrmse-hard-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hard-sin.png  used on input line 1110.
+Package pdftex.def Info: Figuras/nrmse-hard-sin.png  used on input line 1124.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hard_pearson-sin.png, id=887, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hard_pearson-sin.png, id=908, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/nrmse-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hard_pearson-sin.png  used on input line 1116.
+Package pdftex.def Info: Figuras/nrmse-hard_pearson-sin.png  used on input line 1130.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/entropy-hard-sin.png, id=888, 508.0581pt x 395.076pt>
+<Figuras/entropy-hard-sin.png, id=909, 508.0581pt x 395.076pt>
 File: Figuras/entropy-hard-sin.png Graphic file (type png)
 <use Figuras/entropy-hard-sin.png>
-Package pdftex.def Info: Figuras/entropy-hard-sin.png  used on input line 1125.
+Package pdftex.def Info: Figuras/entropy-hard-sin.png  used on input line 1139.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hard_pearson-sin.png, id=889, 501.5538pt x 395.076pt>
+<Figuras/entropy-hard_pearson-sin.png, id=910, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hard_pearson-sin.png Graphic file (type png)
 <use Figuras/entropy-hard_pearson-sin.png>
-Package pdftex.def Info: Figuras/entropy-hard_pearson-sin.png  used on input line 1131.
+Package pdftex.def Info: Figuras/entropy-hard_pearson-sin.png  used on input line 1145.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [50] [51 <./Figuras/nmae-hard-sin.png> <./Figuras/nmae-hard_pearson-sin.png> <./Figuras/nrmse-hard-sin.png> <./Figuras/nrmse-hard_pearson-sin.png> <./Figuras/entropy-hard-sin.png> <./Figuras/entropy-hard_pearson-sin.png>] [52]
-<Figuras/nmae-fuzzy-all.png, id=917, 508.0581pt x 395.076pt>
+ [52] [53 <./Figuras/nmae-hard-sin.png> <./Figuras/nmae-hard_pearson-sin.png> <./Figuras/nrmse-hard-sin.png> <./Figuras/nrmse-hard_pearson-sin.png> <./Figuras/entropy-hard-sin.png> <./Figuras/entropy-hard_pearson-sin.png>] [54]
+<Figuras/nmae-fuzzy-all.png, id=940, 508.0581pt x 395.076pt>
 File: Figuras/nmae-fuzzy-all.png Graphic file (type png)
 <use Figuras/nmae-fuzzy-all.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy-all.png  used on input line 1172.
+Package pdftex.def Info: Figuras/nmae-fuzzy-all.png  used on input line 1186.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nmae-fuzzy_pearson-all.png, id=918, 514.3215pt x 395.076pt>
+<Figuras/nmae-fuzzy_pearson-all.png, id=941, 514.3215pt x 395.076pt>
 File: Figuras/nmae-fuzzy_pearson-all.png Graphic file (type png)
 <use Figuras/nmae-fuzzy_pearson-all.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-all.png  used on input line 1178.
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-all.png  used on input line 1192.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-fuzzy-all.png, id=919, 508.0581pt x 395.076pt>
+<Figuras/nrmse-fuzzy-all.png, id=942, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-fuzzy-all.png Graphic file (type png)
 <use Figuras/nrmse-fuzzy-all.png>
-Package pdftex.def Info: Figuras/nrmse-fuzzy-all.png  used on input line 1187.
+Package pdftex.def Info: Figuras/nrmse-fuzzy-all.png  used on input line 1201.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-fuzzy_pearson-all.png, id=920, 514.3215pt x 395.076pt>
+<Figuras/nrmse-fuzzy_pearson-all.png, id=943, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-fuzzy_pearson-all.png Graphic file (type png)
 <use Figuras/nrmse-fuzzy_pearson-all.png>
-Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-all.png  used on input line 1193.
+Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-all.png  used on input line 1207.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/entropy-fuzzy-all.png, id=921, 501.5538pt x 395.076pt>
+<Figuras/entropy-fuzzy-all.png, id=944, 501.5538pt x 395.076pt>
 File: Figuras/entropy-fuzzy-all.png Graphic file (type png)
 <use Figuras/entropy-fuzzy-all.png>
-Package pdftex.def Info: Figuras/entropy-fuzzy-all.png  used on input line 1202.
+Package pdftex.def Info: Figuras/entropy-fuzzy-all.png  used on input line 1216.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
-<Figuras/entropy-fuzzy_pearson-all.png, id=922, 501.5538pt x 395.076pt>
+<Figuras/entropy-fuzzy_pearson-all.png, id=945, 501.5538pt x 395.076pt>
 File: Figuras/entropy-fuzzy_pearson-all.png Graphic file (type png)
 <use Figuras/entropy-fuzzy_pearson-all.png>
-Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-all.png  used on input line 1208.
+Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-all.png  used on input line 1222.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [53] [54 <./Figuras/nmae-fuzzy-all.png> <./Figuras/nmae-fuzzy_pearson-all.png> <./Figuras/nrmse-fuzzy-all.png> <./Figuras/nrmse-fuzzy_pearson-all.png> <./Figuras/entropy-fuzzy-all.png> <./Figuras/entropy-fuzzy_pearson-all.png>] [55]
-<Figuras/nmae-fuzzy-sin.png, id=952, 514.3215pt x 395.076pt>
+ [55] [56 <./Figuras/nmae-fuzzy-all.png> <./Figuras/nmae-fuzzy_pearson-all.png> <./Figuras/nrmse-fuzzy-all.png> <./Figuras/nrmse-fuzzy_pearson-all.png> <./Figuras/entropy-fuzzy-all.png> <./Figuras/entropy-fuzzy_pearson-all.png>] [57]
+<Figuras/nmae-fuzzy-sin.png, id=973, 514.3215pt x 395.076pt>
 File: Figuras/nmae-fuzzy-sin.png Graphic file (type png)
 <use Figuras/nmae-fuzzy-sin.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy-sin.png  used on input line 1247.
+Package pdftex.def Info: Figuras/nmae-fuzzy-sin.png  used on input line 1261.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nmae-fuzzy_pearson-sin.png, id=953, 508.0581pt x 395.076pt>
+<Figuras/nmae-fuzzy_pearson-sin.png, id=974, 508.0581pt x 395.076pt>
 File: Figuras/nmae-fuzzy_pearson-sin.png Graphic file (type png)
 <use Figuras/nmae-fuzzy_pearson-sin.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1253.
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1267.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-fuzzy-sin.png, id=954, 514.3215pt x 395.076pt>
+<Figuras/nrmse-fuzzy-sin.png, id=975, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-fuzzy-sin.png Graphic file (type png)
 <use Figuras/nrmse-fuzzy-sin.png>
-Package pdftex.def Info: Figuras/nrmse-fuzzy-sin.png  used on input line 1262.
+Package pdftex.def Info: Figuras/nrmse-fuzzy-sin.png  used on input line 1276.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-fuzzy_pearson-sin.png, id=955, 508.0581pt x 395.076pt>
+<Figuras/nrmse-fuzzy_pearson-sin.png, id=976, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-fuzzy_pearson-sin.png Graphic file (type png)
 <use Figuras/nrmse-fuzzy_pearson-sin.png>
-Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-sin.png  used on input line 1268.
+Package pdftex.def Info: Figuras/nrmse-fuzzy_pearson-sin.png  used on input line 1282.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-fuzzy-sin.png, id=956, 501.5538pt x 395.076pt>
+<Figuras/entropy-fuzzy-sin.png, id=977, 501.5538pt x 395.076pt>
 File: Figuras/entropy-fuzzy-sin.png Graphic file (type png)
 <use Figuras/entropy-fuzzy-sin.png>
-Package pdftex.def Info: Figuras/entropy-fuzzy-sin.png  used on input line 1277.
+Package pdftex.def Info: Figuras/entropy-fuzzy-sin.png  used on input line 1291.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
-<Figuras/entropy-fuzzy_pearson-sin.png, id=957, 501.5538pt x 395.076pt>
+<Figuras/entropy-fuzzy_pearson-sin.png, id=978, 501.5538pt x 395.076pt>
 File: Figuras/entropy-fuzzy_pearson-sin.png Graphic file (type png)
 <use Figuras/entropy-fuzzy_pearson-sin.png>
-Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-sin.png  used on input line 1283.
+Package pdftex.def Info: Figuras/entropy-fuzzy_pearson-sin.png  used on input line 1297.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [56] [57 <./Figuras/nmae-fuzzy-sin.png> <./Figuras/nmae-fuzzy_pearson-sin.png> <./Figuras/nrmse-fuzzy-sin.png> <./Figuras/nrmse-fuzzy_pearson-sin.png> <./Figuras/entropy-fuzzy-sin.png> <./Figuras/entropy-fuzzy_pearson-sin.png>] [58]
-<Figuras/nmae-hac-all.png, id=985, 514.3215pt x 395.076pt>
+ [58] [59 <./Figuras/nmae-fuzzy-sin.png> <./Figuras/nmae-fuzzy_pearson-sin.png> <./Figuras/nrmse-fuzzy-sin.png> <./Figuras/nrmse-fuzzy_pearson-sin.png> <./Figuras/entropy-fuzzy-sin.png> <./Figuras/entropy-fuzzy_pearson-sin.png>] [60]
+<Figuras/nmae-hac-all.png, id=1007, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hac-all.png Graphic file (type png)
 <use Figuras/nmae-hac-all.png>
-Package pdftex.def Info: Figuras/nmae-hac-all.png  used on input line 1324.
+Package pdftex.def Info: Figuras/nmae-hac-all.png  used on input line 1338.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nmae-hac_pearson-all.png, id=986, 514.3215pt x 395.076pt>
+<Figuras/nmae-hac_pearson-all.png, id=1008, 514.3215pt x 395.076pt>
 File: Figuras/nmae-hac_pearson-all.png Graphic file (type png)
 <use Figuras/nmae-hac_pearson-all.png>
-Package pdftex.def Info: Figuras/nmae-hac_pearson-all.png  used on input line 1330.
+Package pdftex.def Info: Figuras/nmae-hac_pearson-all.png  used on input line 1344.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hac-all.png, id=987, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hac-all.png, id=1009, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hac-all.png Graphic file (type png)
 <use Figuras/nrmse-hac-all.png>
-Package pdftex.def Info: Figuras/nrmse-hac-all.png  used on input line 1339.
+Package pdftex.def Info: Figuras/nrmse-hac-all.png  used on input line 1353.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hac_pearson-all.png, id=988, 508.0581pt x 395.076pt>
+<Figuras/nrmse-hac_pearson-all.png, id=1010, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-hac_pearson-all.png Graphic file (type png)
 <use Figuras/nrmse-hac_pearson-all.png>
-Package pdftex.def Info: Figuras/nrmse-hac_pearson-all.png  used on input line 1345.
+Package pdftex.def Info: Figuras/nrmse-hac_pearson-all.png  used on input line 1359.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-hac-all.png, id=989, 501.5538pt x 395.076pt>
+<Figuras/entropy-hac-all.png, id=1011, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hac-all.png Graphic file (type png)
 <use Figuras/entropy-hac-all.png>
-Package pdftex.def Info: Figuras/entropy-hac-all.png  used on input line 1354.
+Package pdftex.def Info: Figuras/entropy-hac-all.png  used on input line 1368.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
-<Figuras/entropy-hac_pearson-all.png, id=990, 501.5538pt x 395.076pt>
+<Figuras/entropy-hac_pearson-all.png, id=1012, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hac_pearson-all.png Graphic file (type png)
 <use Figuras/entropy-hac_pearson-all.png>
-Package pdftex.def Info: Figuras/entropy-hac_pearson-all.png  used on input line 1360.
+Package pdftex.def Info: Figuras/entropy-hac_pearson-all.png  used on input line 1374.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [59]
-Overfull \hbox (18.09705pt too wide) in paragraph at lines 1383--1384
+ [61]
+Overfull \hbox (18.09705pt too wide) in paragraph at lines 1397--1398
 []\OT1/cmr/m/n/12 L'aplicaci^^So del clus-te-ring jer^^Rarquic aglo-me-ra-tiu (HAC) als con-junts de da-des sint^^Retiques,
  []
 
-[60 <./Figuras/nmae-hac-all.png> <./Figuras/nmae-hac_pearson-all.png> <./Figuras/nrmse-hac-all.png> <./Figuras/nrmse-hac_pearson-all.png> <./Figuras/entropy-hac-all.png> <./Figuras/entropy-hac_pearson-all.png>]
-Overfull \hbox (13.89006pt too wide) in paragraph at lines 1391--1392
+[62 <./Figuras/nmae-hac-all.png> <./Figuras/nmae-hac_pearson-all.png> <./Figuras/nrmse-hac-all.png> <./Figuras/nrmse-hac_pearson-all.png> <./Figuras/entropy-hac-all.png> <./Figuras/entropy-hac_pearson-all.png>]
+Overfull \hbox (13.89006pt too wide) in paragraph at lines 1405--1406
 []\OT1/cmr/m/n/12 Amb la dist^^Rancia de Pe-ar-son (Fi-gu-ra []4.6f[]), els pa-trons d'en-tro-pia can-vi-en dr^^Rasticament.
  []
 
-[61]
-<Figuras/nmae-hac-sin.png, id=1019, 508.0581pt x 395.076pt>
+[63]
+<Figuras/nmae-hac-sin.png, id=1040, 508.0581pt x 395.076pt>
 File: Figuras/nmae-hac-sin.png Graphic file (type png)
 <use Figuras/nmae-hac-sin.png>
-Package pdftex.def Info: Figuras/nmae-hac-sin.png  used on input line 1400.
+Package pdftex.def Info: Figuras/nmae-hac-sin.png  used on input line 1414.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
 File: Figuras/nmae-fuzzy_pearson-sin.png Graphic file (type png)
 <use Figuras/nmae-fuzzy_pearson-sin.png>
-Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1406.
+Package pdftex.def Info: Figuras/nmae-fuzzy_pearson-sin.png  used on input line 1420.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-hac-sin.png, id=1020, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hac-sin.png, id=1041, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hac-sin.png Graphic file (type png)
 <use Figuras/nrmse-hac-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hac-sin.png  used on input line 1415.
+Package pdftex.def Info: Figuras/nrmse-hac-sin.png  used on input line 1429.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-hac_pearson-sin.png, id=1021, 514.3215pt x 395.076pt>
+<Figuras/nrmse-hac_pearson-sin.png, id=1042, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-hac_pearson-sin.png Graphic file (type png)
 <use Figuras/nrmse-hac_pearson-sin.png>
-Package pdftex.def Info: Figuras/nrmse-hac_pearson-sin.png  used on input line 1421.
+Package pdftex.def Info: Figuras/nrmse-hac_pearson-sin.png  used on input line 1435.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/entropy-hac-sin.png, id=1022, 501.5538pt x 395.076pt>
+<Figuras/entropy-hac-sin.png, id=1043, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hac-sin.png Graphic file (type png)
 <use Figuras/entropy-hac-sin.png>
-Package pdftex.def Info: Figuras/entropy-hac-sin.png  used on input line 1430.
+Package pdftex.def Info: Figuras/entropy-hac-sin.png  used on input line 1444.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
-<Figuras/entropy-hac_pearson-sin.png, id=1023, 501.5538pt x 395.076pt>
+<Figuras/entropy-hac_pearson-sin.png, id=1044, 501.5538pt x 395.076pt>
 File: Figuras/entropy-hac_pearson-sin.png Graphic file (type png)
 <use Figuras/entropy-hac_pearson-sin.png>
-Package pdftex.def Info: Figuras/entropy-hac_pearson-sin.png  used on input line 1436.
+Package pdftex.def Info: Figuras/entropy-hac_pearson-sin.png  used on input line 1450.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
- [62] [63 <./Figuras/nmae-hac-sin.png> <./Figuras/nrmse-hac-sin.png> <./Figuras/nrmse-hac_pearson-sin.png> <./Figuras/entropy-hac-sin.png> <./Figuras/entropy-hac_pearson-sin.png>] [64]
-<Figuras/nmae-euc-ml-small.png, id=1048, 569.9694pt x 423.7431pt>
+ [64] [65 <./Figuras/nmae-hac-sin.png> <./Figuras/nrmse-hac-sin.png> <./Figuras/nrmse-hac_pearson-sin.png> <./Figuras/entropy-hac-sin.png> <./Figuras/entropy-hac_pearson-sin.png>] [66]
+<Figuras/nmae-euc-ml-small.png, id=1070, 569.9694pt x 423.7431pt>
 File: Figuras/nmae-euc-ml-small.png Graphic file (type png)
 <use Figuras/nmae-euc-ml-small.png>
-Package pdftex.def Info: Figuras/nmae-euc-ml-small.png  used on input line 1480.
+Package pdftex.def Info: Figuras/nmae-euc-ml-small.png  used on input line 1494.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/nmae-pear-ml-small.png, id=1049, 570.2103pt x 423.7431pt>
+<Figuras/nmae-pear-ml-small.png, id=1071, 570.2103pt x 423.7431pt>
 File: Figuras/nmae-pear-ml-small.png Graphic file (type png)
 <use Figuras/nmae-pear-ml-small.png>
-Package pdftex.def Info: Figuras/nmae-pear-ml-small.png  used on input line 1486.
+Package pdftex.def Info: Figuras/nmae-pear-ml-small.png  used on input line 1500.
 (pdftex.def)             Requested size: 216.1011pt x 160.59084pt.
-<Figuras/nrmse-euc-ml-small.png, id=1050, 569.9694pt x 423.7431pt>
+<Figuras/nrmse-euc-ml-small.png, id=1072, 569.9694pt x 423.7431pt>
 File: Figuras/nrmse-euc-ml-small.png Graphic file (type png)
 <use Figuras/nrmse-euc-ml-small.png>
-Package pdftex.def Info: Figuras/nrmse-euc-ml-small.png  used on input line 1495.
+Package pdftex.def Info: Figuras/nrmse-euc-ml-small.png  used on input line 1509.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/nrmse-pear-ml-small.png, id=1051, 569.9694pt x 423.7431pt>
+<Figuras/nrmse-pear-ml-small.png, id=1073, 569.9694pt x 423.7431pt>
 File: Figuras/nrmse-pear-ml-small.png Graphic file (type png)
 <use Figuras/nrmse-pear-ml-small.png>
-Package pdftex.def Info: Figuras/nrmse-pear-ml-small.png  used on input line 1501.
+Package pdftex.def Info: Figuras/nrmse-pear-ml-small.png  used on input line 1515.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/entropy-euc-ml-small.png, id=1052, 569.7285pt x 423.7431pt>
+<Figuras/entropy-euc-ml-small.png, id=1074, 569.7285pt x 423.7431pt>
 File: Figuras/entropy-euc-ml-small.png Graphic file (type png)
 <use Figuras/entropy-euc-ml-small.png>
-Package pdftex.def Info: Figuras/entropy-euc-ml-small.png  used on input line 1510.
+Package pdftex.def Info: Figuras/entropy-euc-ml-small.png  used on input line 1524.
 (pdftex.def)             Requested size: 216.1011pt x 160.72661pt.
-<Figuras/entropy-pear-ml-small.png, id=1053, 569.7285pt x 423.7431pt>
+<Figuras/entropy-pear-ml-small.png, id=1075, 569.7285pt x 423.7431pt>
 File: Figuras/entropy-pear-ml-small.png Graphic file (type png)
 <use Figuras/entropy-pear-ml-small.png>
-Package pdftex.def Info: Figuras/entropy-pear-ml-small.png  used on input line 1516.
+Package pdftex.def Info: Figuras/entropy-pear-ml-small.png  used on input line 1530.
 (pdftex.def)             Requested size: 216.1011pt x 160.72661pt.
- [65] [66 <./Figuras/nmae-euc-ml-small.png> <./Figuras/nmae-pear-ml-small.png> <./Figuras/nrmse-euc-ml-small.png> <./Figuras/nrmse-pear-ml-small.png> <./Figuras/entropy-euc-ml-small.png> <./Figuras/entropy-pear-ml-small.png>]
-<Figuras/DBSCAN/k-distancia-ml-small-5.png, id=1073, 433.62pt x 289.08pt>
+ [67] [68 <./Figuras/nmae-euc-ml-small.png> <./Figuras/nmae-pear-ml-small.png> <./Figuras/nrmse-euc-ml-small.png> <./Figuras/nrmse-pear-ml-small.png> <./Figuras/entropy-euc-ml-small.png> <./Figuras/entropy-pear-ml-small.png>]
+<Figuras/DBSCAN/k-distancia-ml-small-5.png, id=1094, 433.62pt x 289.08pt>
 File: Figuras/DBSCAN/k-distancia-ml-small-5.png Graphic file (type png)
 <use Figuras/DBSCAN/k-distancia-ml-small-5.png>
-Package pdftex.def Info: Figuras/DBSCAN/k-distancia-ml-small-5.png  used on input line 1556.
+Package pdftex.def Info: Figuras/DBSCAN/k-distancia-ml-small-5.png  used on input line 1570.
 (pdftex.def)             Requested size: 308.71106pt x 205.81725pt.
- [67] [68 <./Figuras/DBSCAN/k-distancia-ml-small-5.png>]
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png, id=1094, 722.7pt x 433.62pt>
+ [69] [70 <./Figuras/DBSCAN/k-distancia-ml-small-5.png>]
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png, id=1116, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png  used on input line 1582.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png  used on input line 1596.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png, id=1095, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png, id=1117, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png  used on input line 1588.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png  used on input line 1602.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png, id=1096, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png, id=1118, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png  used on input line 1597.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png  used on input line 1611.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png, id=1097, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png, id=1119, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png  used on input line 1603.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png  used on input line 1617.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png, id=1098, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png, id=1120, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png  used on input line 1612.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png  used on input line 1626.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png, id=1099, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png, id=1121, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png  used on input line 1618.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png  used on input line 1632.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png, id=1100, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png, id=1122, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png  used on input line 1625.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png  used on input line 1639.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png, id=1101, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png, id=1123, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png  used on input line 1631.
+Package pdftex.def Info: Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png  used on input line 1645.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
- [69] [70 <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png>] [71]
-<Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png, id=1134, 722.7pt x 433.62pt>
+ [71] [72 <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/ml-small_ml-1m_density_pearson_n_clusters_found_vs_eps.png>] [73]
+<Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png, id=1156, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png  used on input line 1674.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png  used on input line 1688.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png, id=1135, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png, id=1157, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png  used on input line 1680.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png  used on input line 1694.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png, id=1136, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png, id=1158, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png  used on input line 1689.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png  used on input line 1703.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png, id=1137, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png, id=1159, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png  used on input line 1695.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png  used on input line 1709.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png, id=1138, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png, id=1160, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png  used on input line 1704.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png  used on input line 1718.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png, id=1139, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png, id=1161, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png  used on input line 1710.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png  used on input line 1724.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png, id=1140, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png, id=1162, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png  used on input line 1717.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png  used on input line 1731.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
-<Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png, id=1141, 722.7pt x 433.62pt>
+<Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png, id=1163, 722.7pt x 433.62pt>
 File: Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png Graphic file (type png)
 <use Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png>
-Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png  used on input line 1723.
+Package pdftex.def Info: Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png  used on input line 1737.
 (pdftex.def)             Requested size: 216.1011pt x 129.65692pt.
- [72] [73 <./Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png>] [74]
-<Figuras/nmae-gmm-all.png, id=1167, 508.0581pt x 395.076pt>
+ [74] [75 <./Figuras/DBSCAN/res/books_jester_density_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nmae_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_nrmse_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_entropy_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_n_clusters_found_vs_eps.png> <./Figuras/DBSCAN/res/books_jester_density_pearson_n_clusters_found_vs_eps.png>] [76]
+<Figuras/nmae-gmm-all.png, id=1188, 508.0581pt x 395.076pt>
 File: Figuras/nmae-gmm-all.png Graphic file (type png)
 <use Figuras/nmae-gmm-all.png>
-Package pdftex.def Info: Figuras/nmae-gmm-all.png  used on input line 1759.
+Package pdftex.def Info: Figuras/nmae-gmm-all.png  used on input line 1773.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/nrmse-gmm-all.png, id=1168, 508.0581pt x 395.076pt>
+<Figuras/nrmse-gmm-all.png, id=1189, 508.0581pt x 395.076pt>
 File: Figuras/nrmse-gmm-all.png Graphic file (type png)
 <use Figuras/nrmse-gmm-all.png>
-Package pdftex.def Info: Figuras/nrmse-gmm-all.png  used on input line 1765.
+Package pdftex.def Info: Figuras/nrmse-gmm-all.png  used on input line 1779.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
-<Figuras/entropy-gmm-all.png, id=1169, 508.0581pt x 395.076pt>
+<Figuras/entropy-gmm-all.png, id=1190, 508.0581pt x 395.076pt>
 File: Figuras/entropy-gmm-all.png Graphic file (type png)
 <use Figuras/entropy-gmm-all.png>
-Package pdftex.def Info: Figuras/entropy-gmm-all.png  used on input line 1774.
+Package pdftex.def Info: Figuras/entropy-gmm-all.png  used on input line 1788.
 (pdftex.def)             Requested size: 216.1011pt x 168.04674pt.
- [75 <./Figuras/nmae-gmm-all.png> <./Figuras/nrmse-gmm-all.png> <./Figuras/entropy-gmm-all.png>] [76]
-<Figuras/nmae-gmm-sin.png, id=1185, 514.3215pt x 395.076pt>
+ [77 <./Figuras/nmae-gmm-all.png> <./Figuras/nrmse-gmm-all.png> <./Figuras/entropy-gmm-all.png>] [78]
+<Figuras/nmae-gmm-sin.png, id=1207, 514.3215pt x 395.076pt>
 File: Figuras/nmae-gmm-sin.png Graphic file (type png)
 <use Figuras/nmae-gmm-sin.png>
-Package pdftex.def Info: Figuras/nmae-gmm-sin.png  used on input line 1810.
+Package pdftex.def Info: Figuras/nmae-gmm-sin.png  used on input line 1824.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/nrmse-gmm-sin.png, id=1186, 514.3215pt x 395.076pt>
+<Figuras/nrmse-gmm-sin.png, id=1208, 514.3215pt x 395.076pt>
 File: Figuras/nrmse-gmm-sin.png Graphic file (type png)
 <use Figuras/nrmse-gmm-sin.png>
-Package pdftex.def Info: Figuras/nrmse-gmm-sin.png  used on input line 1816.
+Package pdftex.def Info: Figuras/nrmse-gmm-sin.png  used on input line 1830.
 (pdftex.def)             Requested size: 216.1011pt x 165.99709pt.
-<Figuras/entropy-gmm-sin.png, id=1187, 501.5538pt x 395.076pt>
+<Figuras/entropy-gmm-sin.png, id=1209, 501.5538pt x 395.076pt>
 File: Figuras/entropy-gmm-sin.png Graphic file (type png)
 <use Figuras/entropy-gmm-sin.png>
-Package pdftex.def Info: Figuras/entropy-gmm-sin.png  used on input line 1825.
+Package pdftex.def Info: Figuras/entropy-gmm-sin.png  used on input line 1839.
 (pdftex.def)             Requested size: 216.1011pt x 170.22298pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1871--1871
 []\OT1/cmr/bx/n/10.95 M^^Retode de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1871--1871
 []\OT1/cmr/bx/n/10.95 M^^Retrica
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1871--1871
 []\OT1/cmr/bx/n/10.95 Precisi^^So
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 1860--1860
+Underfull \hbox (badness 1102) in paragraph at lines 1874--1874
 \OT1/cmr/m/n/10.95 en-ca-ra ^^Ses el mi-llor per^^Ro
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 1860--1860
+Underfull \hbox (badness 3291) in paragraph at lines 1874--1874
 \OT1/cmr/m/n/10.95 xa).Entropia ge-ne-ral-ment
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 1862--1862
+Underfull \hbox (badness 1024) in paragraph at lines 1876--1876
 \OT1/cmr/m/n/10.95 ra clara per \OT1/cmtt/m/n/10.95 books \OT1/cmr/m/n/10.95 amb
  []
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 1862--1862
+Underfull \hbox (badness 3343) in paragraph at lines 1876--1876
 \OT1/cmr/m/n/10.95 K. Er-ror aug-men-ta per
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 1862--1862
+Underfull \hbox (badness 1888) in paragraph at lines 1876--1876
 \OT1/cmtt/m/n/10.95 ml-small\OT1/cmr/m/n/10.95 . Es-ta-ble per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1862--1862
+Underfull \hbox (badness 10000) in paragraph at lines 1876--1876
 []\OT1/cmr/m/n/10.95 Bona en-tro-pia per
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 1862--1862
+Underfull \hbox (badness 7925) in paragraph at lines 1876--1876
 \OT1/cmr/m/n/10.95 i va-ri-a-ble per \OT1/cmtt/m/n/10.95 jester\OT1/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1863
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1877
 []\OT1/cmr/m/n/10.95 Precisi^^So in-es-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1863
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1877
 \OT1/cmr/m/n/10.95 ble/oscil\TS1/cmr/m/n/10.95 ·\OT1/cmr/m/n/10.95 lat^^Roria per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1863
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1877
 []\OT1/cmr/m/n/10.95 Entropia ex-tre-ma-da-ment
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 1863--1863
+Underfull \hbox (badness 1087) in paragraph at lines 1877--1877
 \OT1/cmr/m/n/10.95 (qua-si tots a 1 cl^^Suster).
  []
 
 
-Overfull \vbox (27.20003pt too high) detected at line 1865
+Overfull \vbox (27.20003pt too high) detected at line 1879
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1865
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1879
 []\OT1/cmr/m/n/10.95 Millora per \OT1/cmtt/m/n/10.95 books\OT1/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1865
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1879
 \OT1/cmr/m/n/10.95 Aug-ment d'er-ror per
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 1865--1865
+Underfull \hbox (badness 5008) in paragraph at lines 1879--1879
 []\OT1/cmr/m/n/10.95 Entropia ac-cep-ta-ble per
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 1866--1866
+Underfull \hbox (badness 1152) in paragraph at lines 1880--1880
 []\OT1/cmr/m/n/10.95 Precisi^^So no-ta-ble-ment mi-
  []
 
 
-Underfull \hbox (badness 6691) in paragraph at lines 1868--1868
+Underfull \hbox (badness 6691) in paragraph at lines 1882--1882
 []\OT1/cmr/m/n/10.95 Precisi^^So bas-tant es-ta-ble
  []
 
 
-Underfull \hbox (badness 3302) in paragraph at lines 1868--1868
+Underfull \hbox (badness 3302) in paragraph at lines 1882--1882
 \OT1/cmr/m/n/10.95 amb pe-ti-tes fluc-tu-a-ci-ons
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 1868--1868
+Underfull \hbox (badness 4859) in paragraph at lines 1882--1882
 []\OT1/cmr/m/n/10.95 Tendeix a for-mar molt
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 1869--1869
+Underfull \hbox (badness 2376) in paragraph at lines 1883--1883
 []\OT1/cmr/m/n/10.95 Comportament si-mi-lar a
  []
 
 
-Underfull \hbox (badness 7415) in paragraph at lines 1871--1871
+Underfull \hbox (badness 7415) in paragraph at lines 1885--1885
 []\OT1/cmr/m/n/10.95 N/A (ba-sat en
  []
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 1871--1871
+Underfull \hbox (badness 2197) in paragraph at lines 1885--1885
 \OT1/cmr/m/n/10.95 molt si-mi-lar a K-means
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 1871--1871
+Underfull \hbox (badness 1297) in paragraph at lines 1885--1885
 \OT1/cmr/m/n/10.95 amb Eu-cli-di-a-na. Mi-llo-
  []
 
 
-Underfull \hbox (badness 3907) in paragraph at lines 1871--1871
+Underfull \hbox (badness 3907) in paragraph at lines 1885--1885
 \OT1/cmr/m/n/10.95 ra per \OT1/cmtt/m/n/10.95 books\OT1/cmr/m/n/10.95 , em-pit-jo-
  []
 
 
-Overfull \hbox (19.54721pt too wide) in paragraph at lines 1855--1874
+Overfull \hbox (19.54721pt too wide) in paragraph at lines 1869--1888
  [][] 
  []
 
-[77 <./Figuras/nmae-gmm-sin.png> <./Figuras/nrmse-gmm-sin.png> <./Figuras/entropy-gmm-sin.png>]
+[79 <./Figuras/nmae-gmm-sin.png> <./Figuras/nrmse-gmm-sin.png> <./Figuras/entropy-gmm-sin.png>]
 Overfull \vbox (4.51701pt too high) has occurred while \output is active []
 
- [78]
-Overfull \hbox (3.37561pt too wide) in paragraph at lines 1886--1887
+ [80]
+Overfull \hbox (3.37561pt too wide) in paragraph at lines 1900--1901
 []\OT1/cmr/bx/n/12 FCM+COG: \OT1/cmr/m/n/12 la dist^^Rancia de Pe-ar-son va re-sul-tar es-pe-ci-al-ment pro-blem^^Ratica,
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1891.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1905.
 
-Overfull \hbox (7.48625pt too wide) in paragraph at lines 1902--1904
+Overfull \hbox (7.48625pt too wide) in paragraph at lines 1916--1918
 []\OT1/cmr/bx/n/12 Limitacions de DBS-CAN. \OT1/cmr/m/n/12 DBS-CAN pre-sen-ta una gran sen-si-bi-li-tat al par^^Rametre
  []
 
-[79]
-<Figuras/FinalResults/nmae-pear-ml-small.png, id=1209, 569.9694pt x 423.7431pt>
+[81]
+<Figuras/FinalResults/nmae-pear-ml-small.png, id=1230, 569.9694pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-ml-small.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-ml-small.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-small.png  used on input line 1926.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-small.png  used on input line 1940.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/FinalResults/nmae-pear-ml-1m.png, id=1210, 570.2103pt x 423.7431pt>
+<Figuras/FinalResults/nmae-pear-ml-1m.png, id=1231, 570.2103pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-ml-1m.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-ml-1m.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-1m.png  used on input line 1932.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-ml-1m.png  used on input line 1946.
 (pdftex.def)             Requested size: 216.1011pt x 160.59084pt.
-<Figuras/FinalResults/nmae-pear-books.png, id=1211, 569.9694pt x 423.7431pt>
+<Figuras/FinalResults/nmae-pear-books.png, id=1232, 569.9694pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-books.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-books.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-books.png  used on input line 1941.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-books.png  used on input line 1955.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/FinalResults/nmae-pear-jester.png, id=1212, 569.9694pt x 423.7431pt>
+<Figuras/FinalResults/nmae-pear-jester.png, id=1233, 569.9694pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-jester.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-jester.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-jester.png  used on input line 1947.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-jester.png  used on input line 1961.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
- [80] [81 <./Figuras/FinalResults/nmae-pear-ml-small.png> <./Figuras/FinalResults/nmae-pear-ml-1m.png> <./Figuras/FinalResults/nmae-pear-books.png> <./Figuras/FinalResults/nmae-pear-jester.png>] [82]
-<Figuras/FinalResults/nmae-pear-syn.png, id=1234, 569.9694pt x 423.7431pt>
+ [82] [83 <./Figuras/FinalResults/nmae-pear-ml-small.png> <./Figuras/FinalResults/nmae-pear-ml-1m.png> <./Figuras/FinalResults/nmae-pear-books.png> <./Figuras/FinalResults/nmae-pear-jester.png>] [84]
+<Figuras/FinalResults/nmae-pear-syn.png, id=1256, 569.9694pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-syn.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-syn.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn.png  used on input line 1989.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn.png  used on input line 2003.
 (pdftex.def)             Requested size: 216.1011pt x 160.66196pt.
-<Figuras/FinalResults/nmae-pear-syn03.png, id=1235, 570.4512pt x 423.7431pt>
+<Figuras/FinalResults/nmae-pear-syn03.png, id=1257, 570.4512pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-syn03.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-syn03.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn03.png  used on input line 1995.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn03.png  used on input line 2009.
 (pdftex.def)             Requested size: 216.1011pt x 160.52617pt.
-<Figuras/FinalResults/nmae-pear-syn80.png, id=1236, 570.4512pt x 423.7431pt>
+<Figuras/FinalResults/nmae-pear-syn80.png, id=1258, 570.4512pt x 423.7431pt>
 File: Figuras/FinalResults/nmae-pear-syn80.png Graphic file (type png)
 <use Figuras/FinalResults/nmae-pear-syn80.png>
-Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn80.png  used on input line 2004.
+Package pdftex.def Info: Figuras/FinalResults/nmae-pear-syn80.png  used on input line 2018.
 (pdftex.def)             Requested size: 216.1011pt x 160.52617pt.
- [83] [84 <./Figuras/FinalResults/nmae-pear-syn.png> <./Figuras/FinalResults/nmae-pear-syn03.png> <./Figuras/FinalResults/nmae-pear-syn80.png>] [85]
+ [85] [86 <./Figuras/FinalResults/nmae-pear-syn.png> <./Figuras/FinalResults/nmae-pear-syn03.png> <./Figuras/FinalResults/nmae-pear-syn80.png>] [87]
 Cap\'{\i }tol 5.
-[86
+[88
 
-] [87] [88] [89
+] [89] [90] [91
 
 ]
 Cap\'{\i }tol 6.
-[90
+[92
 
-] [91] [92] [93]
-Overfull \hbox (9.77583pt too wide) in paragraph at lines 2258--2259
+] [93] [94] [95]
+Overfull \hbox (9.77583pt too wide) in paragraph at lines 2272--2273
 []\OT1/cmr/bx/n/12 Investigador (I): \OT1/cmr/m/n/12 En-car-re-gat de la re-cer-ca bi-bli-ogr^^Rafica, de l'es-tu-di de les t^^Recniques
  []
 
-[94] [95]
-<Figuras/DiagramaGantt.png, id=1304, 1740.5025pt x 700.6175pt>
+[96] [97]
+<Figuras/DiagramaGantt.png, id=1326, 1740.5025pt x 700.6175pt>
 File: Figuras/DiagramaGantt.png Graphic file (type png)
 <use Figuras/DiagramaGantt.png>
-Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 2322.
+Package pdftex.def Info: Figuras/DiagramaGantt.png  used on input line 2336.
 (pdftex.def)             Requested size: 661.5266pt x 266.29086pt.
- [96
+ [98
 
- <./Figuras/DiagramaGantt.png>] [97
+ <./Figuras/DiagramaGantt.png>] [99
 
 ]
 Cap\'{\i }tol 7.
 
-Overfull \hbox (18.05974pt too wide) in paragraph at lines 2392--2420
+Overfull \hbox (18.05974pt too wide) in paragraph at lines 2406--2434
  [][] 
  []
 
-[98
+[100
 
-] [99] [100]
-Overfull \hbox (43.57405pt too wide) in paragraph at lines 2497--2506
+] [101] [102]
+Overfull \hbox (43.57405pt too wide) in paragraph at lines 2511--2520
  [][] 
  []
 
-[101] [102] [103] [104] [105
+[103] [104] [105] [106] [107
 
 ]
-Overfull \hbox (11.25876pt too wide) in paragraph at lines 2619--2619
+Overfull \hbox (11.25876pt too wide) in paragraph at lines 2633--2633
 \OT1/cmr/m/n/12 clus-te-ring for co-lla-bo-ra-ti-ve fil-te-ring''. A: \OT1/cmr/m/it/12 In-for-ma-ti-on Tech-no-logy Jour-nal KMUTNB
  []
 
-[106] [107] (./Memoria.aux)
+[108] [109] (./Memoria.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1775,7 +1775,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: A9311A49E3B45ECD026B9A343F871350;12578.
+(rerunfilecheck)             Checksum: 1966CB9659B20991C2FF3E9FAE253DCF;13105.
 
 Package biblatex Warning: Please rerun LaTeX.
 
@@ -1784,18 +1784,18 @@ Package logreq Info: Writing requests to 'Memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32775 strings out of 474222
- 638698 string characters out of 5748734
+ 32783 strings out of 474222
+ 638788 string characters out of 5748734
  1951975 words of memory out of 5000000
- 54259 multiletter control sequences out of 15000+600000
+ 54262 multiletter control sequences out of 15000+600000
  572338 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,87p,2483b,2979s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Memoria.pdf (108 pages, 11179551 bytes).
+Output written on Memoria.pdf (110 pages, 11182263 bytes).
 PDF statistics:
- 1579 PDF objects out of 1728 (max. 8388607)
- 1210 compressed objects within 13 object streams
- 299 named destinations out of 1000 (max. 500000)
- 1095 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1603 PDF objects out of 1728 (max. 8388607)
+ 1232 compressed objects within 13 object streams
+ 304 named destinations out of 1000 (max. 500000)
+ 1111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
